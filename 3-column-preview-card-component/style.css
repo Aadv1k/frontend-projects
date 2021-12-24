@@ -1,0 +1,156 @@
+/* Lexend deca 400 */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+/* Big shoulders display 700 */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --headings: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Lexend deca", sans-serif;
+}
+
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--headings);
+}
+
+.container__inner {
+  display: flex;
+  max-width: 70%;
+  min-width: 750px;
+}
+
+.card {
+  padding: 6rem 3rem 3rem 2rem;
+  width: 33.3%;
+  position: relative;
+}
+
+.card__title {
+  font-size: 2.5rem;
+  margin: 2rem 0 1em 0;
+  text-transform: uppercase;
+  color: var(--headings);
+  font-family: "Big shoulders display", cursive;
+}
+
+.card__content {
+  margin: 2em 0;
+  width: 90%;
+  line-height: 1.7rem;
+  color: var(--paragraphs);
+}
+
+.card__link {
+  display: inline-block;
+  margin: 3em 0;
+  background-color: var(--headings);
+  padding: 0.9rem 2rem;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.card__link:hover {
+  background-color: transparent;
+  outline: 1px solid var(--headings);
+  color: white;
+}
+
+.sedan {
+  background: var(--bright-orange);
+  color: white;
+  border-radius: 20px 0 0 20px;
+}
+
+.suv {
+  background: var(--dark-cyan);
+  color: white;
+}
+
+.luxury {
+  background: var(--very-dark-cyan);
+  color: white;
+  border-radius: 0 20px 20px 0;
+}
+
+.sedan {
+  background: var(--bright-orange);
+  color: white;
+  border-radius: 20px 0 0 20px;
+}
+
+.suv {
+  background: var(--dark-cyan);
+  color: white;
+}
+
+.card::before {
+  content: "";
+  width: 70px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 8%;
+}
+
+.luxury::before {
+  background-image: url("./images/icon-luxury.svg");
+}
+
+.suv::before {
+  background-image: url("./images/icon-suvs.svg");
+}
+
+.sedan::before {
+  background-image: url("./images/icon-sedans.svg");
+}
+
+.luxury > a {
+  color: var(--very-dark-cyan);
+}
+
+.suv > a {
+  color: var(--dark-cyan);
+}
+
+.sedan > a {
+  color: var(--bright-orange);
+}
+
+@media only screen and (max-width: 780px) {
+  .container__inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 90%;
+  }
+
+  .sedan,
+  .luxury {
+    border-radius: 0;
+  }
+
+  .card {
+    width: 70%;
+    padding: 6rem 3rem 2rem 3rem;
+  }
+}

@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+
+  --cyan: hsl(215, 51%, 70%);
+  --light-blue: hsl(178, 100%, 50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-bg);
+}
+
+.inner__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--card-bg);
+  flex-direction: column;
+
+  min-width: 300px;
+  max-width: 380px;
+
+  border-radius: 18px;
+}
+
+.inner__container:hover {
+  transition: box-shadow 0.5s ease-in-out;
+  box-shadow: 0 0 50px black;
+}
+
+.inner__img {
+  width: 88%;
+  padding: 1.5em 0 1em 0;
+  position: relative;
+}
+
+.inner__img img {
+  border-radius: 5%;
+  width: 100%;
+}
+
+.img__overflow {
+  position: absolute;
+  border-radius: 5%;
+  height: calc(100% - 45px);
+  width: 100%;
+  background-color: hsl(215, 51%, 70%, 60%);
+  top: 6.5%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.inner__img:hover .img__overflow {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.img__overflow::before {
+  content: "";
+  width: 70px;
+  height: 70px;
+  background-image: url("./images/icon-view.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inner__text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 88%;
+
+  color: whitesmoke;
+  font-family: outfit, sans-serif;
+}
+
+.inner__title {
+  font-size: 1.5em;
+}
+
+.inner__title:hover {
+  color: lightblue;
+  cursor: pointer;
+}
+
+.inner__content {
+  color: var(--cyan);
+  line-height: 1.5em;
+  font-size: 1.2em;
+  padding: 1em 0;
+}
+
+.inner_lables {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--cyan);
+  padding: 0.5em 1em;
+  font-size: 1.1em;
+}
+
+.inner_lables span {
+  position: relative;
+  margin: 0 0 1.5em 0;
+}
+
+span:nth-child(1) {
+  font-weight: bold;
+  color: lightblue;
+}
+
+span:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  background-image: url("./images/icon-ethereum.svg");
+  width: 1em;
+  height: 1em;
+  background-repeat: no-repeat;
+  right: 100%;
+  background-size: contain;
+  top: 2px;
+}
+
+span:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  background-image: url("./images/icon-clock.svg");
+  width: 1em;
+  height: 1em;
+  background-repeat: no-repeat;
+  right: 105%;
+  top: 2px;
+  background-size: contain;
+}
+
+hr {
+  background: var(--line);
+  border: none;
+  height: 1px;
+}
+
+.atrib {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.5em 1em 1.7em 0.5em;
+  align-items: center;
+  justify-content: left;
+  font-size: 1.2em;
+}
+
+.atrib:hover {
+  cursor: pointer;
+  color: lightblue;
+}
+
+.atrib > img {
+  width: 12%;
+  margin-right: 1em;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.atrib span {
+  color: var(--cyan);
+  font-weight: normal;
+}
+
+@media only screen and (max-width: 380px) {
+  .inner__container {
+    min-width: 40%;
+    width: 90%;
+  }
+
+  .inner__title {
+    font-size: 1.2em;
+  }
+
+  .inner__content {
+    font-size: 1.1em;
+  }
+
+  .inner_lables {
+    font-size: 1em;
+    padding-bottom: 0;
+  }
+
+  .atrib {
+    padding-top: 1em;
+    font-size: 0.9em;
+  }
+}

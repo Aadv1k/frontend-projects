@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--pale-blue);
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.inner__container {
+  width: 50%;
+  max-width: 450px;
+  min-width: 420px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: white;
+  border-radius: 20px;
+}
+
+.inner__img {
+  width: 100%;
+}
+
+.inner__img > img {
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.inner__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 2em 3em;
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+.inner__title {
+  padding: 0.5em 0 0.5em 0;
+  color: var(--dark-blue);
+}
+
+.inner__text {
+  width: 90%;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  padding: 0.5em 0 2em 0;
+  color: var(--desaturated-blue);
+}
+
+.inner__lables {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.plan {
+  display: flex;
+}
+
+.plan__content {
+  padding: 0 0 0 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.plan__content h5:nth-child(1) {
+  color: var(--dark-blue);
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.plan__content h5:nth-child(2) {
+  color: var(--desaturated-blue);
+  font-weight: lighter;
+  font-size: 1em;
+}
+
+.change {
+  color: var(--bright-blue);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  padding: 3em 0 2em 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.proceed {
+  color: white;
+  background: var(--bright-blue);
+  width: 95%;
+  text-decoration: none;
+  padding: 1em 0;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.cancel {
+  margin: 2em 0 0 0;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--desaturated-blue);
+}
+
+/* Medium screens */
+@media only screen and (max-width: 426px) {
+  .container {
+    background-image: url("./images/pattern-background-mobile.svg");
+  }
+
+  .inner__container {
+    min-width: 90%;
+  }
+
+  .inner__content {
+    padding: 1em 1em;
+  }
+
+  .inner__text {
+    font-size: 1em;
+  }
+
+  .btn {
+    padding-bottom: 1em;
+  }
+
+  .proceed {
+    width: 100%;
+  }
+
+  .inner__lables {
+    width: 95%;
+  }
+
+  .plan__content h5:nth-child(1) {
+    font-size: 0.9em;
+  }
+
+  .plan__content h5:nth-child(2) {
+    font-size: 0.8em;
+  }
+}
+
+/* Small screens */
+@media only screen and (max-width: 321px) {
+  .container {
+    background-image: url("./images/pattern-background-mobile.svg");
+  }
+
+  .inner__container {
+    min-width: 95%;
+  }
+
+  .inner__content {
+    padding: 1em 0.8em;
+  }
+
+  .inner__text {
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .btn {
+    padding-bottom: 1em;
+  }
+
+  .proceed {
+    width: 100%;
+  }
+
+  .inner__lables {
+    width: 100%;
+  }
+
+  .plan__content h5:nth-child(1) {
+    font-size: 0.9em;
+  }
+
+  .plan__content h5:nth-child(2) {
+    font-size: 0.8em;
+  }
+}
+
+/*
+@media only screen and (max-width: 1440px) {
+  .inner__container {
+    min-width: 40%;
+  }
+
+  .inner__content {
+    padding: 1.5em 2em;
+  }
+
+  .inner__title {
+    font-size: 2em;
+  }
+
+  .inner__text {
+    font-size: 1.5em;
+  }
+	
+
+  .plan__content h5:nth-child(1) {
+    font-size: 1.5em;
+  }
+
+  .plan__content h5:nth-child(2) {
+    font-size: 1.5em;
+  }
+
+	.change {
+		font-size: 1.5em
+	}
+	
+	.btn {
+		font-size: 1.5em;
+	}
+}
+*/
