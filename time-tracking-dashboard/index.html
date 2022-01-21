@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lan="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" media="all" />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile__card">
+        <div class="profile__content">
+          <img src="./images/image-jeremy.png" alt="prof" />
+
+          <div class="profile__title">
+            <small>Report for</small>
+            <h3>Jeremy Robson</h3>
+          </div>
+        </div>
+
+        <div class="profile__btn">
+          <button class="daily">Daily</button>
+          <button class="weekly">Weekly</button>
+          <button class="monthly">Monthly</button>
+        </div>
+      </div>
+
+      <section id="tasks">
+
+        <div class="work card">
+          <img class="card__icon" src="./images/icon-work.svg" alt="" />
+
+          <div class="card__subcontent">
+            <section>
+              <h2 id="time" class="subcontent__time">32hrs</h2>
+              <h5 id="type" class="subcontent__type">Work</h5>
+            </section>
+            <section>
+              <small id="previousTime" class="subcontent__prev"
+                >Last week 36hrs</small
+              >
+              <button class="elipse">
+                <img src="./images/icon-ellipsis.svg" alt="---" />
+              </button>
+            </section>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </body>
+  <script src="./script.js" type="module"></script>
+</html>
