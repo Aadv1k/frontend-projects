@@ -1,4 +1,9 @@
 :root {
+ --svelte-flair: hsl(14,100%,50%);
+ --vue-flair: hsl(153,48%,46%);
+ --js-flair: hsl(54,83%,51%);
+ --css-flair: hsl(205,79%,38%);
+ --html-flair: hsl(13,71%,49%);
 }
 
 * {
@@ -18,6 +23,7 @@ body {
   --primary: #0078d7;
 }
 
+
 body.dark {
   --card-bg: #191919;
   --main-bg: #292827;
@@ -27,25 +33,51 @@ body.dark {
 
   --darker-primary: #106ebe;
   --primary: #0078d7;
-
-  /* --primary: #004578;
-  --darker-primary: #005a9e; */
 }
 
 .navbar {
-  background-color: var(--main-bg);
-  width: 100%;
-  display: flex;
-  align-items: center;
+    display: flex;
+    padding: 1.5em 1em;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--darker-primary);
+    background: var(--card-bg);
+    color: white;
+    align-items: center;
+}
+
+.nav__links a {
+    text-decoration: none;
+    color: var(--content);
+    font-size: 2em;
+    margin-right: 20px;
+    opacity: .6;
+}
+
+.nav__links a:hover {
+    opacity: 1;
+}
+
+.flair {
+    background: var(--main-bg);
+    border-radius: 10%;
+    padding: 3px;
+    color: var(--content);
+}
+
+.card__labels {
+    font-size: 15px;
+    padding-top: .5em;
+    display: flex;
+    column-gap: 1em;
 }
 
 .card-container {
+   margin: 2em 1em;
+   justify-content: center;
   display: flex;
-  gap: 1.5em;
-  justify-content: center;
-  margin-top: 2em;
   flex-wrap: wrap;
-  flex-direction: row;
+  align-items: center;
+  gap: 1.5em;
 }
 
 .card {
@@ -58,12 +90,12 @@ body.dark {
 .card__content {
   display: flex;
   flex-direction: column;
-  padding: 1em 1em;
+  padding: 1em 1em .5em 1em;
 }
 
 .card__title {
   color: var(--title);
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
 .card__body {
@@ -79,10 +111,9 @@ body.dark {
 }
 
 .card__links {
-  width: 80%;
   margin: 1em 0;
   display: flex;
-  justify-content: space-between;
+  gap: 1em;
 }
 
 .card__links a {
@@ -106,6 +137,10 @@ body.dark {
     width: 50%;
     min-width: 350px;
   }
+  .navbar {
+      flex-direction: column;
+      justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 381px) {
@@ -115,4 +150,7 @@ body.dark {
   .card__title {
     font-size: 1.4em;
   }
+
+
+
 }
