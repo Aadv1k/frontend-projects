@@ -1,57 +1,74 @@
-const res = await fetch('./data.json');
-const data = await res.json()
-let target = document.getElementById('tasks')
+let taskList = document.getElementById("taskList")
+let btns = document.getElementsByClassName("btn")
 
-let listTasks = (tf, data) => {
-    let htmlString = ""
+let response = await fetch('./data.json');
+let data = await response.json()
+
+
+function getData(data, type) {
+    let htmlChunk = "";
     for (const task of data) {
+        let title = task['title'];
+        let metatitle = task['title'] == 'Self Care' ? 'self-care' : task['title'].toLowerCase();
+        let date;
 
-       let timeframe = task.timeframes[tf]
-       let path = `./images/icon-${task.title}`
-       let className = task.title
-       let previousTime = timeframe.previous
-       let currentTime = timeframe.current
+        switch (type) {
+            case 'weekly':
+                date = "Last Week"
+                break;
+            case 'monthly':
+                date = "Last Month"
+                break;
+            default:
+                date = "Yesterday"
+        }
 
-        htmlString += `
+        let timeframe = task['timeframes'][type];
+        let imgUrl = `./images/icon-${metatitle}.svg`
 
-        <div class="${className} card">
-          <img class="card__icon" src="${path}" alt="" />
-
-          <div class="card__subcontent">
-            <section>
-              <h2 id="time" class="subcontent__time">${currentTime}hrs</h2>
-              <h5 id="type" class="subcontent__type">${className}</h5>
-            </section>
-            <section>
-              <small id="previousTime" class="subcontent__prev" >Last week ${previousTime}hrs</small >
-              <button class="elipse">
-                <img src="./images/icon-elipses.svg" alt="---" />
+        htmlChunk += `<div class="card" style="background: var(--${metatitle})">
+          <img class="card__accent" src="${imgUrl}" alt="" />
+          <div class="card__overlay">
+            <div class="card__flairs">
+              <h4 class="card__category">${title}</h4>
+              <button class="dots">
+                <img src="./images/icon-ellipsis.svg" alt="..." />
               </button>
-            </section>
+            </div>
+            <div class="card__info">
+              <h1>${timeframe.current}hrs</h1>
+              <p>${date} - ${timeframe['previous']}hrs</p>
+            </div>
           </div>
-        </div>
-        `
-    }
-    return htmlString
+        </div>`
+    };
+
+    return htmlChunk;
 }
 
-document.getElementById('target').innerHTML = listTasks('monthly', data)
+
+taskList.innerHTML = getData(data, 'weekly')
+
+for (const item of btns) {
+    item.addEventListener("click", () => {
+       taskList.innerHTML = getData(data, item.getAttribute('value'))
+    })
+};
 
 /*
-        <div class="work card">
-          <img class="card__icon" src="./images/icon-work.svg" alt="" />
-
-          <div class="card__subcontent">
-            <section>
-              <h2 id="time" class="subcontent__time">32hrs</h2>
-              <h5 id="type" class="subcontent__type">Work</h5>
-            </section>
-            <section>
-              <small id="previousTime" class="subcontent__prev" >Last week 36hrs</small >
-              <button class="elipse">
-                <img src="./images/icon-ellipsis.svg" alt="---" />
-              </button>
-            </section>
-          </div>
-        </div>
+<div class="card work" style="background: var(--work)">
+  <img class="card__accent" src="./images/icon-work.svg" alt="" />
+  <div class="card__overlay">
+    <div class="card__flairs">
+      <h4 class="card__category">Work</h4>
+      <button class="dots">
+        <img src="./images/icon-ellipsis.svg" alt="..." />
+      </button>
+    </div>
+    <div class="card__info">
+      <h1>32hrs</h1>
+      <p>Last Week - 36hrs</p>
+    </div>
+  </div>
+</div>
 */

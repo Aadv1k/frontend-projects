@@ -129,6 +129,13 @@ body.dark {
   text-decoration: underline;
 }
 
+.card-container a::after {
+    content: '\f35d';
+    font: normal normal normal 11px/1 FontAwesome;
+    text-decoration: none;
+    margin-left: 3px;
+}
+
 @media only screen and (max-width: 751px) {
   .card-container {
     justify-content: center;

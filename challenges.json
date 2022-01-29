@@ -1,8 +1,20 @@
 [
+
+    {
+        "title": "Time tracking dashboard",
+        "image": "./fem-time-td/design/desktop-preview.jpg",
+        "labels": ["Html", "CSS", "JavaScript", "Junior"],
+        "links": {
+            "Live url": "./fem-time-td/index.html",
+            "GitHub": "",
+            "Challenge": ""
+        }
+    },
+
     {
         "title": "Nft preview component",
         "image": "./fem-nft-pc/design/desktop-preview.jpg",
-        "labels": ["Html", "CSS", "JavaScript"],
+        "labels": ["Html", "CSS", "JavaScript", "Newbie"],
         "links": {
             "Live url": "./fem-nft-pc/index.html",
             "GitHub": "",
@@ -13,7 +25,7 @@
     {
         "title": "Order summary component",
         "image": "./fem-order-sc/design/desktop-preview.jpg",
-        "labels": ["Html", "CSS", "JavaScript"],
+        "labels": ["Html", "CSS", "JavaScript", "Newbie"],
         "links": {
             "Live url": "./fem-order-sc/index.html",
             "GitHub": "",
@@ -24,7 +36,7 @@
     {
         "title": "Stats preview component",
         "image": "./fem-stats-pc/design/desktop-preview.jpg",
-        "labels": ["Html", "CSS", "JavaScript"],
+        "labels": ["Html", "CSS", "JavaScript", "Newbie"],
         "links": {
             "Live url": "./fem-stats-pc/index.html",
             "GitHub": "",
@@ -35,14 +47,11 @@
     {
         "title": "3 Column card component",
         "image": "./fem-3colpcc/design/desktop-preview.jpg",
-        "labels": ["Html", "CSS", "JavaScript"],
+        "labels": ["Html", "CSS", "JavaScript", "Newbie"],
         "links": {
             "Live url": "./fem-3colpcc/index.html",
             "GitHub": "",
             "Challenge": ""
         }
     }
-
-
-
 ]
