@@ -148,9 +148,36 @@ body.dark {
     min-width: 95%;
   }
   .card__title {
-    font-size: 1.4em;
+    font-size: 1.1em;
+  }
+
+  .card__links {
+      font-size: .9em;
+  }
+
+  .navbar {
+      padding: 1.5em .5em;
+      text-align: center;
+  }
+
+  
+.nav__links a {
+    font-size: 1.5em;
+}
+
+  .navbar h1 {
+      font-size: 1.5em;
+  }
+
+  .card__labels {
+    font-size: .8em;
   }
 
 
+    .card__content {
+      display: flex;
+      flex-direction: column;
+      padding: 1em .5em;
+    }
 
 }
