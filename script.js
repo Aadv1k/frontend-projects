@@ -1,32 +1,31 @@
-let container = document.getElementsByClassName('card-container')[0]
+let container = document.getElementsByClassName("card-container")[0];
 
-const response = await fetch('challenges.json');
+const response = await fetch("challenges.json");
 let data = await response.json();
 
-let htmlChunk = ""
+let htmlChunk = "";
 for (let i = 0; i < data.length; i++) {
-    let linkChunk = ""
-    let flairChunk = ""
+  let linkChunk = "";
+  let flairChunk = "";
 
-    let title = data[i].title;
-    let imgUrl = data[i].image;
-    let labels = data[i].labels;
-    let links = data[i].links;
+  let title = data[i].title;
+  let imgUrl = data[i].image;
+  let labels = data[i].labels;
+  let links = data[i].links;
 
-    for (const label of labels) {
-       flairChunk += `
+  for (const label of labels) {
+    flairChunk += `
            <span class="flair">${label}</span>
-        `
-    }
+        `;
+  }
 
-
-    for (const link in links) {
-        linkChunk += `
+  for (const link in links) {
+    linkChunk += `
         <a href="${links[link]}">${link}</a>
-        `
-    }
+        `;
+  }
 
-    htmlChunk += `
+  htmlChunk += `
     <div class="card">
       <div class="card__img">
         <img src="${imgUrl}" alt="" />
@@ -44,12 +43,10 @@ for (let i = 0; i < data.length; i++) {
         </div>
       </div>
       </div>
-    `
+    `;
 }
 
-
-
-container.innerHTML = htmlChunk
+container.innerHTML = htmlChunk;
 
 /*
 
