@@ -1,0 +1,203 @@
+/* Fraunces; Barlow */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+:root {
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --graphic-design-text: hsl(167, 40%, 24%);
+  --photography-text: hsl(198, 62%, 26%);
+
+  --footer: hsl(168, 34%, 41%);
+
+  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+
+  --f-medium: 600;
+  --tf-bold: 700;
+  --tf-bolder: 900;
+  --blue: rgb(60, 189, 254);
+
+  --alt-font: Fraunces;
+  --main-font: Barlow;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+main {
+  position: relative;
+  text-align: center;
+  background: var(--blue);
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: skyblue;
+  padding: 1.5em 2rem;
+  background: var(--blue);
+}
+
+.show {
+  left: 50% !important;
+}
+
+.nav__list {
+  font-family: var(--main-font);
+  font-weight: var(--f-medium);
+
+  position: absolute;
+  top: 15%;
+  left: 150%;
+  transform: translateX(-50%);
+  background: var(--white);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  gap: 2rem;
+  width: calc(90% - 2rem);
+  list-style: none;
+  transition: 0.5s ease-in-out;
+  font-size: 0.9rem;
+}
+
+.nav__list::before {
+  /* TODO - Implement this */
+  content: "";
+  width: 0px;
+  height: 0px;
+  top: -25px;
+  right: 0;
+  position: absolute;
+}
+
+.contact {
+  background: var(--yellow);
+  padding: 1.2em 2em;
+  border-radius: 2rem;
+  color: black;
+  font-family: var(--alt-font);
+  font-weight: var(--tf-bold);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: black !important;
+}
+
+.nav__list li a {
+  text-decoration: none;
+  color: var(--grayish-blue);
+}
+
+.logo {
+  width: 100px;
+  height: fit-content;
+}
+
+button.hamburger {
+  background: none;
+  border: none;
+}
+
+.main__container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  gap: 1em;
+}
+
+.main__title {
+  font-size: calc(5vw + 20px);
+  color: var(--white);
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-weight: var(--tf-bolder);
+  text-align: center;
+  font-family: var(--alt-font);
+}
+
+.main__arrow {
+  width: 30px;
+}
+
+.mobile__header {
+  width: 100%;
+  max-width: 500px;
+  vertical-align: bottom;
+}
+
+.desktop__header {
+  display: none;
+}
+
+@media only screen and (min-width: 800px) {
+  .desktop__header {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile__header {
+    display: none;
+  }
+  .main__container {
+    width: 100%;
+    top: 40%;
+  }
+
+  .main__title {
+    font-size: calc(3vw + 15px);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .navbar {
+    width: 100%;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .nav__list {
+    position: static;
+    flex-direction: row;
+    padding: 0;
+    font-weight: 400;
+    width: fit-content;
+    background: none;
+    gap: 1.5rem;
+    transform: none;
+    margin-right: 4.5rem;
+  }
+
+  .contact {
+    background: var(--white);
+    padding: 1.1em 1.5em;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+
+  .nav__list li a {
+    color: white;
+  }
+}

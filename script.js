@@ -5,13 +5,13 @@ let data = await response.json();
 
 let htmlChunk = "";
 for (let i = 0; i < data.length; i++) {
-  let linkChunk = "";
-  let flairChunk = "";
+  let linkChunk = "",
+      flairChunk = "";
 
-  let title = data[i].title;
-  let imgUrl = data[i].image;
-  let labels = data[i].labels;
-  let links = data[i].links;
+  let title = data[i].title,
+      imgUrl = data[i].image,
+      labels = data[i].labels,
+      links = data[i].links;
 
   for (const label of labels) {
     flairChunk += `
@@ -45,4 +45,4 @@ for (let i = 0; i < data.length; i++) {
     `;
 }
 
-container.innerHTML = htmlChunk;
+window.onload = () => container.innerHTML = htmlChunk;
