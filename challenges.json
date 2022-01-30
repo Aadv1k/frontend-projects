@@ -6,7 +6,7 @@
         "labels": ["Html", "CSS", "JavaScript", "Junior"],
         "links": {
             "Live url": "./fem-time-td/index.html",
-            "GitHub": "",
+            "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-time-td",
             "Challenge": ""
         }
     },
@@ -17,7 +17,7 @@
         "labels": ["Html", "CSS", "JavaScript", "Newbie"],
         "links": {
             "Live url": "./fem-nft-pc/index.html",
-            "GitHub": "",
+            "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-nft-pc",
             "Challenge": ""
         }
     },
@@ -28,7 +28,7 @@
         "labels": ["Html", "CSS", "JavaScript", "Newbie"],
         "links": {
             "Live url": "./fem-order-sc/index.html",
-            "GitHub": "",
+            "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-order-sc",
             "Challenge": ""
         }
     },
@@ -39,7 +39,7 @@
         "labels": ["Html", "CSS", "JavaScript", "Newbie"],
         "links": {
             "Live url": "./fem-stats-pc/index.html",
-            "GitHub": "",
+            "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-stats-pc",
             "Challenge": ""
         }
     },
@@ -50,7 +50,7 @@
         "labels": ["Html", "CSS", "JavaScript", "Newbie"],
         "links": {
             "Live url": "./fem-3colpcc/index.html",
-            "GitHub": "",
+            "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-3colpcc",
             "Challenge": ""
         }
     }
