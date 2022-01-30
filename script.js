@@ -45,4 +45,4 @@ for (let i = 0; i < data.length; i++) {
     `;
 }
 
-window.onload = () => container.innerHTML = htmlChunk;
+container.innerHTML = htmlChunk;
