@@ -195,9 +195,9 @@ button.hamburger {
 .transform__text,
 .stand__text {
   font-family: var(--main-font);
-  font-weight: var(--f-medium);
-  color: var(--grayish-blue);
+  color: var(--dark-grayish-blue);
   line-height: 1.5rem;
+  font-size: 0.9rem;
 }
 
 .learn {
@@ -234,51 +234,50 @@ button.hamburger {
 /*************************/
 /*************************/
 
-
-.graphic, .photography {
-    position: relative;
+.graphic,
+.photography {
+  position: relative;
 }
 
 .graphic__desktop,
-.photography__desktop { 
-    display: none;
+.photography__desktop {
+  display: none;
 }
 
-
 .graphic__mobile,
-.photography__mobile { 
-    display: block;
-    width: 100%;
+.photography__mobile {
+  display: block;
+  width: 100%;
 }
 
 .graphic__content,
 .photography__content {
-    position: absolute;
-    bottom: 10%;
-    text-align: center;
-    width: 90%;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  bottom: 10%;
+  text-align: center;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .content__title {
-    font-family: var(--alt-font);
-    opacity: .7;
-    margin-bottom: 1rem;
+  font-family: var(--alt-font);
+  opacity: 0.7;
+  margin-bottom: 1rem;
 }
 
 .photo-content__text {
-    font-family: var(--main-font);
-    line-height: 1.5rem;
-    color: var(--photography-text);
-    font-size: .9rem;
+  font-family: var(--main-font);
+  line-height: 1.5rem;
+  color: var(--photography-text);
+  font-size: 0.9rem;
 }
 
 .graphic-content__text {
-    font-family: var(--main-font);
-    line-height: 1.5rem;
-    color: var(--graphic-design-text);
-    font-size: .9rem;
+  font-family: var(--main-font);
+  line-height: 1.5rem;
+  color: var(--graphic-design-text);
+  font-size: 0.9rem;
 }
 
 @media only screen and (min-width: 850px) {
@@ -338,6 +337,12 @@ button.hamburger {
     color: white;
   }
 
+  /***********************/
+  /***********************/
+  /******Mid-Section******/
+  /***********************/
+  /***********************/
+
   .transform,
   .stand-out {
     display: grid;
@@ -382,5 +387,51 @@ button.hamburger {
 
   .learn:hover:before {
     display: none;
+  }
+
+  /*************************/
+  /*************************/
+  /******Lower-Section******/
+  /*************************/
+  /*************************/
+
+  .graphic__mobile,
+  .photography__mobile {
+    display: none;
+  }
+
+  .graphic__desktop,
+  .photography__desktop {
+    display: block;
+    width: 100%;
+  }
+
+  .section-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content__title {
+    font-family: var(--alt-font);
+    opacity: 0.7;
+    margin-bottom: 1rem;
+  }
+
+  .graphic__content,
+  .photography__content {
+    bottom: 5%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .photo-content__text {
+    width: 80%;
+  }
+
+  .graphic-content__text {
+    width: 80%;
   }
 }
