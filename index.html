@@ -19,6 +19,11 @@
     <nav class="navbar">
       <h1 class="nav__title">Aadvik's Frontend projects</h1>
       <ul class="nav__links">
+
+          <button class="theme-toggle" href="" id="toggle">
+              <i class="fas"  id="themeIcon"></i>
+          </button>
+
         <a class="github" href="https://github.com/aadv1k" target="_blank">
           <i class="fab fa-github"></i>
         </a>
@@ -35,9 +40,7 @@
   <script src="script.js" type="module"></script>
 
   <script>
-    theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-    document.getElementsByTagName("body")[0].classList.add(theme);
+    
+
   </script>
 </html>

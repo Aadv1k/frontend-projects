@@ -6,12 +6,12 @@ let data = await response.json();
 let htmlChunk = "";
 for (let i = 0; i < data.length; i++) {
   let linkChunk = "",
-      flairChunk = "";
+    flairChunk = "";
 
   let title = data[i].title,
-      imgUrl = data[i].image,
-      labels = data[i].labels,
-      links = data[i].links;
+    imgUrl = data[i].image,
+    labels = data[i].labels,
+    links = data[i].links;
 
   for (const label of labels) {
     flairChunk += `
@@ -46,3 +46,26 @@ for (let i = 0; i < data.length; i++) {
 }
 
 container.innerHTML = htmlChunk;
+
+let themeToggle = document.getElementById("toggle");
+let icon = document.getElementById("themeIcon");
+let target = document.getElementsByTagName("body")[0];
+
+let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+  ? "dark"
+  : "light";
+
+target.classList.toggle(theme);
+
+let innerIcon = theme == "dark" ? "fa-sun" : "fa-moon";
+icon.classList.add(innerIcon);
+
+themeToggle.addEventListener("click", () => {
+  let currentIcon = icon.classList.contains("fa-sun") ? "fa-sun" : "fa-moon";
+  let altIcon = currentIcon == "fa-sun" ? "fa-moon" : "fa-sun";
+
+  target.classList.toggle("dark");
+
+  icon.classList.remove(currentIcon);
+  icon.classList.add(altIcon);
+});

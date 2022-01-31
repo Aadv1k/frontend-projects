@@ -55,6 +55,20 @@ body.dark {
   opacity: 0.6;
 }
 
+.theme-toggle {
+    margin-right: 20px;
+    opacity: 0.6;
+    background: none;
+    color: var(--content);
+    font-size: 2em;
+    border: none;
+    cursor: pointer;
+}
+
+.nav__links button:hover {
+  opacity: 1;
+}
+
 .nav__links a:hover {
   opacity: 1;
 }
@@ -174,6 +188,11 @@ body.dark {
   .nav__links a {
     font-size: 1.5em;
     margin: 0;
+  }
+
+  .theme-toggle {
+    margin: 0;
+    font-size: 1.5em;
   }
 
   .navbar h1 {
