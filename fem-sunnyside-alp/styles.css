@@ -280,6 +280,30 @@ button.hamburger {
   font-size: 0.9rem;
 }
 
+/*****************************/
+/*****************************/
+/******Lower Mid section******/
+/*****************************/
+/*****************************/
+
+.section-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+.section-3__testimonials {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    width: 80%;
+}
+
+
 @media only screen and (min-width: 850px) {
   .desktop__header {
     display: block;
