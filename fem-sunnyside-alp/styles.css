@@ -146,6 +146,77 @@ button.hamburger {
   display: none;
 }
 
+/***********************/
+/***********************/
+/******Mid-Section******/
+/***********************/
+/***********************/
+
+.transform,
+.stand-out {
+  display: flex;
+  flex-direction: column;
+}
+
+.transform__desktop,
+.stand__desktop {
+  display: none;
+}
+
+.transform__content,
+.stand__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2.5rem;
+  padding: 2rem 1rem;
+}
+
+.transform__title,
+.stand__title {
+  font-size: 1.7rem;
+  font-weight: var(--tf-bold);
+  font-family: var(--alt-font);
+}
+
+.transform__text,
+.stand__text {
+  font-family: var(--main-font);
+  font-weight: var(--f-medium);
+  color: var(--grayish-blue);
+  line-height: 1.5rem;
+}
+
+.learn {
+  text-decoration: none;
+  font-family: var(--alt-font);
+  color: black;
+  letter-spacing: 2px;
+  font-weight: var(--tf-bold);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  position: relative;
+}
+
+.learn::before {
+  content: "";
+  height: 7px;
+  width: 0;
+  background: var(--yellow);
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  opacity: 0.2;
+}
+
+.learn:hover:before {
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
 @media only screen and (min-width: 800px) {
   .desktop__header {
     display: block;
@@ -192,12 +263,56 @@ button.hamburger {
 
   .contact {
     background: var(--white);
-    padding: 1.1em 1.5em;
+    padding: 0.9em 1.5em;
     text-transform: uppercase;
     color: var(--blue);
+    font-size: 0.8rem;
   }
 
   .nav__list li a {
     color: white;
   }
+
+  .stand__mobile,
+  .transform__mobile {
+    display: block;
+    width: 50%;
+  }
+
+  .transform *,
+  .stand-out * {
+      /* outline: 1px solid black; */
+  }
+
+  .transform,
+  .stand-out {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+
+  .stand-out {
+    flex-direction: row;
+
+  }
+
+
+  .transform__content, .stand__content {
+     width: 50%;
+     align-items: baseline;
+     text-align: left;
+  }
+
+  .transform__title, .stand__title {
+     font-size: 1.5rem;
+     width: 80%;
+  }
+
+  .transform__text, .stand__text {
+     font-size: .9rem;
+     width: 80%;
+  }
+
+  
+
 }
