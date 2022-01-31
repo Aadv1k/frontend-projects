@@ -1,4 +1,7 @@
-# A collection of my frontend projects.
+A collection of my frontend projects I occasionally work on.
 
-## URLs
-[Live dashboard url](https://aadv1k-frontend.netlify.app/)
+[***Url to my dashboard***](https://aadv1k-frontend.netlify.app/)
+
+Tech stack:
+- Brain 🧠
+(also JavaScript, css and html)

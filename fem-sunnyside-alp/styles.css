@@ -163,6 +163,17 @@ button.hamburger {
   display: none;
 }
 
+.stand__img-container,
+.transform__img-container {
+  width: 100%;
+}
+
+.stand__mobile,
+.transform__mobile {
+  display: block;
+  width: 100%;
+}
+
 .transform__content,
 .stand__content {
   display: flex;
@@ -217,7 +228,28 @@ button.hamburger {
   transition: width 0.5s ease-in-out;
 }
 
-@media only screen and (min-width: 800px) {
+***************************
+***************************
+/******Lower-Section******/
+***************************
+***************************
+
+.graphic img:nth-child(1) {
+    display: none;
+}
+
+.photo__desktop {
+    display: none;
+}
+
+.graphic__mobile, .photo__mobile {
+    display: none;
+    width: 100%;
+}
+
+
+
+@media only screen and (min-width: 850px) {
   .desktop__header {
     display: block;
     width: 100%;
@@ -226,6 +258,7 @@ button.hamburger {
   .mobile__header {
     display: none;
   }
+
   .main__container {
     width: 100%;
     top: 40%;
@@ -273,46 +306,55 @@ button.hamburger {
     color: white;
   }
 
-  .stand__mobile,
-  .transform__mobile {
-    display: block;
-    width: 50%;
-  }
-
-  .transform *,
-  .stand-out * {
-      /* outline: 1px solid black; */
-  }
-
   .transform,
   .stand-out {
-    display: flex;
     flex-direction: row-reverse;
-    width: 100%;
   }
 
   .stand-out {
     flex-direction: row;
-
   }
 
-
-  .transform__content, .stand__content {
-     width: 50%;
-     align-items: baseline;
-     text-align: left;
+  .stand__img-container,
+  .transform__img-container {
+    /* TODO: Messy handling of flex. */
+    width: 52.5%;
   }
 
-  .transform__title, .stand__title {
-     font-size: 1.5rem;
-     width: 80%;
+  .stand__mobile,
+  .transform__mobile {
+    display: none;
   }
 
-  .transform__text, .stand__text {
-     font-size: .9rem;
-     width: 80%;
+  .stand__desktop,
+  .transform__desktop {
+    display: block;
+    width: 100%;
   }
 
-  
+  .transform__content,
+  .stand__content {
+    width: 50%;
+    gap: 2rem;
 
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+  }
+
+  .transform__title,
+  .stand__title {
+    font-size: 1.5rem;
+    width: 80%;
+  }
+
+  .transform__text,
+  .stand__text {
+    font-size: 0.9rem;
+    width: 80%;
+    font-weight: var(--f-medium);
+  }
 }
+
+
+
