@@ -234,20 +234,52 @@ button.hamburger {
 /*************************/
 /*************************/
 
-.graphic img:nth-child(1) {
+
+.graphic, .photography {
+    position: relative;
+}
+
+.graphic__desktop,
+.photography__desktop { 
     display: none;
 }
 
-.photo__desktop {
-    display: none;
-}
 
-.graphic__mobile, .photo__mobile {
-    display: none;
+.graphic__mobile,
+.photography__mobile { 
+    display: block;
     width: 100%;
 }
 
+.graphic__content,
+.photography__content {
+    position: absolute;
+    bottom: 10%;
+    text-align: center;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+.content__title {
+    font-family: var(--alt-font);
+    opacity: .7;
+    margin-bottom: 1rem;
+}
+
+.photo-content__text {
+    font-family: var(--main-font);
+    line-height: 1.5rem;
+    color: var(--photography-text);
+    font-size: .9rem;
+}
+
+.graphic-content__text {
+    font-family: var(--main-font);
+    line-height: 1.5rem;
+    color: var(--graphic-design-text);
+    font-size: .9rem;
+}
 
 @media only screen and (min-width: 850px) {
   .desktop__header {
@@ -306,57 +338,49 @@ button.hamburger {
     color: white;
   }
 
-
-
-  .transform, .stand-out {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+  .transform,
+  .stand-out {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .transform__img-container {
-      order: 1;
+    order: 1;
   }
 
-
-  .transform__content, .stand__content {
-      text-align: left;
-      padding: 0;
-      align-items: center;
-      gap: 2rem;
+  .transform__content,
+  .stand__content {
+    padding: 0;
+    align-items: center;
+    gap: 2rem;
+    text-align: left;
   }
 
-  .transform__title, .stand__title {
-      font-size: 2rem;
-      font-weight: var(--tf-bolder);
+  .transform__title,
+  .stand__title {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: var(--tf-bolder);
+    width: 80%;
   }
 
-  .transform__text, .stand__text {
-      font-size: 1rem;
+  .transform__text,
+  .stand__text {
+    text-align: left;
+    font-size: 1rem;
+    width: 80%;
   }
 
-  .transform__content *:not(a) , .stand__content *:not(a) {
-      width: 60%;
+  /* messy handling of the link, should have wrapped the entire text content in
+   * its own wrapper, but hey ¯\_(ツ)_/¯ */
+
+  .learn {
+    width: 80%;
   }
 
   /* Sadly due to this we have to remove ::before element */
-  .learn {
-    
-  }
 
   .learn:hover:before {
-      display: none;
+    display: none;
   }
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
