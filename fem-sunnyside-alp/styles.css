@@ -228,11 +228,11 @@ button.hamburger {
   transition: width 0.5s ease-in-out;
 }
 
-***************************
-***************************
+/*************************/
+/*************************/
 /******Lower-Section******/
-***************************
-***************************
+/*************************/
+/*************************/
 
 .graphic img:nth-child(1) {
     display: none;
@@ -306,54 +306,56 @@ button.hamburger {
     color: white;
   }
 
-  .transform,
-  .stand-out {
-    flex-direction: row-reverse;
+
+
+  .transform, .stand-out {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
   }
 
-  .stand-out {
-    flex-direction: row;
-  }
-
-  .stand__img-container,
   .transform__img-container {
-    /* TODO: Messy handling of flex. */
-    width: 52.5%;
+      order: 1;
   }
 
-  .stand__mobile,
-  .transform__mobile {
-    display: none;
+
+  .transform__content, .stand__content {
+      text-align: left;
+      padding: 0;
+      align-items: center;
+      gap: 2rem;
   }
 
-  .stand__desktop,
-  .transform__desktop {
-    display: block;
-    width: 100%;
+  .transform__title, .stand__title {
+      font-size: 2rem;
+      font-weight: var(--tf-bolder);
   }
 
-  .transform__content,
-  .stand__content {
-    width: 50%;
-    gap: 2rem;
-
-    align-items: center;
-    text-align: left;
-    justify-content: center;
+  .transform__text, .stand__text {
+      font-size: 1rem;
   }
 
-  .transform__title,
-  .stand__title {
-    font-size: 1.5rem;
-    width: 80%;
+  .transform__content *:not(a) , .stand__content *:not(a) {
+      width: 60%;
   }
 
-  .transform__text,
-  .stand__text {
-    font-size: 0.9rem;
-    width: 80%;
-    font-weight: var(--f-medium);
+  /* Sadly due to this we have to remove ::before element */
+  .learn {
+    
   }
+
+  .learn:hover:before {
+      display: none;
+  }
+
+
+
+
+
+
+
+
+
+
 }
 
 
