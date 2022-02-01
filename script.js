@@ -1,3 +1,26 @@
+let themeToggle = document.getElementById("toggle");
+let icon = document.getElementById("themeIcon");
+let target = document.getElementsByTagName("body")[0];
+
+let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+  ? "dark"
+  : "light";
+
+target.classList.toggle(theme);
+
+let innerIcon = theme == "dark" ? "fa-sun" : "fa-moon";
+icon.classList.add(innerIcon);
+
+themeToggle.addEventListener("click", () => {
+  let currentIcon = icon.classList.contains("fa-sun") ? "fa-sun" : "fa-moon";
+  let altIcon = currentIcon == "fa-sun" ? "fa-moon" : "fa-sun";
+
+  target.classList.toggle("dark");
+
+  icon.classList.remove(currentIcon);
+  icon.classList.add(altIcon);
+});
+
 let container = document.getElementsByClassName("card-container")[0];
 
 const response = await fetch("challenges.json");
@@ -46,26 +69,3 @@ for (let i = 0; i < data.length; i++) {
 }
 
 container.innerHTML = htmlChunk;
-
-let themeToggle = document.getElementById("toggle");
-let icon = document.getElementById("themeIcon");
-let target = document.getElementsByTagName("body")[0];
-
-let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-  ? "dark"
-  : "light";
-
-target.classList.toggle(theme);
-
-let innerIcon = theme == "dark" ? "fa-sun" : "fa-moon";
-icon.classList.add(innerIcon);
-
-themeToggle.addEventListener("click", () => {
-  let currentIcon = icon.classList.contains("fa-sun") ? "fa-sun" : "fa-moon";
-  let altIcon = currentIcon == "fa-sun" ? "fa-moon" : "fa-sun";
-
-  target.classList.toggle("dark");
-
-  icon.classList.remove(currentIcon);
-  icon.classList.add(altIcon);
-});
