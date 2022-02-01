@@ -2,10 +2,10 @@
   {
     "title": "Sunnyside landing page",
     "image": "./fem-sunnyside-alp/design/desktop-preview.jpg",
-    "labels": ["In-Progress", "Html", "CSS", "JavaScript", "Junior"],
+    "labels": ["Html", "CSS", "JavaScript", "Junior"],
     "links": {
       "Live url": "./fem-sunnyside-alp/index.html",
-      "GitHub": "",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-sunnyside-alp",
       "Challenge": ""
     }
   },

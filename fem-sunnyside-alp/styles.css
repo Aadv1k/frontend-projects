@@ -8,11 +8,11 @@
   --photography-text: hsl(198, 62%, 26%);
 
   --footer: hsl(168, 34%, 41%);
+  --footer-bg: hsl(210, 4%, 67%);
 
   --very-dark-desaturated-blue: hsl(212, 27%, 19%);
   --very-dark-grayish-blue: hsl(213, 9%, 39%);
   --dark-grayish-blue: hsl(232, 10%, 55%);
-  --grayish-blue: hsl(210, 4%, 67%);
   --white: hsl(0, 0%, 100%);
 
   --f-medium: 600;
@@ -95,9 +95,10 @@ main {
   color: black !important;
 }
 
+
 .nav__list li a {
   text-decoration: none;
-  color: var(--grayish-blue);
+  color: var(--footer);
 }
 
 .logo {
@@ -287,20 +288,156 @@ button.hamburger {
 /*****************************/
 
 .section-3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  gap: 2rem;
 }
 
 .section-3__testimonials {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 3rem;
+  width: 80%;
+}
+
+.section-3__title {
+  font-family: var(--alt-font);
+  margin: 1.5rem 0;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: var(--dark-grayish-blue);
+  font-weight: var(--tf-bold);
+}
+
+.client {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.client__text {
+  font-family: var(--main-font);
+  line-height: 1.5rem;
+  color: var(--very-dark-grayish-blue);
+  font-size: 0.9rem;
+  max-width: 40ch;
+}
+
+.client__profile {
+  width: 30%;
+  max-width: 100px;
+  border-radius: 50%;
+}
+
+.client__initials h2 {
+  font-size: 1.1rem;
+  color: var(--very-dark-desaturated-blue);
+  font-family: var(--alt-font);
+  margin-bottom: 0.5rem;
+}
+
+.client__initials small {
+  font-family: var(--main-font);
+  color: var(--footer);
+}
+
+/***********************/
+/***********************/
+/******Img gallery******/
+/***********************/
+/***********************/
+
+.section-4__desktop {
+  display: none;
+}
+
+.section-4__mobile {
+  width: 100%;
+}
+
+.section-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+/******************/
+/******************/
+/******Footer******/
+/******************/
+/******************/
+
+footer {
+    background: var(--footer-bg);
     display: flex;
     flex-direction: column;
-    text-align: center;
-    gap: 3rem;
-    width: 80%;
+    padding: 4rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+    position: relative;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer__nav {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer__nav li a {
+    color: var(--very-dark-grayish-blue);
+    font-family: var(--main-font);
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+.social__links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.social__links svg {
+    fill: #2C7566;
+}
+
+.social__links svg:hover {
+    fill: var(--white) !important;
+}
+
+.footer__nav li a:hover {
+    color: var(--white);
+}
+
+.footer__logo {
+    width: 140px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 5%;
+    font-size: .9rem;
+    font-family: var(--main-font);
+    color: var(--very-dark-grayish-blue);
+}
+
+.attribution a {
+    color: var(--very-dark-grayish-blue);
 }
 
 
@@ -355,6 +492,12 @@ button.hamburger {
     text-transform: uppercase;
     color: var(--blue);
     font-size: 0.8rem;
+  }
+
+  .contact:hover {
+      color: white !important;
+    transition: .2s ease-in;
+      background: hsla(0, 0%, 100%, 0.3);
   }
 
   .nav__list li a {
@@ -457,5 +600,39 @@ button.hamburger {
 
   .graphic-content__text {
     width: 80%;
+  }
+
+  /*****************************/
+  /*****************************/
+  /******Lower Mid section******/
+  /*****************************/
+  /*****************************/
+
+  .section-3 {
+    padding: 5rem;
+  }
+
+  .section-3__testimonials {
+    flex-direction: row;
+  }
+
+  /***********************/
+  /***********************/
+  /******Img gallery******/
+  /***********************/
+  /***********************/
+
+  .section-4__desktop {
+    display: block;
+    width: 100%;
+  }
+
+  .section-4__mobile {
+    display: none;
+  }
+
+  .section-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 }

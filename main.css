@@ -1,7 +1,7 @@
 :root {
   --svelte-flair: hsl(14, 100%, 50%);
   --vue-flair: hsl(153, 48%, 46%);
-  --js-flair: hsl(54, 83%, 51%);
+  --javascript: hsl(54, 83%, 51%);
   --css-flair: hsl(205, 79%, 38%);
   --html-flair: hsl(13, 71%, 49%);
 }
@@ -78,6 +78,7 @@ body.dark {
   border-radius: 10%;
   padding: 3px;
   color: var(--content);
+  font-size: .9em;
 }
 
 .card__labels {
