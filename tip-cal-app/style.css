@@ -1,0 +1,128 @@
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(184, 14%, 56%);
+
+  --main-bg: hsl(185, 41%, 84%);
+  --input-bg: hsl(189, 41%, 97%);
+
+  --white: hsl(0, 0%, 100%);
+
+  --main-font: JetBrains Mono, Monospace;
+  --f-wght-thin: 400;
+  --f-wght-medium: 500;
+  --f-wght-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  padding-top: 3rem;
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  background: var(--main-bg);
+  font-family: var(--main-font);
+}
+
+h1 {
+  font-weight: var(--f-wght-thin);
+  font-size: 1.5em;
+  line-height: 1em;
+  letter-spacing: 10px;
+}
+
+section.calc {
+  background: var(--white);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 2em 0;
+  align-items: center;
+}
+
+.calc > div {
+  width: 90%;
+}
+
+h4 {
+  font-size: 0.9em;
+  color: var(--dark-grayish-cyan);
+  font-weight: var(--f-wght-bold);
+}
+
+.calc input {
+  width: 100%;
+  padding: 1em 1em;
+  background: whitesmoke;
+  border: none;
+  margin-top: 1em;
+}
+
+.tip__btns {
+  width: 100%;
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5em;
+}
+
+.tip__btns button {
+  border: none;
+  border-radius: 3px;
+  height: 1.9em;
+  font-size: 20px;
+  background: var(--very-dark-cyan);
+  color: var(--white);
+  font-family: var(--main-font);
+}
+
+.tip__btns .tip__btn--custom {
+  background: lightgrey;
+  color: black;
+  font-weight: var(--f-wght-medium);
+}
+
+.calc__result {
+  background: var(--very-dark-cyan);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 0;
+  border-radius: 10px;
+}
+
+.calc__result > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.calc__result h3 {
+  font-size: 1em;
+}
+
+.calc__result small {
+  color: var(--dark-grayish-cyan);
+}
+
+h2.result__value {
+  font-size: 1.5em;
+  color: var(--dark-grayish-cyan);
+}
+
+@media screen and (min-width: 600px) {
+  .tip__btns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
