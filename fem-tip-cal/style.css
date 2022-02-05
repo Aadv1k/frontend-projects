@@ -54,6 +54,12 @@ section.calc {
   width: 90%;
 }
 
+.ghost__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 h4 {
   font-size: 0.9em;
   color: var(--dark-grayish-cyan);
@@ -62,10 +68,29 @@ h4 {
 
 .calc input {
   width: 100%;
-  padding: 1em 1em;
+  padding: .5em 1em;
   background: whitesmoke;
   border: none;
   margin-top: 1em;
+  font-family: var(--main-font);
+  outline: none; 
+  text-align: right;
+  font-weight: var(--f-wght-bolder);
+  border-radius: 5px;
+}
+
+.calc input:hover {
+  outline: 2px solid var(--dark-grayish-cyan);
+}
+
+.calc input:focus {
+  outline: 2px solid var(--dark-grayish-cyan);
+}
+
+.calc button:hover {
+  cursor: pointer;
+  background: var(--main-bg);
+  color: black;
 }
 
 .tip__btns {
@@ -78,12 +103,17 @@ h4 {
 
 .tip__btns button {
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   height: 1.9em;
   font-size: 20px;
   background: var(--very-dark-cyan);
   color: var(--white);
   font-family: var(--main-font);
+}
+
+.calc input.btns__custom {
+  margin-top: 0;
+  border-radius: 5px;
 }
 
 .tip__btns .tip__btn--custom {
@@ -92,16 +122,45 @@ h4 {
   font-weight: var(--f-wght-medium);
 }
 
+.tip__btn--active {
+  background: var(--dark-grayish-cyan) !important;
+  color: black !important;
+}
+
+.calc__people {
+  position: relative;
+}
+
+.calc__people input.people__input:invalid {
+  outline: 2px solid red;
+}
+
+
+.people__warning {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  font-size: .8em;
+  color: red;
+  display: none;
+}
+
+.people__warning--display {
+  display: block;
+}
+
 .calc__result {
   background: var(--very-dark-cyan);
   color: white;
   display: flex;
   flex-direction: column;
   padding: 1.5em 0;
+  justify-content: space-between;
   border-radius: 10px;
+  gap: 1.5em;
 }
 
-.calc__result > div {
+.calc__text > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -116,6 +175,17 @@ h4 {
   color: var(--dark-grayish-cyan);
 }
 
+.calc__reset {
+  margin: 0 2.5em;
+  padding: .9em 0;
+  background: var(--dark-grayish-cyan);
+  border: none;
+  font-size: .9em;
+  text-transform: uppercase;
+  color: var(--very-dark-cyan);
+  font-family: var(--main-font);
+}
+
 h2.result__value {
   font-size: 1.5em;
   color: var(--dark-grayish-cyan);
@@ -125,4 +195,47 @@ h2.result__value {
   .tip__btns {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+
+
+@media screen and (min-width: 900px) {
+
+  body {
+    background: var(--main-bg);
+  }
+
+  main {
+    position: absolute;
+    margin: 0;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 4em;
+  }
+
+  section.calc {
+    flex-direction: row;
+    width: 80%;
+    gap: 0;
+    max-width: 800px;
+    align-items: normal;
+  }
+
+  .tip__btns button {
+    font-size: 15px;
+    height: 2.1em;
+  }
+
+  .ghost__container {
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .calc__result {
+    margin: 1em 2em;
+  }
+
 }

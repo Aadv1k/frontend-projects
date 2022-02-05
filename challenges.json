@@ -1,11 +1,11 @@
 [
   {
     "title": "Tip calculator app",
-    "image": "./tip-cal-app/design/desktop-preview.jpg",
-    "labels": ["In-Progress", "Html", "CSS", "JavaScript", "Junior"],
+    "image": "./fem-tip-cal/design/desktop-preview.jpg",
+    "labels": ["Html", "CSS", "JavaScript", "Junior"],
     "links": {
-      "Live url": "./tip-cal-app/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/tip-cal-app",
+      "Live url": "./fem-tip-cal/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-tip-cal",
       "Challenge": ""
     }
   },

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="style.css" media="all" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>SPLI<br />TTER</h1>
+
+      <section class="calc">
+        <div class="ghost__container">
+
+        <div class="calc__bill">
+          <h4>Bill</h4>
+          <input type="text" placeholder="$" class="bill__input">
+        </div>
+
+        <div class="calc__tip">
+          <h4>Select tip %</h4>
+
+          <div class="tip__btns">
+            <button class="tip__btn" value="5">5%</button>
+            <button class="tip__btn" value="10">10%</button>
+            <button class="tip__btn" value="15">15%</button>
+            <button class="tip__btn" value="25">25%</button>
+            <button class="tip__btn" value="50">50%</button>
+            <input class="btns__custom" placeholder="Custom" >
+          </div>
+        </div>
+
+        <div class="calc__people">
+          <h4>Number of People</h4>
+          <small class="people__warning">can't be 0</small>
+          <input type="text" placeholder="👤" class="people__input" pattern="[1-99]+">
+        </div>
+
+        </div>
+
+        <div class="calc__result">
+          <div class="calc__text">
+            <div class="result__row">
+              <div class="row__text">
+                <h3>Tip Amount</h3>
+                <small>/ person</small>
+              </div>
+              <h2 class="result__value">$00.00</h2>
+            </div>
+
+            <div class="result__row">
+              <div class="row__text">
+                <h3>Total</h3>
+                <small>/ person</small>
+              </div>
+              <h2 class="result__value">$00.00</h2>
+            </div>
+          </div>
+          <button class="calc__reset">reset</button>
+          </div>
+      </section>
+    </main>
+  </body>
+</html>
