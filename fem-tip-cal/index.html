@@ -25,10 +25,9 @@
         <div class="ghost__container">
 
         <div class="calc__bill">
-          <h4>Bill</h4>
-          <input type="text" placeholder="$" class="bill__input">
+          <label>Bill</label>
+          <input type="tel"  class="bill__input" pattern="[0-999]+">
         </div>
-
         <div class="calc__tip">
           <h4>Select tip %</h4>
 
@@ -38,14 +37,14 @@
             <button class="tip__btn" value="15">15%</button>
             <button class="tip__btn" value="25">25%</button>
             <button class="tip__btn" value="50">50%</button>
-            <input class="btns__custom" placeholder="Custom" >
+            <input class="btns__custom"  placeholder="Custom" type="tel">
           </div>
         </div>
 
         <div class="calc__people">
-          <h4>Number of People</h4>
+          <label>Number of People</label>
           <small class="people__warning">can't be 0</small>
-          <input type="text" placeholder="👤" class="people__input" pattern="[1-99]+">
+          <input type="tel"  class="people__input" pattern="[1-99]+">
         </div>
 
         </div>

@@ -67,15 +67,14 @@ function resetAll() {
   billInput.value = ""
 
   setValue(bill, tip, people);
-  document.querySelector('[value="5"]').classList.add("tip__btn--active");
+  document.querySelector('[value="15"]').classList.add("tip__btn--active");
 }
 
 function setValue(bill, tip, people) {
   let tipAmount = ((tip * bill) / 100 ) / people;
+  let splitBill = (parseInt(bill) + parseInt(tip)) / people;
 
-  // Seems to be wrong
-  let splitBill = (bill + tip) / people;
 
-  document.querySelectorAll(".result__value")[0].innerText = "$" + tipAmount.toFixed(3);
+  document.querySelectorAll(".result__value")[0].innerText = "$" + tipAmount.toFixed(2);
   document.querySelectorAll(".result__value")[1].innerText = "$" + splitBill.toFixed(2);
 }

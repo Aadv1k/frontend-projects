@@ -1,3 +1,6 @@
+/* Space mono; 400, 700 */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 :root {
   --strong-cyan: hsl(172, 67%, 45%);
   --very-dark-cyan: hsl(183, 100%, 15%);
@@ -8,7 +11,7 @@
 
   --white: hsl(0, 0%, 100%);
 
-  --main-font: JetBrains Mono, Monospace;
+  --main-font: 'Space Mono', Monospace;
   --f-wght-thin: 400;
   --f-wght-medium: 500;
   --f-wght-bold: 700;
@@ -34,14 +37,16 @@ main {
 }
 
 h1 {
-  font-weight: var(--f-wght-thin);
+  font-weight: var(--f-wght-bold);
   font-size: 1.5em;
-  line-height: 1em;
+  line-height: 1.3em;
   letter-spacing: 10px;
+  color: var(--very-dark-cyan);
 }
 
 section.calc {
   background: var(--white);
+  border-radius: 20px 20px 0 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -60,23 +65,89 @@ section.calc {
   gap: 1em;
 }
 
-h4 {
+h4,label {
   font-size: 0.9em;
   color: var(--dark-grayish-cyan);
   font-weight: var(--f-wght-bold);
 }
 
-.calc input {
+
+.calc__bill {
+  position: relative;
+}
+
+.calc__bill::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 15%;
+  left: 3%;
+  background-image: url(./images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.calc__people {
+  position: relative;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.calc__people::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 15%;
+  left: 3%;
+  background-image: url(./images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.calc input:not(.btns__custom) {
   width: 100%;
-  padding: .5em 1em;
+  padding: .4em 1em;
   background: whitesmoke;
   border: none;
   margin-top: 1em;
   font-family: var(--main-font);
   outline: none; 
+  font-size: 1.3em;
   text-align: right;
   font-weight: var(--f-wght-bolder);
   border-radius: 5px;
+}
+
+.btns__custom {
+  width: 100%;
+  padding: .2em 1em;
+  background: whitesmoke;
+  border: none;
+  margin-top: 1em;
+  font-family: var(--main-font);
+  outline: none; 
+  font-size: 1em;
+  text-align: right;
+  font-weight: var(--f-wght-bolder);
+  border-radius: 5px;
+}
+
+.btns__custom::placeholder {
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: var(--f-wght-bold);
 }
 
 .calc input:hover {
@@ -105,7 +176,8 @@ h4 {
   border: none;
   border-radius: 5px;
   height: 1.9em;
-  font-size: 20px;
+  font-size: 1.5em;
+  font-weight: var(--f-wght-bold);
   background: var(--very-dark-cyan);
   color: var(--white);
   font-family: var(--main-font);
@@ -124,14 +196,16 @@ h4 {
 
 .tip__btn--active {
   background: var(--dark-grayish-cyan) !important;
-  color: black !important;
+  color: var(--very-dark-cyan) !important;
 }
 
 .calc__people {
   position: relative;
 }
 
-.calc__people input.people__input:invalid {
+.calc__people input.people__input:invalid,
+.calc__bill input.bill__input:invalid
+{
   outline: 2px solid red;
 }
 
@@ -217,6 +291,7 @@ h2.result__value {
   section.calc {
     flex-direction: row;
     width: 80%;
+    border-radius: 20px;
     gap: 0;
     max-width: 800px;
     align-items: normal;
@@ -225,6 +300,11 @@ h2.result__value {
   .tip__btns button {
     font-size: 15px;
     height: 2.1em;
+  }
+
+
+  .btns__custom::placeholder {
+    font-size: 1em;
   }
 
   .ghost__container {
