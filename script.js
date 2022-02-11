@@ -1,3 +1,85 @@
+let data = [
+  {
+    "title": "Tip calculator app",
+    "image": "./fem-tip-cal/design/desktop-preview.jpg",
+    "labels": ["Html", "CSS", "JavaScript", "Junior"],
+    "links": {
+      "Live url": "./fem-tip-cal/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-tip-cal",
+      "Challenge": ""
+    }
+  },
+
+  {
+    "title": "Sunnyside landing page",
+    "image": "./fem-sunnyside-alp/design/desktop-preview.jpg",
+    "labels": ["Html", "CSS", "JavaScript", "Junior"],
+    "links": {
+      "Live url": "./fem-sunnyside-alp/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-sunnyside-alp",
+      "Challenge": ""
+    }
+  },
+
+  {
+    "title": "Time tracking dashboard",
+    "image": "./fem-time-td/design/desktop-preview.jpg",
+    "labels": ["Html", "CSS", "JavaScript", "Junior"],
+    "links": {
+      "Live url": "./fem-time-td/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-time-td",
+      "Challenge": ""
+    }
+  },
+
+  {
+    "title": "Nft preview component",
+    "image": "./fem-nft-pc/design/desktop-preview.jpg",
+    "labels": ["Html", "CSS", "Newbie"],
+    "links": {
+      "Live url": "./fem-nft-pc/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-nft-pc",
+      "Challenge": ""
+    }
+  },
+
+  {
+    "title": "Order summary component",
+    "image": "./fem-order-sc/design/desktop-preview.jpg",
+    "labels": ["Html", "CSS", "Newbie"],
+    "links": {
+      "Live url": "./fem-order-sc/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-order-sc",
+      "Challenge": ""
+    }
+  },
+
+  {
+    "title": "Stats preview component",
+    "image": "./fem-stats-pc/design/desktop-preview.jpg",
+    "labels": ["Html", "CSS", "Newbie"],
+    "links": {
+      "Live url": "./fem-stats-pc/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-stats-pc",
+      "Challenge": ""
+    }
+  },
+
+  {
+    "title": "3 Column card component",
+    "image": "./fem-3colpcc/design/desktop-preview.jpg",
+    "labels": ["Html", "CSS", "Newbie"],
+    "links": {
+      "Live url": "./fem-3colpcc/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-3colpcc",
+      "Challenge": ""
+    }
+  }
+]
+
+
+
+
 let themeToggle = document.getElementById("toggle");
 let icon = document.getElementById("themeIcon");
 let target = document.getElementsByTagName("body")[0];
@@ -22,10 +104,6 @@ themeToggle.addEventListener("click", () => {
 });
 
 let container = document.getElementsByClassName("card-container")[0];
-
-const response = await fetch("challenges.json");
-let data = await response.json();
-
 let htmlChunk = "";
 for (let i = 0; i < data.length; i++) {
   let linkChunk = "",
@@ -69,3 +147,4 @@ for (let i = 0; i < data.length; i++) {
 }
 
 container.innerHTML = htmlChunk;
+

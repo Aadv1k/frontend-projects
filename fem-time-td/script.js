@@ -1,32 +1,32 @@
-let taskList = document.getElementById("taskList")
-let btns = document.getElementsByClassName("btn")
+let taskList = document.getElementById("taskList");
+let btns = document.getElementsByClassName("btn");
 
-let response = await fetch('./data.json');
-let data = await response.json()
-
+let response = await fetch("./data.json");
+let data = await response.json();
 
 function getData(data, type) {
-    let htmlChunk = "";
-    for (const task of data) {
-        let title = task['title'];
-        let metatitle = task['title'] == 'Self Care' ? 'self-care' : task['title'].toLowerCase();
-        let date;
+  let htmlChunk = "";
+  for (const task of data) {
+    let title = task["title"];
+    let metatitle =
+      task["title"] == "Self Care" ? "self-care" : task["title"].toLowerCase();
+    let date;
 
-        switch (type) {
-            case 'weekly':
-                date = "Last Week"
-                break;
-            case 'monthly':
-                date = "Last Month"
-                break;
-            default:
-                date = "Yesterday"
-        }
+    switch (type) {
+      case "weekly":
+        date = "Last Week";
+        break;
+      case "monthly":
+        date = "Last Month";
+        break;
+      default:
+        date = "Yesterday";
+    }
 
-        let timeframe = task['timeframes'][type];
-        let imgUrl = `./images/icon-${metatitle}.svg`
+    let timeframe = task["timeframes"][type];
+    let imgUrl = `./images/icon-${metatitle}.svg`;
 
-        htmlChunk += `<div class="card" style="background: var(--${metatitle})">
+    htmlChunk += `<div class="card" style="background: var(--${metatitle})">
           <img class="card__accent" src="${imgUrl}" alt="" />
           <div class="card__overlay">
             <div class="card__flairs">
@@ -37,23 +37,22 @@ function getData(data, type) {
             </div>
             <div class="card__info">
               <h1>${timeframe.current}hrs</h1>
-              <p>${date} - ${timeframe['previous']}hrs</p>
+              <p>${date} - ${timeframe["previous"]}hrs</p>
             </div>
           </div>
-        </div>`
-    };
+        </div>`;
+  }
 
-    return htmlChunk;
+  return htmlChunk;
 }
 
-
-taskList.innerHTML = getData(data, 'weekly')
+taskList.innerHTML = getData(data, "weekly");
 
 for (const item of btns) {
-    item.addEventListener("click", () => {
-       taskList.innerHTML = getData(data, item.getAttribute('value'))
-    })
-};
+  item.addEventListener("click", () => {
+    taskList.innerHTML = getData(data, item.getAttribute("value"));
+  });
+}
 
 /*
 <div class="card work" style="background: var(--work)">

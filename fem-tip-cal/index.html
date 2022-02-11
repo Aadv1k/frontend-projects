@@ -23,30 +23,28 @@
 
       <section class="calc">
         <div class="ghost__container">
-
-        <div class="calc__bill">
-          <label>Bill</label>
-          <input type="tel"  class="bill__input" pattern="[0-999]+">
-        </div>
-        <div class="calc__tip">
-          <h4>Select tip %</h4>
-
-          <div class="tip__btns">
-            <button class="tip__btn" value="5">5%</button>
-            <button class="tip__btn" value="10">10%</button>
-            <button class="tip__btn" value="15">15%</button>
-            <button class="tip__btn" value="25">25%</button>
-            <button class="tip__btn" value="50">50%</button>
-            <input class="btns__custom"  placeholder="Custom" type="tel">
+          <div class="calc__bill">
+            <label>Bill</label>
+            <input type="tel" class="bill__input" pattern="[0-999]+" />
           </div>
-        </div>
+          <div class="calc__tip">
+            <h4>Select tip %</h4>
 
-        <div class="calc__people">
-          <label>Number of People</label>
-          <small class="people__warning">can't be 0</small>
-          <input type="tel"  class="people__input" pattern="[1-99]+">
-        </div>
+            <div class="tip__btns">
+              <button class="tip__btn" value="5">5%</button>
+              <button class="tip__btn" value="10">10%</button>
+              <button class="tip__btn" value="15">15%</button>
+              <button class="tip__btn" value="25">25%</button>
+              <button class="tip__btn" value="50">50%</button>
+              <input class="btns__custom" placeholder="Custom" type="tel" />
+            </div>
+          </div>
 
+          <div class="calc__people">
+            <label>Number of People</label>
+            <small class="people__warning">can't be 0</small>
+            <input type="tel" class="people__input" pattern="[1-99]+" />
+          </div>
         </div>
 
         <div class="calc__result">
@@ -68,7 +66,7 @@
             </div>
           </div>
           <button class="calc__reset">reset</button>
-          </div>
+        </div>
       </section>
     </main>
   </body>

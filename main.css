@@ -56,13 +56,13 @@ body.dark {
 }
 
 .theme-toggle {
-    margin-right: 20px;
-    opacity: 0.6;
-    background: none;
-    color: var(--content);
-    font-size: 2em;
-    border: none;
-    cursor: pointer;
+  margin-right: 20px;
+  opacity: 0.6;
+  background: none;
+  color: var(--content);
+  font-size: 2em;
+  border: none;
+  cursor: pointer;
 }
 
 .nav__links button:hover {
@@ -76,9 +76,9 @@ body.dark {
 .flair {
   background: var(--main-bg);
   border-radius: 10%;
-  padding: 3px;
+  padding: 3px 4px;
   color: var(--content);
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 .card__labels {
@@ -86,7 +86,7 @@ body.dark {
   padding-top: 0.5em;
   display: flex;
   column-gap: 1em;
-  row-gap: .5em;
+  row-gap: 0.5em;
   flex-wrap: wrap;
 }
 
@@ -147,10 +147,10 @@ body.dark {
 }
 
 .card-container a::after {
-    content: '\f35d';
-    font: normal normal normal 11px/1 FontAwesome;
-    text-decoration: none;
-    margin-left: 3px;
+  content: "\f35d";
+  font: normal normal normal 11px/1 FontAwesome;
+  text-decoration: none;
+  margin-left: 3px;
 }
 
 @media only screen and (max-width: 751px) {
