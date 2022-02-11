@@ -4,6 +4,8 @@
   --javascript: hsl(54, 83%, 51%);
   --css-flair: hsl(205, 79%, 38%);
   --html-flair: hsl(13, 71%, 49%);
+  
+  --border-radius: 15px;
 }
 
 * {
@@ -91,7 +93,7 @@ body.dark {
 }
 
 .card-container {
-  margin: 2em 1em;
+  margin: 2em auto;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -103,7 +105,20 @@ body.dark {
   width: 30%;
   max-width: 350px;
   background: var(--card-bg);
-  border: 0.1px solid var(--primary);
+  border-radius: var(--border-radius);
+
+  transition: box-shadow .5s ease-in;
+  transition: transform .5s ease-in;
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px black;
+  transform: translateY(-2%);
+
+}
+
+.card img {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .card__content {
@@ -171,7 +186,7 @@ body.dark {
 
 @media only screen and (max-width: 381px) {
   .card {
-    min-width: 95%;
+    min-width: 85%;
   }
   .card__title {
     font-size: 1.1em;

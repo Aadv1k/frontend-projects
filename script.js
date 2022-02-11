@@ -123,7 +123,7 @@ for (let i = 0; i < data.length; i++) {
   for (const link in links) {
     if (links[link] !== "") {
       linkChunk += `
-        <a href="${links[link]}">${link}</a>
+        <a target="_blank "href="${links[link]}">${link}</a>
         `;
     }
   }
