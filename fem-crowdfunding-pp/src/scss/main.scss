@@ -1,0 +1,373 @@
+// @use not supported in libsass
+@import "variables";
+@import "reset";
+@import "components";
+
+body {
+  font-family: $main-font;
+  background: whitesmoke;
+}
+
+.none {
+  display: none !important;
+}
+
+.open {
+  top: 200% !important;
+}
+
+button.ham {
+  background: none;
+  border: none;
+}
+
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background: none;
+
+  > img {
+    height: fit-content;
+  }
+
+  > * {
+    padding: 2rem 1.5rem;
+  }
+
+  ul {
+    list-style: none;
+    position: absolute;
+
+    top: -150%;
+    box-shadow: 0 10px 35px black;
+    transition: top 0.5s ease;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    background-color: white;
+    width: 90%;
+    border-radius: 10px;
+    font-size: 1.1rem;
+
+    li {
+      padding: 1.2em 1em;
+
+      a {
+        text-decoration: none;
+        color: $black;
+        font-weight: $f-medium;
+      }
+    }
+
+    li:not(:last-child) {
+      border-bottom: 0.2px solid lighten($black, 70%);
+    }
+  }
+}
+
+.img__mobile {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.img__desktop {
+  display: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4.5em;
+  gap: 2em;
+  background: whitesmoke;
+
+  .section__1 {
+    position: relative;
+    padding: 3em 1.5em;
+
+    margin-top: -4em;
+
+    .sec1__logo {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 0;
+      width: 75px;
+    }
+
+    .sec1__btns {
+      display: flex;
+      gap: 1em;
+      width: 100%;
+      max-width: 500px;
+      justify-content: center;
+
+      img {
+        vertical-align: bottom;
+      }
+
+      button {
+        border: none;
+        border-radius: 50%;
+        font-weight: $f-bold;
+      }
+
+      .bookmark {
+        display: flex;
+        align-items: center;
+        border-radius: 40px;
+        gap: 1em;
+        justify-content: center;
+
+        span {
+          display: none;
+          padding-right: 1em;
+          color: $dark-gray;
+          font-weight: $f-bold;
+        }
+      }
+
+      .back__project {
+        border-radius: 30px;
+        width: 65%;
+        max-width: 200px;
+      }
+    }
+  }
+}
+
+.section__2 {
+  gap: 2em;
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  hr {
+    width: $hr-width;
+    height: 0.5px;
+    background: lighten($black, 60%);
+    border: none;
+  }
+
+  .progress {
+    background: whitesmoke;
+    border-radius: 30px;
+    width: 80%;
+    height: 15px;
+
+    .overlay {
+      width: 60%;
+      background: $moderate-cyan;
+      border-radius: inherit;
+      height: inherit;
+    }
+  }
+}
+
+.section__3 {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  gap: 1.5em;
+
+  .sec3__content {
+    display: flex;
+    flex-direction: column;
+    gap: inherit;
+  }
+
+  .card {
+    width: 98%;
+  }
+}
+
+.section__3 .card {
+  text-align: left;
+  padding: 1em 1.5em;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: .5em;
+  }
+
+  span {
+    color: $moderate-cyan;
+    font-size: 1.1em;
+  }
+
+  > * {
+    width: 100%;
+    padding: 1em 0;
+  }
+
+  .pricing {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+  
+    h1 {
+      font-size: 2.4em;
+    }
+  
+    small {
+      font-size: 1.2em;
+      color: $moderate-cyan;
+    }
+  }
+
+  .btn-primary {
+    border-radius: 30px;
+    padding: 1em 1.5em;
+    width: fit-content;
+    max-width: 200px;
+    margin-top: 1em;
+  }
+} 
+
+.modal__overlay {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+////////////////////
+////////////////////
+// Bigger screens //
+////////////////////
+////////////////////
+
+@media screen and (min-width: 800px) {
+  nav.navbar {
+    button {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      position: static;
+      box-shadow: none;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 0;
+      transform: none;
+      background: none;
+      width: auto;
+
+      li:not(:last-child) {
+        border-bottom: none;
+      }
+
+      li {
+        padding: 0;
+      }
+
+      li a {
+        color: white;
+        padding: 1em;
+        border: none;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: lightgray;
+        }
+      }
+    }
+  }
+
+  .img__mobile {
+    display: none;
+  }
+
+  .img__desktop {
+    display: block;
+    width: 100%;
+  }
+
+  .section__1 {
+    .sec1__btns {
+      justify-content: space-between;
+
+      .bookmark {
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .section__2 {
+    // Hacky, but hey, it works.
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2em 2.5em;
+    text-align: left;
+
+    .progress {
+      width: 100%;
+    }
+
+    hr {
+      height: $hr-width;
+      width: 1px;
+    }
+  }
+
+  .section__3 .card {
+    > div {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .btn-primary {
+      margin-top: 0;
+    }
+  }
+}
+
+//////////////////////////
+//////////////////////////
+// SMALLER SCREEN SIZES//
+//////////////////////////
+//////////////////////////
+
+@media screen and (max-width: 360px) {
+  .container {
+    
+    .card:nth-child(1) {
+      padding: 3em 0.5em;
+    }
+    
+
+    .card {
+      padding: 1.5em 0.5em;
+      width: 90%;
+    }
+  }
+
+  .sec1__btns {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    .back__project {
+      padding: 0.5em;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.card {
+  background: white;
+  border: 0.2px solid lighten($black, 70%);
+  border-radius: 10px;
+  gap: 1.5em;
+  max-width: 900px;
+  padding: 1.5em $card-padding;
+  text-align: center;
+  width: 80%;
+
+  p {
+    color: $dark-gray;
+    line-height: $card-line-height;
+  }
+
+  h2 {
+    font-size: $card-title-font;
+  }
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-primary {
+  border-radius: 30px;
+  background-color: $moderate-cyan;
+  border: none;
+  color: white;
+  font-family: $main-font;
+  font-size: $btn-font;
+
+  &:not(.btn-primary--disabled):is(:focus, :hover) {
+    background-color: darken($moderate-cyan, 10%);
+    cursor: pointer;
+  }
+
+  &:not(.btn-primary--disabled):focus {
+    outline: none;
+  }
+}
+
+.btn-primary--disabled, .card--disabled {
+  opacity: 0.5;
+  user-select: none;
+
+  &:focus {
+    outline: none;
+  }
+}

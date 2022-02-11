@@ -1,5 +1,16 @@
 let data = [
   {
+    "title": "Crowdfunding project page",
+    "image": "./fem-crowdfunding-pp/design/desktop-preview.jpg",
+    "labels": ["Html", "Scss", "JavaScript", "Gulp", "Junior"],
+    "links": {
+      "Live url": "./fem-crowdfunding-pp/dist/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-crowdfunding-pp",
+      "Challenge": ""
+    }
+  },
+
+  {
     "title": "Tip calculator app",
     "image": "./fem-tip-cal/design/desktop-preview.jpg",
     "labels": ["Html", "CSS", "JavaScript", "Junior"],
