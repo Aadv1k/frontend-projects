@@ -1,0 +1,155 @@
+:root {
+  --quote-fnt: hsl(193, 38%, 86%);
+
+  --main-bg: rgb(32,38,50);
+  --card-bg: rgb(49,58,73);
+  --green-accent: rgb(82,255,171);
+
+  --quote-fnt-size: 28px;
+  --main-fnt: 'Segoe UI', ariel, sans-sherif;
+  --fnt-bold: 800;
+}
+
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--main-bg);
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--main-fnt);
+}
+
+
+.card {
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  background: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  gap: 2em;
+  padding: 2em 1.5em 4em 1.5em;
+
+  position: relative;
+
+}
+
+.card__advice-id {
+  color: var(--green-accent);
+  text-transform: Uppercase;
+  letter-spacing: 2px;
+  font-size: .8em;
+}
+
+.card__advice {
+  font-size: var(--quote-fnt-size);
+  color: var(--quote-fnt);
+  quotes: "“" "”";
+}
+
+.card__advice::after {
+  content: close-quote;
+}
+
+.card__advice::before {
+  content: open-quote;
+}
+
+.card .divider__desktop {
+  display: none;
+}
+
+.card .divider__mobile {
+  width: 100%;
+  min-width: 250px;
+}
+
+.card__button {
+  position: absolute;
+  bottom: -10%;
+  background: var(--green-accent);
+  border: none;
+  padding: 1.3em;
+  border-radius: 50%;
+  transition: box-shadow .2s ease-in-out;
+  cursor: pointer;
+}
+
+.disable {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+.card__button:hover {
+  box-shadow: 0 0 15px 0 var(--green-accent);
+}
+
+
+.card__button img {
+  vertical-align: bottom;
+  transition: transform .2s ease-in-out;
+}
+
+
+
+/******************/
+/******************/
+/* BIGGER SCREENS */
+/******************/
+/******************/
+
+@media only screen and (min-width: 530px) {
+  .card {
+    padding: 2em 2.5em 4em 2.5em;
+  }
+
+  .card .divider__mobile {
+    display: none;
+  }
+
+  .card .divider__desktop {
+    display: block;
+  }
+
+}
+
+
+/******************/
+/******************/
+/* SMALLER SCREENS */
+/******************/
+/******************/
+
+
+
+@media only screen and (max-width: 340px) {
+  .card {
+    padding: 2em 1em 4em 1em;
+  }
+
+  .card__advice {
+    font-size: 1.5em;
+  }
+
+  .card__button {
+    padding: 1em;
+  }
+
+  .card .divider__mobile {
+    min-width: 100px;
+  }
+}

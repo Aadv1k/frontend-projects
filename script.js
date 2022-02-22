@@ -1,4 +1,17 @@
 let data = [
+
+  {
+    "title": "Advice generator app",
+    "image": "./fem-advice-app/design/desktop-preview.jpg",
+    "labels": ["Html", "JavaScript", "CSS", "Junior"],
+    "links": {
+      "Live url": "./fem-advice-app/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-advice-app",
+      "Challenge": ""
+    }
+  },
+
+
   {
     "title": "Crowdfunding project page",
     "image": "./fem-crowdfunding-pp/design/desktop-preview.jpg",
