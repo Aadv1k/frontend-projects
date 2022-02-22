@@ -44,7 +44,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: skyblue;
+  background: var(--blue);
   padding: 1.5em 2rem;
   background: var(--blue);
 }
@@ -92,7 +92,6 @@ main {
   font-weight: var(--tf-bold);
   text-transform: uppercase;
   font-size: 0.8rem;
-  color: black !important;
 }
 
 

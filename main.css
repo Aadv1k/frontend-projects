@@ -17,12 +17,13 @@ body {
   background: var(--main-bg);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
-  --main-bg: #f4f2f1;
-  --card-bg: #fff;
+  --main-bg: #e9e5e2;
+  --card-bg: #f4f2f1;
   --title: #000000;
   --content: #605e5c;
   --darker-primary: #106ebe;
   --primary: #0078d7;
+  --box-shadow: 0 5px 15px 0 rgba(19, 19, 19, 0.1)
 }
 
 body.dark {
@@ -34,6 +35,7 @@ body.dark {
 
   --darker-primary: #106ebe;
   --primary: #0078d7;
+  --box-shadow: 0 5px 15px 0 rgba(19, 19, 19, 0.5)
 }
 
 .navbar {
@@ -106,14 +108,14 @@ body.dark {
   max-width: 350px;
   background: var(--card-bg);
   border-radius: var(--border-radius);
-  border: .2px solid var(--primary);
+  /* border: .2px solid var(--primary); */
 
   transition: box-shadow .5s ease-in;
   transition: transform .1s ease-in;
 }
 
 .card:hover {
-  box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.2);
+  box-shadow: var(--box-shadow);
   transform: translateY(-2%);
 
 }

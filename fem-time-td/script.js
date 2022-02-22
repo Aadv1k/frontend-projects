@@ -53,21 +53,3 @@ for (const item of btns) {
     taskList.innerHTML = getData(data, item.getAttribute("value"));
   });
 }
-
-/*
-<div class="card work" style="background: var(--work)">
-  <img class="card__accent" src="./images/icon-work.svg" alt="" />
-  <div class="card__overlay">
-    <div class="card__flairs">
-      <h4 class="card__category">Work</h4>
-      <button class="dots">
-        <img src="./images/icon-ellipsis.svg" alt="..." />
-      </button>
-    </div>
-    <div class="card__info">
-      <h1>32hrs</h1>
-      <p>Last Week - 36hrs</p>
-    </div>
-  </div>
-</div>
-*/

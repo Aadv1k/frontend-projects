@@ -1,0 +1,22 @@
+{
+  "name": "fem-interactive-pc",
+  "version": "1.0.0",
+  "description": "Oh hey, have you tried 🍪 with ☕ ?",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.49.7",
+    "uglify": "^0.1.5"
+  }
+}
