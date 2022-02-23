@@ -103,10 +103,10 @@ main {
 
 .hero__card {
   width: 90%;
-  max-width: 600px;
+  max-width: 550px;
   border-radius: 10px;
   background: white;
-  box-shadow: 0 0 15px rgba(41, 51, 86, 0.3);
+  box-shadow: 0 0 50px rgba(41, 51, 86, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,7 +216,7 @@ main {
   font-size: 0.8em;
   border-radius: 20px;
 }
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 400px) {
   .card__billing-plan .billing-plan__plan--yearly::after {
     left: 50%;
     top: 130%;
