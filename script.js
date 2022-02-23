@@ -1,4 +1,14 @@
 let data = [
+  {
+    "title": "Interactive pricing component",
+    "image": "./fem-interactive-pc/design/desktop-preview.jpg",
+    "labels": ["Html", "SCSS", "Junior"],
+    "links": {
+      "Live url": "./fem-interactive-pc/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-interactive-pc",
+      "Challenge": ""
+    }
+  },
 
   {
     "title": "Advice generator app",
