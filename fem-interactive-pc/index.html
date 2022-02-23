@@ -28,7 +28,7 @@
           <span class="card__page-views">100k Pageviews</span>
 
           <div class="card__pricing">
-            <h1>$16.00</h1>
+            <h1>$<span id="pricing">16</span>.00</h1>
             <p class="pricing__type">/ month</p>
           </div>
         </div>
@@ -40,6 +40,7 @@
             max="100"
             value="50"
             class="slider"
+            step="4"
             id="cardSlider"
           />
         </div>
@@ -69,4 +70,17 @@
       </section>
     </main>
   </body>
+
+  <script>
+    let p = document.getElementById('pricing');
+    let slider = document.getElementById('cardSlider');
+
+    // $16 for 100
+
+    
+    slider.addEventListener('input', () => {
+        p.innerText = slider.value;
+    })
+
+  </script>
 </html>
