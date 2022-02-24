@@ -1,4 +1,16 @@
 let data = [
+
+  {
+    "title": "Testimonials grid section",
+    "image": "./fem-testemonials-grid/design/desktop-preview.jpg",
+    "labels": ["Html", "SCSS", "Junior"],
+    "links": {
+      "Live url": "./fem-testemonials-grid/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-testemonials-grid",
+      "Challenge": ""
+    }
+  },
+
   {
     "title": "Interactive pricing component",
     "image": "./fem-interactive-pc/design/desktop-preview.jpg",
@@ -20,7 +32,6 @@ let data = [
       "Challenge": ""
     }
   },
-
 
   {
     "title": "Crowdfunding project page",
