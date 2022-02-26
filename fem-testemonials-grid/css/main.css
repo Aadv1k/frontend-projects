@@ -160,7 +160,7 @@ main {
     grid-template-areas: "e1 e1" "e2 e3" "e4 e3" "e5 e5";
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   main {
     width: 90%;
     grid-template-columns: 1fr;

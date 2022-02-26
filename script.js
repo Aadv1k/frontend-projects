@@ -1,6 +1,18 @@
 let data = [
 
   {
+    "title": "Social Media Dashboard",
+    "image": "./fem-social-dashboard/design/desktop-preview.jpg",
+    "labels": ["Html", "SCSS", "JavaScript", "Webpack", "Junior"],
+    "links": {
+      "Live url": "./fem-social-dashboard/dist/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-social-dashboard",
+      "Challenge": ""
+    }
+  },
+
+
+  {
     "title": "Testimonials grid section",
     "image": "./fem-testemonials-grid/design/desktop-preview.jpg",
     "labels": ["Html", "SCSS", "Junior"],

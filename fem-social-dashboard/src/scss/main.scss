@@ -1,0 +1,213 @@
+@use "theme" as *;
+@use "variables" as *;
+@use "mixins" as mixin;
+@use "components";
+
+/* TABLE OF CONTENT
+ * L30 - HEAD SECTION
+ * L00 - FOLLOWER SECTION
+ * L143 - OVERVIEW SECTION
+ */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $main-bg;
+  font-family: $main-font;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 40vh;
+    border-radius: 0 0 20px 20px;
+    z-index: -1;
+    background: $top-bg;
+  }
+
+}
+
+main {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  padding-block: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  position: relative;
+  
+}
+
+/****************/
+/****************/
+/* HEAD SECTION */
+/****************/
+/****************/
+
+section.head {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  h3 {
+    color: $text-2;
+    font-size: clamp(1.3em, 3vw + 10px, 2em);
+  }
+
+  p {
+    color: $text-1;
+    font-weight: $f-bold;
+    font-size: 0.9em;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background: $text-1;
+    opacity: 30%;
+    width: 100%;
+    
+  }
+
+  .head__toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .head__toggle label {
+    color: $text-1;
+    font-weight: $f-bold;
+    font-size: 0.9em;
+  }
+
+  input[type="checkbox"] {
+    @include mixin.w-n-h(40, 20);
+    border-radius: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: $toggle;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      @include mixin.w-n-h(16);
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+
+      border-radius: 50%;
+      background: $main-bg;
+      opacity: 90%;
+      transition: 500ms;
+    }
+
+    &:checked::after {
+      left: 55%;
+    }
+  }
+}
+
+/********************/
+/********************/
+/* FOLLOWER SECTION */
+/********************/
+/********************/
+
+section.followers {
+  display: flex;
+  gap: 1.5em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    flex-grow: 2;
+    text-align: center;
+    align-items: center;
+    padding-block: 2em;
+    gap: 1em;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .card .follower p {
+    text-transform: uppercase;
+    color: $text-1;
+    font-size: 0.8em;
+    letter-spacing: 5px;
+  }
+
+  @media only screen and (min-width: 500px) {
+    .card {
+      width: 40%;
+    }
+  }
+
+  @media only screen and (min-width: 900px) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+/********************/
+/********************/
+/* OVERVIEW SECTION */
+/********************/
+/********************/
+
+section.overview {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  h3 {
+    color: $text-2;
+    font-size: clamp(1.3em, 3vw + 10px, 2em);
+  }
+
+  .card > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card {
+    padding: 1.5em;
+    gap: 1em;
+    border-radius: $border-radius;
+    p {
+      font-weight: $f-bold;
+    }
+  }
+
+  .overview__cards {
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(1, 1fr);
+
+    @media only screen and (min-width: 500px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (min-width: 900px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@use "theme" as *;
+@use "variables" as *;
+@use "mixins" as mixin;
+
+.card {
+  background: $card-bg;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  transition: background 300ms;
+  border-radius: 0 0 $border-radius $border-radius;
+
+  &:hover {
+    background: $hover;  
+  }
+
+  h1 {
+    color: $text-2;
+    font-size: 3.2em;
+  }
+
+  p {
+    color: $text-1;
+  }
+
+  .card__link {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+
+    a {
+      color: $text-1;
+      font-weight: $f-bold;
+      text-decoration: none;
+    }
+  }
+
+
+  h2 {
+    color: $text-2;
+    font-size: 2.1em;
+  }
+}
+
+/****************/
+/****************/
+/* CARD ACCENTS */
+/****************/
+/****************/
+
+.card--fb::before {
+  @include mixin.card-accent($facebook);
+}
+
+.card--yt::before {
+  @include mixin.card-accent($youtube);
+}
+
+.card--insta::before {
+  @include mixin.card-accent($instagram);
+}
+
+.card--twt::before {
+  @include mixin.card-accent($twitter);
+}
+
+/********************************/
+/********************************/
+/* Follower increment/Decrement */
+/********************************/
+/********************************/
+
+span.link-up {
+  color: $lime-green;
+  font-weight: $f-bold;
+  font-size: 0.85em;
+  position: relative;
+  padding-left: 1.2em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    @include mixin.w-n-h(10);
+    top: 50%;
+    transform: translateY(-50%);
+    @include mixin.bg-img("../assets/icon-up.svg", no-repeat, center, contain);
+  }
+}
+
+span.link-down {
+  color: $bright-red;
+  font-weight: $f-bold;
+  font-size: 0.85em;
+  position: relative;
+  padding-left: 1.2em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    @include mixin.w-n-h(10);
+    top: 50%;
+    @include mixin.bg-img("../assets/icon-down.svg", no-repeat, center, contain);
+    transform: translateY(-50%);
+  }
+}

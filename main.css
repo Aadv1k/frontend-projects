@@ -4,7 +4,6 @@
   --javascript: hsl(54, 83%, 51%);
   --css-flair: hsl(205, 79%, 38%);
   --html-flair: hsl(13, 71%, 49%);
-  
   --border-radius: 15px;
 }
 
@@ -40,7 +39,7 @@ body.dark {
 
 .navbar {
   display: flex;
-  padding: 1.5em 1em;
+  padding: 1em 1em;
   justify-content: space-between;
   border-bottom: 2px solid var(--darker-primary);
   background: var(--card-bg);
@@ -82,7 +81,7 @@ body.dark {
   border-radius: 10%;
   padding: 3px 4px;
   color: var(--content);
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .card__labels {
@@ -108,7 +107,6 @@ body.dark {
   max-width: 350px;
   background: var(--card-bg);
   border-radius: var(--border-radius);
-  /* border: .2px solid var(--primary); */
 
   transition: box-shadow .5s ease-in;
   transition: transform .1s ease-in;
@@ -122,6 +120,7 @@ body.dark {
 
 .card img {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
+  filter: brightness(90%);
 }
 
 .card__content {
