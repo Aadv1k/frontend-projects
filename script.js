@@ -1,6 +1,18 @@
 let data = [
 
   {
+    "title": "Loopstudios landing page",
+    "image": "./fem-loopstudios-page/design/desktop-preview.jpg",
+    "labels": ["Html", "SCSS", "JavaScript", "Webpack", "Junior"],
+    "links": {
+      "Live url": "./fem-loopstudios-page/dist/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-loopstudios-page",
+      "Challenge": ""
+    }
+  },
+
+
+  {
     "title": "Social Media Dashboard",
     "image": "./fem-social-dashboard/design/desktop-preview.jpg",
     "labels": ["Html", "SCSS", "JavaScript", "Webpack", "Junior"],
