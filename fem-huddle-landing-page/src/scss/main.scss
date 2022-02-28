@@ -1,0 +1,194 @@
+@use 'variables' as *;
+@use 'components';
+
+@mixin bg-img($url, $repeat: no-repeat, $pos: 0 0, $size: auto auto) {
+  background-image: url($url);
+  background-position: $pos;
+  background-repeat: $repeat;
+  background-size: $size;
+}
+
+@mixin w-n-h($wid, $hei: $wid) {
+  width: $wid * 1px;
+  height: $hei * 1px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: $f-regular;
+  background: $very-pale-blue;
+}
+
+main {
+
+  section {
+    margin-bottom: 6em;
+  }
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 1em;
+
+  .logo {
+    width: 150px; 
+  }
+
+  button {
+    padding: .5em 2em;
+  }
+
+  @media screen and (min-width: 700px) {
+    padding: 2.5em 3em;
+  }
+
+}
+
+section.hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 1em;
+
+  .btn-primary {
+    padding: 1.1em 5em;
+    margin-top: 1em;
+  }
+
+  .hero__stats {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 6em;
+    text-align: left;
+
+    h1 {
+      font-size: 3.5em;
+      position: relative;
+    }
+
+
+    .stats__itm:nth-child(1) > h1::before {
+      background: url('../assets/icon-communities.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    } 
+
+    .stats__itm:nth-child(2) > h1::before {
+      background: url('../assets/icon-messages.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    } 
+
+    h1::before {
+      content: '';
+      @include w-n-h(35);
+      top: -30%;
+      position: absolute;
+    }
+
+
+  }
+
+  .hero__img {
+    width: 100%;
+    max-width: 650px;
+    margin-top: 2em;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  >p,>h2 {
+    width: 80%;
+    max-width: 500px;
+  }
+
+  >h2 {
+    max-width: 800px;
+    font-size: clamp(1.5em, 5vw - 10px, 2em);
+  }
+
+  @media screen and (min-width: 700px) {
+    .hero__stats {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 50%;
+      margin-top: 3em;
+    }
+  }
+}
+
+section.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  text-align: center;
+
+  .features__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    gap: 3em;
+    max-width: 500px;
+  }
+
+  .features__row img {
+    width: 80%;
+  }
+
+  @media screen and (min-width: 700px) {
+    text-align: left;
+    gap: 8em;
+
+    .features__row {
+      flex-direction: row;
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    .row__content {
+      width: 70%;
+    }
+
+    .features__row:nth-child(2) {
+      flex-direction: row-reverse;
+    }
+
+    .features__row img {
+      width: 50%;
+    }
+  }
+}
+
+section.build {
+  flex-direction: column;
+  margin: 10em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+
+  h1 {
+    text-align: center;
+  }
+
+  button {
+    padding: 1.1em 5em;
+  }
+
+}

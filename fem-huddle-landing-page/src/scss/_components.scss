@@ -1,0 +1,45 @@
+@use 'variables' as *;
+
+h1,h2 {
+  font-family: $title-font;
+  color: $very-dark-cyan;
+  text-transform: capitalize;
+}
+
+
+p {
+  font-family: $main-font;
+  color: $very-dark-cyan;
+  line-height: 1.5;
+  font-weight: $f-regular;
+}
+
+.btn-primary {
+  border: none;
+  background: $pink;
+  color: lightcyan; 
+  text-transform: capitalize;
+  box-shadow: 0 1px 4px $light-pink;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background .2s ease;
+
+  &:hover {
+    background: $light-pink;
+  }
+}
+
+.btn-primary-no-bg {
+  border: 1px solid $pink;
+  background: none;
+  color: $pink; 
+  text-transform: capitalize;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all .2s ease;
+
+  &:hover {
+    border: 1px solid $light-pink;
+    color: $light-pink;
+  }
+}

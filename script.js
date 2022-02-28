@@ -69,6 +69,17 @@ let data = [
   },
 
   {
+    "title": "Huddle landing page",
+    "image": "./fem-huddle-landing-page/design/desktop-preview.jpg",
+    "labels": ["Html", "Scss", "webpack", "Junior"],
+    "links": {
+      "Live url": "./fem-huddle-landing-page/dist/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-huddle-landing-page",
+      "Challenge": ""
+    }
+  },
+
+  {
     "title": "Tip calculator app",
     "image": "./fem-tip-cal/design/desktop-preview.jpg",
     "labels": ["Html", "CSS", "JavaScript", "Junior"],
