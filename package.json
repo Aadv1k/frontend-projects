@@ -1,0 +1,21 @@
+{
+  "name": "frontend-projects",
+  "workspaces": [
+    "frontendmentor.io/*"
+  ],
+
+  "version": "1.0.0",
+  "description": "A collection of my frontend project",
+  "main": "script.js",
+  "scripts": { },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aadv1k/frontend-projects.git"
+  },
+  "author": "Aadvik <aadv1k@outlook.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/aadv1k/frontend-projects/issues"
+  },
+  "homepage": "https://github.com/aadv1k/frontend-projects#readme"
+}

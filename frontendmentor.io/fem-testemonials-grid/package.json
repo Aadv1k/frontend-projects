@@ -1,0 +1,16 @@
+{
+  "name": "@frontend-projects/fem-testemonials-grid",
+  "version": "1.0.0",
+  "description": "fem-testemonials-grid",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass --update scss/:dist/",
+    "dev": "sass --watch scss/:dist/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.52.1"
+  }
+}
