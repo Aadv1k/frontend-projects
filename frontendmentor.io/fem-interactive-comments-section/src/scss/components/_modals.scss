@@ -1,0 +1,61 @@
+@use "../variables" as *;
+
+section.modals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modals--show {
+  pointer-events: auto !important;
+  opacity: 1 !important;
+}
+
+.modal {
+  background: $white;
+  font-family: $main-fnt;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1.2em;
+  width: 90%;
+  max-width: 30em;
+  border-radius: 0.5vmin;
+
+  h2 {
+    color: $dark-blue;
+    font-weight: map-get($fnt-wght, "bold");
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+  }
+
+  p {
+    color: darken($light-gray, 50%);
+    line-height: 1.3;
+    font-weight: map-get($fnt-wght, "reg");
+    font-size: 1em;
+    word-wrap: anywhere;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+  }
+
+  &__btns .btn {
+    flex: 50%;
+    font-size: 1em;
+    font-weight: map-get($fnt-wght, "med");
+    border-radius: 0.5vmin;
+  }
+}

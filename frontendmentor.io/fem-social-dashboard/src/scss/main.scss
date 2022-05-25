@@ -108,7 +108,7 @@ section.head {
       @include mixin.w-n-h(16);
       position: absolute;
       top: 50%;
-      left: 5%;
+      left: 55%;
       transform: translateY(-50%);
 
       border-radius: 50%;
@@ -118,7 +118,7 @@ section.head {
     }
 
     &:checked::after {
-      left: 55%;
+      left: 5%;
     }
   }
 }

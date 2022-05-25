@@ -1,0 +1,80 @@
+@use "../variables" as *;
+
+$card-brdr: 1vmin;
+$nested-card-width: 90%;
+$nested-card-thread: 105%;
+
+.uname-you {
+  position: relative;
+  margin-right: 2.3em;
+
+  &::after {
+    content: "you";
+    background: $moderate-blue;
+    position: absolute;
+    right: -50%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $white;
+    border-radius: 0.2vmin;
+    font-size: 0.8em;
+    padding: 0.3em 0.5em;
+  }
+}
+
+.card {
+  background: $white;
+  border-radius: $card-brdr;
+  font-family: $main-fnt;
+  width: 100%;
+
+  strong {
+    color: $dark-blue;
+    font-weight: map-get($fnt-wght, "bold");
+  }
+
+  .card__content,
+  p {
+    color: darken($light-gray, 50%);
+    line-height: 1.3;
+    font-weight: map-get($fnt-wght, "reg");
+    font-size: 1em;
+    word-wrap: anywhere;
+  }
+}
+
+.card--nested {
+  width: 100%;
+  align-self: flex-end;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    background-color: darken($light-gray, 20%);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @media screen and (min-width: 400px) {
+    width: $nested-card-width;
+
+    &::before {
+      height: calc(100% + 1em);
+      left: -5%;
+    }
+  }
+}
+
+.content--editable {
+  overflow-y: scroll;
+  word-wrap: anywhere;
+  outline: 1px solid lighten($moderate-blue, 40%);
+  border-radius: 0.5vmin;
+  padding: 0.5em;
+
+  &:focus-within {
+    outline: 1px solid $moderate-blue;
+  }
+}

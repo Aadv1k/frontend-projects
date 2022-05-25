@@ -1,5 +1,16 @@
 let data = [
   {
+    "title": "Interactive comments section",
+    "image": "frontendmentor.io/fem-interactive-comments-section/design/desktop-preview.jpg",
+    "labels": ["Html", "SCSS", "JavaScript", "Webpack", "Intermediate"],
+    "links": {
+      "Live url": "frontendmentor.io/fem-interactive-comments-section/dist/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-loopstudios-page",
+      "Challenge": ""
+    }
+  },
+
+  {
     "title": "Loopstudios landing page",
     "image": "frontendmentor.io/fem-loopstudios-page/design/desktop-preview.jpg",
     "labels": ["Html", "SCSS", "JavaScript", "Webpack", "Junior"],
@@ -60,7 +71,7 @@ let data = [
     "image": "frontendmentor.io/fem-crowdfunding-pp/design/desktop-preview.jpg",
     "labels": ["Html", "Scss", "JavaScript", "Gulp", "Junior"],
     "links": {
-      "Live url": "frontendmentor.io/fem-crowdfunding-pp/dist/index.html",
+      "Live url": "frontendmentor.io/fem-crowdfunding-pp/index.html",
       "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-crowdfunding-pp",
       "Challenge": ""
     }

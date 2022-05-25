@@ -1,0 +1,115 @@
+@use "../variables" as *;
+
+$btn-brdr: 1.1vmin;
+$btn-fnt: 0.9em;
+$btn-icon-size: 15px;
+$btn-primary-width: 100px;
+$btn-opacity: 50%;
+
+.btn {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: $moderate-blue;
+  border-radius: $btn-brdr;
+  color: $white;
+  font-size: $btn-fnt;
+  padding: 1em;
+  width: $btn-primary-width;
+  font-weight: map-get($fnt-wght, "med");
+  text-transform: uppercase;
+  transition: 0.5s opacity;
+
+  &:hover {
+    opacity: $btn-opacity;
+  }
+}
+
+.btn--danger {
+  @extend .btn--primary;
+  background-color: $soft-red;
+  width: fit-content;
+}
+
+.btn--secondary {
+  @extend .btn--primary;
+  background-color: $grayish-blue;
+  width: fit-content;
+}
+
+.btn--reply {
+  color: $moderate-blue;
+  font-size: $btn-fnt;
+  font-weight: map-get($fnt-wght, "bold");
+  text-transform: capitalize;
+  transition: 0.5s opacity;
+  position: relative;
+  // We need to make the margin proportionally smaller
+  margin-left: $btn-icon-size - 2px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: $btn-icon-size;
+    height: $btn-icon-size;
+    top: 50%;
+    left: -42%;
+    transform: translateY(-50%);
+    background: url("../images/icon-reply.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover {
+    opacity: $btn-opacity;
+  }
+}
+
+.btn--delete {
+  @extend .btn--reply;
+  color: $soft-red;
+
+  &::before {
+    background: url("../images/icon-delete.svg");
+    background-repeat: no-repeat;
+    //for some Unknown reason this shifts more than the others (?)
+    left: -30%;
+  }
+}
+
+.btn--edit {
+  @extend .btn--reply;
+  color: $moderate-blue;
+
+  &::before {
+    background: url("../images/icon-edit.svg");
+    background-repeat: no-repeat;
+    left: -60%;
+  }
+}
+
+.btn--plus {
+  background: url("../images/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: $btn-icon-size - 2px;
+  height: $btn-icon-size - 2px;
+  transition: 0.5s opacity;
+
+  &:hover {
+    opacity: $btn-opacity;
+  }
+}
+
+.btn--minus {
+  @extend .btn--plus;
+  background-size: contain;
+  background: url("../images/icon-minus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
