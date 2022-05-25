@@ -15,7 +15,7 @@
   },
   "version": "1.0.0",
   "description": "fem-interactive-comments-section",
-  "name": "fem-interactive-comments-section",
+  "name": "@frontend-projects/fem-interactive-comments-section",
   "scripts": {
     "dev": "webpack serve",
     "build": "webpack --mode=production"

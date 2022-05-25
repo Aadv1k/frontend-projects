@@ -13,7 +13,7 @@ let data = [
   {
     "title": "Loopstudios landing page",
     "image": "frontendmentor.io/fem-loopstudios-page/design/desktop-preview.jpg",
-    "labels": ["Html", "SCSS", "JavaScript", "Webpack", "Junior"],
+    "labels": ["Html", "SCSS", "JavaScript", "Webpack-", "Junior"],
     "links": {
       "Live url": "frontendmentor.io/fem-loopstudios-page/dist/index.html",
       "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-loopstudios-page",
