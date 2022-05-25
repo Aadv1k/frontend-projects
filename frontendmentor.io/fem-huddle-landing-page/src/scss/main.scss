@@ -1,5 +1,5 @@
-@use 'variables' as *;
-@use 'components';
+@use "variables" as *;
+@use "components";
 
 @mixin bg-img($url, $repeat: no-repeat, $pos: 0 0, $size: auto auto) {
   background-image: url($url);
@@ -25,11 +25,9 @@ body {
 }
 
 main {
-
   section {
     margin-bottom: 6em;
   }
-
 }
 
 nav {
@@ -39,17 +37,16 @@ nav {
   padding: 2em 1em;
 
   .logo {
-    width: 150px; 
+    width: 150px;
   }
 
   button {
-    padding: .5em 2em;
+    padding: 0.5em 2em;
   }
 
   @media screen and (min-width: 700px) {
     padding: 2.5em 3em;
   }
-
 }
 
 section.hero {
@@ -78,27 +75,24 @@ section.hero {
       position: relative;
     }
 
-
     .stats__itm:nth-child(1) > h1::before {
-      background: url('../assets/icon-communities.svg');
+      background: url("../assets/icon-communities.svg");
       background-size: contain;
       background-repeat: no-repeat;
-    } 
+    }
 
     .stats__itm:nth-child(2) > h1::before {
-      background: url('../assets/icon-messages.svg');
+      background: url("../assets/icon-messages.svg");
       background-size: contain;
       background-repeat: no-repeat;
-    } 
+    }
 
     h1::before {
-      content: '';
+      content: "";
       @include w-n-h(35);
       top: -30%;
       position: absolute;
     }
-
-
   }
 
   .hero__img {
@@ -111,12 +105,13 @@ section.hero {
     }
   }
 
-  >p,>h2 {
+  > p,
+  > h2 {
     width: 80%;
     max-width: 500px;
   }
 
-  >h2 {
+  > h2 {
     max-width: 800px;
     font-size: clamp(1.5em, 5vw - 10px, 2em);
   }
@@ -190,5 +185,4 @@ section.build {
   button {
     padding: 1.1em 5em;
   }
-
 }

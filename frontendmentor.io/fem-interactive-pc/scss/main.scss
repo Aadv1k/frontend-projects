@@ -1,13 +1,12 @@
-@use 'reset';
-@use 'variables' as *;
-@use 'mixins' as *;
-
+@use "reset";
+@use "variables" as *;
+@use "mixins" as *;
 
 body {
   font-family: $main-font;
   background-color: $main-bg;
 
-  @include bg-img('../images/bg-pattern.svg', no-repeat, top left)
+  @include bg-img("../images/bg-pattern.svg", no-repeat, top left);
 }
 
 main {
@@ -19,9 +18,8 @@ main {
   gap: 2em;
 }
 
-
 .hero__title {
-  @include bg-img('../images/pattern-circles.svg', no-repeat, center, contain);
+  @include bg-img("../images/pattern-circles.svg", no-repeat, center, contain);
   padding: 2.5em 0;
 
   h2 {
@@ -33,8 +31,8 @@ main {
   p {
     line-height: 1.5;
     color: $text;
-    font-size: .9em;
-    margin-top: .5em;
+    font-size: 0.9em;
+    margin-top: 0.5em;
   }
   span {
     display: block;
@@ -47,12 +45,9 @@ main {
 
     span {
       display: inline-block;
-
     }
   }
-
 }
-
 
 .hero__card {
   width: 90%;
@@ -85,7 +80,6 @@ main {
       width: 70%;
     }
   }
-
 }
 
 .card__page-views {
@@ -93,47 +87,45 @@ main {
   text-transform: uppercase;
   font-weight: $fnt-bold;
   letter-spacing: 1.5px;
-  font-size: .85em;
+  font-size: 0.85em;
 }
 
 .card__pricing {
   display: flex;
   align-items: center;
-  gap: .8em;
-  
+  gap: 0.8em;
+
   h1 {
     font-size: 2.5em;
-    font-weight: $fnt-bold; 
+    font-weight: $fnt-bold;
     color: $cta-bg;
   }
-  
 
   p {
     color: $text;
   }
 }
- 
 
 .card__slider {
   width: 90%;
 
-  .slider  {
+  .slider {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
-    height: .7em;
+    height: 0.7em;
     background: $full-slider;
     border-radius: 20px;
-    opacity: 0.7; 
-    -webkit-transition: .2s; 
-    transition: opacity .2s;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
     cursor: pointer;
     outline: none;
 
-    &:hover, &:focus {
-      opacity: 1
+    &:hover,
+    &:focus {
+      opacity: 1;
     }
-
   }
 
   .slider::-webkit-slider-thumb {
@@ -142,7 +134,7 @@ main {
     box-shadow: 0 0 40px $slider-bg;
     border-radius: 50%;
     background: $slider-bg;
-    @include bg-img('../images/icon-slider.svg', no-repeat, center);
+    @include bg-img("../images/icon-slider.svg", no-repeat, center);
     @include w-n-h(40);
   }
 }
@@ -151,14 +143,14 @@ main {
   display: flex;
   align-items: center;
 
-  gap: .5em;
+  gap: 0.5em;
 
   @media screen and(max-width: $small-screen) {
-    gap: .1em; 
+    gap: 0.1em;
   }
 
   .billing-plan__plan {
-    font-size: .9em;
+    font-size: 0.9em;
     color: $text;
   }
 
@@ -167,7 +159,7 @@ main {
   }
 
   .billing-plan__plan--yearly::after {
-    content: '-25%';
+    content: "-25%";
     position: absolute;
     right: -50%;
     top: 50%;
@@ -175,10 +167,9 @@ main {
 
     background: $discount-bg;
     color: $discount-text;
-    padding: .4em .5em;
-    font-size: .8em;
+    padding: 0.4em 0.5em;
+    font-size: 0.8em;
     border-radius: 20px;
-
 
     @media screen and(max-width: 400px) {
       left: 50%;
@@ -187,15 +178,13 @@ main {
       width: fit-content;
     }
   }
-
 }
-
 
 .billing-plan__toggle {
-  margin: 0 .5em;
+  margin: 0 0.5em;
 }
-  
-.billing-plan__toggle input[type=checkbox] {
+
+.billing-plan__toggle input[type="checkbox"] {
   position: relative;
   @include w-n-h(50, 25);
   border-radius: 20px;
@@ -205,19 +194,20 @@ main {
   cursor: pointer;
   outline: none;
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     opacity: 1;
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     @include w-n-h(15);
     top: 50%;
     transform: translateY(-50%);
     background: white;
     border-radius: 50%;
-    transition: left .3s ease-in-out;
+    transition: left 0.3s ease-in-out;
     left: 10%;
   }
 
@@ -234,7 +224,6 @@ main {
   opacity: 0.2;
 }
 
-
 .card__features {
   color: $text;
   font-size: 1em;
@@ -245,8 +234,8 @@ main {
   }
 
   li::before {
-    content: '';
-    @include bg-img('../images/icon-check.svg', no-repeat, center, 100%);
+    content: "";
+    @include bg-img("../images/icon-check.svg", no-repeat, center, 100%);
     @include w-n-h(10);
     position: absolute;
     top: 50%;
@@ -258,22 +247,20 @@ main {
     li::before {
       left: -20px;
     }
-
   }
-
 }
 
 .card__button {
   background: $cta-bg;
   border: none;
   padding: 1.2em 2.7em;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: $fnt-medium;
   border-radius: 30px;
   color: $cta-text;
   cursor: pointer;
-  transition: color .2s ease;
-  
+  transition: color 0.2s ease;
+
   &:hover {
     color: white;
   }
@@ -281,5 +268,4 @@ main {
   @media only screen and(min-width: $large-screen) {
     padding: 1em 2.5em;
   }
-
 }

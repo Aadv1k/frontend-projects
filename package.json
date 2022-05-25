@@ -3,11 +3,12 @@
   "workspaces": [
     "frontendmentor.io/*"
   ],
-
   "version": "1.0.0",
   "description": "A collection of my frontend project",
   "main": "script.js",
-  "scripts": { },
+  "scripts": {
+    "cleanAll": "npm exec --ws -c ../../scripts/cleanUp.sh "
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aadv1k/frontend-projects.git"

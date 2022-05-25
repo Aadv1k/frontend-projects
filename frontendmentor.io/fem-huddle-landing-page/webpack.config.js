@@ -8,12 +8,12 @@ module.exports = {
     filename: "[name].[contenthash].js",
     clean: true,
   },
-  
+
   devServer: {
-      static: './dist',
-      open: false
+    static: "./dist",
+    open: false,
   },
-  
+
   plugins: [
     new htmlWebpackPlugin({
       template: "./src/index.template.html",
@@ -34,9 +34,9 @@ module.exports = {
       },
 
       {
-          test: /\.htm[l]$/,
-          use: 'html-loader'
-      }
+        test: /\.htm[l]$/,
+        use: "html-loader",
+      },
     ],
   },
 };
