@@ -1,7 +1,11 @@
-A collection of my frontend projects I occasionally work on.
+This is the monorepo 🗿 of all my front-end projects.
 
-[***Url to the dashboard***](https://aadv1k-frontend.netlify.app/)
+[here is the url to the dashboard](https://aadv1k-frontend.netlify.app/)
 
-Tech stack:
-- Brain 🧠
-(also JavaScript, CSS and HTML)
+the tools 🔧🔨 used within this repo (as of 27/05):
+- NPM (package management and workspaces)
+- Webpack
+- PostCSS (autoprefixer)
+- Gulp
+- Sass
+- Prettier (formatting)
