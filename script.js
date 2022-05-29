@@ -1,8 +1,19 @@
 let data = [
   {
+    "title": "Intro section with dropdown navigation",
+    "image": "./frontendmentor.io/fem-intro-section-with-dropdown-navigation/design/desktop-preview.jpg",
+    "labels": ["JavaScript", "Webpack", "TailwindCSS", "Junior"],
+    "links": {
+      "Live url": "frontendmentor.io/fem-intro-section-with-dropdown-navigation/dist/index.html",
+      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-loopstudios-page",
+      "Challenge": ""
+    }
+  },
+
+  {
     "title": "Interactive comments section",
     "image": "frontendmentor.io/fem-interactive-comments-section/design/desktop-preview.jpg",
-    "labels": ["Html", "SCSS", "JavaScript", "Webpack", "Intermediate"],
+    "labels": ["SCSS", "JavaScript", "Webpack", "Intermediate"],
     "links": {
       "Live url": "frontendmentor.io/fem-interactive-comments-section/dist/index.html",
       "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-loopstudios-page",
@@ -13,7 +24,7 @@ let data = [
   {
     "title": "Loopstudios landing page",
     "image": "frontendmentor.io/fem-loopstudios-page/design/desktop-preview.jpg",
-    "labels": ["Html", "SCSS", "JavaScript", "Webpack-", "Junior"],
+    "labels": ["SCSS", "JavaScript", "Webpack", "Junior"],
     "links": {
       "Live url": "frontendmentor.io/fem-loopstudios-page/dist/index.html",
       "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-loopstudios-page",
@@ -25,7 +36,7 @@ let data = [
   {
     "title": "Social Media Dashboard",
     "image": "frontendmentor.io/fem-social-dashboard/design/desktop-preview.jpg",
-    "labels": ["Html", "SCSS", "JavaScript", "Webpack", "Junior"],
+    "labels": ["SCSS", "JavaScript", "Webpack", "Junior"],
     "links": {
       "Live url": "frontendmentor.io/fem-social-dashboard/dist/index.html",
       "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-social-dashboard",
@@ -36,7 +47,7 @@ let data = [
   {
     "title": "Huddle landing page",
     "image": "frontendmentor.io/fem-huddle-landing-page/design/desktop-preview.jpg",
-    "labels": ["Html", "Scss", "webpack", "Junior"],
+    "labels": ["SCSS", "Webpack", "PostCSS", "Junior"],
     "links": {
       "Live url": "frontendmentor.io/fem-huddle-landing-page/dist/index.html",
       "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-huddle-landing-page",
