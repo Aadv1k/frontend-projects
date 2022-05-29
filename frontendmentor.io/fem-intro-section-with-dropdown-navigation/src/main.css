@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav > * {
+  @apply text-gray text-base;
+}
+
+.nav__links a {
+  @apply hover:text-black;
+}
+
+.btn {
+  @apply font-medium text-sm px-4 py-1.5 hover:text-black cursor-pointer;
+}
+
+.btn--bordered {
+  @apply border-solid border-gray border-2 hover:border-black;
+  @apply rounded-xl text-sm;
+}
+
+.nav__mobile > *:not(:first-child) {
+  @apply flex flex-col gap-3 text-lg;
+}
+
+.dropdown__btn:hover {
+  @apply text-black;
+}
+
+.hero__clients {
+  @apply px-4;
+}
+
+ul.hero__clients li {
+  flex: 25%;
+}
+
+:root {
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-offset: -40%;
+}
+
+.dropdown__list {
+  @apply my-1 flex-col gap-2 bg-white;
+}
+
+.dropdown__list li {
+  position: relative;
+}
+
+a.link--todo::before {
+  content: "";
+  background-image: url("./images/icon-todo.svg");
+  background-repeat: no-repeat;
+  width: var(--icon-width);
+  height: var(--icon-height);
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: var(--icon-offset);
+}
+
+/*
+ * Thinking of you SASS... 
+ */
+
+a.link--calendar::before {
+  content: "";
+  background-image: url("./images/icon-calendar.svg");
+  background-repeat: no-repeat;
+  width: var(--icon-width);
+  height: var(--icon-height);
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: var(--icon-offset);
+}
+a.link--reminders::before {
+  content: "";
+  background-image: url("./images/icon-reminders.svg");
+  background-repeat: no-repeat;
+  width: var(--icon-width);
+  height: var(--icon-height);
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: var(--icon-offset);
+}
+
+a.link--planning::before {
+  content: "";
+  background-image: url("./images/icon-planning.svg");
+  background-repeat: no-repeat;
+  width: var(--icon-width);
+  height: var(--icon-height);
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: var(--icon-offset);
+}
+
+@media screen and (min-width: 740px) {
+  .nav__mobile {
+    @apply static top-auto left-auto transform-none h-auto w-[100%];
+    @apply shadow-none flex-row justify-between;
+  }
+
+  .nav__ham {
+    @apply hidden;
+  }
+
+  .nav__mobile > *:not(:first-child) {
+    @apply flex-row text-base items-center;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown__list {
+    @apply absolute rounded-md w-max shadow-2xl;
+  }
+}
