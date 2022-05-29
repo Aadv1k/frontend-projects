@@ -1,5 +1,4 @@
 import "./main.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
 
 const hamBtn = document.getElementById("hamBtn");
 const closeBtn = document.getElementById("closeBtn");
