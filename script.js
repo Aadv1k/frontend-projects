@@ -1,199 +1,210 @@
-const ghPrefix = "https://github.com/Aadv1k/frontend-projects/tree/main/frontendmentor.io/"
+const gh =
+  "https://github.com/Aadv1k/frontend-projects/tree/main/frontendmentor.io/";
 
 let data = [
   {
-    "title": "Github user search",
-    "image": "./frontendmentor.io/fem-github-user-search-app/design/desktop-preview.jpg",
-    "labels": ["JavaScript", "Webpack", "TailwindCSS", "Junior"],
-    "links": {
-      "Live url": "frontendmentor.io/fem-github-user-search-app/dist/index.html",
-      "GitHub": ghPrefix + "fem-github-user-search-app",
-      "Challenge": ""
-      
-    }
+    title: "Github user search app",
+    image:
+      "./frontendmentor.io/fem-github-user-search-app/design/desktop-preview.jpg",
+    labels: ["JavaScript", "Webpack", "TailwindCSS", "Junior"],
+    links: {
+      "Live url":
+        "frontendmentor.io/fem-github-user-search-app/dist/index.html",
+      GitHub: gh + "fem-github-user-search-app",
+      Challenge: "",
+    },
   },
 
   {
-    "title": "Intro section with dropdown navigation",
-    "image": "./frontendmentor.io/fem-intro-section-with-dropdown-navigation/design/desktop-preview.jpg",
-    "labels": ["JavaScript", "Webpack", "TailwindCSS", "Junior"],
-    "links": {
-      "Live url": "frontendmentor.io/fem-intro-section-with-dropdown-navigation/dist/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-loopstudios-page",
-      "Challenge": ""
-    }
+    title: "Intro section with dropdown navigation",
+    image:
+      "./frontendmentor.io/fem-intro-section-with-dropdown-navigation/design/desktop-preview.jpg",
+    labels: ["JavaScript", "Webpack", "TailwindCSS", "Junior"],
+    links: {
+      "Live url":
+        "frontendmentor.io/fem-intro-section-with-dropdown-navigation/dist/index.html",
+      GitHub: gh + "fem-intro-section-with-dropdown-navigation",
+      Challenge: "",
+    },
   },
 
   {
-    "title": "Interactive comments section",
-    "image": "frontendmentor.io/fem-interactive-comments-section/design/desktop-preview.jpg",
-    "labels": ["SCSS", "JavaScript", "Webpack", "Intermediate"],
-    "links": {
-      "Live url": "frontendmentor.io/fem-interactive-comments-section/dist/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-loopstudios-page",
-      "Challenge": ""
-    }
+    title: "Interactive comments section",
+    image:
+      "frontendmentor.io/fem-interactive-comments-section/design/desktop-preview.jpg",
+    labels: ["SCSS", "JavaScript", "Webpack", "Intermediate"],
+    links: {
+      "Live url":
+        "frontendmentor.io/fem-interactive-comments-section/dist/index.html",
+      GitHub: gh + "fem-interactive-comments-section",
+      Challenge: "",
+    },
   },
 
   {
-    "title": "Loopstudios landing page",
-    "image": "frontendmentor.io/fem-loopstudios-page/design/desktop-preview.jpg",
-    "labels": ["SCSS", "JavaScript", "Webpack", "Junior"],
-    "links": {
+    title: "Loopstudios landing page",
+    image: "frontendmentor.io/fem-loopstudios-page/design/desktop-preview.jpg",
+    labels: ["SCSS", "JavaScript", "Webpack", "Junior"],
+    links: {
       "Live url": "frontendmentor.io/fem-loopstudios-page/dist/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-loopstudios-page",
-      "Challenge": ""
-    }
+      GitHub: gh + "fem-loopstudios-page",
+      Challenge: "",
+    },
   },
 
-
   {
-    "title": "Social Media Dashboard",
-    "image": "frontendmentor.io/fem-social-dashboard/design/desktop-preview.jpg",
-    "labels": ["SCSS", "JavaScript", "Webpack", "Junior"],
-    "links": {
+    title: "Social Media Dashboard",
+    image: "frontendmentor.io/fem-social-dashboard/design/desktop-preview.jpg",
+    labels: ["SCSS", "JavaScript", "Webpack", "Junior"],
+    links: {
       "Live url": "frontendmentor.io/fem-social-dashboard/dist/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-social-dashboard",
-      "Challenge": ""
-    }
+      GitHub: gh + "fem-social-dashboard",
+      Challenge: "",
+    },
   },
 
   {
-    "title": "Huddle landing page",
-    "image": "frontendmentor.io/fem-huddle-landing-page/design/desktop-preview.jpg",
-    "labels": ["SCSS", "Webpack", "PostCSS", "Junior"],
-    "links": {
+    title: "Huddle landing page",
+    image:
+      "frontendmentor.io/fem-huddle-landing-page/design/desktop-preview.jpg",
+    labels: ["SCSS", "Webpack", "PostCSS", "Junior"],
+    links: {
       "Live url": "frontendmentor.io/fem-huddle-landing-page/dist/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-huddle-landing-page",
-      "Challenge": ""
-    }
+      GitHub: gh + "fem-huddle-landing-page",
+      Challenge: "",
+    },
   },
 
   {
-    "title": "Testimonials grid section",
-    "image": "frontendmentor.io/fem-testemonials-grid/design/desktop-preview.jpg",
-    "labels": ["Html", "SCSS", "Junior"],
-    "links": {
+    title: "Testimonials grid section",
+    image: "frontendmentor.io/fem-testemonials-grid/design/desktop-preview.jpg",
+    labels: ["Html", "SCSS", "Junior"],
+    links: {
       "Live url": "frontendmentor.io/fem-testemonials-grid/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-testemonials-grid",
-      "Challenge": ""
-    }
+      GitHub: gh + "fem-testemonials-grid",
+      Challenge: "",
+    },
   },
 
   {
-    "title": "Interactive pricing component",
-    "image": "frontendmentor.io/fem-interactive-pc/design/desktop-preview.jpg",
-    "labels": ["Html", "SCSS", "Junior"],
-    "links": {
+    title: "Interactive pricing component",
+    image: "frontendmentor.io/fem-interactive-pc/design/desktop-preview.jpg",
+    labels: ["Html", "SCSS", "Junior"],
+    links: {
       "Live url": "frontendmentor.io/fem-interactive-pc/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-interactive-pc",
-      "Challenge": ""
-    }
+      GitHub: gh + "fem-interactive-pc",
+      Challenge: "",
+    },
   },
 
   {
-    "title": "Crowdfunding project page",
-    "image": "frontendmentor.io/fem-crowdfunding-pp/design/desktop-preview.jpg",
-    "labels": ["Html", "Scss", "JavaScript", "Gulp", "Junior"],
-    "links": {
+    title: "Crowdfunding project page",
+    image: "frontendmentor.io/fem-crowdfunding-pp/design/desktop-preview.jpg",
+    labels: ["Html", "Scss", "JavaScript", "Gulp", "Junior"],
+    links: {
       "Live url": "frontendmentor.io/fem-crowdfunding-pp/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-crowdfunding-pp",
-      "Challenge": ""
-    }
+      GitHub: gh + "fem-crowdfunding-pp",
+      Challenge: "",
+    },
   },
 
   {
-    "title": "Advice generator app",
-    "image": "frontendmentor.io/static-projects/fem-advice-app/desktop-preview.jpg",
-    "labels": ["Html", "JavaScript", "CSS", "Junior"],
-    "links": {
+    title: "Advice generator app",
+    image:
+      "frontendmentor.io/static-projects/fem-advice-app/desktop-preview.jpg",
+    labels: ["Html", "JavaScript", "CSS", "Junior"],
+    links: {
       "Live url": "frontendmentor.io/static-projects/fem-advice-app/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-advice-app",
-      "Challenge": ""
-    }
+      GitHub: gh + "fem-advice-app",
+      Challenge: "",
+    },
   },
 
-
   {
-    "title": "Tip calculator app",
-    "image": "frontendmentor.io/static-projects/fem-tip-cal/desktop-preview.jpg",
-    "labels": ["Html", "CSS", "JavaScript", "Junior"],
-    "links": {
+    title: "Tip calculator app",
+    image: "frontendmentor.io/static-projects/fem-tip-cal/desktop-preview.jpg",
+    labels: ["Html", "CSS", "JavaScript", "Junior"],
+    links: {
       "Live url": "frontendmentor.io/static-projects/fem-tip-cal/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-tip-cal",
-      "Challenge": ""
-    }
+      GitHub: gh + "fem-tip-cal",
+      Challenge: "",
+    },
   },
 
   {
-    "title": "Sunnyside landing page",
-    "image": "frontendmentor.io/static-projects/fem-sunnyside-alp/desktop-preview.jpg",
-    "labels": ["Html", "CSS", "JavaScript", "Junior"],
-    "links": {
-      "Live url": "frontendmentor.io/static-projects/fem-sunnyside-alp/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-sunnyside-alp",
-      "Challenge": ""
-    }
+    title: "Sunnyside landing page",
+    image:
+      "frontendmentor.io/static-projects/fem-sunnyside-alp/desktop-preview.jpg",
+    labels: ["Html", "CSS", "JavaScript", "Junior"],
+    links: {
+      "Live url":
+        "frontendmentor.io/static-projects/fem-sunnyside-alp/index.html",
+      GitHub:
+        "https://github.com/Aadv1k/frontend-projects/tree/main/fem-sunnyside-alp",
+      Challenge: "",
+    },
   },
 
   {
-    "title": "Time tracking dashboard",
-    "image": "frontendmentor.io/static-projects/fem-time-td/desktop-preview.jpg",
-    "labels": ["Html", "CSS", "JavaScript", "Junior"],
-    "links": {
+    title: "Time tracking dashboard",
+    image: "frontendmentor.io/static-projects/fem-time-td/desktop-preview.jpg",
+    labels: ["Html", "CSS", "JavaScript", "Junior"],
+    links: {
       "Live url": "frontendmentor.io/static-projects/fem-time-td/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-time-td",
-      "Challenge": ""
-    }
+      GitHub:
+        "https://github.com/Aadv1k/frontend-projects/tree/main/fem-time-td",
+      Challenge: "",
+    },
   },
 
   {
-    "title": "Nft preview component",
-    "image": "frontendmentor.io/static-projects/fem-nft-pc/desktop-preview.jpg",
-    "labels": ["Html", "CSS", "Newbie"],
-    "links": {
+    title: "Nft preview component",
+    image: "frontendmentor.io/static-projects/fem-nft-pc/desktop-preview.jpg",
+    labels: ["Html", "CSS", "Newbie"],
+    links: {
       "Live url": "frontendmentor.io/static-projects/fem-nft-pc/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-nft-pc",
-      "Challenge": ""
-    }
+      GitHub:
+        "https://github.com/Aadv1k/frontend-projects/tree/main/fem-nft-pc",
+      Challenge: "",
+    },
   },
 
   {
-    "title": "Order summary component",
-    "image": "frontendmentor.io/static-projects/fem-order-sc/desktop-preview.jpg",
-    "labels": ["Html", "CSS", "Newbie"],
-    "links": {
+    title: "Order summary component",
+    image: "frontendmentor.io/static-projects/fem-order-sc/desktop-preview.jpg",
+    labels: ["Html", "CSS", "Newbie"],
+    links: {
       "Live url": "frontendmentor.io/static-projects/fem-order-sc/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-order-sc",
-      "Challenge": ""
-    }
+      GitHub:
+        "https://github.com/Aadv1k/frontend-projects/tree/main/fem-order-sc",
+      Challenge: "",
+    },
   },
 
   {
-    "title": "Stats preview component",
-    "image": "frontendmentor.io/static-projects/fem-stats-pc/desktop-preview.jpg",
-    "labels": ["Html", "CSS", "Newbie"],
-    "links": {
+    title: "Stats preview component",
+    image: "frontendmentor.io/static-projects/fem-stats-pc/desktop-preview.jpg",
+    labels: ["Html", "CSS", "Newbie"],
+    links: {
       "Live url": "frontendmentor.io/static-projects/fem-stats-pc/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-stats-pc",
-      "Challenge": ""
-    }
+      GitHub:
+        "https://github.com/Aadv1k/frontend-projects/tree/main/fem-stats-pc",
+      Challenge: "",
+    },
   },
 
   {
-    "title": "3 Column card component",
-    "image": "frontendmentor.io/static-projects/fem-3colpcc/desktop-preview.jpg",
-    "labels": ["Html", "CSS", "Newbie"],
-    "links": {
+    title: "3 Column card component",
+    image: "frontendmentor.io/static-projects/fem-3colpcc/desktop-preview.jpg",
+    labels: ["Html", "CSS", "Newbie"],
+    links: {
       "Live url": "frontendmentor.io/static-projects/fem-3colpcc/index.html",
-      "GitHub": "https://github.com/Aadv1k/frontend-projects/tree/main/fem-3colpcc",
-      "Challenge": ""
-    }
-  }
-]
-
-
-
+      GitHub:
+        "https://github.com/Aadv1k/frontend-projects/tree/main/fem-3colpcc",
+      Challenge: "",
+    },
+  },
+];
 
 let themeToggle = document.getElementById("toggle");
 let icon = document.getElementById("themeIcon");
@@ -262,4 +273,3 @@ for (let i = 0; i < data.length; i++) {
 }
 
 container.innerHTML = htmlChunk;
-
