@@ -1,4 +1,18 @@
+const ghPrefix = "https://github.com/Aadv1k/frontend-projects/tree/main/frontendmentor.io/"
+
 let data = [
+  {
+    "title": "Github user search",
+    "image": "./frontendmentor.io/fem-github-user-search-app/design/desktop-preview.jpg",
+    "labels": ["JavaScript", "Webpack", "TailwindCSS", "Junior"],
+    "links": {
+      "Live url": "frontendmentor.io/fem-github-user-search-app/dist/index.html",
+      "GitHub": ghPrefix + "fem-github-user-search-app",
+      "Challenge": ""
+      
+    }
+  },
+
   {
     "title": "Intro section with dropdown navigation",
     "image": "./frontendmentor.io/fem-intro-section-with-dropdown-navigation/design/desktop-preview.jpg",

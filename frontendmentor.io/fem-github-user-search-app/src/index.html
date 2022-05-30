@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Github user search</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    class="bg-paleBlue font-mono w-[90%] max-w-3xl mx-auto my-4 dark:bg-darkViolet"
+  >
+    <nav
+      class="flex justify-between items-center text-cyan-800 dark:text-slate-100"
+    >
+      <h1 class="text-3xl font-bold">devfinder</h1>
+
+      <div>
+        <button type="button" class="uppercase tracking-wider" id="themeToggle">
+          light
+        </button>
+        <i class="bi bi-sun-fill fill-darktext" id="themeToggleIcn"></i>
+      </div>
+    </nav>
+
+    <main class="mt-10">
+      <section
+        class="bg-white flex items-center justify-between p-2 gap-2 rounded-xl shadow-cyan-200 shadow-lg relative dark:bg-violet dark:shadow-none"
+        id="search"
+      >
+        <div
+          class="flex items-center w-full text-slate-600 text-md dark:text-slate-200"
+        >
+          <i class="bi bi-search px-2 pr-3 text-2xl text-skyBlue"></i>
+          <input
+            type="text"
+            placeholder="Search GitHub username..."
+            class="w-full bg-inherit outline-none"
+            id="searchInput"
+          />
+        </div>
+        <button
+          id="searchBtn"
+          class="bg-skyBlue w-max text-white px-4 py-3.5 transition-transform active:scale-95 rounded-xl"
+        >
+          Search
+        </button>
+      </section>
+
+      <section
+        class="flex flex-col items-center gap-8 bg-white rounded-xl mt-2 py-6 px-2 shadow-cyan-200 shadow-lg dark:bg-violet dark:shadow-none md:px-12 md:gap-6"
+        id="profCard"
+      ></section>
+    </main>
+  </body>
+</html>
+
+<!--
+        <i class="bi bi-sun-fill fill-darktext"></i>
+        <i class="bi bi-search"></i>
+-->
