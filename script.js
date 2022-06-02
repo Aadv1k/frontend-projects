@@ -2,6 +2,20 @@ const gh =
   "https://github.com/Aadv1k/frontend-projects/tree/main/frontendmentor.io/";
 
 let data = [
+
+  {
+    title: "Expenses chart component",
+    image:
+      "./frontendmentor.io/fem-expenses-chart-component/design/desktop-preview.jpg",
+    labels: ["JavaScript", "Webpack", "TailwindCSS", "Junior"],
+    links: {
+      "Live url":
+        "frontendmentor.io/fem-expenses-chart-component/dist/index.html",
+      GitHub: gh + "fem-expenses-chart-component",
+      Challenge: "",
+    },
+  },
+
   {
     title: "Github user search app",
     image:
