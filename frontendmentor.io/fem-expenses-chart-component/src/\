@@ -1,8 +1,0 @@
-import "./main.css";
-import data from "./data.json"
-
-function normalize(amount, total) {
-  return amount * 100/total  
-}
-
-console.log(Math.max(data.map(e => e.amount)))
