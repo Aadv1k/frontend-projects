@@ -59,5 +59,14 @@ function reloadBrowserSync(cb) {
   cb();
 }
 
-exports.watch = gulp.series(styles, scripts, initBrowserSync, watchFiles);
-exports.build = gulp.series(styles, scripts);
+function cpHtml() {
+  return gulp.src('./index.html').pipe(gulp.dest('./dist'))
+}
+
+function cpImg() {
+  return gulp.src('./images/*').pipe(gulp.dest('./dist/images/'))
+}
+
+
+exports.watch = gulp.series(styles, scripts, cpHtml, cpImg, initBrowserSync, watchFiles);
+exports.build = gulp.series(styles, scripts, cpHtml, cpImg);
