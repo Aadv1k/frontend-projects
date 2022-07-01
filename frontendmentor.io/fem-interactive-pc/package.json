@@ -4,7 +4,7 @@
   "description": "Oh hey, have some :ramen:",
   "main": "index.js",
   "scripts": {
-    "build": "sass --update scss/:dist/",
+    "build": "sass --update scss/:dist/ && cp -r ./index.html ./dist && cp -r ./images ./dist ",
     "dev": "sass --watch scss/:dist/"
   },
   "keywords": [],
