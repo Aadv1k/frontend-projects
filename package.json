@@ -8,7 +8,7 @@
   "main": "script.js",
   "scripts": {
     "cleanAll": "npm exec --ws -c ../../scripts/cleanUp.sh ",
-    "build": "npm exec --ws -c ../../scripts/deploy.sh "
+    "build": "mkdir -p www && npm exec --ws -c ../../scripts/deploy.sh "
   },
   "repository": {
     "type": "git",
