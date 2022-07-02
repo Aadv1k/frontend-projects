@@ -2,6 +2,18 @@ const gh =
   "https://github.com/Aadv1k/frontend-projects/tree/main/frontendmentor.io/";
 
 let data = [
+  {
+    title: "Typemaster Prelaunch Landing Page",
+    labels: ["React", "Webpack", "OpenProps", "Junior"],
+    image: "./frontendmentor.io/fem-typemaster-prelaunch-landing-page/design/desktop-preview.jpg",
+    links: {
+      "Live url":
+        "./frontendmentor.io/fem-typemaster-prelaunch-landing-page/dist/index.html",
+      GitHub: gh + "fem-typemaster-prelaunch-landing-page",
+      Challenge: "",
+    },
+
+  },
 
   {
     title: "Expenses chart component",

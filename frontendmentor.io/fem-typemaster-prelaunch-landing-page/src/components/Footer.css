@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+  padding-block: 2em;
+}
+
+.footer p:nth-child(1) {
+  position: relative;
+  font-weight: var(--fnt-bld);
+}
+
+.footer p:nth-child(1)::after {
+  content: '';
+  width: 1px;
+  height: 90%;
+  background-color: var(--clr-paras);
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

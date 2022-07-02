@@ -1,0 +1,71 @@
+.features {
+  padding: 4em 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 2.5em;
+}
+
+.features > div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6em;
+  gap: 1em;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.features > div::before {
+  content: '';
+  width: 60px;
+  height: 60px;
+  background-color: var(--p-btn-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: var(--btn-radius);
+  position: absolute;
+  top: -80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features > div:nth-child(1)::before {
+  background-image: url('../images/shared/icon-compatible.svg');
+}
+
+.features > div:nth-child(2)::before {
+  background-image: url('../images/shared/icon-bluetooth.svg');
+}
+
+.features > div:nth-child(3)::before {
+  background-image: url('../images/shared/icon-light.svg');
+}
+
+.features > div:nth-child(4)::before {
+  background-image: url('../images/shared/icon-battery.svg');
+}
+
+@media screen and (min-width: 650px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 2em;
+  }
+
+  .features p {
+    width: 80%;
+  }
+
+  .features > div::before {
+    top: -70%;
+  }
+}
+
+
+@media screen and (min-width: 1000px) {
+  .features > div::before {
+    top: -80%;
+  }
+}
+

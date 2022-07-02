@@ -1,0 +1,52 @@
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity ease-in 200ms;
+}
+
+.btn--primary {
+  text-transform: uppercase;
+  background-color: var(--p-btn-bg);
+  color: var(--p-btn-clr);
+  font-family: var(--fnt-main);
+  font-weight: var(--fnt-bld);
+  border-radius: var(--btn-radius);
+}
+
+.btn--primary:is(:hover, :focus),.btn--secondary:is(:hover, :focus) {
+  opacity: 0.7;
+}
+
+.btn--secondary {
+  text-transform: uppercase;
+  background-color: var(--s-btn-bg);
+  color: var(--s-btn-clr);
+  font-family: var(--fnt-main);
+  font-weight: var(--fnt-bld);
+  border-radius: var(--btn-radius);
+}
+
+h1,h2,h3 {
+  font-family: var(--fnt-main);
+  font-weight: var(--fnt-black);
+  color: var(--clr-heading);
+  font-size: clamp(2.5em, 10vw - 10px, 3em);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  font-family: var(--fnt-main);
+  font-weight: var(--fnt-med);
+  color: var(--clr-paras);
+  line-height: 1.4;
+  font-size: 1.1em;
+}

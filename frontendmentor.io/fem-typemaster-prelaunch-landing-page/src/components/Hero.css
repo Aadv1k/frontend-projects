@@ -1,0 +1,87 @@
+.hero {
+  overflow-x: hidden;
+  padding: 1.5em 0;
+}
+
+.hero__img img {
+  width: 100%;
+  border-radius: var(--img-radius);
+}
+
+.hero__img {
+  border-radius: var(--img-radius);
+  width: 120%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  align-items: flex-start;
+}
+
+.hero__cta {
+  padding: var(--btn-padding);
+  font-size: .9em;
+  position: relative;
+}
+
+.hero__cta::after {
+  content: 'Release on 5/27';
+  text-transform: uppercase;
+  font-family: var(--fnt-main);
+  color: var(--clr-paras);
+  position: absolute;
+  width: max-content;
+  top: 50%;
+  right: -100%;
+  transform: translateY(-50%);
+  user-select: none;
+  cursor: default;
+}
+
+@media screen and (min-width: 650px) {
+  .hero {
+    flex-direction: row;
+    padding: 2em 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero__content {
+    gap: 2.5em;
+    width: 50%;
+  }
+
+  .hero__title {
+    width: 400px;
+    font-size: 2.5em;
+  }
+
+  .hero__content p {
+    max-width: 40ch;
+  }
+
+  .hero__img img {
+    width: 100%;
+    border-radius: var(--radius-3);
+  }
+
+  .hero__img {
+    border-radius: var(--radius-3);
+    max-width: 500px;
+    margin-right: -100px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .hero__img {
+    margin-right: 0;
+  }
+}

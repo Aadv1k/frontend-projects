@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700;900&display=swap');
+
+@import "open-props/colors";
+@import "open-props/fonts";
+@import "open-props/sizes";
+@import "open-props/borders";
+@import "open-props/shadows";
+
+:root {
+  --ink-blue: #162542;
+
+  --img-radius: var(--radius-4);
+
+  --btn-radius: var(--radius-2);
+  --btn-padding: 1em 0.5em;
+
+  --p-btn-bg: var(--orange-7);
+  --p-btn-clr: var(--gray-1);
+
+  --s-btn-bg: var(--gray-3);
+  --s-btn-clr: var(--ink-blue);
+
+  --fnt-med: var(--font-weight-5);
+  --fnt-bld: var(--font-weight-7);
+  --fnt-black: var(--font-weight-9);
+
+  --clr-paras: var(--gray-6);
+  --clr-heading: var(--ink-blue);
+
+  --fnt-main: 'Barlow', sans-sherif;
+}
+
+

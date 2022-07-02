@@ -1,0 +1,15 @@
+.navbar {
+ display: flex; 
+ justify-content: space-between;
+ align-items: center;
+ width: 100%;
+ padding: 1em 0;
+}
+
+nav > .btn--secondary {
+  padding: var(--btn-padding);
+}
+
+.nav__logo img {
+  vertical-align: bottom;
+}
