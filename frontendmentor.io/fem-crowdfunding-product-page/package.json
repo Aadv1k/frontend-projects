@@ -1,12 +1,12 @@
 {
-  "name": "@frontend-projects/fem-crowdfunding-pp",
+  "name": "@frontend-projects/fem-crowdfunding-product-page",
   "version": "1.0.0",
   "description": "crowdfunding page from frontendmentor.io",
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp --version",
     "format": "prettier --write .",
-    "build": "gulp build",
+    "build": "gulp build && cp ./index.html ./dist/",
     "dev": "gulp watch"
   },
   "author": "Aadvik <aadv1k@outlook.com>",

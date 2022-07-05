@@ -8,7 +8,8 @@
   "main": "script.js",
   "scripts": {
     "cleanAll": "npm exec --ws -c ../../scripts/cleanUp.sh ",
-    "build": "mkdir -p dist && npm exec --ws -c ../../scripts/deploy.sh "
+    "build": "mkdir -p dist && npm exec --ws -c ../../scripts/deploy.sh",
+    "femFetch": "./scripts/femfetch.sh"
   },
   "repository": {
     "type": "git",

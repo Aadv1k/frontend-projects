@@ -40,6 +40,13 @@ module.exports = {
       test: /\.(png|svg|jpg|jpeg|gif)$/i,
       type: "asset/resource",
     },
+
+    fonts: {
+      test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      type: 'asset/resource',
+    }
+
+    
   },
 
   resolveReact: [...baseResolve, '.jsx'],

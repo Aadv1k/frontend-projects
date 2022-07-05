@@ -125,11 +125,11 @@ let data = [
 
   {
     title: "Crowdfunding project page",
-    image: "frontendmentor.io/fem-crowdfunding-pp/design/desktop-preview.jpg",
+    image: "frontendmentor.io/fem-crowdfunding-product-page/design/desktop-preview.jpg",
     labels: ["Html", "Scss", "JavaScript", "Gulp", "Junior"],
     links: {
-      "Live url": "frontendmentor.io/fem-crowdfunding-pp/index.html",
-      GitHub: gh + "fem-crowdfunding-pp",
+      "Live url": "frontendmentor.io/fem-crowdfunding-product-page/dist/index.html",
+      GitHub: gh + "fem-crowdfunding-product-page",
       Challenge: "",
     },
   },
