@@ -114,11 +114,11 @@ let data = [
 
   {
     title: "Interactive pricing component",
-    image: "frontendmentor.io/fem-interactive-pc/design/desktop-preview.jpg",
+    image: "frontendmentor.io/fem-interactive-pricing-component/design/desktop-preview.jpg",
     labels: ["Html", "SCSS", "Junior"],
     links: {
-      "Live url": "frontendmentor.io/fem-interactive-pc/index.html",
-      GitHub: gh + "fem-interactive-pc",
+      "Live url": "frontendmentor.io/fem-interactive-pricing-component/index.html",
+      GitHub: gh + "fem-interactive-pricing-component",
       Challenge: "",
     },
   },

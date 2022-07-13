@@ -1,0 +1,11 @@
+@mixin bg-img($url, $repeat: no-repeat, $pos: 0 0, $size: auto auto) {
+  background-image: url($url);
+  background-position: $pos;
+  background-repeat: $repeat;
+  background-size: $size;
+}
+
+@mixin w-n-h($wid, $hei: $wid) {
+  width: $wid * 1px;
+  height: $hei * 1px;
+}
