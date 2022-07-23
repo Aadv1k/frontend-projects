@@ -2,6 +2,21 @@ const gh =
   "https://github.com/Aadv1k/frontend-projects/tree/main/frontendmentor.io/";
 
 let data = [
+
+  {
+    title: "Pricing component with toggle",
+    labels: ["React", "Webpack", "WindiCSS", "Junior"],
+    image: "./frontendmentor.io/fem-pricing-component-with-toggle/design/desktop-preview.jpg",
+    links: {
+      "Live url":
+        "./frontendmentor.io/fem-pricing-component-with-toggle/dist/index.html",
+      GitHub: gh + "fem-pricing-component-with-toggle",
+      Challenge: "",
+    },
+
+  },
+
+
   {
     title: "Typemaster Prelaunch Landing Page",
     labels: ["React", "Webpack", "OpenProps", "Junior"],

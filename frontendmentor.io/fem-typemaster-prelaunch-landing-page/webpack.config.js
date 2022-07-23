@@ -1,4 +1,4 @@
-const config = require('../../config/webpack.config.js')
+const config = require('../../config/webpack.util')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
@@ -20,13 +20,25 @@ module.exports = {
 
   module: {
     rules: [
-      config.loader.babel,
-      config.loader.css,
-      config.loader.imgs
+      {
+        test: config.babelReg,
+        use: config.babelLoader,
+        exclude: /node_modules/i
+      },
+
+      {
+        test: config.cssReg,
+        use: config.cssLoader,
+      },
+
+      {
+        test: config.imgReg,
+        type: "asset/resource"
+      },
     ]
   },
 
   resolve: {
-    extensions: config.resolveReact
+    extensions: config.reactExt
   }
 }
