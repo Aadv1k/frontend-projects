@@ -6,10 +6,10 @@ let data = [
   {
     title: "Pricing component with toggle",
     labels: ["React", "Webpack", "WindiCSS", "Junior"],
-    image: "./frontendmentor.io/fem-pricing-component-with-toggle/design/desktop-preview.jpg",
+    image: "./fem-pricing-component-with-toggle/desktop-preview.jpg",
     links: {
       "Live url":
-        "./frontendmentor.io/fem-pricing-component-with-toggle/dist/index.html",
+        "./fem-pricing-component-with-toggle/index.html",
       GitHub: gh + "fem-pricing-component-with-toggle",
       Challenge: "",
     },
@@ -20,10 +20,10 @@ let data = [
   {
     title: "Typemaster Prelaunch Landing Page",
     labels: ["React", "Webpack", "OpenProps", "Junior"],
-    image: "./frontendmentor.io/fem-typemaster-prelaunch-landing-page/design/desktop-preview.jpg",
+    image: "./fem-typemaster-prelaunch-landing-page/desktop-preview.jpg",
     links: {
       "Live url":
-        "./frontendmentor.io/fem-typemaster-prelaunch-landing-page/dist/index.html",
+        "./fem-typemaster-prelaunch-landing-page/index.html",
       GitHub: gh + "fem-typemaster-prelaunch-landing-page",
       Challenge: "",
     },
@@ -33,11 +33,11 @@ let data = [
   {
     title: "Expenses chart component",
     image:
-      "./frontendmentor.io/fem-expenses-chart-component/design/desktop-preview.jpg",
+      "./fem-expenses-chart-component/desktop-preview.jpg",
     labels: ["JavaScript", "Webpack", "TailwindCSS", "Junior"],
     links: {
       "Live url":
-        "frontendmentor.io/fem-expenses-chart-component/dist/index.html",
+        "fem-expenses-chart-component/index.html",
       GitHub: gh + "fem-expenses-chart-component",
       Challenge: "",
     },
@@ -46,11 +46,11 @@ let data = [
   {
     title: "Github user search app",
     image:
-      "./frontendmentor.io/fem-github-user-search-app/design/desktop-preview.jpg",
+      "./fem-github-user-search-app/desktop-preview.jpg",
     labels: ["JavaScript", "Webpack", "TailwindCSS", "Junior"],
     links: {
       "Live url":
-        "frontendmentor.io/fem-github-user-search-app/dist/index.html",
+        "fem-github-user-search-app/index.html",
       GitHub: gh + "fem-github-user-search-app",
       Challenge: "",
     },
@@ -59,11 +59,11 @@ let data = [
   {
     title: "Intro section with dropdown navigation",
     image:
-      "./frontendmentor.io/fem-intro-section-with-dropdown-navigation/design/desktop-preview.jpg",
+      "./fem-intro-section-with-dropdown-navigation/desktop-preview.jpg",
     labels: ["JavaScript", "Webpack", "TailwindCSS", "Junior"],
     links: {
       "Live url":
-        "frontendmentor.io/fem-intro-section-with-dropdown-navigation/dist/index.html",
+        "fem-intro-section-with-dropdown-navigation/index.html",
       GitHub: gh + "fem-intro-section-with-dropdown-navigation",
       Challenge: "",
     },
@@ -72,11 +72,11 @@ let data = [
   {
     title: "Interactive comments section",
     image:
-      "frontendmentor.io/fem-interactive-comments-section/design/desktop-preview.jpg",
+      "fem-interactive-comments-section/desktop-preview.jpg",
     labels: ["SCSS", "JavaScript", "Webpack", "Intermediate"],
     links: {
       "Live url":
-        "frontendmentor.io/fem-interactive-comments-section/dist/index.html",
+        "fem-interactive-comments-section/index.html",
       GitHub: gh + "fem-interactive-comments-section",
       Challenge: "",
     },
@@ -84,10 +84,10 @@ let data = [
 
   {
     title: "Loopstudios landing page",
-    image: "frontendmentor.io/fem-loopstudios-page/design/desktop-preview.jpg",
+    image: "fem-loopstudios-page/desktop-preview.jpg",
     labels: ["SCSS", "JavaScript", "Webpack", "Junior"],
     links: {
-      "Live url": "frontendmentor.io/fem-loopstudios-page/dist/index.html",
+      "Live url": "fem-loopstudios-page/index.html",
       GitHub: gh + "fem-loopstudios-page",
       Challenge: "",
     },
@@ -95,10 +95,10 @@ let data = [
 
   {
     title: "Social Media Dashboard",
-    image: "frontendmentor.io/fem-social-dashboard/design/desktop-preview.jpg",
+    image: "fem-social-dashboard/desktop-preview.jpg",
     labels: ["SCSS", "JavaScript", "Webpack", "Junior"],
     links: {
-      "Live url": "frontendmentor.io/fem-social-dashboard/dist/index.html",
+      "Live url": "fem-social-dashboard/index.html",
       GitHub: gh + "fem-social-dashboard",
       Challenge: "",
     },
@@ -107,10 +107,10 @@ let data = [
   {
     title: "Huddle landing page",
     image:
-      "frontendmentor.io/fem-huddle-landing-page/design/desktop-preview.jpg",
+      "fem-huddle-landing-page/desktop-preview.jpg",
     labels: ["SCSS", "Webpack", "PostCSS", "Junior"],
     links: {
-      "Live url": "frontendmentor.io/fem-huddle-landing-page/dist/index.html",
+      "Live url": "fem-huddle-landing-page/index.html",
       GitHub: gh + "fem-huddle-landing-page",
       Challenge: "",
     },
@@ -118,10 +118,10 @@ let data = [
 
   {
     title: "Testimonials grid section",
-    image: "frontendmentor.io/fem-testemonials-grid/design/desktop-preview.jpg",
+    image: "fem-testemonials-grid/desktop-preview.jpg",
     labels: ["Html", "SCSS", "Junior"],
     links: {
-      "Live url": "frontendmentor.io/fem-testemonials-grid/index.html",
+      "Live url": "fem-testemonials-grid/index.html",
       GitHub: gh + "fem-testemonials-grid",
       Challenge: "",
     },
@@ -129,10 +129,10 @@ let data = [
 
   {
     title: "Interactive pricing component",
-    image: "frontendmentor.io/fem-interactive-pricing-component/design/desktop-preview.jpg",
+    image: "fem-interactive-pricing-component/desktop-preview.jpg",
     labels: ["Html", "SCSS", "Junior"],
     links: {
-      "Live url": "frontendmentor.io/fem-interactive-pricing-component/index.html",
+      "Live url": "fem-interactive-pricing-component/index.html",
       GitHub: gh + "fem-interactive-pricing-component",
       Challenge: "",
     },
@@ -140,22 +140,24 @@ let data = [
 
   {
     title: "Crowdfunding project page",
-    image: "frontendmentor.io/fem-crowdfunding-product-page/design/desktop-preview.jpg",
+    image: "fem-crowdfunding-product-page/desktop-preview.jpg",
     labels: ["Html", "Scss", "JavaScript", "Gulp", "Junior"],
     links: {
-      "Live url": "frontendmentor.io/fem-crowdfunding-product-page/dist/index.html",
+      "Live url": "fem-crowdfunding-product-page/index.html",
       GitHub: gh + "fem-crowdfunding-product-page",
       Challenge: "",
     },
   },
 
+
+
   {
     title: "Advice generator app",
     image:
-      "frontendmentor.io/static-projects/fem-advice-app/desktop-preview.jpg",
+      "./fem-advice-app/desktop-preview.jpg",
     labels: ["Html", "JavaScript", "CSS", "Junior"],
     links: {
-      "Live url": "frontendmentor.io/static-projects/fem-advice-app/index.html",
+      "Live url": "./fem-advice-app/index.html",
       GitHub: gh + "fem-advice-app",
       Challenge: "",
     },
@@ -163,10 +165,10 @@ let data = [
 
   {
     title: "Tip calculator app",
-    image: "frontendmentor.io/static-projects/fem-tip-cal/desktop-preview.jpg",
+    image: "./fem-tip-cal/desktop-preview.jpg",
     labels: ["Html", "CSS", "JavaScript", "Junior"],
     links: {
-      "Live url": "frontendmentor.io/static-projects/fem-tip-cal/index.html",
+      "Live url": "./fem-tip-cal/index.html",
       GitHub: gh + "fem-tip-cal",
       Challenge: "",
     },
@@ -175,11 +177,11 @@ let data = [
   {
     title: "Sunnyside landing page",
     image:
-      "frontendmentor.io/static-projects/fem-sunnyside-alp/desktop-preview.jpg",
+      "./fem-sunnyside-alp/desktop-preview.jpg",
     labels: ["Html", "CSS", "JavaScript", "Junior"],
     links: {
       "Live url":
-        "frontendmentor.io/static-projects/fem-sunnyside-alp/index.html",
+        "./fem-sunnyside-alp/index.html",
       GitHub:
         "https://github.com/Aadv1k/frontend-projects/tree/main/fem-sunnyside-alp",
       Challenge: "",
@@ -188,10 +190,10 @@ let data = [
 
   {
     title: "Time tracking dashboard",
-    image: "frontendmentor.io/static-projects/fem-time-td/desktop-preview.jpg",
+    image: "./fem-time-td/desktop-preview.jpg",
     labels: ["Html", "CSS", "JavaScript", "Junior"],
     links: {
-      "Live url": "frontendmentor.io/static-projects/fem-time-td/index.html",
+      "Live url": "./fem-time-td/index.html",
       GitHub:
         "https://github.com/Aadv1k/frontend-projects/tree/main/fem-time-td",
       Challenge: "",
@@ -200,10 +202,10 @@ let data = [
 
   {
     title: "Nft preview component",
-    image: "frontendmentor.io/static-projects/fem-nft-pc/desktop-preview.jpg",
+    image: "./fem-nft-pc/desktop-preview.jpg",
     labels: ["Html", "CSS", "Newbie"],
     links: {
-      "Live url": "frontendmentor.io/static-projects/fem-nft-pc/index.html",
+      "Live url": "./fem-nft-pc/index.html",
       GitHub:
         "https://github.com/Aadv1k/frontend-projects/tree/main/fem-nft-pc",
       Challenge: "",
@@ -212,10 +214,10 @@ let data = [
 
   {
     title: "Order summary component",
-    image: "frontendmentor.io/static-projects/fem-order-sc/desktop-preview.jpg",
+    image: "./fem-order-sc/desktop-preview.jpg",
     labels: ["Html", "CSS", "Newbie"],
     links: {
-      "Live url": "frontendmentor.io/static-projects/fem-order-sc/index.html",
+      "Live url": "./fem-order-sc/index.html",
       GitHub:
         "https://github.com/Aadv1k/frontend-projects/tree/main/fem-order-sc",
       Challenge: "",
@@ -224,10 +226,10 @@ let data = [
 
   {
     title: "Stats preview component",
-    image: "frontendmentor.io/static-projects/fem-stats-pc/desktop-preview.jpg",
+    image: "./fem-stats-pc/desktop-preview.jpg",
     labels: ["Html", "CSS", "Newbie"],
     links: {
-      "Live url": "frontendmentor.io/static-projects/fem-stats-pc/index.html",
+      "Live url": "./fem-stats-pc/index.html",
       GitHub:
         "https://github.com/Aadv1k/frontend-projects/tree/main/fem-stats-pc",
       Challenge: "",
@@ -236,10 +238,10 @@ let data = [
 
   {
     title: "3 Column card component",
-    image: "frontendmentor.io/static-projects/fem-3colpcc/desktop-preview.jpg",
+    image: "./fem-3colpcc/desktop-preview.jpg",
     labels: ["Html", "CSS", "Newbie"],
     links: {
-      "Live url": "frontendmentor.io/static-projects/fem-3colpcc/index.html",
+      "Live url": "fem-3colpcc/index.html",
       GitHub:
         "https://github.com/Aadv1k/frontend-projects/tree/main/fem-3colpcc",
       Challenge: "",

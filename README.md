@@ -38,6 +38,7 @@ now you can simply load up `./index.html` in a browser.
 
 - `./config`: configuration scripts for dev tools - eslint, webpack, prettier
 - `./scripts/`: utility shell scripts to organize, clean and fetch files in the project
+- `./site/`: The static styles for the main dashboard
 - `./frontendmentor.io/`: primary package directory it contains projects from [frontendmentor.io](https://frontendmentor.io)
 
 ## Architecture
@@ -46,6 +47,8 @@ this monorepo is managed using a (minimal) npm workspace config since
 currently, i don't feel the need to use something like lerna, but it is a
 possibility for the future depending on the complexity of this repo. the
 primary package folder is `./frontendmentor.io/`.
+
+The site is deployed on netlify via the `npm run build` command This command makes it so that the `./site` folder can be dropped onto any server as a static site.
 
 _note: currently there are no inner-deps_
 

@@ -7,8 +7,8 @@
   "description": "A collection of my frontend project",
   "main": "script.js",
   "scripts": {
-    "cleanAll": "npm exec --ws -c ../../scripts/cleanUp.sh ",
-    "build": "mkdir -p dist && npm exec --ws -c ../../scripts/deploy.sh",
+    "clean": "npm exec --ws -c ../../scripts/cleanUp.sh ",
+    "build": "npm exec --ws -c ../../scripts/deploy.sh && ./scripts/deployStatic.sh",
     "femFetch": "./scripts/femfetch.sh"
   },
   "repository": {
