@@ -8,7 +8,7 @@
   "main": "script.js",
   "scripts": {
     "clean": "npm exec --ws -c ../../scripts/cleanUp.sh ",
-    "build": "npm exec --ws -c ../../scripts/deploy.sh && ./scripts/deployStatic.sh",
+    "build": "npm run build --ws && npm exec --ws -c ../../scripts/deploy.sh && ./scripts/deployStatic.sh",
     "femFetch": "./scripts/femfetch.sh"
   },
   "repository": {
