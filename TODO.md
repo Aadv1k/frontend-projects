@@ -1,3 +1,3 @@
-- Standardize ESLint, Prettier config throughout the project
-- Write tests using cypress
-- Set up a proper deploy command (generate a ./dist file with the entire static site)
+- [ ] Standardize ESLint, Prettier config throughout the project
+- [ ] Write tests using cypress
+- [x] Set up a proper deploy command (generate a ./dist file with the entire static site)

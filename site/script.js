@@ -307,8 +307,12 @@ for (let i = 0; i < data.length; i++) {
 
   for (const link in links) {
     if (links[link] !== "") {
+      const linkName = link.toLowerCase().split(' ')
+      linkName.push('card')
+
+
       linkChunk += `
-        <a target="_blank "href="${links[link]}">${link}</a>
+        <a target="_blank" class="${linkName.join('-')}" href="${links[link]}">${link}</a>
         `;
     }
   }
