@@ -4,7 +4,7 @@
   --javascript: hsl(54, 83%, 51%);
   --css-flair: hsl(205, 79%, 38%);
   --html-flair: hsl(13, 71%, 49%);
-  --border-radius: 15px;
+  --border-radius: 6px;
 }
 
 * {
@@ -91,6 +91,7 @@ body.dark {
   column-gap: 1em;
   row-gap: 0.5em;
   flex-wrap: wrap;
+  user-select: none;
 }
 
 .card-container {
@@ -149,25 +150,47 @@ body.dark {
 .card__links {
   margin: 1em 0;
   display: flex;
-  gap: 1em;
+  flex-direction: column;
+  gap: .5em;
+  align-items: center;
 }
 
 .card__links a {
-  color: var(--primary);
+  border-radius: var(--border-radius);
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: .5em 0;
+  background-color: var(--primary);
   text-decoration: none;
   font-size: 1em;
 }
 
 .card__links a:hover {
-  color: var(--darker-primary);
-  text-decoration: underline;
+  background: var(--darker-primary);
 }
 
-.card-container a::after {
-  content: "\f35d";
+a.github-card {
+  background-color: #EB4747;
+}
+
+a.github-card:hover {
+  background: #e53333;
+}
+
+.card-container a.github-card::after {
+  content: "\f113";
+  font: normal normal normal 14px/1 FontAwesome;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+
+.card-container a.live-url-card::after {
+  content: "\f08e";
   font: normal normal normal 11px/1 FontAwesome;
   text-decoration: none;
-  margin-left: 3px;
+  margin-left: 5px;
 }
 
 @media only screen and (max-width: 751px) {
@@ -175,10 +198,8 @@ body.dark {
     justify-content: center;
     align-items: center;
   }
-
   .card {
-    width: 50%;
-    min-width: 350px;
+    width: 80%;
   }
   .navbar {
     flex-direction: column;
@@ -188,10 +209,11 @@ body.dark {
 
 @media only screen and (max-width: 381px) {
   .card {
-    min-width: 85%;
+    width: 90%;
   }
+
   .card__title {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 
   .card__links {
