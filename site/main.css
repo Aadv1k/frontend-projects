@@ -25,6 +25,14 @@ body {
   --box-shadow: 0 5px 15px 0 rgba(19, 19, 19, 0.1)
 }
 
+.ribbon {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99;
+}
+
+
 body.dark {
   --card-bg: #191919;
   --main-bg: #292827;

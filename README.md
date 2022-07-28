@@ -16,6 +16,7 @@ this is the monorepo of aadvik's frontend projects. **_[Here is the url to the d
 | [@frontend-projects/fem-testemonials-grid](./frontendmentor.io/fem-testemonials-grid/)                                            | ![sass]                      |
 | [@frontend-projects/fem-typemaster-prelaunch-landing-page](./frontendmentor.io/fem-typemaster-prelaunch-landing-page/)            | ![react] Webpack OpenProps   |
 | [@frontend-projects/fem-pricing-component-with-toggle](./frontendmentor.io/fem-pricing-component-with-toggle/)                    | ![react] Webpack WindiCSS    |
+| [@frontend-projects/fem-inbrowser-markdown-editor](./frontendmentor.io/fem-inbrowser-markdown-editor)                             | ![react] Webpack OpenProps   |
 | [./frontendmentor.io/static-projects/](./frontendmentor.io/static-projects) static project (not npm packages) can be copied as-is | ![html] ![css] ![javascript] |
 
 ## Install
@@ -43,10 +44,11 @@ now you can simply load up `./index.html` in a browser.
 
 ## Architecture
 
-this monorepo is managed using a (minimal) npm workspace config since
-currently, i don't feel the need to use something like lerna, but it is a
-possibility for the future depending on the complexity of this repo. the
-primary package folder is `./frontendmentor.io/`.
+This monorepo is managed using [npm workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces), I chose to use
+a monorepo for primarily one reason - Organization. I liked the semantics of
+having everything in one place, the standard `config` utilities and a single
+domain are really good to have and manage.
+Alongside this, under this single monorepo, I can test, my code, and setup a CI pipelines.
 
 The site is deployed on netlify via the `npm run build` command This command makes it so that the `./site` folder can be dropped onto any server as a static site.
 
