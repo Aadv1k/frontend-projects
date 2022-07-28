@@ -1,0 +1,147 @@
+@import "../variables.css";
+
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: margin 200ms ease-in; 
+}
+
+.editors {
+  display: flex;
+}
+
+.editor,.preview {
+  background-color: var(--clr-gray-3);
+  height: calc(100vh - 155px);
+  width: 100%;
+  padding: 1em;
+  overflow-y: scroll;
+  color: var(--text-clr);
+}
+
+.editor {
+  outline: none;
+  word-wrap: break-word;
+  font-family: var(--mono-font);
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-gray);
+}
+
+.editor textarea {
+  color: inherit;
+  background: inherit;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  resize: none;
+}
+
+.mobileTrigger {
+  display: none;
+}
+
+.triggerRev {
+  display: block;
+}
+
+.preview {
+  font-family: var(--alt-font);
+}
+
+.preview h1,h3,h5 {
+  color: var(--text-clr-main)
+}
+
+.preview hr {
+  background-color: var(--blue-gray);
+  border: none;
+  height: 1px;
+  width: 100%;
+}
+
+.preview li::marker, .preview li::marker {
+  color: var(--red-6);
+}
+
+.preview p, .preview li{
+  line-height: 1.5;
+}
+
+.preview blockquote, .preview pre {
+  background: var(--clr-pre);
+  padding: 1em;
+  width: 90%;
+  margin: .5em 0;
+  font-weight: bold;
+  color: var(--text-clr-main);
+  border-radius: .5vmin;
+  word-wrap: break-word;
+  overflow-x: scroll;
+}
+
+.preview a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.preview pre {
+  font-family: var(--mono-font);
+  font-weight: normal;
+}
+
+.preview p code, .preview > code{
+  color: var(--red-5);
+  font-weight: bold;
+}
+
+
+.previewBar {
+  background-color: var(--clr-gray-2);
+  font-family: var(--main-font);
+  color: var(--text-clr);
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: .9em;
+}
+
+.eyebtn {
+  background: none;
+  color: inherit;
+  border: none;
+}
+
+@media only screen and (min-width: 700px) {
+  .mobileTrigger {
+    width: 100%;
+    display: block;
+  }
+
+  .triggerRev {
+    display: none;
+  }
+
+  .editor {
+    border-right: 2px solid var(--blue-gray);
+  }
+
+}

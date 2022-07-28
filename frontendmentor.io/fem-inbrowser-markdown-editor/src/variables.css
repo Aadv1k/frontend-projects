@@ -1,0 +1,32 @@
+@import "open-props/colors";
+@import "open-props/fonts";
+@import "open-props/media";
+@import "open-props/sizes";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+:root {
+  --main-font: var(--font-sans);
+  --alt-font: "Roboto Slab", sans-serif;
+  --mono-font: "Roboto Mono", monospace;
+  --blue-gray: #37383d;
+}
+
+[data-theme="dark"] {
+  --clr-gray-1: #2c2d31;
+  --clr-gray-2: #1e1f23;
+  --clr-gray-3: #15161a;
+  --text-clr: var(--gray-5);
+  --text-clr-main: white;
+  --clr-pre: var(--clr-gray-1)
+}
+
+[data-theme="light"] {
+  /* Technically not actually gray, but idk a better css color naming convention */
+  --clr-gray-1: #2c2d31;
+  --clr-gray-2: #f3f1f1;
+  --clr-gray-3: #ffffff;
+  --text-clr: var(--gray-8);
+  --text-clr-main: black;
+  --clr-pre: var(--clr-gray-2)
+}

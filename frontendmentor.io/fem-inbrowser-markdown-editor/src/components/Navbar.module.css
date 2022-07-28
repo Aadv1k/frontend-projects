@@ -1,0 +1,153 @@
+@import "../variables.css";
+@value nav-height: 70px;
+
+.nav {
+  background-color: var(--clr-gray-1);
+  height: nav-height;
+  display: flex;
+  font-family: var(--main-font);
+  align-items: center;
+  gap: 1em;
+  transition: margin 200ms ease-in;
+}
+
+.ham {
+  background-color: var(--blue-gray);
+  color: white;
+  border: none;
+  position: relative;
+  font-size: 1.5em;
+  padding-inline: 1em;
+  align-self: normal;
+}
+
+.mdtitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: white;
+  display: none;
+}
+
+.sep {
+  height: 40px;
+  width: 1px;
+  background-color: var(--blue-gray);
+  margin-inline: 1em;
+  display: none;
+}
+
+.navinfo {
+  display: flex;
+  align-items: center;
+}
+
+.infotitle {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+.infotitle svg {
+  color: white;
+  font-size: 1.2em;
+}
+
+
+.infotitle div span {
+  color: var(--gray-6);
+  text-transform: capitalize;
+  display: none;
+}
+
+.infotitle div strong {
+  color: white;
+  font-weight: normal;
+}
+
+.btngroup {
+  margin-left: auto;
+  margin-right: 1.5em;
+  display: flex;
+  gap: .5em;
+}
+
+.btngroup .binbtn {
+  background: none;
+  border: none;
+  color: var(--blue-gray);
+  font-size: 1.2em;
+  color: var(--gray-6)
+}
+
+
+.editabletitle {
+  width: 100px;
+  overflow-x: scroll;
+  outline: none;
+  background-color: inherit;
+  border: none;
+
+  color: var(--text-clr-main);
+}
+
+.savebtn {
+  text-transform: capitalize;
+  color: white;
+  background-color: var(--red-6);
+  border: none;
+  padding: .9em;
+  border-radius: 2px;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+
+.binbtn {
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+
+.savebtn:hover, .binbtn:hover{
+  opacity: .8;
+}
+
+.savebtn > p {
+  display: none;
+}
+
+.savebtn > svg {
+  font-size: 1.2em;
+  margin-bottom: -1px;
+}
+
+@media screen and (min-width: 700px) {
+  .infotitle div span {
+    display: block;
+  }
+
+  .mdtitle,.sep {
+    display: block;
+  }
+
+  .infotitle {
+    gap: 1em;
+  }
+
+
+  .savebtn {
+    padding: 0.7em;
+  }
+
+  .savebtn > p {
+    display: inline;
+  }
+
+  .savebtn > svg {
+    margin-right: 5px;
+  }
+
+  .btngroup {
+    gap: 1em;
+  }
+
+}

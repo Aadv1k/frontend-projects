@@ -1,0 +1,64 @@
+.container {
+  position: fixed;
+  height: 100%;
+  width: 100vw;
+  z-index: 10;
+  top: 0;
+}
+
+.modal h2 {
+  margin: 0;
+}
+.modal p {
+  margin: .5em 0;
+}
+
+
+.modal {
+  position: absolute;
+  gap: 1em;
+  background: white;
+  z-index: 11;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--alt-font);
+  padding: 1em;
+  border-radius: 1vmin;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal p {
+  color: var(--gray-8);
+}
+
+.modal button {
+  text-transform: uppercase;
+  border-radius: .5vmin;
+  padding: .5em 1.5em;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: opacity 200ms ease;
+}
+
+.modal button:hover {
+  opacity: .9;
+}
+
+.yes {
+  background: var(--red-6);
+  margin-right: .2em;
+}
+
+.no {
+  background: var(--blue-gray);
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: .5;
+}

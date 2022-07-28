@@ -2,6 +2,18 @@ const gh =
   "https://github.com/Aadv1k/frontend-projects/tree/main/frontendmentor.io/";
 
 let data = [
+  {
+    title: "In-browser markdown editor",
+    date: new Date('Thu 28 Jul 2022 06:18:59 PM IST'),
+    labels: ["React", "Webpack", "OpenProps", "Intermediate"],
+    image: "./fem-inbrowser-markdown-editor/desktop-preview.jpg",
+    links: {
+      "Live url":
+        "./fem-inbrowser-markdown-editor/index.html",
+      GitHub: gh + "fem-inbrowser-markdown-editor",
+      Challenge: "",
+    },
+  },
 
   {
     title: "Pricing component with toggle",
@@ -14,7 +26,6 @@ let data = [
       GitHub: gh + "fem-pricing-component-with-toggle",
       Challenge: "",
     },
-
   },
 
 

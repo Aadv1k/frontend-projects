@@ -1,0 +1,5 @@
+@import "normalize.css";
+
+body {
+  min-height: 100vh;
+}
