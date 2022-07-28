@@ -14,7 +14,8 @@
   border-radius: var(--btn-radius);
 }
 
-.btn--primary:is(:hover, :focus),.btn--secondary:is(:hover, :focus) {
+.btn--primary:is(:hover, :focus),
+.btn--secondary:is(:hover, :focus) {
   opacity: 0.7;
 }
 
@@ -27,7 +28,9 @@
   border-radius: var(--btn-radius);
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   font-family: var(--fnt-main);
   font-weight: var(--fnt-black);
   color: var(--clr-heading);

@@ -1,5 +1,5 @@
 /* Space mono; 400, 700 */
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
 :root {
   --strong-cyan: hsl(172, 67%, 45%);
@@ -11,7 +11,7 @@
 
   --white: hsl(0, 0%, 100%);
 
-  --main-font: 'Space Mono', Monospace;
+  --main-font: "Space Mono", Monospace;
   --f-wght-thin: 400;
   --f-wght-medium: 500;
   --f-wght-bold: 700;
@@ -65,19 +65,19 @@ section.calc {
   gap: 1em;
 }
 
-h4,label {
+h4,
+label {
   font-size: 0.9em;
   color: var(--dark-grayish-cyan);
   font-weight: var(--f-wght-bold);
 }
-
 
 .calc__bill {
   position: relative;
 }
 
 .calc__bill::before {
-  content: '';
+  content: "";
   width: 20px;
   height: 20px;
   position: absolute;
@@ -100,12 +100,12 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
 .calc__people::before {
-  content: '';
+  content: "";
   width: 20px;
   height: 20px;
   position: absolute;
@@ -118,12 +118,12 @@ input[type=number] {
 
 .calc input:not(.btns__custom) {
   width: 100%;
-  padding: .4em 1em;
+  padding: 0.4em 1em;
   background: whitesmoke;
   border: none;
   margin-top: 1em;
   font-family: var(--main-font);
-  outline: none; 
+  outline: none;
   font-size: 1.3em;
   text-align: right;
   font-weight: var(--f-wght-bolder);
@@ -132,12 +132,12 @@ input[type=number] {
 
 .btns__custom {
   width: 100%;
-  padding: .2em 1em;
+  padding: 0.2em 1em;
   background: whitesmoke;
   border: none;
   margin-top: 1em;
   font-family: var(--main-font);
-  outline: none; 
+  outline: none;
   font-size: 1em;
   text-align: right;
   font-weight: var(--f-wght-bolder);
@@ -204,17 +204,15 @@ input[type=number] {
 }
 
 .calc__people input.people__input:invalid,
-.calc__bill input.bill__input:invalid
-{
+.calc__bill input.bill__input:invalid {
   outline: 2px solid red;
 }
-
 
 .people__warning {
   position: absolute;
   top: 20%;
   right: 0;
-  font-size: .8em;
+  font-size: 0.8em;
   color: red;
   display: none;
 }
@@ -251,10 +249,10 @@ input[type=number] {
 
 .calc__reset {
   margin: 0 2.5em;
-  padding: .9em 0;
+  padding: 0.9em 0;
   background: var(--dark-grayish-cyan);
   border: none;
-  font-size: .9em;
+  font-size: 0.9em;
   text-transform: uppercase;
   color: var(--very-dark-cyan);
   font-family: var(--main-font);
@@ -271,10 +269,7 @@ h2.result__value {
   }
 }
 
-
-
 @media screen and (min-width: 900px) {
-
   body {
     background: var(--main-bg);
   }
@@ -302,7 +297,6 @@ h2.result__value {
     height: 2.1em;
   }
 
-
   .btns__custom::placeholder {
     font-size: 1em;
   }
@@ -317,5 +311,4 @@ h2.result__value {
   .calc__result {
     margin: 1em 2em;
   }
-
 }

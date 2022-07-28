@@ -1,5 +1,5 @@
 const path = require("path");
-const htmlWebpackPlugin = require('html-webpack-plugin')
+const htmlWebpackPlugin = require("html-webpack-plugin");
 const copyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[hash].js",
-    clean: true
+    clean: true,
   },
 
   devServer: {
@@ -19,10 +19,9 @@ module.exports = {
 
   plugins: [
     new htmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/template.html'),
-      filename: 'index.html'
+      template: path.resolve(__dirname, "./src/template.html"),
+      filename: "index.html",
     }),
-
   ],
 
   module: {
@@ -33,15 +32,13 @@ module.exports = {
       },
 
       {
-        test:/\.html$/,
-        use: [
-          'html-loader'
-        ]
+        test: /\.html$/,
+        use: ["html-loader"],
       },
 
       {
         test: /\.(png|svg)$/,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
     ],
   },

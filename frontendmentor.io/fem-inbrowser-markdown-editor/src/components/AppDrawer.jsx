@@ -24,26 +24,26 @@ export default class extends Component {
                     this.props.setDrawerState();
                     this.props.setDocumentState(e.id, e.name, e.content, true);
 
-                    const data = this.props.documents.map(elem => {
+                    const data = this.props.documents.map((elem) => {
                       if (elem.id !== e.id) {
                         return {
                           name: elem.name,
-                          content: elem.content, 
+                          content: elem.content,
                           id: elem.id,
-                          lastOpened: false
-                        }
+                          lastOpened: false,
+                        };
                       }
 
                       return {
                         name: elem.name,
-                        content: elem.content, 
+                        content: elem.content,
                         id: elem.id,
-                        lastOpened: true
-                      }
-                    })
+                        lastOpened: true,
+                      };
+                    });
 
-                    this.props.setDocumentsState(data)
-                    localStorage.setItem("document", JSON.stringify(data))
+                    this.props.setDocumentsState(data);
+                    localStorage.setItem("document", JSON.stringify(data));
                     this.props.inputRef.current.value = "";
                   }}
                 >
@@ -62,10 +62,10 @@ export default class extends Component {
               const content = "# Welcome to the markdown editor";
               const name = "untitled.md";
 
-              this.props.saveDocument(content, id , name, true);
-              this.props.setDocumentState(id, name, content, true)
+              this.props.saveDocument(content, id, name, true);
+              this.props.setDocumentState(id, name, content, true);
               this.props.setDrawerState();
-              this.props.inputRef.current.value = ""
+              this.props.inputRef.current.value = "";
             }}
           >
             New Document

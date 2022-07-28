@@ -60,13 +60,19 @@ function reloadBrowserSync(cb) {
 }
 
 function cpHtml() {
-  return gulp.src('./index.html').pipe(gulp.dest('./dist'))
+  return gulp.src("./index.html").pipe(gulp.dest("./dist"));
 }
 
 function cpImg() {
-  return gulp.src('./images/*').pipe(gulp.dest('./dist/images/'))
+  return gulp.src("./images/*").pipe(gulp.dest("./dist/images/"));
 }
 
-
-exports.watch = gulp.series(styles, scripts, cpHtml, cpImg, initBrowserSync, watchFiles);
+exports.watch = gulp.series(
+  styles,
+  scripts,
+  cpHtml,
+  cpImg,
+  initBrowserSync,
+  watchFiles
+);
 exports.build = gulp.series(styles, scripts, cpHtml, cpImg);

@@ -1,6 +1,6 @@
 import { Component } from "react";
 import "./Navbar.css";
-import Logo from "../images/shared/logo.svg"
+import Logo from "../images/shared/logo.svg";
 
 export default class extends Component {
   render() {
@@ -11,6 +11,6 @@ export default class extends Component {
         </span>
         <button className="btn btn--secondary">pre-order now</button>
       </nav>
-    )
+    );
   }
 }

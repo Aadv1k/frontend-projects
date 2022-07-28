@@ -1,15 +1,13 @@
 import { Component } from "react";
-import KeyboardImg from "../images/desktop/image-keyboard.jpg"
-import "./Hero.css"
+import KeyboardImg from "../images/desktop/image-keyboard.jpg";
+import "./Hero.css";
 
 export default class extends Component {
   render() {
     return (
       <section className="hero">
         <div className="hero__content">
-          <h1 className="hero__title">
-            typemaster keyboard
-          </h1>
+          <h1 className="hero__title">typemaster keyboard</h1>
 
           <p>
             Amet inventore voluptatum distinctio repellat quod, eligendi!
@@ -21,10 +19,10 @@ export default class extends Component {
           </div>
         </div>
 
-          <div className="hero__img">
+        <div className="hero__img">
           <img src={KeyboardImg} alt="kb" />
         </div>
       </section>
-    )
+    );
   }
 }

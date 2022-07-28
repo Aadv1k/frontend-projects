@@ -26,9 +26,9 @@
 .ul li {
   display: flex;
   flex-direction: column;
-  padding: .5em;
+  padding: 0.5em;
   width: 100%;
-  border-radius: .5vmin;
+  border-radius: 0.5vmin;
 }
 
 .ul li:hover {
@@ -42,18 +42,13 @@
 
 .ul li span:nth-child(2) {
   color: var(--gray-6);
-  font-size: .9em;
+  font-size: 0.9em;
 }
-
-
 
 .btn {
   composes: savebtn from "./Navbar.module.css";
   margin-bottom: 2em;
-  padding: .5em;
-  border-radius: .5vmin;
+  padding: 0.5em;
+  border-radius: 0.5vmin;
   width: 80%;
-
-
 }
-

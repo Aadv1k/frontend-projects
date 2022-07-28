@@ -9,7 +9,6 @@
  * L143 - OVERVIEW SECTION
  */
 
-
 * {
   margin: 0;
   padding: 0;
@@ -23,9 +22,8 @@ body {
   display: flex;
   align-items: center;
 
-  
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 50%;
@@ -36,7 +34,6 @@ body {
     z-index: -1;
     background: $top-bg;
   }
-
 }
 
 main {
@@ -48,7 +45,6 @@ main {
   flex-direction: column;
   gap: 2em;
   position: relative;
-  
 }
 
 /****************/
@@ -79,7 +75,6 @@ section.head {
     background: $text-1;
     opacity: 30%;
     width: 100%;
-    
   }
 
   .head__toggle {

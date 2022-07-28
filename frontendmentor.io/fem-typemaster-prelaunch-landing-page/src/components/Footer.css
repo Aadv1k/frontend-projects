@@ -11,7 +11,7 @@
 }
 
 .footer p:nth-child(1)::after {
-  content: '';
+  content: "";
   width: 1px;
   height: 90%;
   background-color: var(--clr-paras);

@@ -10,7 +10,8 @@ import "./App.css";
 
 export default class extends Component {
   render() {
-    return ( <>
+    return (
+      <>
         <Navbar />
         <Hero />
         <Info />

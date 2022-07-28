@@ -3,4 +3,4 @@
 - TailwindCSS
 - Webpack
 - PostCSS
-- Vanilla JS 
+- Vanilla JS

@@ -1,5 +1,5 @@
 This project was built using:
-- webpack 
+
+- webpack
 - PostCSS
 - TailwindCSS
-

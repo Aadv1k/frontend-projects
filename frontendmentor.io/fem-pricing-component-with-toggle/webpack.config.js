@@ -1,6 +1,6 @@
 const config = require("../../config/webpack.util");
-const windiCssWebpackPlugin = require('windicss-webpack-plugin');
-const htmlWebpackPlugin = require('html-webpack-plugin');
+const windiCssWebpackPlugin = require("windicss-webpack-plugin");
+const htmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -16,9 +16,9 @@ module.exports = {
     new windiCssWebpackPlugin(),
     new htmlWebpackPlugin({
       template: path.join(__dirname, "./public/index.html"),
-      favicon: path.join(__dirname, "./public/favicon-32x32.png"), 
-      title: "Frontend Mentor | Pricing Component With Toggle"
-    })
+      favicon: path.join(__dirname, "./public/favicon-32x32.png"),
+      title: "Frontend Mentor | Pricing Component With Toggle",
+    }),
   ],
 
   module: {

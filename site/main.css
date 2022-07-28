@@ -22,7 +22,7 @@ body {
   --content: #605e5c;
   --darker-primary: #106ebe;
   --primary: #0078d7;
-  --box-shadow: 0 5px 15px 0 rgba(19, 19, 19, 0.1)
+  --box-shadow: 0 5px 15px 0 rgba(19, 19, 19, 0.1);
 }
 
 .ribbon {
@@ -31,7 +31,6 @@ body {
   top: 0;
   z-index: 99;
 }
-
 
 body.dark {
   --card-bg: #191919;
@@ -42,7 +41,7 @@ body.dark {
 
   --darker-primary: #106ebe;
   --primary: #0078d7;
-  --box-shadow: 0 5px 15px 0 rgba(19, 19, 19, 0.5)
+  --box-shadow: 0 5px 15px 0 rgba(19, 19, 19, 0.5);
 }
 
 .navbar {
@@ -117,14 +116,13 @@ body.dark {
   background: var(--card-bg);
   border-radius: var(--border-radius);
 
-  transition: box-shadow .5s ease-in;
-  transition: transform .1s ease-in;
+  transition: box-shadow 0.5s ease-in;
+  transition: transform 0.1s ease-in;
 }
 
 .card:hover {
   box-shadow: var(--box-shadow);
   transform: translateY(-2%);
-
 }
 
 .card img {
@@ -159,7 +157,7 @@ body.dark {
   margin: 1em 0;
   display: flex;
   flex-direction: column;
-  gap: .5em;
+  gap: 0.5em;
   align-items: center;
 }
 
@@ -168,7 +166,7 @@ body.dark {
   width: 100%;
   text-align: center;
   color: white;
-  padding: .5em 0;
+  padding: 0.5em 0;
   background-color: var(--primary);
   text-decoration: none;
   font-size: 1em;
@@ -179,7 +177,7 @@ body.dark {
 }
 
 a.github-card {
-  background-color: #EB4747;
+  background-color: #eb4747;
 }
 
 a.github-card:hover {
@@ -192,7 +190,6 @@ a.github-card:hover {
   text-decoration: none;
   margin-left: 5px;
 }
-
 
 .card-container a.live-url-card::after {
   content: "\f08e";

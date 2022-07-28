@@ -1,21 +1,21 @@
-const config = require('../../config/webpack.util')
-const htmlWebpackPlugin = require('html-webpack-plugin')
-const path = require('path')
+const config = require("../../config/webpack.util");
+const htmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 module.exports = {
   mode: "development",
 
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, 'dist/')
+    path: path.join(__dirname, "dist/"),
   },
 
   devServer: config.devServer,
 
   plugins: [
     new htmlWebpackPlugin({
-      template: path.join(__dirname, 'public/index.html')
-    })
+      template: path.join(__dirname, "public/index.html"),
+    }),
   ],
 
   module: {
@@ -23,7 +23,7 @@ module.exports = {
       {
         test: config.babelReg,
         use: config.babelLoader,
-        exclude: /node_modules/i
+        exclude: /node_modules/i,
       },
 
       {
@@ -33,12 +33,12 @@ module.exports = {
 
       {
         test: config.imgReg,
-        type: "asset/resource"
+        type: "asset/resource",
       },
-    ]
+    ],
   },
 
   resolve: {
-    extensions: config.reactExt
-  }
-}
+    extensions: config.reactExt,
+  },
+};

@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
 
 :root {
   --quote-fnt: hsl(193, 38%, 86%);
 
-  --main-bg: rgb(32,38,50);
-  --card-bg: rgb(49,58,73);
-  --green-accent: rgb(82,255,171);
+  --main-bg: rgb(32, 38, 50);
+  --card-bg: rgb(49, 58, 73);
+  --green-accent: rgb(82, 255, 171);
 
   --quote-fnt-size: 28px;
-  --main-fnt: 'Manrope', 'Segoe UI', Tahoma, Verdana, sans-sherif;
+  --main-fnt: "Manrope", "Segoe UI", Tahoma, Verdana, sans-sherif;
   --fnt-bold: 800;
 }
 
 * {
-  margin: 0; 
-  padding: 0; 
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -30,7 +30,6 @@ body {
   font-family: var(--main-fnt);
 }
 
-
 .card {
   border-radius: 15px;
   width: 90%;
@@ -45,14 +44,13 @@ body {
   padding: 2em 1.5em 4em 1.5em;
 
   position: relative;
-
 }
 
 .card__advice-id {
   color: var(--green-accent);
   text-transform: Uppercase;
   letter-spacing: 2px;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .card__advice {
@@ -85,7 +83,7 @@ body {
   border: none;
   padding: 1.3em;
   border-radius: 50%;
-  transition: box-shadow .2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
   cursor: pointer;
 }
 
@@ -95,18 +93,14 @@ body {
   pointer-events: none;
 }
 
-
 .card__button:hover {
   box-shadow: 0 0 15px 0 var(--green-accent);
 }
 
-
 .card__button img {
   vertical-align: bottom;
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
-
-
 
 /******************/
 /******************/
@@ -126,17 +120,13 @@ body {
   .card .divider__desktop {
     display: block;
   }
-
 }
-
 
 /******************/
 /******************/
 /* SMALLER SCREENS */
 /******************/
 /******************/
-
-
 
 @media only screen and (max-width: 340px) {
   .card {

@@ -12,7 +12,7 @@
   border-radius: 0 0 $border-radius $border-radius;
 
   &:hover {
-    background: $hover;  
+    background: $hover;
   }
 
   h1 {
@@ -27,7 +27,7 @@
   .card__link {
     display: flex;
     align-items: center;
-    gap: .5em;
+    gap: 0.5em;
 
     a {
       color: $text-1;
@@ -35,7 +35,6 @@
       text-decoration: none;
     }
   }
-
 
   h2 {
     color: $text-2;
@@ -102,7 +101,12 @@ span.link-down {
     left: 0;
     @include mixin.w-n-h(10);
     top: 50%;
-    @include mixin.bg-img("../assets/icon-down.svg", no-repeat, center, contain);
+    @include mixin.bg-img(
+      "../assets/icon-down.svg",
+      no-repeat,
+      center,
+      contain
+    );
     transform: translateY(-50%);
   }
 }

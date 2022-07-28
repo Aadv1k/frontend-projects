@@ -45,14 +45,13 @@
 .infotitle {
   display: flex;
   align-items: center;
-  gap: .5em;
+  gap: 0.5em;
 }
 
 .infotitle svg {
   color: white;
   font-size: 1.2em;
 }
-
 
 .infotitle div span {
   color: var(--gray-6);
@@ -69,7 +68,7 @@
   margin-left: auto;
   margin-right: 1.5em;
   display: flex;
-  gap: .5em;
+  gap: 0.5em;
 }
 
 .btngroup .binbtn {
@@ -77,9 +76,8 @@
   border: none;
   color: var(--blue-gray);
   font-size: 1.2em;
-  color: var(--gray-6)
+  color: var(--gray-6);
 }
-
 
 .editabletitle {
   width: 100px;
@@ -96,7 +94,7 @@
   color: white;
   background-color: var(--red-6);
   border: none;
-  padding: .9em;
+  padding: 0.9em;
   border-radius: 2px;
   transition: all 200ms ease;
   cursor: pointer;
@@ -107,8 +105,9 @@
   cursor: pointer;
 }
 
-.savebtn:hover, .binbtn:hover{
-  opacity: .8;
+.savebtn:hover,
+.binbtn:hover {
+  opacity: 0.8;
 }
 
 .savebtn > p {
@@ -125,14 +124,14 @@
     display: block;
   }
 
-  .mdtitle,.sep {
+  .mdtitle,
+  .sep {
     display: block;
   }
 
   .infotitle {
     gap: 1em;
   }
-
 
   .savebtn {
     padding: 0.7em;
@@ -149,5 +148,4 @@
   .btngroup {
     gap: 1em;
   }
-
 }

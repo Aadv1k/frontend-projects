@@ -6,41 +6,43 @@ const searchBtn = document.getElementById("searchBtn");
 const searchInput = document.getElementById("searchInput");
 const themeToggle = document.getElementById("themeToggle");
 const themeToggleIcn = document.getElementById("themeToggleIcn");
-const htmlTag = document.getElementsByTagName('html')[0];
+const htmlTag = document.getElementsByTagName("html")[0];
 
 // themeToggle.addEventListener('click', () => { })
 
 function toggleMode(mode) {
-  document.getElementsByTagName('html')[0].classList.remove(mode === 'dark' ? 'light' : 'dark')
-  document.getElementsByTagName('html')[0].classList.add(mode)
+  document
+    .getElementsByTagName("html")[0]
+    .classList.remove(mode === "dark" ? "light" : "dark");
+  document.getElementsByTagName("html")[0].classList.add(mode);
 }
 
 function setTheme() {
-  if (htmlTag.classList.contains('dark')) {
-    toggleMode('light')
-    themeToggle.innerText = 'dark'
-    themeToggleIcn.classList.remove('bi-sun-fill')
-    themeToggleIcn.classList.add('bi-moon-fill')
+  if (htmlTag.classList.contains("dark")) {
+    toggleMode("light");
+    themeToggle.innerText = "dark";
+    themeToggleIcn.classList.remove("bi-sun-fill");
+    themeToggleIcn.classList.add("bi-moon-fill");
   } else {
-    toggleMode('dark')
-    themeToggle.innerText = 'light'
-    themeToggleIcn.classList.remove('bi-moon-fill')
-    themeToggleIcn.classList.add('bi-sun-fill')
+    toggleMode("dark");
+    themeToggle.innerText = "light";
+    themeToggleIcn.classList.remove("bi-moon-fill");
+    themeToggleIcn.classList.add("bi-sun-fill");
   }
 }
 
 if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  toggleMode('dark')
+  toggleMode("dark");
 } else {
-  toggleMode('light')
+  toggleMode("light");
 }
 
-themeToggle.addEventListener('click', setTheme)
+themeToggle.addEventListener("click", setTheme);
 
 async function fetchData(user) {
   let rawData = await fetch(`https://api.github.com/users/${user}`);
   let data = await rawData.json();
-  console.log(rawData.status)
+  console.log(rawData.status);
 
   if ([404, 403].includes(rawData.status)) {
     return {};
@@ -70,22 +72,21 @@ function showLoader(elem) {
         </div> `;
 }
 
-
-searchBtn.addEventListener('click', () => {
+searchBtn.addEventListener("click", () => {
   let rawVal = searchInput.value;
-  const val = rawVal.split(' ').shift()
-  showLoader(profCard)
+  const val = rawVal.split(" ").shift();
+  showLoader(profCard);
 
   fetchData(val).then((data) => {
     if (!Object.keys(data).length) {
       profCard.innerHTML = ``;
-      searchBtn.innerText = 'Error!'
-      searchBtn.classList.add('bg-red-600')
+      searchBtn.innerText = "Error!";
+      searchBtn.classList.add("bg-red-600");
       setTimeout(() => {
-        searchBtn.innerText = 'Search'
-        searchBtn.classList.remove('bg-red-600', 'w-44')
-      }, 2000)
-      return 
+        searchBtn.innerText = "Search";
+        searchBtn.classList.remove("bg-red-600", "w-44");
+      }, 2000);
+      return;
     }
 
     profCard.innerHTML = `
@@ -183,4 +184,4 @@ searchBtn.addEventListener('click', () => {
           </div>
           `;
   });
-})
+});

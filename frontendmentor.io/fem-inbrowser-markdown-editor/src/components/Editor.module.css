@@ -1,18 +1,18 @@
 @import "../variables.css";
 
-
 .section {
   display: flex;
   flex-direction: column;
   width: 100%;
-  transition: margin 200ms ease-in; 
+  transition: margin 200ms ease-in;
 }
 
 .editors {
   display: flex;
 }
 
-.editor,.preview {
+.editor,
+.preview {
   background-color: var(--clr-gray-3);
   height: calc(100vh - 155px);
   width: 100%;
@@ -59,8 +59,10 @@
   font-family: var(--alt-font);
 }
 
-.preview h1,h3,h5 {
-  color: var(--text-clr-main)
+.preview h1,
+h3,
+h5 {
+  color: var(--text-clr-main);
 }
 
 .preview hr {
@@ -70,22 +72,25 @@
   width: 100%;
 }
 
-.preview li::marker, .preview li::marker {
+.preview li::marker,
+.preview li::marker {
   color: var(--red-6);
 }
 
-.preview p, .preview li{
+.preview p,
+.preview li {
   line-height: 1.5;
 }
 
-.preview blockquote, .preview pre {
+.preview blockquote,
+.preview pre {
   background: var(--clr-pre);
   padding: 1em;
   width: 90%;
-  margin: .5em 0;
+  margin: 0.5em 0;
   font-weight: bold;
   color: var(--text-clr-main);
-  border-radius: .5vmin;
+  border-radius: 0.5vmin;
   word-wrap: break-word;
   overflow-x: scroll;
 }
@@ -100,11 +105,11 @@
   font-weight: normal;
 }
 
-.preview p code, .preview > code{
+.preview p code,
+.preview > code {
   color: var(--red-5);
   font-weight: bold;
 }
-
 
 .previewBar {
   background-color: var(--clr-gray-2);
@@ -121,7 +126,7 @@
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 2px;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 .eyebtn {
@@ -143,5 +148,4 @@
   .editor {
     border-right: 2px solid var(--blue-gray);
   }
-
 }

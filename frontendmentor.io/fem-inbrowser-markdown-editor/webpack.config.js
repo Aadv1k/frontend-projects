@@ -31,7 +31,7 @@ module.exports = {
               modules: {
                 mode: "local",
                 auto: /\.module.css$/i,
-              }
+              },
             },
           },
         ],
@@ -51,7 +51,6 @@ module.exports = {
   },
 
   resolve: {
-    extensions: util.reactExt
-  }
-
+    extensions: util.reactExt,
+  },
 };

@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 .link--disabled {
-  @apply opacity-50 cursor-not-allowed select-none pointer-events-none
+  @apply opacity-50 cursor-not-allowed select-none pointer-events-none;
 }
 
 .disabled {
-  @apply opacity-50 select-none
+  @apply opacity-50 select-none;
 }
 
 .btn--error {
-  @apply bg-red-600
+  @apply bg-red-600;
 }

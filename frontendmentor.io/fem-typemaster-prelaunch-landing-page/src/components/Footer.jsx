@@ -1,5 +1,5 @@
 import { Component } from "react";
-import "./Footer.css"
+import "./Footer.css";
 
 export default class extends Component {
   render() {
@@ -11,4 +11,3 @@ export default class extends Component {
     );
   }
 }
-

@@ -17,7 +17,7 @@
 }
 
 .features > div::before {
-  content: '';
+  content: "";
   width: 60px;
   height: 60px;
   background-color: var(--p-btn-bg);
@@ -31,19 +31,19 @@
 }
 
 .features > div:nth-child(1)::before {
-  background-image: url('../images/shared/icon-compatible.svg');
+  background-image: url("../images/shared/icon-compatible.svg");
 }
 
 .features > div:nth-child(2)::before {
-  background-image: url('../images/shared/icon-bluetooth.svg');
+  background-image: url("../images/shared/icon-bluetooth.svg");
 }
 
 .features > div:nth-child(3)::before {
-  background-image: url('../images/shared/icon-light.svg');
+  background-image: url("../images/shared/icon-light.svg");
 }
 
 .features > div:nth-child(4)::before {
-  background-image: url('../images/shared/icon-battery.svg');
+  background-image: url("../images/shared/icon-battery.svg");
 }
 
 @media screen and (min-width: 650px) {
@@ -62,10 +62,8 @@
   }
 }
 
-
 @media screen and (min-width: 1000px) {
   .features > div::before {
     top: -80%;
   }
 }
-

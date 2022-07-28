@@ -54,27 +54,27 @@ peopleInput.addEventListener("keyup", () => {
   }
 });
 
-reset.addEventListener('click', resetAll)
+reset.addEventListener("click", resetAll);
 
 function resetAll() {
-
   bill = 142.55;
   tip = 15;
   people = 5;
 
-  peopleInput.value = ""
-  customTip.value = ""
-  billInput.value = ""
+  peopleInput.value = "";
+  customTip.value = "";
+  billInput.value = "";
 
   setValue(bill, tip, people);
   document.querySelector('[value="15"]').classList.add("tip__btn--active");
 }
 
 function setValue(bill, tip, people) {
-  let tipAmount = ((tip * bill) / 100 ) / people;
+  let tipAmount = (tip * bill) / 100 / people;
   let splitBill = (parseInt(bill) + parseInt(tip)) / people;
 
-
-  document.querySelectorAll(".result__value")[0].innerText = "$" + tipAmount.toFixed(2);
-  document.querySelectorAll(".result__value")[1].innerText = "$" + splitBill.toFixed(2);
+  document.querySelectorAll(".result__value")[0].innerText =
+    "$" + tipAmount.toFixed(2);
+  document.querySelectorAll(".result__value")[1].innerText =
+    "$" + splitBill.toFixed(2);
 }

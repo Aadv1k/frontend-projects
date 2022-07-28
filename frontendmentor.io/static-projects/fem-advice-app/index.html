@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Advice generator app</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Advice generator app</title>
 
-  <link rel="stylesheet" href="style.css" media="all">
-  <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" media="all" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="card">
+      <p class="card__advice-id">Advice #<span id="adviceId">420</span></p>
 
-</head>
-<body>
+      <h1 class="card__advice" id="adviceText">When was was was was was is.</h1>
 
+      <div class="card__divider">
+        <img
+          class="divider__mobile divider__img"
+          src="./images/pattern-divider-mobile.svg"
+          alt='"'
+        />
+        <img
+          class="divider__desktop divider__img"
+          src="./images/pattern-divider-desktop.svg"
+          alt='"'
+        />
+      </div>
 
-  <main class="card">
-    <p class="card__advice-id">Advice #<span id="adviceId">420</span></p>
-
-    <h1 class="card__advice" id="adviceText">
-      When was was was was was is. 
-    </h1>
-
-    <div class="card__divider">
-      <img class="divider__mobile divider__img" src="./images/pattern-divider-mobile.svg" alt='"'>
-      <img class="divider__desktop divider__img" src="./images/pattern-divider-desktop.svg" alt='"'>
-    </div>
-
-
-    <button class="card__button" id="adviceBtn">
-      <img id="adviceImg" class="card__img" src="./images/icon-dice.svg" alt="🎲">
-    </button>
-  </main>
-</body>
+      <button class="card__button" id="adviceBtn">
+        <img
+          id="adviceImg"
+          class="card__img"
+          src="./images/icon-dice.svg"
+          alt="🎲"
+        />
+      </button>
+    </main>
+  </body>
 </html>

@@ -22,18 +22,18 @@
 .hero__content {
   display: flex;
   flex-direction: column;
-  gap: .5em;
+  gap: 0.5em;
   align-items: flex-start;
 }
 
 .hero__cta {
   padding: var(--btn-padding);
-  font-size: .9em;
+  font-size: 0.9em;
   position: relative;
 }
 
 .hero__cta::after {
-  content: 'Release on 5/27';
+  content: "Release on 5/27";
   text-transform: uppercase;
   font-family: var(--fnt-main);
   color: var(--clr-paras);

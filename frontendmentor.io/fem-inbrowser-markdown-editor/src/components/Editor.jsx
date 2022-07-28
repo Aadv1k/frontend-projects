@@ -27,7 +27,7 @@ export default class extends Component {
   }
 
   render() {
-    console.warn("RENDERED AGAIN")
+    console.warn("RENDERED AGAIN");
 
     return (
       <section

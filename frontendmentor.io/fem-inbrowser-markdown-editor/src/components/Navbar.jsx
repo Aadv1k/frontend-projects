@@ -32,7 +32,7 @@ export default class extends Component {
 
   setModalDeleteState() {
     this.setState({ modalDelete: !this.state.modalDelete });
-    this.deleteDocument()
+    this.deleteDocument();
   }
 
   saveDocumentToLocalStorage(content, id, name, lastOpened) {
@@ -164,7 +164,7 @@ export default class extends Component {
               if (!this.state.modalDelete) {
                 this.setModalState();
                 return;
-              } 
+              }
             }}
           >
             <FontAwesomeIcon icon={faTrashAlt} />

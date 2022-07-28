@@ -3,7 +3,7 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      'mono': ['Space mono', 'Ubuntu mono', 'ui-monospace']
+      mono: ["Space mono", "Ubuntu mono", "ui-monospace"],
     },
 
     extend: {
@@ -12,10 +12,9 @@ module.exports = {
         violet: "#1F2A48",
         paleBlue: "#F5F8FF",
         white: "#FEFEFE",
-        skyBlue: "#0079FE"
-      }
-    }
-  
+        skyBlue: "#0079FE",
+      },
+    },
   },
   plugins: [],
 };
