@@ -1,24 +1,24 @@
-const generatePerms = (perms) => {
+const generatePerms = perms => {
   let blob = "";
 
-  perms.forEach((perm) => {
+  perms.forEach(perm => {
     blob += `<button class="btn btn--${perm}" data-${perm}>${perm}</button>`;
   });
   return blob;
 };
 
 const renderContent = (input, imgs) => {
-  const currentUser = input["currentUser"].username;
-  let data = input["comments"];
+  const currentUser = input.currentUser.username;
+  const data = input.comments;
   let blob = "";
 
   for (const post of data) {
-    let username = post.user.username,
-      imgPath = imgs[`image-${post.user.username}.png`],
-      content = post.content,
-      createdAt = post.createdAt,
-      score = post.score,
-      perms = username === currentUser ? ["edit", "delete"] : ["reply"];
+    let { username } = post.user;
+    let imgPath = imgs[`image-${post.user.username}.png`];
+    let { content } = post;
+    let { createdAt } = post;
+    let { score } = post;
+    let perms = username === currentUser ? ["edit", "delete"] : ["reply"];
 
     blob += `<div class="card">
     <div class="card__profile">
@@ -45,18 +45,16 @@ const renderContent = (input, imgs) => {
 
   </div>`;
 
-    if (post.replies.length === 0) {
-      continue;
-    }
-    let originalPoster = post.user.username;
+    const originalPoster = post.user.username;
     for (const reply of post.replies) {
-      (username = reply.user.username),
-        (imgPath = imgs[`image-${reply.user.username}.png`]),
-        (content = reply.content),
-        (createdAt = reply.createdAt),
-        (score = reply.score),
-        (perms = username === currentUser ? ["edit", "delete"] : ["reply"]);
-      let btnClass = currentUser === username ? "uname-you" : "";
+      username = reply.user.username;
+      imgPath = imgs[`image-${reply.user.username}.png`];
+      content = reply.content;
+      createdAt = reply.createdAt;
+      score = reply.score;
+      perms = username === currentUser ? ["edit", "delete"] : ["reply"];
+
+      const btnClass = currentUser === username ? "uname-you" : "";
 
       blob += ` <div class="card card--nested">
             <div class="card__profile">
@@ -88,8 +86,8 @@ const renderContent = (input, imgs) => {
 };
 
 const renderComment = (input, imgs) => {
-  let currentUserImg = imgs[input.currentUser.image.png.split("/").pop()];
-  let currentUser = input.currentUser.username;
+  const currentUserImg = imgs[input.currentUser.image.png.split("/").pop()];
+  const currentUser = input.currentUser.username;
 
   return `<div class="card card--comment">
         <span class="card__profile"

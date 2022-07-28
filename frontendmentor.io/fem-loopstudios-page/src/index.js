@@ -1,10 +1,10 @@
-import style from "./scss/main.scss";
+import style from "./scss/main.scss"; // eslint-disable-line
 
-let ham = document.getElementById("ham");
-let navOverlay = document.getElementById("navOverlay");
+const ham = document.getElementById("ham");
+const navOverlay = document.getElementById("navOverlay");
 
 ham.addEventListener("click", () => {
-  if (ham.getAttribute("value") == "close") {
+  if (ham.getAttribute("value") === "close") {
     navOverlay.classList.add("nav__overlay--open");
     ham.setAttribute("value", "open");
     document.getElementById("hamOpen").style.display = "none";

@@ -14,9 +14,9 @@ closeBtn.addEventListener("click", () => {
   navMbl.classList.add("translate-x-full");
 });
 
-for (let btn of tooltipBtn) {
-  let tooltip = btn.parentElement.getElementsByClassName("dropdown__list")[0];
-  let icon = btn.getElementsByClassName("btn__icon")[0];
+for (const btn of tooltipBtn) {
+  const tooltip = btn.parentElement.getElementsByClassName("dropdown__list")[0];
+  const icon = btn.getElementsByClassName("btn__icon")[0];
 
   btn.addEventListener("click", () => {
     if (btn.getAttribute("data-open") === null) {
@@ -31,7 +31,7 @@ for (let btn of tooltipBtn) {
       btn.removeAttribute("data-open");
     }
 
-    for (let nBtn of tooltipBtn) {
+    for (const nBtn of tooltipBtn) {
       if (!btn === nBtn) {
         nBtn.removeAttribute("data-open");
       }

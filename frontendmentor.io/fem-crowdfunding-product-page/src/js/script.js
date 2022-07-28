@@ -1,10 +1,10 @@
-let ham = document.getElementsByClassName("ham")[0];
-let navList = document.getElementsByClassName("nav__list")[0];
+const ham = document.getElementsByClassName("ham")[0];
+const navList = document.getElementsByClassName("nav__list")[0];
 
 document.getElementsByClassName("close__icon")[0].classList.add("none");
 
 ham.addEventListener("click", () => {
-  if (navList.getAttribute("toggled") == "false") {
+  if (navList.getAttribute("toggled") === "false") {
     navList.classList.add("open");
     document.getElementsByClassName("ham__icon")[0].classList.add("none");
     document.getElementsByClassName("close__icon")[0].classList.remove("none");

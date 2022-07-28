@@ -1,7 +1,7 @@
 const gh =
   "https://github.com/Aadv1k/frontend-projects/tree/main/frontendmentor.io/";
 
-let data = [
+const data = [
   {
     title: "In-browser markdown editor",
     date: new Date("Thu 28 Jul 2022 06:18:59 PM IST"),
@@ -9,7 +9,7 @@ let data = [
     image: "./fem-inbrowser-markdown-editor/desktop-preview.jpg",
     links: {
       "Live url": "./fem-inbrowser-markdown-editor/index.html",
-      GitHub: gh + "fem-inbrowser-markdown-editor",
+      GitHub: `${gh}fem-inbrowser-markdown-editor`,
       Challenge: "",
     },
   },
@@ -21,7 +21,7 @@ let data = [
     image: "./fem-pricing-component-with-toggle/desktop-preview.jpg",
     links: {
       "Live url": "./fem-pricing-component-with-toggle/index.html",
-      GitHub: gh + "fem-pricing-component-with-toggle",
+      GitHub: `${gh}fem-pricing-component-with-toggle`,
       Challenge: "",
     },
   },
@@ -33,7 +33,7 @@ let data = [
     image: "./fem-typemaster-prelaunch-landing-page/desktop-preview.jpg",
     links: {
       "Live url": "./fem-typemaster-prelaunch-landing-page/index.html",
-      GitHub: gh + "fem-typemaster-prelaunch-landing-page",
+      GitHub: `${gh}fem-typemaster-prelaunch-landing-page`,
       Challenge: "",
     },
   },
@@ -45,7 +45,7 @@ let data = [
     labels: ["JavaScript", "Webpack", "TailwindCSS", "Junior"],
     links: {
       "Live url": "fem-expenses-chart-component/index.html",
-      GitHub: gh + "fem-expenses-chart-component",
+      GitHub: `${gh}fem-expenses-chart-component`,
       Challenge: "",
     },
   },
@@ -57,7 +57,7 @@ let data = [
     labels: ["JavaScript", "Webpack", "TailwindCSS", "Junior"],
     links: {
       "Live url": "fem-github-user-search-app/index.html",
-      GitHub: gh + "fem-github-user-search-app",
+      GitHub: `${gh}fem-github-user-search-app`,
       Challenge: "",
     },
   },
@@ -69,7 +69,7 @@ let data = [
     labels: ["JavaScript", "Webpack", "TailwindCSS", "Junior"],
     links: {
       "Live url": "fem-intro-section-with-dropdown-navigation/index.html",
-      GitHub: gh + "fem-intro-section-with-dropdown-navigation",
+      GitHub: `${gh}fem-intro-section-with-dropdown-navigation`,
       Challenge: "",
     },
   },
@@ -81,7 +81,7 @@ let data = [
     labels: ["SCSS", "JavaScript", "Webpack", "Intermediate"],
     links: {
       "Live url": "fem-interactive-comments-section/index.html",
-      GitHub: gh + "fem-interactive-comments-section",
+      GitHub: `${gh}fem-interactive-comments-section`,
       Challenge: "",
     },
   },
@@ -93,7 +93,7 @@ let data = [
     labels: ["SCSS", "JavaScript", "Webpack", "Junior"],
     links: {
       "Live url": "fem-loopstudios-page/index.html",
-      GitHub: gh + "fem-loopstudios-page",
+      GitHub: `${gh}fem-loopstudios-page`,
       Challenge: "",
     },
   },
@@ -105,7 +105,7 @@ let data = [
     labels: ["SCSS", "JavaScript", "Webpack", "Junior"],
     links: {
       "Live url": "fem-social-dashboard/index.html",
-      GitHub: gh + "fem-social-dashboard",
+      GitHub: `${gh}fem-social-dashboard`,
       Challenge: "",
     },
   },
@@ -117,7 +117,7 @@ let data = [
     labels: ["SCSS", "Webpack", "PostCSS", "Junior"],
     links: {
       "Live url": "fem-huddle-landing-page/index.html",
-      GitHub: gh + "fem-huddle-landing-page",
+      GitHub: `${gh}fem-huddle-landing-page`,
       Challenge: "",
     },
   },
@@ -129,7 +129,7 @@ let data = [
     labels: ["Html", "SCSS", "Junior"],
     links: {
       "Live url": "fem-testemonials-grid/index.html",
-      GitHub: gh + "fem-testemonials-grid",
+      GitHub: `${gh}fem-testemonials-grid`,
       Challenge: "",
     },
   },
@@ -141,7 +141,7 @@ let data = [
     labels: ["Html", "SCSS", "Junior"],
     links: {
       "Live url": "fem-interactive-pricing-component/index.html",
-      GitHub: gh + "fem-interactive-pricing-component",
+      GitHub: `${gh}fem-interactive-pricing-component`,
       Challenge: "",
     },
   },
@@ -153,7 +153,7 @@ let data = [
     labels: ["Html", "Scss", "JavaScript", "Gulp", "Junior"],
     links: {
       "Live url": "fem-crowdfunding-product-page/index.html",
-      GitHub: gh + "fem-crowdfunding-product-page",
+      GitHub: `${gh}fem-crowdfunding-product-page`,
       Challenge: "",
     },
   },
@@ -165,7 +165,7 @@ let data = [
     labels: ["Html", "JavaScript", "CSS", "Junior"],
     links: {
       "Live url": "./fem-advice-app/index.html",
-      GitHub: gh + "fem-advice-app",
+      GitHub: `${gh}fem-advice-app`,
       Challenge: "",
     },
   },
@@ -177,7 +177,7 @@ let data = [
     labels: ["Html", "CSS", "JavaScript", "Junior"],
     links: {
       "Live url": "./fem-tip-cal/index.html",
-      GitHub: gh + "fem-tip-cal",
+      GitHub: `${gh}fem-tip-cal`,
       Challenge: "",
     },
   },
@@ -257,22 +257,22 @@ let data = [
   },
 ];
 
-let themeToggle = document.getElementById("toggle");
-let icon = document.getElementById("themeIcon");
-let target = document.getElementsByTagName("body")[0];
+const themeToggle = document.getElementById("toggle");
+const icon = document.getElementById("themeIcon");
+const target = document.getElementsByTagName("body")[0];
 
-let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+const theme = window.matchMedia("(prefers-color-scheme: dark)").matches
   ? "dark"
   : "light";
 
 target.classList.toggle(theme);
 
-let innerIcon = theme == "dark" ? "fa-sun" : "fa-moon";
+const innerIcon = theme === "dark" ? "fa-sun" : "fa-moon";
 icon.classList.add(innerIcon);
 
 themeToggle.addEventListener("click", () => {
-  let currentIcon = icon.classList.contains("fa-sun") ? "fa-sun" : "fa-moon";
-  let altIcon = currentIcon == "fa-sun" ? "fa-moon" : "fa-sun";
+  const currentIcon = icon.classList.contains("fa-sun") ? "fa-sun" : "fa-moon";
+  const altIcon = currentIcon === "fa-sun" ? "fa-moon" : "fa-sun";
 
   target.classList.toggle("dark");
 
@@ -280,16 +280,16 @@ themeToggle.addEventListener("click", () => {
   icon.classList.add(altIcon);
 });
 
-let container = document.getElementsByClassName("card-container")[0];
+const container = document.getElementsByClassName("card-container")[0];
 let htmlChunk = "";
-for (let i = 0; i < data.length; i++) {
-  let linkChunk = "",
-    flairChunk = "";
+for (let i = 0; i < data.length; i += 1) {
+  let linkChunk = "";
+  let flairChunk = "";
 
-  let title = data[i].title,
-    imgUrl = data[i].image,
-    labels = data[i].labels,
-    links = data[i].links;
+  const { title } = data[i];
+  const imgUrl = data[i].image;
+  const { labels } = data[i];
+  const { links } = data[i];
 
   for (const label of labels) {
     flairChunk += `

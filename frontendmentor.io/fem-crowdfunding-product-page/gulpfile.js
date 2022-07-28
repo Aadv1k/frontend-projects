@@ -12,7 +12,7 @@ const uglify = require("gulp-uglify");
 const sass = require("gulp-sass")(require("sass"));
 const browserSync = require("browser-sync").create();
 
-path = {
+const path = {
   styles: {
     src: "./src/scss/**/*.scss",
     dest: "./dist/styles/",
@@ -38,6 +38,11 @@ function scripts() {
     .pipe(gulp.dest(path.scripts.dest, { sourcemaps: "." }));
 }
 
+function reloadBrowserSync(cb) {
+  browserSync.reload();
+  cb();
+}
+
 function watchFiles(cb) {
   gulp.watch("./dist/*.html", reloadBrowserSync);
   gulp.watch(path.styles.src, gulp.series(styles, reloadBrowserSync));
@@ -53,12 +58,6 @@ function initBrowserSync(cb) {
   });
   cb();
 }
-
-function reloadBrowserSync(cb) {
-  browserSync.reload();
-  cb();
-}
-
 function cpHtml() {
   return gulp.src("./index.html").pipe(gulp.dest("./dist"));
 }

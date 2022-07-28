@@ -40,9 +40,8 @@ if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
 themeToggle.addEventListener("click", setTheme);
 
 async function fetchData(user) {
-  let rawData = await fetch(`https://api.github.com/users/${user}`);
-  let data = await rawData.json();
-  console.log(rawData.status);
+  const rawData = await fetch(`https://api.github.com/users/${user}`);
+  const data = await rawData.json();
 
   if ([404, 403].includes(rawData.status)) {
     return {};
@@ -66,20 +65,23 @@ async function fetchData(user) {
   };
 }
 
+/* eslint-disable */
 function showLoader(elem) {
-  elem.innerHTML = `<div class="flex justify-center items-center">
+  elem.innerHTML = `<div class="flex justify-center items-center"> 
           <div class="spinner-border animate-spin inline-block w-12 h-12 border-4 rounded-full text-cyan-800 dark:text-slate-100" role="status" > </div>
-        </div> `;
+        </div> `; // eslint-disable-line
 }
 
+/* eslint-enable */
+
 searchBtn.addEventListener("click", () => {
-  let rawVal = searchInput.value;
+  const rawVal = searchInput.value;
   const val = rawVal.split(" ").shift();
   showLoader(profCard);
 
   fetchData(val).then((data) => {
     if (!Object.keys(data).length) {
-      profCard.innerHTML = ``;
+      profCard.innerHTML = "";
       searchBtn.innerText = "Error!";
       searchBtn.classList.add("bg-red-600");
       setTimeout(() => {

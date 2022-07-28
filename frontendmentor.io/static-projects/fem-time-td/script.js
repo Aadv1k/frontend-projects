@@ -1,15 +1,14 @@
-let taskList = document.getElementById("taskList");
-let btns = document.getElementsByClassName("btn");
+const taskList = document.getElementById("taskList");
+const btns = document.getElementsByClassName("btn");
 
-let response = await fetch("./data.json");
-let data = await response.json();
+const response = fetch("./data.json");
 
 function getData(data, type) {
   let htmlChunk = "";
   for (const task of data) {
-    let title = task["title"];
-    let metatitle =
-      task["title"] == "Self Care" ? "self-care" : task["title"].toLowerCase();
+    const { title } = task;
+    const metatitle =
+      task.title === "Self Care" ? "self-care" : task.title.toLowerCase();
     let date;
 
     switch (type) {
@@ -23,8 +22,8 @@ function getData(data, type) {
         date = "Yesterday";
     }
 
-    let timeframe = task["timeframes"][type];
-    let imgUrl = `./images/icon-${metatitle}.svg`;
+    const timeframe = task.timeframes[type];
+    const imgUrl = `./images/icon-${metatitle}.svg`;
 
     htmlChunk += `<div class="card" style="background: var(--${metatitle})">
           <img class="card__accent" src="${imgUrl}" alt="" />
@@ -37,7 +36,7 @@ function getData(data, type) {
             </div>
             <div class="card__info">
               <h1>${timeframe.current}hrs</h1>
-              <p>${date} - ${timeframe["previous"]}hrs</p>
+              <p>${date} - ${timeframe.previous}hrs</p>
             </div>
           </div>
         </div>`;
@@ -46,10 +45,11 @@ function getData(data, type) {
   return htmlChunk;
 }
 
-taskList.innerHTML = getData(data, "weekly");
-
-for (const item of btns) {
-  item.addEventListener("click", () => {
-    taskList.innerHTML = getData(data, item.getAttribute("value"));
-  });
-}
+response.then((data) => {
+  taskList.innerHTML = getData(data, "weekly");
+  for (const item of btns) {
+    item.addEventListener("click", () => {
+      taskList.innerHTML = getData(data, item.getAttribute("value"));
+    });
+  }
+});

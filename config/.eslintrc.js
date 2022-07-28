@@ -1,15 +1,18 @@
 module.exports = {
+  extends: ["airbnb", "prettier", "eslint-config-prettier"],
   plugins: ["prettier"],
   env: {
     browser: true,
-    commonjs: false,
+    node: true,
+    commonjs: true,
     es2021: true,
   },
-
-  ignorePatterns: [
-    "node_modules/",
-    "dist/",
-    "prettier.config.js",
-    "webpack.config.js",
-  ],
+  rules: {
+    "prettier/prettier": "warn",
+    sourceType: 0,
+    "no-restricted-syntax": ["off"],
+    "react/jsx-filename-extension": ["off"],
+    radix: "off",
+  },
+  ignorePatterns: ["node_modules/", "dist/", "*.config.js"],
 };

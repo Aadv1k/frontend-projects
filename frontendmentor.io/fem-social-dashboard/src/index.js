@@ -1,4 +1,4 @@
-import style from "./scss/main.scss";
+import style from "./scss/main.scss"; // eslint-disable-line
 
 const themeToggle = document.getElementById("themeToggle");
 

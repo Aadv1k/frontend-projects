@@ -1,10 +1,10 @@
 import "./scss/main.scss";
 import data from "./data.json";
-import { renderContent, renderComment } from "./render.js";
+import { renderContent, renderComment } from "./render";
 
 function importAll(r) {
-  let images = {};
-  r.keys().forEach((item) => {
+  const images = {};
+  r.keys().forEach(item => {
     images[item.replace("./", "")] = r(item);
   });
   return images;
@@ -13,8 +13,8 @@ const profileImg = importAll(
   require.context("./images/avatars/", true, /\.(png|jpe?g|svg)$/)
 );
 
-let commentsList = document.getElementById("commentsList");
-let commentsInput = document.getElementById("commentsInput");
+const commentsList = document.getElementById("commentsList");
+const commentsInput = document.getElementById("commentsInput");
 commentsList.innerHTML += renderContent(data, profileImg);
 commentsInput.innerHTML += renderComment(data, profileImg);
 
@@ -30,7 +30,7 @@ function showModal(show = true) {
 
 function upsListener() {
   for (const elem of document.querySelectorAll(".btn--plus")) {
-    let counter = elem.parentElement.querySelector("[data-counter]");
+    const counter = elem.parentElement.querySelector("[data-counter]");
     elem.addEventListener("click", () => {
       if (counter.getAttribute("voted") === "down") {
         counter.textContent = parseInt(counter.textContent) + 2;
@@ -46,7 +46,7 @@ function upsListener() {
   }
 
   for (const elem of document.querySelectorAll(".btn--minus")) {
-    let counter = elem.parentElement.querySelector("[data-counter]");
+    const counter = elem.parentElement.querySelector("[data-counter]");
     elem.addEventListener("click", () => {
       if (counter.getAttribute("voted") === "up") {
         counter.textContent = parseInt(counter.textContent) - 2;
@@ -65,13 +65,14 @@ function upsListener() {
 function editBtnListener() {
   for (const elem of document.querySelectorAll("[data-edit]")) {
     elem.addEventListener("click", () => {
-      let contentField =
+      const contentField =
         elem.parentNode.parentNode.querySelector(".card__content");
       contentField.setAttribute("contenteditable", "");
       contentField.classList.add("content--editable");
 
-      let updateBtn = elem.parentNode.parentNode.querySelector(".card__ghost");
-      let inner = contentField.innerHTML;
+      const updateBtn =
+        elem.parentNode.parentNode.querySelector(".card__ghost");
+      const inner = contentField.innerHTML;
 
       updateBtn.style.display = "flex";
       updateBtn.addEventListener("click", () => {
@@ -103,23 +104,23 @@ function deleteBtnListener() {
 
 function replyBtnListener() {
   for (const elem of document.querySelectorAll("[data-reply]")) {
-    let target = elem.parentNode.parentElement;
+    const target = elem.parentNode.parentElement;
 
     elem.addEventListener("click", () => {
       if (!elem.getAttribute("clicked")) {
         elem.setAttribute("clicked", "true");
         target.insertAdjacentHTML("afterend", renderComment(data, profileImg));
-        for (let child of commentsList.children) {
+        for (const child of commentsList.children) {
           if (child.classList.contains("card--comment")) {
             child
               .querySelector(".btn--primary")
               .addEventListener("click", () => {
-                let input = child.querySelector(".input").innerHTML;
-                let imgPath =
+                const input = child.querySelector(".input").innerHTML;
+                const imgPath =
                   profileImg[data.currentUser.image.png.split("/").pop()];
-                let username = data.currentUser.username;
+                const { username } = data.currentUser;
 
-                let blob = `<div class="card card--nested">
+                const blob = `<div class="card card--nested">
                   <div class="card__profile">
                     <span><img src="${imgPath}" alt="🧑" for="${username}"/></span>
                     <strong class="uname-you">${username}</strong>
@@ -166,13 +167,13 @@ upsListener();
 // Handle the send event
 for (const elem of document.querySelectorAll("[data-send]")) {
   elem.addEventListener("click", () => {
-    let input =
+    const input =
       elem.parentNode.parentNode.querySelector("[data-input]").innerText;
-    let username = elem.getAttribute("data-send");
-    let imgPath = profileImg[`image-${username}.png`];
+    const username = elem.getAttribute("data-send");
+    const imgPath = profileImg[`image-${username}.png`];
 
     if (input.trim().length) {
-      let blob = `<div class="card">
+      const blob = `<div class="card">
           <div class="card__profile">
             <span><img src="${imgPath}" alt="🧑" for="${username}"/></span>
             <strong class="uname-you">${username}</strong>

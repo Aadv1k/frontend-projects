@@ -94,7 +94,6 @@ main {
   font-size: 0.8rem;
 }
 
-
 .nav__list li a {
   text-decoration: none;
   color: var(--footer);
@@ -375,7 +374,6 @@ button.hamburger {
   grid-template-columns: repeat(2, 1fr);
 }
 
-
 /******************/
 /******************/
 /******Footer******/
@@ -383,69 +381,68 @@ button.hamburger {
 /******************/
 
 footer {
-    background: var(--footer-bg);
-    display: flex;
-    flex-direction: column;
-    padding: 4rem 2rem;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2.5rem;
-    position: relative;
+  background: var(--footer-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  position: relative;
 }
 
 .footer__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .footer__nav {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
 .footer__nav li a {
-    color: var(--very-dark-grayish-blue);
-    font-family: var(--main-font);
-    text-decoration: none;
-    font-size: .9rem;
+  color: var(--very-dark-grayish-blue);
+  font-family: var(--main-font);
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
 .social__links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
 .social__links svg {
-    fill: #2C7566;
+  fill: #2c7566;
 }
 
 .social__links svg:hover {
-    fill: var(--white) !important;
+  fill: var(--white) !important;
 }
 
 .footer__nav li a:hover {
-    color: var(--white);
+  color: var(--white);
 }
 
 .footer__logo {
-    width: 140px;
+  width: 140px;
 }
 
 .attribution {
-    position: absolute;
-    bottom: 5%;
-    font-size: .9rem;
-    font-family: var(--main-font);
-    color: var(--very-dark-grayish-blue);
+  position: absolute;
+  bottom: 5%;
+  font-size: 0.9rem;
+  font-family: var(--main-font);
+  color: var(--very-dark-grayish-blue);
 }
 
 .attribution a {
-    color: var(--very-dark-grayish-blue);
->>>>>>> e0a1c059192775c3fecdb573886033dab62bd4fa
+  color: var(--very-dark-grayish-blue);
 }
 
 .section-3__title {
@@ -637,15 +634,9 @@ footer {
   }
 
   .contact:hover {
-<<<<<<< HEAD
     color: white !important;
     transition: 0.2s ease-in;
     background: hsla(0, 0%, 100%, 0.3);
-=======
-      color: white !important;
-    transition: .2s ease-in;
-      background: hsla(0, 0%, 100%, 0.3);
->>>>>>> e0a1c059192775c3fecdb573886033dab62bd4fa
   }
 
   .nav__list li a {

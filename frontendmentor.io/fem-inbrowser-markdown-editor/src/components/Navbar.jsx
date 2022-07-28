@@ -140,7 +140,7 @@ export default class extends Component {
               <span>document name</span>
               <input
                 className={style.editabletitle}
-                placeholder={this.props.document.name}
+                value={this.props.document.name}
                 ref={this.inputRef}
                 onInput={(e) => {
                   this.props.setDocumentState(

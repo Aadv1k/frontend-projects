@@ -7,16 +7,16 @@ function normalize(amount, total) {
   return (amount / 100) * total;
 }
 
-let barHeight = 200;
+const barHeight = 200;
 
 const max = Math.max(...data.map((e) => e.amount));
 
 for (const elem of data) {
-  let normalizedHeight = normalize(elem.amount, barHeight) + "px";
+  const normalizedHeight = `${normalize(elem.amount, barHeight)}px`;
 
-  let bar = document.createElement("div");
+  const bar = document.createElement("div");
   bar.classList.add("text-center", "w-[14%]", "relative");
-  let htm = ` 
+  const htm = ` 
   <div style="height: ${normalizedHeight};" class="w-full ${
     elem.amount === max ? "bg-gray-400" : "bg-tomato"
   } rounded-sm transition-[opacity] hover:opacity-70 hover:cursor-pointer"> </div> 
