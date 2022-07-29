@@ -2,7 +2,7 @@
 
 base=$(pwd | rev | cut -d '/' -f 1 | rev)
 
-for static in ./frontendmentor.io/static-projects/*/ 
+for static in ./packages/frontendmentor/static-projects/*/ 
 do
   cp -r "$static" ./site/
 done

@@ -2,22 +2,22 @@
 
 this is the monorepo of aadvik's frontend projects. **_[Here is the url to the darhboard](https://aadv1k-frontend.netlify.app)_**
 
-| Packages 📦                                                                                                                       | Tooling 🛠️                           |
-| --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [@frontend-projects/fem-inbrowser-markdown-editor](./frontendmentor.io/fem-inbrowser-markdown-editor)                             | ![react] ![webpack] ![openprops]     |
-| [@frontend-projects/fem-pricing-component-with-toggle](./frontendmentor.io/fem-pricing-component-with-toggle/)                    | ![react] ![webpack] ![windicss]      |
-| [@frontend-projects/fem-typemaster-prelaunch-landing-page](./frontendmentor.io/fem-typemaster-prelaunch-landing-page/)            | ![react] ![webpack] ![openprops]     |
-| [@frontend-projects/fem-expenses-chart-component](./frontendmentor.io/fem-expenses-chart-component/)                              | ![tailwindcss] ![webpack] ![postcss] |
-| [@frontend-projects/fem-github-user-search-app](./frontendmentor.io/fem-github-user-search-app/)                                  | ![tailwindcss] ![Webpack] ![postcss] |
-| [@frontend-projects/fem-intro-section-with-dropdown-navigation](./frontendmentor.io/fem-intro-section-with-dropdown-navigation/)  | ![tailwindcss] ![webpack] ![postcss] |
-| [@frontend-projects/fem-interactive-comments-section](./frontendmentor.io/fem-interactive-comments-section/)                      | ![sass] ![webpack]                   |
-| [@frontend-projects/fem-loopstudios-page](./frontendmentor.io/fem-loopstudios-page/)                                              | ![sass] ![webpack]                   |
-| [@frontend-projects/fem-social-dashboard](./frontendmentor.io/fem-social-dashboard/)                                              | ![sass] ![webpack]                   |
-| [@frontend-projects/fem-huddle-landing-page](./frontendmentor.io/fem-huddle-landing-page/)                                        | ![sass] ![webpack] ![postcss]        |
-| [@frontend-projects/fem-testemonials-grid](./frontendmentor.io/fem-testemonials-grid/)                                            | ![sass]                              |
-| [@frontend-projects/fem-interactive-pricing-component](./frontendmentor.io/fem-interactive-pricing-component/)                    | ![sass]                              |
-| [@frontend-projects/fem-crowdfunding-product-page](./frontendmentor.io/fem-crowdfunding-product-page/)                            | ![sass] ![gulp]                      |
-| [./frontendmentor.io/static-projects/](./frontendmentor.io/static-projects) static project (not npm packages) can be copied as-is | ![html] ![css] ![javascript]         |
+| Packages 📦                                                                                                                                   | Tooling 🛠️                           |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| [@frontend-projects/fem-inbrowser-markdown-editor](./packages/frontendmentor/fem-inbrowser-markdown-editor)                                   | ![react] ![webpack] ![openprops]     |
+| [@frontend-projects/fem-pricing-component-with-toggle](./packages/frontendmentor/fem-pricing-component-with-toggle/)                          | ![react] ![webpack] ![windicss]      |
+| [@frontend-projects/fem-typemaster-prelaunch-landing-page](./packages/frontendmentor/fem-typemaster-prelaunch-landing-page/)                  | ![react] ![webpack] ![openprops]     |
+| [@frontend-projects/fem-expenses-chart-component](./packages/frontendmentor/fem-expenses-chart-component/)                                    | ![tailwindcss] ![webpack] ![postcss] |
+| [@frontend-projects/fem-github-user-search-app](./packages/frontendmentor/fem-github-user-search-app/)                                        | ![tailwindcss] ![Webpack] ![postcss] |
+| [@frontend-projects/fem-intro-section-with-dropdown-navigation](./packages/frontendmentor/fem-intro-section-with-dropdown-navigation/)        | ![tailwindcss] ![webpack] ![postcss] |
+| [@frontend-projects/fem-interactive-comments-section](./packages/frontendmentor/fem-interactive-comments-section/)                            | ![sass] ![webpack]                   |
+| [@frontend-projects/fem-loopstudios-page](./packages/frontendmentor/fem-loopstudios-page/)                                                    | ![sass] ![webpack]                   |
+| [@frontend-projects/fem-social-dashboard](./packages/frontendmentor/fem-social-dashboard/)                                                    | ![sass] ![webpack]                   |
+| [@frontend-projects/fem-huddle-landing-page](./packages/frontendmentor/fem-huddle-landing-page/)                                              | ![sass] ![webpack] ![postcss]        |
+| [@frontend-projects/fem-testemonials-grid](./packages/frontendmentor/fem-testemonials-grid/)                                                  | ![sass]                              |
+| [@frontend-projects/fem-interactive-pricing-component](./packages/frontendmentor/fem-interactive-pricing-component/)                          | ![sass]                              |
+| [@frontend-projects/fem-crowdfunding-product-page](./packages/frontendmentor/fem-crowdfunding-product-page/)                                  | ![sass] ![gulp]                      |
+| [./packages/frontendmentor/static-projects/](./packages/frontendmentor/static-projects) static project (not npm packages) can be copied as-is | ![html] ![css] ![javascript]         |
 
 ## Install
 
@@ -40,21 +40,22 @@ now you can simply load up the `./site/` in a browser.
 
 ## Structure
 
+- `./packages`: Directory with all the primary packages of the project
+  - `./packages/frontendmentor/`: Front-end challenges from [frontendmentor.io](https://frontendmentor.io)
 - `./config`: configuration scripts for dev tools - eslint, webpack, prettier
 - `./scripts/`: utility shell scripts to organize, clean and fetch files in the project
-- `./site/`: The static styles for the main dashboard
-- `./frontendmentor.io/`: primary package directory it contains projects from [frontendmentor.io](https://frontendmentor.io)
-- `./.husky`: pre-commit hook to format; pre-push hook to lint
+- `./site/`: The static site for the main dashboard
 
 ## Architecture
 
-This monorepo is managed using [npm workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces), I chose to use
+This monorepo is managed using [npm
+workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces), I chose to use
 a monorepo for primarily one reason - Organization. I liked the semantics of
 having everything in one place, the standard `config` utilities and a single
-domain are really good to have and manage.
-Alongside this, under this single monorepo, I can test, my code, and setup a CI pipelines.
-
-The site is deployed on netlify via the `npm run build` command This command makes it so that the `./site` folder can be dropped onto any server as a static site.
+domain are really good to have and manage. Alongside this, under this single
+monorepo, I can test, my code, and setup a CI pipelines. The site is deployed
+on netlify via the `npm run build` command This command makes it so that the
+`./site` folder can be dropped onto any server as a static site.
 
 _note: currently there are no inner-deps_
 

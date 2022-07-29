@@ -1,7 +1,7 @@
 {
   "name": "frontend-projects",
   "workspaces": [
-    "frontendmentor.io/*"
+    "packages/frontendmentor/*"
   ],
   "version": "1.0.0",
   "description": "A collection of my frontend project",
