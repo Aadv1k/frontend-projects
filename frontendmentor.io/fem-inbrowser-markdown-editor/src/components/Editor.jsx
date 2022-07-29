@@ -1,11 +1,10 @@
-import { Component } from "react";
-
-import style from "./Editor.module.css";
+import React, { Component } from "react";
 
 import { marked } from "marked";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
+import style from "./Editor.module.css";
 
 export default class extends Component {
   constructor(props) {
@@ -15,7 +14,8 @@ export default class extends Component {
   }
 
   setPreviewState() {
-    if (this.state.preview) {
+    const { preview } = this.state;
+    if (preview) {
       this.setState({ preview: false });
       return;
     }
@@ -27,8 +27,6 @@ export default class extends Component {
   }
 
   render() {
-    console.warn("RENDERED AGAIN");
-
     return (
       <section
         className={style.section}
@@ -72,7 +70,7 @@ export default class extends Component {
                 );
               }}
               value={this.props.document.content}
-            ></textarea>
+            />
           </div>
 
           <div
@@ -84,7 +82,7 @@ export default class extends Component {
               dangerouslySetInnerHTML={this.markedHtml(
                 this.props.document.content
               )}
-            ></div>
+            />
           </div>
         </div>
       </section>

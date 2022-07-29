@@ -1,14 +1,17 @@
-import { Component } from "react";
-import Navbar from "./components/Navbar.jsx";
-import Editor from "./components/Editor.jsx";
+/* eslint-disable react/jsx-no-bind */
+import React, { Component } from "react";
+import Navbar from "./components/Navbar";
+import Editor from "./components/Editor";
 
 import "./App.css";
 
 // Works ¯\_(ツ)_/¯heigh
 // TODO: Use context here
-window.matchMedia("(prefers-color-scheme: light)").matches
-  ? document.getElementsByTagName("html")[0].setAttribute("data-theme", "light")
-  : document.getElementsByTagName("html")[0].setAttribute("data-theme", "dark");
+if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+  document.getElementsByTagName("html")[0].setAttribute("data-theme", "light");
+} else {
+  document.getElementsByTagName("html")[0].setAttribute("data-theme", "dark");
+}
 
 export default class extends Component {
   constructor(props) {
@@ -20,35 +23,8 @@ export default class extends Component {
     };
   }
 
-  setDrawerState() {
-    if (this.state.drawer) {
-      this.setState({ drawer: false });
-      return;
-    }
-    this.setState({ drawer: true });
-  }
-
-  setDocumentState(id, name, content, lastOpened) {
-    if (lastOpened === undefined) {
-      lastOpened = true;
-    }
-
-    this.setState({
-      document: {
-        id: id,
-        name: name,
-        content: content,
-        lastOpened: lastOpened,
-      },
-    });
-  }
-
-  setDocumentsState(arr) {
-    this.setState({ documents: arr });
-  }
-
   UNSAFE_componentWillMount() {
-    const data = JSON.parse(localStorage.getItem("document"));
+    let data = JSON.parse(localStorage.getItem("document"));
     if (data === null) {
       localStorage.setItem("document", "[]");
       data = JSON.parse(localStorage.getItem("document"));
@@ -68,23 +44,57 @@ export default class extends Component {
     });
   }
 
+  setDocumentsState(arr) {
+    this.setState({ documents: arr });
+  }
+
+  setDocumentState(id, name, content, lastOpened) {
+    if (lastOpened === undefined) {
+      // eslint-disable-next-line no-param-reassign
+      lastOpened = true;
+    }
+
+    this.setState({
+      document: {
+        id,
+        name,
+        content,
+        lastOpened,
+      },
+    });
+  }
+
+  setDrawerState() {
+    const { drawer } = this.state;
+    if (drawer) {
+      this.setState({ drawer: false });
+      return;
+    }
+    this.setState({ drawer: true });
+  }
+
   render() {
-    this.state.drawer
-      ? (document.getElementById("root").style.overflow = "hidden")
-      : (document.getElementById("root").style.overflow = "auto");
+    const { drawer, document, documents } = this.state;
+
+    if (drawer) {
+      document.getElementById("root").style.overflow = "hidden";
+    } else {
+      document.getElementById("root").style.overflow = "auto";
+    }
+
     return (
       <>
         <Navbar
           setDrawerState={this.setDrawerState.bind(this)}
-          drawer={this.state.drawer}
+          drawer={drawer}
           setDocumentState={this.setDocumentState.bind(this)}
           setDocumentsState={this.setDocumentsState.bind(this)}
           document={this.state.document}
-          documents={this.state.documents}
+          documents={documents}
         />
 
         <Editor
-          drawer={this.state.drawer}
+          drawer={drawer}
           setDocumentState={this.setDocumentState.bind(this)}
           document={this.state.document}
         />

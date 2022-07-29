@@ -1,7 +1,6 @@
-import { Component } from "react";
-import style from "./AppDrawer.module.css";
-
+import React, { Component } from "react";
 import uuid from "react-uuid";
+import style from "./AppDrawer.module.css";
 
 export default class extends Component {
   render() {
@@ -16,42 +15,40 @@ export default class extends Component {
           }}
         >
           <ul className={style.ul}>
-            {this.props.documents.map((e, i) => {
-              return (
-                <li
-                  key={i}
-                  onClick={() => {
-                    this.props.setDrawerState();
-                    this.props.setDocumentState(e.id, e.name, e.content, true);
+            {this.props.documents.map((e, i) => (
+              <li
+                key={i}
+                onClick={() => {
+                  this.props.setDrawerState();
+                  this.props.setDocumentState(e.id, e.name, e.content, true);
 
-                    const data = this.props.documents.map((elem) => {
-                      if (elem.id !== e.id) {
-                        return {
-                          name: elem.name,
-                          content: elem.content,
-                          id: elem.id,
-                          lastOpened: false,
-                        };
-                      }
-
+                  const data = this.props.documents.map((elem) => {
+                    if (elem.id !== e.id) {
                       return {
                         name: elem.name,
                         content: elem.content,
                         id: elem.id,
-                        lastOpened: true,
+                        lastOpened: false,
                       };
-                    });
+                    }
 
-                    this.props.setDocumentsState(data);
-                    localStorage.setItem("document", JSON.stringify(data));
-                    this.props.inputRef.current.value = "";
-                  }}
-                >
-                  <span>{e.name}</span>
-                  <span>{e.content.slice(0, 20) + "..."}</span>
-                </li>
-              );
-            })}
+                    return {
+                      name: elem.name,
+                      content: elem.content,
+                      id: elem.id,
+                      lastOpened: true,
+                    };
+                  });
+
+                  this.props.setDocumentsState(data);
+                  localStorage.setItem("document", JSON.stringify(data));
+                  this.props.inputRef.current.value = "";
+                }}
+              >
+                <span>{e.name}</span>
+                <span>{`${e.content.slice(0, 20)}...`}</span>
+              </li>
+            ))}
           </ul>
 
           <button
@@ -71,7 +68,7 @@ export default class extends Component {
             New Document
           </button>
         </div>
-        <div className={style.overlay}></div>
+        <div className={style.overlay} />
       </div>
     );
   }

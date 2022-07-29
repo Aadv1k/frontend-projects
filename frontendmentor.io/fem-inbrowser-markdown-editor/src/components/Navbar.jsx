@@ -1,8 +1,5 @@
 import { Component, createRef } from "react";
 
-import AppDrawer from "./AppDrawer.jsx";
-import Modal from "./Modal.jsx";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 
@@ -12,9 +9,11 @@ import {
   faFloppyDisk,
 } from "@fortawesome/free-regular-svg-icons";
 
+import uuid from "react-uuid";
 import style from "./Navbar.module.css";
 
-import uuid from "react-uuid";
+import Modal from "./Modal.jsx";
+import AppDrawer from "./AppDrawer.jsx";
 
 export default class extends Component {
   constructor(props) {
@@ -44,10 +43,10 @@ export default class extends Component {
 
     if (data) {
       data.push({
-        id: id,
-        name: name,
-        content: content,
-        lastOpened: lastOpened,
+        id,
+        name,
+        content,
+        lastOpened,
       });
       localStorage.setItem("document", JSON.stringify(data));
 
@@ -56,19 +55,18 @@ export default class extends Component {
       );
 
       return {
-        id: id,
-        name: name,
-        content: content,
+        id,
+        name,
+        content,
       };
-    } else {
-      localStorage.setItem("document", "[]");
-      return -1;
     }
+    localStorage.setItem("document", "[]");
+    return -1;
   }
 
   deleteDocument() {
-    let data = JSON.parse(localStorage.getItem("document"));
-    let d = data.findIndex((e) => e.id === this.props.document.id);
+    const data = JSON.parse(localStorage.getItem("document"));
+    const d = data.findIndex((e) => e.id === this.props.document.id);
     data.splice(d, d + 1);
     data[0].lastOpened = true;
     localStorage.setItem("document", JSON.stringify(data));
@@ -132,7 +130,7 @@ export default class extends Component {
 
         <div className={style.navinfo}>
           <span className={style.mdtitle}>markdown</span>
-          <span className={style.sep}></span>
+          <span className={style.sep} />
           <div className={style.infotitle}>
             <FontAwesomeIcon icon={faFile} />
 
@@ -151,7 +149,7 @@ export default class extends Component {
                     this.props.document.content
                   );
                 }}
-              ></input>
+              />
             </div>
           </div>
         </div>
@@ -163,7 +161,6 @@ export default class extends Component {
             onClick={() => {
               if (!this.state.modalDelete) {
                 this.setModalState();
-                return;
               }
             }}
           >
@@ -174,8 +171,8 @@ export default class extends Component {
             className={style.savebtn}
             type="button"
             onClick={() => {
-              let data = JSON.parse(localStorage.getItem("document"));
-              let target = data.findIndex(
+              const data = JSON.parse(localStorage.getItem("document"));
+              const target = data.findIndex(
                 (e) => e.id === this.props.document.id
               );
               data[target].content = this.props.document.content;

@@ -36,7 +36,7 @@ now you can simply load up the `./site/` in a browser.
 - [`npm run femfetch`](./scripts/femfetch.sh): a utility script to fetch challenge files from [frontendmentor.io](https://frontendmentor.io)
 - `npm run lint`: run `eslint .`
 - `npm run lint:fix`: run `eslint . --fix`
-- `npm run format`: format using prettier 
+- `npm run format`: format using prettier
 
 ## Structure
 

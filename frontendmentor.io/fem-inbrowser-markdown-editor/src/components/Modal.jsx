@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import style from "./Modal.module.css";
 
 export default class extends Component {
@@ -26,7 +26,7 @@ export default class extends Component {
             </button>
           </div>
         </div>
-        <div className={style.overlay}></div>
+        <div className={style.overlay} />
       </div>
     );
   }
