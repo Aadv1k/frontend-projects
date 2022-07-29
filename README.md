@@ -4,9 +4,9 @@ this is the monorepo of aadvik's frontend projects. **_[Here is the url to the d
 
 | Packages 📦                                                                                                                       | Tooling 🛠️                           |
 | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [@frontend-projects/fem-inbrowser-markdown-editor](./frontendmentor.io/fem-inbrowser-markdown-editor)                             | ![react] ![webpack] ![openprops]        |
+| [@frontend-projects/fem-inbrowser-markdown-editor](./frontendmentor.io/fem-inbrowser-markdown-editor)                             | ![react] ![webpack] ![openprops]     |
 | [@frontend-projects/fem-pricing-component-with-toggle](./frontendmentor.io/fem-pricing-component-with-toggle/)                    | ![react] ![webpack] ![windicss]      |
-| [@frontend-projects/fem-typemaster-prelaunch-landing-page](./frontendmentor.io/fem-typemaster-prelaunch-landing-page/)            | ![react] ![webpack] ![openprops]        |
+| [@frontend-projects/fem-typemaster-prelaunch-landing-page](./frontendmentor.io/fem-typemaster-prelaunch-landing-page/)            | ![react] ![webpack] ![openprops]     |
 | [@frontend-projects/fem-expenses-chart-component](./frontendmentor.io/fem-expenses-chart-component/)                              | ![tailwindcss] ![webpack] ![postcss] |
 | [@frontend-projects/fem-github-user-search-app](./frontendmentor.io/fem-github-user-search-app/)                                  | ![tailwindcss] ![Webpack] ![postcss] |
 | [@frontend-projects/fem-intro-section-with-dropdown-navigation](./frontendmentor.io/fem-intro-section-with-dropdown-navigation/)  | ![tailwindcss] ![webpack] ![postcss] |
@@ -24,18 +24,19 @@ this is the monorepo of aadvik's frontend projects. **_[Here is the url to the d
 ```shell
 $ git clone git@github.com:aadv1k/frontend-projects.git
 $ npm install # install deps
-$ npm run build --ws # run the build command in the packages
+$ npm run build # run the build command
 ```
 
-now you can simply load up `./index.html` in a browser.
+now you can simply load up the `./site/` in a browser.
 
 ## Scripts
 
-- [`npm run cleanAll`](./scripts/cleanUp.sh): purges all files in `@frontend-projects/package/design/` except the design preview; also removes other unwanted files
-- [`npm run build`](./scripts/deploy.sh): wip - copies all the packages to a `./www/` directory and renames them appropriately
+- [`npm run clean`](./scripts/cleanUp.sh): purges all files in `@frontend-projects/package/design/` except the design preview; also removes other unwanted files
+- [`npm run build`](./scripts/deploy.sh): copies all the packages to the `./site/` directory and renames them appropriately
 - [`npm run femfetch`](./scripts/femfetch.sh): a utility script to fetch challenge files from [frontendmentor.io](https://frontendmentor.io)
 - `npm run lint`: run `eslint .`
 - `npm run lint:fix`: run `eslint . --fix`
+- `npm run format`: format using prettier 
 
 ## Structure
 
@@ -43,6 +44,7 @@ now you can simply load up `./index.html` in a browser.
 - `./scripts/`: utility shell scripts to organize, clean and fetch files in the project
 - `./site/`: The static styles for the main dashboard
 - `./frontendmentor.io/`: primary package directory it contains projects from [frontendmentor.io](https://frontendmentor.io)
+- `./.husky`: pre-commit hook to format; pre-push hook to lint
 
 ## Architecture
 

@@ -20,7 +20,9 @@
     <main>
       <section class="hero__title">
         <h2>Simple, traffic-based pricing</h2>
-        <p>Sign-up for our 30-day trial.<span>No credit card required<span>.</p>
+        <p>
+          Sign-up for our 30-day trial.<span>No credit card required</span>.
+        </p>
       </section>
 
       <section class="hero__card">
@@ -48,7 +50,7 @@
         <div class="card__billing-plan">
           <p class="billing-plan__plan">Monthly Billing</p>
           <div class="billing-plan__toggle">
-            <input type="checkbox" class="cb"/>
+            <input type="checkbox" class="cb" />
             <label class="toggle__slider" for="cb"></label>
           </div>
           <p class="billing-plan__plan billing-plan__plan--yearly">
@@ -72,15 +74,13 @@
   </body>
 
   <script>
-    let p = document.getElementById('pricing');
-    let slider = document.getElementById('cardSlider');
+    let p = document.getElementById("pricing");
+    let slider = document.getElementById("cardSlider");
 
     // $16 for 100
 
-    
-    slider.addEventListener('input', () => {
-        p.innerText = slider.value;
-    })
-
+    slider.addEventListener("input", () => {
+      p.innerText = slider.value;
+    });
   </script>
 </html>
