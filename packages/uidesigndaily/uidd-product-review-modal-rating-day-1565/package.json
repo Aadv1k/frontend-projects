@@ -4,7 +4,7 @@
   "source": "./src/index.html",
   "scripts": {
     "dev": "parcel --port 8080",
-    "build": "mkdir -p dist && rm -rf ./dist/* && parcel build"
+    "build": "mkdir -p dist && rm -rf ./dist/* && parcel build ./src/index.html --public-url ./"
   },
   "author": "Aadvik <aadv1k@outlook.com>",
   "license": "GPL-3.0-or-later",

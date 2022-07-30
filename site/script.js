@@ -1,7 +1,20 @@
 const gh =
-  "https://github.com/Aadv1k/frontend-projects/tree/main/frontendmentor.io/";
+  "https://github.com/Aadv1k/frontend-projects/tree/main/packages/frontendmentor/";
+const ghu =
+  "https://github.com/Aadv1k/frontend-projects/tree/main/packages/uidesigndaily/";
 
 const data = [
+  {
+    title: "Product review modal rating",
+    date: new Date("Sat 30 Jul 2022 09:46:31 PM IST"),
+    labels: ["Parcel", "UiDesignDaily"],
+    image: "./uidd-product-review-modal-rating-day-1565/desktop-preview.jpg",
+    links: {
+      "Live url": "./uidd-product-review-modal-rating-day-1565/index.html",
+      GitHub: `${ghu}uidd-product-review-modal-rating-day-1565`,
+      Challenge: "",
+    },
+  },
   {
     title: "In-browser markdown editor",
     date: new Date("Thu 28 Jul 2022 06:18:59 PM IST"),

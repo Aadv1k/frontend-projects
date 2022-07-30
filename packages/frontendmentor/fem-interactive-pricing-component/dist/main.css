@@ -324,7 +324,7 @@ main {
   margin: 0 0.5em;
 }
 
-.billing-plan__toggle input[type="checkbox"] {
+.billing-plan__toggle input[type=checkbox] {
   position: relative;
   width: 50px;
   height: 25px;
@@ -336,12 +336,12 @@ main {
   outline: none;
 }
 
-.billing-plan__toggle input[type="checkbox"]:hover,
-.billing-plan__toggle input[type="checkbox"]:active {
+.billing-plan__toggle input[type=checkbox]:hover,
+.billing-plan__toggle input[type=checkbox]:active {
   opacity: 1;
 }
 
-.billing-plan__toggle input[type="checkbox"]::before {
+.billing-plan__toggle input[type=checkbox]::before {
   content: "";
   position: absolute;
   width: 15px;
@@ -354,7 +354,7 @@ main {
   left: 10%;
 }
 
-.billing-plan__toggle input[type="checkbox"]:checked::before {
+.billing-plan__toggle input[type=checkbox]:checked::before {
   left: 60%;
 }
 

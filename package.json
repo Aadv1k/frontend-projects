@@ -8,8 +8,8 @@
   "description": "A collection of my frontend project",
   "main": "script.js",
   "scripts": {
-    "clean": "npm exec --ws -c ../../scripts/clean.sh ",
-    "build": "npm run build --ws && npm exec --ws -c ../../scripts/deploy.sh && ./scripts/deployStatic.sh",
+    "clean": "npm exec --ws -c ../../../scripts/clean.sh ",
+    "build": "npm run build --ws && npm exec --ws -c ../../../scripts/deploy.sh && ./scripts/deployStatic.sh",
     "femFetch": "./scripts/femfetch.sh",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
