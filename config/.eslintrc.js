@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["airbnb", "prettier", "eslint-config-prettier"],
+  extends: ["airbnb", "eslint-config-prettier"],
   plugins: ["prettier"],
   env: {
     browser: true,

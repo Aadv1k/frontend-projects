@@ -4,6 +4,7 @@ this is the monorepo of aadvik's frontend projects. **_[Here is the url to the d
 
 | Packages 📦                                                                                                                                   | Tooling 🛠️                           |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| [@frontend-projects/uidd-product-review-modal-rating-day-1565](./packages/uidesigndaily/uidd-product-review-modal-rating-day-1565)            | ![parcel]                            |
 | [@frontend-projects/fem-inbrowser-markdown-editor](./packages/frontendmentor/fem-inbrowser-markdown-editor)                                   | ![react] ![webpack] ![openprops]     |
 | [@frontend-projects/fem-pricing-component-with-toggle](./packages/frontendmentor/fem-pricing-component-with-toggle/)                          | ![react] ![webpack] ![windicss]      |
 | [@frontend-projects/fem-typemaster-prelaunch-landing-page](./packages/frontendmentor/fem-typemaster-prelaunch-landing-page/)                  | ![react] ![webpack] ![openprops]     |
@@ -42,6 +43,7 @@ now you can simply load up the `./site/` in a browser.
 
 - `./packages`: Directory with all the primary packages of the project
   - `./packages/frontendmentor/`: Front-end challenges from [frontendmentor.io](https://frontendmentor.io)
+  - `./packages/uidesigndaily/`: Random design to code challenges from [uidesigndaily](https://uidesigndaily.com/)
 - `./config`: configuration scripts for dev tools - eslint, webpack, prettier
 - `./scripts/`: utility shell scripts to organize, clean and fetch files in the project
 - `./site/`: The static site for the main dashboard
@@ -63,6 +65,7 @@ _note: currently there are no inner-deps_
 [tailwindcss]: https://img.shields.io/badge/-Tailwindcss-282c34?logo=tailwind-css&logocolor=white&style=classic
 [sass]: https://img.shields.io/badge/-Sass-282c34?logo=sass&logocolor=white&style=classic
 [webpack]: https://img.shields.io/badge/-Webpack-282c34?logo=webpack&logocolor=white&style=classic
+[parcel]: https://img.shields.io/badge/-Parcel-282c34?logo=parcel&logocolor=white&style=classic
 [gulp]: https://img.shields.io/badge/-Gulp-282c34?logo=gulp&logocolor=white&style=classic
 [postcss]: https://img.shields.io/badge/-PostCSS-282c34?logo=postCSS&logocolor=white&style=classic
 [openprops]: https://img.shields.io/badge/-OpenProps-282c34?logo=&logocolor=white&style=classic

@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 
 import kb1Mobile from "../images/mobile/image-phone-and-keyboard.jpg";
 import kb2Mobile from "../images/mobile/image-glass-and-keyboard.jpg";

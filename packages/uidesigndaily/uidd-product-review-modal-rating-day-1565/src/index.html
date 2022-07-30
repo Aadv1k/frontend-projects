@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>product-review-modal-rating-day</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="./style.css" media="all" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <button type="button" class="form__btn click" id="openModal">
+      Submit a review
+    </button>
+
+    <div class="modal">
+      <button class="close__btn" type="button" id="closeModal">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-x-lg"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+          />
+        </svg>
+      </button>
+      <form action="#" class="modal__form">
+        <div class="form__overall">
+          <h1>Overall rating</h1>
+        </div>
+
+        <div class="form__title">
+          <label for="titleInp">Review title</label>
+          <input
+            id="titleInp"
+            type="text"
+            placeholder="example: easy to use"
+            required
+          />
+        </div>
+
+        <div class="form__recommend">
+          <strong>Would you recommend this product to a friend?</strong>
+          <div>
+            <span>
+              <input type="radio" id="cbYes" name="cb" required />
+              <label for="cbYes">Yes</label>
+            </span>
+            <span>
+              <input type="radio" id="cbNo" name="cb" />
+              <label for="cbNo">No</label>
+            </span>
+          </div>
+        </div>
+
+        <div class="form__review">
+          <label for="productInp">Product review</label>
+          <input
+            id="productInp"
+            type="text"
+            placeholder="Example: Since I bought this a month ago, it has been used a lot. What I like best/what is worst about this product is ..."
+            required
+          />
+        </div>
+
+        <div class="form__about">
+          <span>
+            <label for="nickname">Nickname</label>
+            <input
+              id="nickname"
+              type="text"
+              placeholder="Example: bob27"
+              required
+            />
+          </span>
+          <span>
+            <label for="email">Email address (will not be published)</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Example: your@email.com"
+              required
+            />
+          </span>
+        </div>
+
+        <div class="form__toc">
+          <input type="checkbox" id="toc" required />
+          <label for="toc" class="label-toc"
+            >I accept the
+            <a href="#">terms and conditions</a>
+          </label>
+        </div>
+
+        <p class="form__info">
+          You will be able to receive emails in connection with this review (eg
+          if others comment on your review). All emails contain the option to
+          unsubscribe. We can use the text and star rating from your review in
+          other marketing.
+        </p>
+
+        <button type="submit" class="form__btn" id="modalSubmit">
+          Submit product review
+        </button>
+      </form>
+    </div>
+  </body>
+
+  <div class="attribution">
+    Awesome
+    <a
+      href="https://uidesigndaily.com/posts/figma-product-review-modal-rating-day-1565"
+      >design</a
+    >
+    by <a href="https://uidesigndaily.com/">UIDesignDaily</a> into code by
+    <a href="https://github.com/aadv1k">Aadv1k</a>
+  </div>
+</html>
