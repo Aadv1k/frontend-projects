@@ -1,2 +1,5 @@
 node_modules/
 site/*/
+.parcel-cache/
+**/.parcel-cache/
+

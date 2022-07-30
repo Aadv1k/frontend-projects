@@ -13,6 +13,7 @@
     "femFetch": "./scripts/femfetch.sh",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "test:ws": "npm run test --if-present --ws",
     "format": "prettier --write ."
   },
   "repository": {
