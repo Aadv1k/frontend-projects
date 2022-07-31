@@ -65,10 +65,10 @@ _note: currently there are no inner-deps_
 [tailwindcss]: https://img.shields.io/badge/-Tailwindcss-282c34?logo=tailwind-css&logocolor=white&style=classic
 [sass]: https://img.shields.io/badge/-Sass-282c34?logo=sass&logocolor=white&style=classic
 [webpack]: https://img.shields.io/badge/-Webpack-282c34?logo=webpack&logocolor=white&style=classic
-[parcel]: https://img.shields.io/badge/-Parcel-282c34?logo=parcel&logocolor=white&style=classic
+[parcel]: https://img.shields.io/badge/-📦%20Parcel-282c34?logo=parcel&logocolor=white&style=classic
 [gulp]: https://img.shields.io/badge/-Gulp-282c34?logo=gulp&logocolor=white&style=classic
 [postcss]: https://img.shields.io/badge/-PostCSS-282c34?logo=postCSS&logocolor=white&style=classic
-[openprops]: https://img.shields.io/badge/-OpenProps-282c34?logo=&logocolor=white&style=classic
+[openprops]: https://img.shields.io/badge/-🅿%20OpenProps-282c34?logo=&logocolor=white&style=classic
 [windicss]: https://img.shields.io/badge/-WindiCSS-282c34?logo=windicss&logocolor=white&style=classic
 [javascript]: https://img.shields.io/badge/-JavaScript-282c34?logo=javascript&logocolor=white&style=classic
 [css]: https://img.shields.io/badge/-CSS-282c34?logo=CSS&logocolor=white&style=classic
