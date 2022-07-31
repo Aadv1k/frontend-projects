@@ -4,12 +4,15 @@
   "source": "./src/index.html",
   "scripts": {
     "dev": "parcel --port 8080",
-    "build": "mkdir -p dist && rm -rf ./dist/* && parcel build ./src/index.html --public-url ./"
+    "build": "mkdir -p dist && rm -rf ./dist/* && parcel build ./src/index.html --public-url ./",
+    "test": "npm run build && jest --detectOpenHandles && rm -rf ./dist"
   },
   "author": "Aadvik <aadv1k@outlook.com>",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "parcel": "^2.6.2"
+    "jest": "^28.1.3",
+    "parcel": "^2.6.2",
+    "puppeteer": "^15.5.0"
   },
   "repository": {
     "type": "git",

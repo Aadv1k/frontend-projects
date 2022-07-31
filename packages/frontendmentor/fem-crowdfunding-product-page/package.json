@@ -4,7 +4,6 @@
   "description": "crowdfunding page from frontendmentor.io",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "gulp --version",
     "format": "prettier --write .",
     "build": "gulp build && cp ./index.html ./dist/",
     "dev": "gulp watch"
