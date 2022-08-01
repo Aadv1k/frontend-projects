@@ -2,7 +2,8 @@
   "name": "frontend-projects",
   "workspaces": [
     "packages/frontendmentor/*",
-    "packages/uidesigndaily/*"
+    "packages/uidesigndaily/*",
+    "uidd-stores-list-card-dark-mode-day-1563"
   ],
   "version": "1.0.0",
   "description": "A collection of my frontend project",
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/aadv1k/frontend-projects#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
     "eslint": "^8.20.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
