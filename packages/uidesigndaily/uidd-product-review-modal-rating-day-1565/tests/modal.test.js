@@ -1,5 +1,5 @@
 const puppeteer = require("puppeteer");
-const path = require("path")
+const path = require("path");
 
 describe("A test suite to assess the behaviour of the modal", () => {
   let browser;

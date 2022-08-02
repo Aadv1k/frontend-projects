@@ -108,7 +108,7 @@ nav {
     }
   }
 
-  @media only screen and(min-width: 650px) {
+  @media only screen and (min-width: 650px) {
     padding: 2em clamp(1em, 5vw + 10px, 8em);
 
     .nav__logo {
@@ -169,7 +169,7 @@ nav {
   border: 2px solid $white;
   padding: 0.5em;
 
-  @media only screen and(min-width: 650px) {
+  @media only screen and (min-width: 650px) {
     width: 40%;
     padding: 0.6em;
     font-size: clamp(2em, 5vw - 10px, 3.5em);

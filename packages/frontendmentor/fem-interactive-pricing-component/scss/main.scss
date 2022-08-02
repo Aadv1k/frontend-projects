@@ -38,7 +38,7 @@ main {
     display: block;
   }
 
-  @media only screen and(min-width: $large-screen) {
+  @media only screen and (min-width: $large-screen) {
     h2 {
       font-size: 1.7em;
     }
@@ -145,7 +145,7 @@ main {
 
   gap: 0.5em;
 
-  @media screen and(max-width: $small-screen) {
+  @media screen and (max-width: $small-screen) {
     gap: 0.1em;
   }
 
@@ -171,7 +171,7 @@ main {
     font-size: 0.8em;
     border-radius: 20px;
 
-    @media screen and(max-width: 400px) {
+    @media screen and (max-width: 400px) {
       left: 50%;
       top: 130%;
       transform: translateX(-50%);
@@ -243,7 +243,7 @@ main {
     transform: translateY(-50%);
   }
 
-  @media only screen and(min-width: $large-screen) {
+  @media only screen and (min-width: $large-screen) {
     li::before {
       left: -20px;
     }
@@ -265,7 +265,7 @@ main {
     color: white;
   }
 
-  @media only screen and(min-width: $large-screen) {
+  @media only screen and (min-width: $large-screen) {
     padding: 1em 2.5em;
   }
 }
