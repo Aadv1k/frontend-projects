@@ -13,9 +13,12 @@ describe("A test suite to assess the behaviour of the list", () => {
 
   it("Should disallow more than 5 numbers in postal code", async () => {
     await page.type("#postalInp", "123456", { delay: 20 });
-    const contains = await page.$eval("#viewAll", (e) =>
-      e.classList.contains("btn--disabled")
-    );
-    expect(contains).toBe(true);
+    setTimeout(async () => {
+      const contains = await page.$eval("#viewAll", (e) =>
+        e.classList.contains("btn--disabled")
+      );
+      expect(contains).toBe(false);
+      await browser.close();
+    }, 1000);
   });
 });

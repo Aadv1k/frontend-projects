@@ -6,7 +6,7 @@
   "scripts": {
     "build": "parcel build --public-url ./",
     "dev": "parcel --port 8080",
-    "test": "npm run build && jest . && rm -rf ./dist"
+    "test": "npm run build && jest --detectOpenHandles && rm -rf ./dist"
   },
   "author": "Aadvik <aadv1k@outlook.com>",
   "license": "GPL-3.0-or-later",
