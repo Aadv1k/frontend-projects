@@ -74,9 +74,7 @@ export default class extends Component {
   }
 
   render() {
-    const { drawer, document, documents } = this.state;
-
-    if (drawer) {
+    if (this.state.drawer) {
       document.getElementById("root").style.overflow = "hidden";
     } else {
       document.getElementById("root").style.overflow = "auto";
@@ -86,15 +84,15 @@ export default class extends Component {
       <>
         <Navbar
           setDrawerState={this.setDrawerState.bind(this)}
-          drawer={drawer}
+          drawer={this.state.drawer}
           setDocumentState={this.setDocumentState.bind(this)}
           setDocumentsState={this.setDocumentsState.bind(this)}
           document={this.state.document}
-          documents={documents}
+          documents={this.state.documents}
         />
 
         <Editor
-          drawer={drawer}
+          drawer={this.state.drawer}
           setDocumentState={this.setDocumentState.bind(this)}
           document={this.state.document}
         />
