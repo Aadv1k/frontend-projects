@@ -4,7 +4,7 @@ this is the monorepo of aadvik's frontend projects. **_[Here is the url to the d
 
 | Packages 📦                                                                                                                                   | Tooling 🛠️                           |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [@frontend-projects/uidd-stores-list-card-dark-mode-day-1563](./packages/uidesigndaily/uidd-stores-list-card-dark-mode-day-1563)              | ! ![sass] ![parcel]                  |
+| [@frontend-projects/uidd-stores-list-card-dark-mode-day-1563](./packages/uidesigndaily/uidd-stores-list-card-dark-mode-day-1563)              | ![sass] ![parcel]                  |
 | [@frontend-projects/uidd-product-review-modal-rating-day-1565](./packages/uidesigndaily/uidd-product-review-modal-rating-day-1565)            | ![parcel]                            |
 | [@frontend-projects/fem-inbrowser-markdown-editor](./packages/frontendmentor/fem-inbrowser-markdown-editor)                                   | ![react] ![webpack] ![openprops]     |
 | [@frontend-projects/fem-pricing-component-with-toggle](./packages/frontendmentor/fem-pricing-component-with-toggle/)                          | ![react] ![webpack] ![windicss]      |
@@ -28,16 +28,15 @@ $ git clone git@github.com:aadv1k/frontend-projects.git
 $ npm install # install deps
 $ npm run build # run the build command
 ```
-
 now you can simply load up the `./site/` in a browser.
 
 ## Scripts
 
-- [`npm run clean`](./scripts/cleanUp.sh): purges all files in `@frontend-projects/package/design/` except the design preview; also removes other unwanted files
 - [`npm run build`](./scripts/deploy.sh): copies all the packages to the `./site/` directory and renames them appropriately
 - [`npm run femfetch`](./scripts/femfetch.sh): a utility script to fetch challenge files from [frontendmentor.io](https://frontendmentor.io)
 - `npm run lint`: run `eslint .`
 - `npm run lint:fix`: run `eslint . --fix`
+- `npm run test:ws`: run tests in packages where they are present
 - `npm run format`: format using prettier
 
 ## Structure
