@@ -38,6 +38,7 @@ body {
   padding: 2em;
   border-radius: map-get($map: $radius, $key: md);
   width: 80%;
+  max-width: 30em;
 
   position: absolute;
   top: 50%;
@@ -101,7 +102,6 @@ body {
     margin: 0;
   }
 
-  // TODO: Do something about very small screens
   @media screen and (min-width: 400px) {
     .btn {
       margin-inline-start: 1em;
@@ -112,10 +112,26 @@ body {
       height: 25px;
     }
   }
+
+  @media screen and (max-width: 370px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;
+
+    .btn {
+      margin-inline-start: 0;
+    }
+
+    label {
+      top: -30%;
+    }
+  }
 }
 
 .card__list {
   list-style: none;
+  height: 300px;
 
   li {
     width: 100%;
@@ -157,6 +173,7 @@ body {
   border: none;
   cursor: pointer;
   font-family: $fnt-sans;
+  transition: all 100ms ease;
 
   &--primary {
     background-color: $clr-blue-200;
@@ -166,5 +183,19 @@ body {
   &--secondary {
     background-color: transparent;
     color: $clr-blue-200;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+@media (hover: hover) {
+  .btn--primary:hover {
+    opacity: 0.8;
+  }
+  .btn--secondary:hover {
+    color: $clr-blue-100;
   }
 }

@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Cruise Bar",
+    "opening_hours": { "open_now": false },
+    "vicinity": "Level 1, 2 and 3, Overseas Passenger Terminal, Circular Quay W, The Rocks"
+  },
+
+  {
+    "name": "Sydney Harbour Dinner Cruises",
+    "opening_hours": { "open_now": true },
+    "vicinity": "32 The Promenade, Sydney"
+  },
+
+  {
+    "name": "Clearview Sydney Harbour Cruises",
+    "opening_hours": { "open_now": false },
+    "vicinity": "32 The Promenade King Street Wharf 5, Sydney"
+  },
+  {
+    "name": "Sydney Harbour Lunch Cruise",
+    "opening_hours": { "open_now": false },
+    "vicinity": "5/32 The Promenade, Sydney"
+  },
+  {
+    "name": "Sydney Showboats - Dinner Cruise With Show",
+    "opening_hours": { "open_now": false },
+    "vicinity": "32 The Promenade, King Street Wharf, 5, Sydney"
+  },
+  {
+    "name": "Magistic Cruises",
+    "opening_hours": { "open_now": true },
+    "vicinity": "King Street Wharf, 32 The Promenade, Sydney"
+  },
+  {
+    "name": "Australian Cruise Group",
+    "opening_hours": { "open_now": false },
+    "vicinity": "6 Cirular Quay, Sydney"
+  },
+  {
+    "name": "Rhythmboat Cruises",
+    "opening_hours": { "open_now": false },
+    "vicinity": "King Street Wharf, King St, Sydney"
+  },
+  {
+    "name": "Glass Island",
+    "opening_hours": { "open_now": false },
+    "vicinity": "37 Bank St, Pyrmont"
+  }
+]

@@ -8,15 +8,16 @@
     />
     <title>uidd-stores-list-card-dark-mode-day-1563</title>
     <link rel="stylesheet" href="main.scss" />
+    <script src="./script.js" defer type="module"></script>
   </head>
   <body>
     <div class="card">
       <h2 class="card__title">Closest stores</h2>
 
       <div class="card__input">
-        <label for="postal"> Postal code </label>
-        <input type="number" id="postal" />
-        <button type="button" class="btn btn--secondary">
+        <label for="postalInp"> Postal code </label>
+        <input type="number" id="postalInp" />
+        <button type="button" class="btn btn--secondary" id="postalLoc">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -36,55 +37,10 @@
         </button>
       </div>
 
-      <ul class="card__list" id="cardList">
-        <li class="list__itm" data-status="closed">
-          <strong>FOO BAR</strong>
-          <p>5279 Nikolaus Streets, Suite 759, 14405-4491</p>
-          <p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-clock"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
-              />
-              <path
-                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
-              />
-            </svg>
-            9:00 - 19:00
-          </p>
-        </li>
-
-        <li class="list__itm" data-status="closed">
-          <strong>FOO BAR</strong>
-          <p>5279 Nikolaus Streets, Suite 759, 14405-4491</p>
-          <p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-clock"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
-              />
-              <path
-                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
-              />
-            </svg>
-            9:00 - 19:00
-          </p>
-        </li>
+      <ul class="card__list" id="cardList" data-click="false">
       </ul>
 
-      <button type="button" class="btn btn--primary card__viewall">
+      <button type="button" class="btn btn--primary card__viewall" id="viewAll">
         View all
       </button>
     </div>
