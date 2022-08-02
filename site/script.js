@@ -5,6 +5,17 @@ const ghu =
 
 const data = [
   {
+    title: "Stores list card - dark mode",
+    date: new Date("Tue 02 Aug 2022 08:08:10 PM IST"),
+    labels: ["Parcel", "SCSS", "UiDesignDaily"],
+    image: "./uidd-stores-list-card-dark-mode-day-1563/desktop-preview.jpg",
+    links: {
+      "Live url": "./uidd-stores-list-card-dark-mode-day-1563/index.html",
+      GitHub: `${ghu}uidd-stores-list-card-dark-mode-day-1563`,
+      Challenge: "",
+    },
+  },
+  {
     title: "Product review modal rating",
     date: new Date("Sat 30 Jul 2022 09:46:31 PM IST"),
     labels: ["Parcel", "UiDesignDaily"],

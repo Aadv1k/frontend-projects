@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+
+$clr-purple-100: #1c1a39;
+$clr-purple-200: #121129;
+
+$clr-blue-100: #c4c0ff;
+$clr-blue-200: #756bff;
+$clr-pink: #ff5dab;
+
+$gradient: linear-gradient($clr-pink, $clr-blue-200);
+
+$fnt-sans: "Mulish", sans-serif;
+$fnt-w: (
+  "r": 400,
+  "b": 700,
+);
+
+$radius: (
+  "sm": 5px,
+  "md": 15px,
+  "full": 100px,
+);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $clr-purple-100;
+}
+
+.card {
+  background-color: $clr-purple-200;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  padding: 2em;
+  border-radius: map-get($map: $radius, $key: md);
+  width: 80%;
+  max-width: 30em;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $clr-blue-100;
+  font-family: $fnt-sans;
+
+  &__title {
+    font-weight: map-get($map: $fnt-w, $key: r);
+  }
+
+  .card__viewall {
+    padding: 1em;
+    border-radius: map-get($map: $radius, $key: sm);
+  }
+}
+
+.card__input {
+  position: relative;
+
+  label {
+    font-size: 0.9em;
+    position: absolute;
+    top: -40%;
+  }
+
+  input[type="number"] {
+    background: inherit;
+    border: 1px solid lighten($clr-purple-100, 10%);
+    border-radius: map-get($map: $radius, $key: sm);
+    outline: none;
+    margin: 0;
+    padding: 0.8em;
+    width: 6em;
+    color: $clr-blue-100;
+    font-size: 1.1em;
+  }
+
+  .btn {
+    font-size: 1em;
+    margin-inline-start: 0.3em;
+  }
+
+  .btn svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    transform: translateY(-2px);
+  }
+
+  .btn svg path {
+    fill: inherit;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 400px) {
+    .btn {
+      margin-inline-start: 1em;
+    }
+
+    .btn svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  @media screen and (max-width: 370px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;
+
+    .btn {
+      margin-inline-start: 0;
+    }
+
+    label {
+      top: -30%;
+    }
+  }
+}
+
+.card__list {
+  list-style: none;
+  height: 300px;
+
+  li {
+    width: 100%;
+    margin-block: 1.2em;
+    position: relative;
+  }
+
+  li:is(:first-child, :last-child) {
+    margin-top: 0;
+  }
+
+  li::before {
+    content: attr(data-status);
+    position: absolute;
+    background: $clr-pink;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding: 0.2em 0.4em;
+    border-radius: 30px;
+    right: 0;
+    font-weight: map-get($map: $fnt-w, $key: b);
+  }
+
+  li > p {
+    color: $clr-blue-100;
+    margin-block: 0.5em;
+  }
+
+  p > svg {
+    vertical-align: middle;
+    transform: translateY(-2px);
+    margin-right: 4px;
+  }
+}
+
+.btn {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+  font-family: $fnt-sans;
+  transition: all 100ms ease;
+
+  &--primary {
+    background-color: $clr-blue-200;
+    color: white;
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: $clr-blue-200;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+@media (hover: hover) {
+  .btn--primary:hover {
+    opacity: 0.8;
+  }
+  .btn--secondary:hover {
+    color: $clr-blue-100;
+  }
+}
