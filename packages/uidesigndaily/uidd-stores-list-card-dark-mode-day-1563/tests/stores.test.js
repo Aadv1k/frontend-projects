@@ -6,7 +6,7 @@ describe("A test suite to assess the behaviour of the list", () => {
   let page;
 
   beforeAll(async () => {
-    browser = await pptr.launch({ headless: false });
+    browser = await pptr.launch();
     page = await browser.newPage();
     await page.goto(`file:///${path.join(__dirname, "../dist/index.html")}`);
   });

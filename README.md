@@ -4,6 +4,7 @@ this is the monorepo of aadvik's frontend projects. **_[Here is the url to the d
 
 | Packages 📦                                                                                                                                   | Tooling 🛠️                           |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| [@frontend-projects/uidd-stores-list-card-dark-mode-day-1563](./packages/uidesigndaily/uidd-stores-list-card-dark-mode-day-1563)              | ! ![sass] ![parcel]                  |
 | [@frontend-projects/uidd-product-review-modal-rating-day-1565](./packages/uidesigndaily/uidd-product-review-modal-rating-day-1565)            | ![parcel]                            |
 | [@frontend-projects/fem-inbrowser-markdown-editor](./packages/frontendmentor/fem-inbrowser-markdown-editor)                                   | ![react] ![webpack] ![openprops]     |
 | [@frontend-projects/fem-pricing-component-with-toggle](./packages/frontendmentor/fem-pricing-component-with-toggle/)                          | ![react] ![webpack] ![windicss]      |
