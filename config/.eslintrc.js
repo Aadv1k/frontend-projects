@@ -9,6 +9,7 @@ module.exports = {
   },
   rules: {
     "prettier/prettier": "warn",
+    "prettier/allowParens": "off",
     sourceType: 0,
     "no-restricted-syntax": ["off"],
     "react/jsx-filename-extension": ["off"],

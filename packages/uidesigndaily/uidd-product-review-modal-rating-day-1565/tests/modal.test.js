@@ -8,7 +8,7 @@ describe("A test suite to assess the behaviour of the modal", () => {
   beforeEach(async () => {
     browser = await puppeteer.launch({ headless: true });
     page = await browser.newPage();
-    await page.goto("file:///" + path.resolve(__dirname, "../dist/index.html"));
+    await page.goto(`file:///${path.resolve(__dirname, "../dist/index.html")}`);
   });
 
   it("Should open the modal", async () => {
