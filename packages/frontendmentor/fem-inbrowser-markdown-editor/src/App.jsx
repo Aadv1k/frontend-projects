@@ -11,7 +11,11 @@ import DocumentContext from "./contexts/DocumentContext";
 import "./App.css";
 
 // Works ¯\_(ツ)_/¯heigh
-// TODO: Use context here
+// After refactoring the Navbar component to use DocumentContext I have come to
+// realize that there isn't much point using contexts in this case, the main
+// "issue" was the AppDrawer component, which required passing down props to a
+// grandchild, however since I've moved it to App.jsx there is not much prop
+// drilling going on, hence, I will leave rest of the components as it is.
 
 export default class extends Component {
   constructor(props) {
@@ -84,40 +88,42 @@ export default class extends Component {
       <ThemeContext.Provider
         value={[this.state.theme, this.setTheme.bind(this)]}
       >
-        <AppDrawer
-          drawer={this.state.drawer}
-          setDrawerState={this.setDrawerState.bind(this)}
-          documents={this.state.documents}
-          setDocumentState={this.setDocumentState.bind(this)}
-          setDocumentsState={this.setDocumentsState.bind(this)}
-          document={this.state.document}
-          saveDocument={this.saveDocumentToLocalStorage.bind(this)}
-          inputRef={this.inpRef}
-        />
-
-        <section
-          style={{
-            marginLeft: this.state.drawer ? "250px" : "0",
-            width: this.state.drawer ? "100%" : "auto",
-            transition: "margin 200ms ease-in",
-          }}
+        <DocumentContext.Provider
+          value={[this.state.document, this.setDocumentState.bind(this)]}
         >
-          <Navbar
-            setDrawerState={this.setDrawerState.bind(this)}
+          <AppDrawer
             drawer={this.state.drawer}
+            setDrawerState={this.setDrawerState.bind(this)}
             setDocumentState={this.setDocumentState.bind(this)}
-            setDocumentsState={this.setDocumentsState.bind(this)}
             document={this.state.document}
+            setDocumentsState={this.setDocumentsState.bind(this)}
             documents={this.state.documents}
-            setRef={this.inpRef}
+            saveDocument={this.saveDocumentToLocalStorage.bind(this)}
+            inputRef={this.inpRef}
           />
 
-          <Editor
-            drawer={this.state.drawer}
-            setDocumentState={this.setDocumentState.bind(this)}
-            document={this.state.document}
-          />
-        </section>
+          <section
+            style={{
+              marginLeft: this.state.drawer ? "250px" : "0",
+              width: this.state.drawer ? "100%" : "auto",
+              transition: "margin 200ms ease-in",
+            }}
+          >
+            <Navbar
+              setDrawerState={this.setDrawerState.bind(this)}
+              drawer={this.state.drawer}
+              setDocumentsState={this.setDocumentsState.bind(this)}
+              documents={this.state.documents}
+              setRef={this.inpRef}
+            />
+
+            <Editor
+              drawer={this.state.drawer}
+              setDocumentState={this.setDocumentState.bind(this)}
+              document={this.state.document}
+            />
+          </section>
+        </DocumentContext.Provider>
       </ThemeContext.Provider>
     );
   }

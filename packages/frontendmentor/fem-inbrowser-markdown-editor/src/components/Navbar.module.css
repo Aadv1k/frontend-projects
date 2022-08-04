@@ -84,8 +84,7 @@
   outline: none;
   background-color: inherit;
   border: none;
-
-  color: var(--text-clr-main);
+  color: var(--gray-4);
 }
 
 .savebtn {
