@@ -22,10 +22,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: var(--alt-font);
-  padding: 1em;
+  padding: 1.5em;
   border-radius: 1vmin;
   display: flex;
   flex-direction: column;
+  max-width: 350px;
+  width: 70%;
 }
 
 .modal p {

@@ -3,8 +3,10 @@ import React, { Component } from "react";
 
 import Navbar from "./components/Navbar";
 import Editor from "./components/Editor";
+import AppDrawer from "./components/AppDrawer";
 
 import ThemeContext from "./contexts/ThemeContext";
+import DocumentContext from "./contexts/DocumentContext";
 
 import "./App.css";
 
@@ -16,84 +18,106 @@ export default class extends Component {
     super(props);
     this.state = {
       drawer: false,
-      document: {},
+      document: {
+        content: "",
+        id: "",
+        name: "",
+      },
       documents: [],
-      theme: window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+      theme: window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light",
     };
+    this.inpRef = React.createRef();
   }
 
-  UNSAFE_componentWillMount() {
+  componentDidMount() {
     let data = JSON.parse(localStorage.getItem("document"));
     if (data === null) {
       localStorage.setItem("document", "[]");
       data = JSON.parse(localStorage.getItem("document"));
     }
+    if (data.length !== 0) {
+      this.setState({
+        document: data.find((e) => e.lastOpened === true),
+        documents: data,
+      });
+    }
+  }
 
-    this.setState({
-      document:
-        data.length === 0
-          ? {
-              content:
-                "# Welcome to markdown editor!\nOpen the 🍔 to create a new doc",
-              id: "1",
-              name: "",
-            }
-          : data.find((e) => e.lastOpened === true),
-      documents: data,
-    });
+  setTheme() {
+    if (this.state.theme === "dark") {
+      this.setState({ theme: "light" });
+      return;
+    }
+    this.setState({ theme: "dark" });
   }
 
   setDocumentsState(arr) {
     this.setState({ documents: arr });
   }
 
-  setDocumentState(id, name, content, lastOpened) {
-    if (lastOpened === undefined) {
-      // eslint-disable-next-line no-param-reassign
-      lastOpened = true;
-    }
-
+  setDocumentState(id, name, content, lastOpened = true) {
     this.setState({
-      document: {
-        id,
-        name,
-        content,
-        lastOpened,
-      },
+      document: { id, name, content, lastOpened },
     });
   }
 
   setDrawerState() {
-    const { drawer } = this.state;
-    if (drawer) {
-      this.setState({ drawer: false });
-      return;
+    this.setState({ drawer: !this.state.drawer });
+  }
+
+  saveDocumentToLocalStorage(content, id, name, lastOpened = true) {
+    const data = JSON.parse(localStorage.getItem("document"));
+    if (data) {
+      data.push({ id, name, content, lastOpened });
+      localStorage.setItem("document", JSON.stringify(data));
+      this.setDocumentsState(JSON.parse(localStorage.getItem("document")));
+      return { id, name, content };
     }
-    this.setState({ drawer: true });
+    localStorage.setItem("document", "[]");
+    return -1;
   }
 
   render() {
-    if (this.state.drawer) {
-      document.getElementById("root").style.overflow = "hidden";
-    } else {
-      document.getElementById("root").style.overflow = "auto";
-    }
-
     return (
-      <ThemeContext.Provider value={this.state.theme}>
-        <Navbar
-          setDrawerState={this.setDrawerState.bind(this)}
+      <ThemeContext.Provider
+        value={[this.state.theme, this.setTheme.bind(this)]}
+      >
+        <AppDrawer
           drawer={this.state.drawer}
+          setDrawerState={this.setDrawerState.bind(this)}
+          documents={this.state.documents}
           setDocumentState={this.setDocumentState.bind(this)}
           setDocumentsState={this.setDocumentsState.bind(this)}
           document={this.state.document}
-          documents={this.state.documents}
+          saveDocument={this.saveDocumentToLocalStorage.bind(this)}
+          inputRef={this.inpRef}
         />
-        <Editor
-          drawer={this.state.drawer}
-          setDocumentState={this.setDocumentState.bind(this)}
-          document={this.state.document}
-        />
+
+        <section
+          style={{
+            marginLeft: this.state.drawer ? "250px" : "0",
+            width: this.state.drawer ? "100%" : "auto",
+            transition: "margin 200ms ease-in",
+          }}
+        >
+          <Navbar
+            setDrawerState={this.setDrawerState.bind(this)}
+            drawer={this.state.drawer}
+            setDocumentState={this.setDocumentState.bind(this)}
+            setDocumentsState={this.setDocumentsState.bind(this)}
+            document={this.state.document}
+            documents={this.state.documents}
+            setRef={this.inpRef}
+          />
+
+          <Editor
+            drawer={this.state.drawer}
+            setDocumentState={this.setDocumentState.bind(this)}
+            document={this.state.document}
+          />
+        </section>
       </ThemeContext.Provider>
     );
   }

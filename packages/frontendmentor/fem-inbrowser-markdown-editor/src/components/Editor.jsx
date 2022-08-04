@@ -31,12 +31,8 @@ export default class extends Component {
   render() {
     return (
       <ThemeContext.Consumer>
-        {(theme) => {
+        {([theme, _]) => {
           return <section
-            className={style.section}
-            style={{
-              marginLeft: this.props.drawer ? "250px" : "0",
-            }}
             data-theme={theme}
           >
             <div className={style.previewBar}>

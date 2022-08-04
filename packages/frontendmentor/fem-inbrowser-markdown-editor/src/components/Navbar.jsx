@@ -15,7 +15,6 @@ import uuid from "react-uuid";
 import style from "./Navbar.module.css";
 
 import Modal from "./Modal.jsx";
-import AppDrawer from "./AppDrawer.jsx";
 
 export default class extends Component {
   constructor(props) {
@@ -36,35 +35,6 @@ export default class extends Component {
     this.deleteDocument();
   }
 
-  saveDocumentToLocalStorage(content, id, name, lastOpened) {
-    if (lastOpened === undefined) {
-      lastOpened = true;
-    }
-
-    const data = JSON.parse(localStorage.getItem("document"));
-
-    if (data) {
-      data.push({
-        id,
-        name,
-        content,
-        lastOpened,
-      });
-      localStorage.setItem("document", JSON.stringify(data));
-
-      this.props.setDocumentsState(
-        JSON.parse(localStorage.getItem("document"))
-      );
-
-      return {
-        id,
-        name,
-        content,
-      };
-    }
-    localStorage.setItem("document", "[]");
-    return -1;
-  }
 
   deleteDocument() {
     const data = JSON.parse(localStorage.getItem("document"));
@@ -88,13 +58,9 @@ export default class extends Component {
   render() {
     return (
       <ThemeContext.Consumer>
-        {(theme) => {
+        {([theme, _]) => {
           return <nav
             className={`${style.nav}`}
-            style={{
-              marginLeft: this.props.drawer ? "250px" : "0",
-              width: this.props.drawer ? "100%" : "auto",
-            }}
             data-theme={theme}
           >
             {this.state.modal ? (
@@ -123,17 +89,6 @@ export default class extends Component {
               )}
             </button>
 
-            <AppDrawer
-              drawer={this.props.drawer}
-              setDrawerState={this.props.setDrawerState}
-              documents={this.props.documents}
-              setDocumentState={this.props.setDocumentState}
-              setDocumentsState={this.props.setDocumentsState}
-              document={this.props.document}
-              saveDocument={this.saveDocumentToLocalStorage.bind(this)}
-              inputRef={this.inputRef}
-            />
-
             <div className={style.navinfo}>
               <span className={style.mdtitle}>markdown</span>
               <span className={style.sep} />
@@ -145,7 +100,7 @@ export default class extends Component {
                   <input
                     className={style.editabletitle}
                     value={this.props.document.name}
-                    ref={this.inputRef}
+                    ref={this.props.setRef}
                     onInput={(e) => {
                       this.props.setDocumentState(
                         this.props.document.id,
