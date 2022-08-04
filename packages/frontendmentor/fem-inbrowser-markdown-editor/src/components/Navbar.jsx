@@ -35,7 +35,6 @@ export default class extends Component {
     this.deleteDocument();
   }
 
-
   deleteDocument() {
     const data = JSON.parse(localStorage.getItem("document"));
     const d = data.findIndex((e) => e.id === this.props.document.id);
@@ -59,94 +58,93 @@ export default class extends Component {
     return (
       <ThemeContext.Consumer>
         {([theme, _]) => {
-          return <nav
-            className={`${style.nav}`}
-            data-theme={theme}
-          >
-            {this.state.modal ? (
-              <Modal
-                setModalState={this.setModalState.bind(this)}
-                setModalDeleteState={this.setModalDeleteState.bind(this)}
-                docName={this.props.document.name}
-              />
-            ) : (
-              ""
-            )}
-            <button
-              type="button"
-              className={style.ham}
-              onClick={this.props.setDrawerState}
-              style={{
-                background: this.props.drawer
-                  ? "var(--red-6)"
-                  : "var(--blue-gray)",
-              }}
-            >
-              {!this.props.drawer ? (
-                <FontAwesomeIcon icon={faBars} />
+          return (
+            <nav className={`${style.nav}`} data-theme={theme}>
+              {this.state.modal ? (
+                <Modal
+                  setModalState={this.setModalState.bind(this)}
+                  setModalDeleteState={this.setModalDeleteState.bind(this)}
+                  docName={this.props.document.name}
+                />
               ) : (
-                <FontAwesomeIcon icon={faX} />
+                ""
               )}
-            </button>
+              <button
+                type="button"
+                className={style.ham}
+                onClick={this.props.setDrawerState}
+                style={{
+                  background: this.props.drawer
+                    ? "var(--red-6)"
+                    : "var(--blue-gray)",
+                }}
+              >
+                {!this.props.drawer ? (
+                  <FontAwesomeIcon icon={faBars} />
+                ) : (
+                  <FontAwesomeIcon icon={faX} />
+                )}
+              </button>
 
-            <div className={style.navinfo}>
-              <span className={style.mdtitle}>markdown</span>
-              <span className={style.sep} />
-              <div className={style.infotitle}>
-                <FontAwesomeIcon icon={faFile} />
+              <div className={style.navinfo}>
+                <span className={style.mdtitle}>markdown</span>
+                <span className={style.sep} />
+                <div className={style.infotitle}>
+                  <FontAwesomeIcon icon={faFile} />
 
-                <div>
-                  <span>document name</span>
-                  <input
-                    className={style.editabletitle}
-                    value={this.props.document.name}
-                    ref={this.props.setRef}
-                    onInput={(e) => {
-                      this.props.setDocumentState(
-                        this.props.document.id,
-                        e.target.value.trim().length === 0
-                          ? this.props.document.name
-                          : e.target.value,
-                        this.props.document.content
-                      );
-                    }}
-                  />
+                  <div>
+                    <span>document name</span>
+                    <input
+                      className={style.editabletitle}
+                      value={this.props.document.name}
+                      ref={this.props.setRef}
+                      onInput={(e) => {
+                        this.props.setDocumentState(
+                          this.props.document.id,
+                          e.target.value.trim().length === 0
+                            ? this.props.document.name
+                            : e.target.value,
+                          this.props.document.content
+                        );
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className={style.btngroup}>
-              <button
-                className={style.binbtn}
-                type="button"
-                onClick={() => {
-                  if (!this.state.modalDelete) {
-                    this.setModalState();
-                  }
-                }}
-              >
-                <FontAwesomeIcon icon={faTrashAlt} />
-              </button>
+              <div className={style.btngroup}>
+                <button
+                  className={style.binbtn}
+                  type="button"
+                  onClick={() => {
+                    if (!this.state.modalDelete) {
+                      this.setModalState();
+                    }
+                  }}
+                >
+                  <FontAwesomeIcon icon={faTrashAlt} />
+                </button>
 
-              <button
-                className={style.savebtn}
-                type="button"
-                onClick={() => {
-                  const data = JSON.parse(localStorage.getItem("document"));
-                  const target = data.findIndex(
-                    (e) => e.id === this.props.document.id
-                  );
-                  data[target].content = this.props.document.content;
-                  data[target].name = this.props.document.name;
-                  this.props.setDocumentsState(data);
-                  localStorage.setItem("document", JSON.stringify(data));
-                }}
-              >
-                <FontAwesomeIcon icon={faFloppyDisk} />
-                <p>save document</p>
-              </button>
-            </div>
-          </nav>;
+                <button
+                  className={style.savebtn}
+                  type="button"
+                  onClick={() => {
+                    const data = JSON.parse(localStorage.getItem("document"));
+                    const target = data.findIndex(
+                      (e) => e.id === this.props.document.id
+                    );
+                    data[target].content = this.props.document.content;
+                    data[target].name = this.props.document.name;
+                    this.props.setDocumentsState(data);
+                    localStorage.setItem("document", JSON.stringify(data));
+                  }}
+                >
+                  <FontAwesomeIcon icon={faFloppyDisk} />
+                  <p>save document</p>
+                </button>
+              </div>
+            </nav>
+          );
         }}
       </ThemeContext.Consumer>
     );
