@@ -134,7 +134,7 @@ export default class extends Component {
                           const target = data.findIndex((e) => e.id === doc.id);
                           data[target].content = doc.content;
                           data[target].name = doc.name;
-                          setDocState(data);
+                          this.props.setDocumentsState(data);
                           localStorage.setItem(
                             "document",
                             JSON.stringify(data)
