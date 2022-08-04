@@ -12,6 +12,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  font-family: var(--main-font);
 }
 
 .ul {
@@ -51,4 +52,12 @@
   padding: 0.5em;
   border-radius: 0.5vmin;
   width: 80%;
+}
+
+.bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 1em;
 }
