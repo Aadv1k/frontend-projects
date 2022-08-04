@@ -1,17 +1,15 @@
 /* eslint-disable react/jsx-no-bind */
 import React, { Component } from "react";
+
 import Navbar from "./components/Navbar";
 import Editor from "./components/Editor";
+
+import ThemeContext from "./contexts/ThemeContext";
 
 import "./App.css";
 
 // Works ¯\_(ツ)_/¯heigh
 // TODO: Use context here
-if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-  document.getElementsByTagName("html")[0].setAttribute("data-theme", "light");
-} else {
-  document.getElementsByTagName("html")[0].setAttribute("data-theme", "dark");
-}
 
 export default class extends Component {
   constructor(props) {
@@ -20,6 +18,7 @@ export default class extends Component {
       drawer: false,
       document: {},
       documents: [],
+      theme: window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
     };
   }
 
@@ -81,7 +80,7 @@ export default class extends Component {
     }
 
     return (
-      <>
+      <ThemeContext.Provider value={this.state.theme}>
         <Navbar
           setDrawerState={this.setDrawerState.bind(this)}
           drawer={this.state.drawer}
@@ -90,13 +89,12 @@ export default class extends Component {
           document={this.state.document}
           documents={this.state.documents}
         />
-
         <Editor
           drawer={this.state.drawer}
           setDocumentState={this.setDocumentState.bind(this)}
           document={this.state.document}
         />
-      </>
+      </ThemeContext.Provider>
     );
   }
 }
