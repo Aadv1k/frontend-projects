@@ -1,5 +1,8 @@
 # front-end monorepo 🗿
 
+![test workflow](https://github.com/aadv1k/frontend-projects/actions/workflows/test.js.yml/badge.svg)
+![build workflow](https://github.com/aadv1k/frontend-projects/actions/workflows/deploy.yml/badge.svg)
+
 this is the monorepo of aadvik's frontend projects. **_[Here is the url to the darhboard](https://aadv1k-frontend.netlify.app)_**
 
 | Packages 📦                                                                                                                                   | Tooling 🛠️                           |
