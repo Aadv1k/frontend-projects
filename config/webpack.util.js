@@ -11,7 +11,7 @@ module.exports = {
   cssReg: /\.css/i,
   sassReg: /\.s[a|c]ss/i,
   babelReg: /\.jsx?$/i,
-  imgReg: /\.(png|svg|jpg|jpeg|gif)$/i,
+  imgReg: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
   fontReg: /\.(woff|woff2|eot|ttf|otf)$/i,
 
   sassLoader: [...baseStyleLoader, "sass-loader"],
