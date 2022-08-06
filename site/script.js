@@ -5,6 +5,17 @@ const ghu =
 
 const data = [
   {
+    title: "Single page design portfolio",
+    date: new Date("Sat 06 Aug 2022 03:56:01 PM IST"),
+    labels: ["React", "Webpack", "SCSS", "CSS Modules"],
+    image: "./fem-single-page-design-portfolio/desktop-preview.jpg",
+    links: {
+      "Live url": "./fem-single-page-design-portfolio/index.html",
+      GitHub: `${gh}fem-single-page-design-portfolio`,
+      Challenge: "",
+    },
+  },
+  {
     title: "Stores list card - dark mode",
     date: new Date("Tue 02 Aug 2022 08:08:10 PM IST"),
     labels: ["Parcel", "SCSS", "UiDesignDaily"],

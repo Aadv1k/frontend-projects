@@ -2,8 +2,7 @@
   "name": "frontend-projects",
   "workspaces": [
     "packages/frontendmentor/*",
-    "packages/uidesigndaily/*",
-    "uidd-stores-list-card-dark-mode-day-1563"
+    "packages/uidesigndaily/*"
   ],
   "version": "1.0.0",
   "description": "A collection of my frontend project",

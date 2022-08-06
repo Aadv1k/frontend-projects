@@ -1,0 +1,360 @@
+@use "./scss/variables" as *;
+
+main > * {
+  width: 90%;
+  margin: 2em auto;
+  max-width: 1000px;
+  font-family: $fnt-sans;
+}
+
+P {
+  color: $clr-gray-1;
+  max-width: 60ch;
+}
+
+body {
+  background-color: $clr-white;
+}
+
+:root {
+  --slider-img-size: 300px;
+}
+
+.btn {
+  border-radius: 100px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: opacity 200ms ease-in-out;
+  border: none;
+  font-family: $fnt-sans;
+  font-weight: map-get($map: $fnt-w, $key: "reg");
+  font-size: 0.9em;
+  color: $clr-white;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.btnRed {
+  composes: btn;
+  background-color: $clr-red-2;
+  padding: 0.5em 1.5em;
+}
+.btnBlack {
+  composes: btnRed;
+  background-color: $clr-black;
+}
+
+.Nav {
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    background-color: $clr-black;
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+
+  div::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    border: 3px solid $clr-white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.Head {
+  font-family: $fnt-sans;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: map-get($map: $fnt-w, $key: "bld");
+  }
+
+  p {
+    margin-block: 1em;
+    color: $clr-gray-1;
+    max-width: 60ch;
+  }
+
+  @media screen and (min-width: 700px) {
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+}
+
+.SkillMosaic {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+
+  $block: 150px;
+  $big-block: $block * 2+16px;
+
+  li {
+    height: $block;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 200ms ease-in;
+  }
+
+  li > strong {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: $clr-white;
+    font-size: 1.2em;
+  }
+
+  li::before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  li:not(:nth-child(2), :nth-child(3)) {
+    grid-column: span 2;
+  }
+
+  li:nth-child(1) {
+    background-color: $clr-blue;
+    height: $big-block;
+    &::before {
+      width: 120px;
+      height: 200px;
+      background-image: url("./images/pattern-graphic-design.svg");
+    }
+  }
+
+  li:nth-child(2) {
+    background-color: $clr-orange;
+    &::before {
+      width: 70px;
+      height: 70px;
+      background-image: url("./images/pattern-ui-ux.svg");
+    }
+  }
+
+  li:nth-child(3) {
+    background-color: $clr-red-1;
+    &::before {
+      width: 70px;
+      height: 70px;
+      background-image: url("./images/pattern-apps.svg");
+    }
+  }
+
+  li:nth-child(4) {
+    background-color: $clr-red-2;
+    &::before {
+      width: 150px;
+      height: 150px;
+      background-image: url("./images/pattern-illustrations.svg");
+    }
+  }
+
+  li:nth-child(5) {
+    background-color: $clr-teal;
+    &::before {
+      width: 150px;
+      height: 150px;
+      background-image: url("./images/pattern-photography.svg");
+    }
+  }
+
+  li:nth-child(6) {
+    background-color: $clr-plum;
+    &::before {
+      width: 150px;
+      height: 150px;
+      background-image: url("./images/pattern-motion-graphics.svg");
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    li:nth-child(1) {
+      grid-row: span 2;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.About {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+
+  > * {
+    width: 100%;
+    text-align: center;
+  }
+
+  img {
+    max-width: 350px;
+  }
+
+  h2 {
+    max-width: 40ch;
+    line-height: 1.3;
+    font-size: 1.8em;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+  }
+
+  button {
+    padding: 0.8em 1.5em;
+    width: max-content;
+  }
+
+  // Tablets
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+
+    div {
+      width: 60%;
+      text-align: left;
+    }
+
+    img {
+      margin-left: -20%;
+    }
+
+    button {
+      align-self: flex-start;
+    }
+  }
+
+  // Laptops, Desktops
+  @media screen and (min-width: 800px) {
+    justify-content: space-between;
+    div {
+      width: 50%;
+    }
+
+    img {
+      margin-left: 0;
+    }
+  }
+}
+
+.Carousal {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  h2 {
+    line-height: 1.3;
+    font-size: 1.8em;
+  }
+}
+
+.Slider {
+  --img-gap: 1em;
+
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: var(--img-gap);
+  transition: transform 200ms ease-in;
+
+  margin-block: 1em;
+
+  img {
+    width: var(--slider-img-size);
+    border-radius: 1em;
+  }
+}
+
+.CarousalBtn {
+  button:nth-child(1) {
+    margin-inline-end: 1em;
+  }
+}
+
+.round {
+  composes: btn;
+  background-color: $clr-black;
+  padding: 1em;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.Book {
+  display: flex;
+  flex-direction: column;
+  background-color: $clr-black;
+  align-items: center;
+  padding: 1em 0.5em;
+  border-radius: 20px;
+  gap: 0.5em;
+
+  div {
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+  }
+
+  h2,
+  p {
+    color: $clr-white;
+    margin-block: 0.5em;
+  }
+  p {
+    opacity: 0.9;
+  }
+
+  @media only screen and (min-width: 800px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.5em;
+    div {
+      text-align: left;
+    }
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  :root {
+    --slider-img-size: 450px;
+  }
+}
