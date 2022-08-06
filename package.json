@@ -2,7 +2,7 @@
   "name": "frontend-projects",
   "workspaces": [
     "packages/frontendmentor/*",
-    "packages/uidesigndaily/*",
+    "packages/uidesigndaily/*"
   ],
   "version": "1.0.0",
   "description": "A collection of my frontend project",
