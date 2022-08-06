@@ -1,0 +1,24 @@
+.btn {
+  border-radius: 100px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: opacity 200ms ease-in-out;
+  border: none;
+  font-family: $fnt-sans;
+  font-weight: map-get($map: $fnt-w, $key: "reg");
+  font-size: 0.9em;
+  color: $clr-white;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.btnRed {
+  composes: btn;
+  background-color: $clr-red-2;
+  padding: 0.5em 1.5em;
+}
+.btnBlack {
+  composes: btnRed;
+  background-color: $clr-black;
+}
