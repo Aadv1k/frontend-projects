@@ -1,5 +1,7 @@
 # front-end monorepo 🗿
 
+Note (09/08/2022): I Am currently taking a break from frontend dev, and thus, this repo won't be recieving any major additions.
+
 ![test workflow](https://github.com/aadv1k/frontend-projects/actions/workflows/test.js.yml/badge.svg)
 ![build workflow](https://github.com/aadv1k/frontend-projects/actions/workflows/deploy.yml/badge.svg)
 
