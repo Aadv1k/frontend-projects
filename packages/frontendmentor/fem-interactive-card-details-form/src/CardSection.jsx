@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import { fonts, sizes, colors } from "./styles/Variables";
@@ -147,7 +148,7 @@ const CardContentSub = styled.div`
   }
 `;
 
-export default function ({ card }) {
+function CardSection({ card }) {
   return (
     <Section>
       <CardContainer>
@@ -176,3 +177,17 @@ export default function ({ card }) {
     </Section>
   );
 }
+
+CardSection.propTypes = {
+  card: PropTypes.shape({
+    name: PropTypes.string,
+    num: PropTypes.string,
+    cvc: PropTypes.string,
+    date: PropTypes.shape({
+      mm: PropTypes.string,
+      yy: PropTypes.string,
+    }),
+  }).isRequired,
+};
+
+export default CardSection;

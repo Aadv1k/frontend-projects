@@ -1,11 +1,12 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
+import Cleve from "cleave.js/react";
 
-import { fonts, colors, sizes } from "./styles/Variables.js";
+import { fonts, colors, sizes } from "./styles/Variables";
 
 import imgBlueTick from "./images/icon-complete.svg";
-
-import Cleve from "cleave.js/react";
 
 const Form = styled.form`
   width: 100%;
@@ -131,7 +132,7 @@ const ContBtn = styled(FormButton)`
   min-width: 280px;
 `;
 
-export default function ({ card, setCard }) {
+function FormSection({ card, setCard }) {
   const [modal, setModal] = useState(true);
 
   return (
@@ -140,7 +141,7 @@ export default function ({ card, setCard }) {
       onSubmit={(e) => {
         e.preventDefault();
         const form = e.target;
-        for (let i of form) {
+        for (const i of form) {
           i.value = "";
         }
         setModal(!modal);
@@ -209,10 +210,12 @@ export default function ({ card, setCard }) {
 
                   return;
                 }
-                data = data.split(" ").filter((e) => Number(e) || e === " ");
+                data = data
+                  .split(" ")
+                  .filter((elem) => Number(elem) || elem === " ");
                 data[data.length - 1] = data[data.length - 1].slice(0, 4);
                 data = data.join(" ");
-                let t = data + card.num.slice(data.length, card.num.length);
+                const t = data + card.num.slice(data.length, card.num.length);
 
                 setCard({
                   ...card,
@@ -229,11 +232,11 @@ export default function ({ card, setCard }) {
                 <Input
                   required
                   placeholder="MM"
+                  id="cardmm"
                   options={{
                     date: true,
                     datePattern: ["mm"],
                   }}
-                  name="cardmm"
                   onInput={(e) => {
                     setCard({
                       ...card,
@@ -291,7 +294,7 @@ export default function ({ card, setCard }) {
           <img src={imgBlueTick} alt="" />
           <div>
             <h2>Thank you!</h2>
-            <p>We've added your card details</p>
+            <p>We&apos;ve added your card details</p>
           </div>
           <ContBtn onClick={() => setModal(!modal)}>Continue</ContBtn>
         </Modal>
@@ -299,3 +302,18 @@ export default function ({ card, setCard }) {
     </Form>
   );
 }
+
+FormSection.propTypes = {
+  card: PropTypes.shape({
+    name: PropTypes.string,
+    num: PropTypes.string,
+    cvc: PropTypes.string,
+    date: PropTypes.shape({
+      mm: PropTypes.string,
+      yy: PropTypes.string,
+    }),
+  }).isRequired,
+  setCard: PropTypes.func.isRequired,
+};
+
+export default FormSection;
