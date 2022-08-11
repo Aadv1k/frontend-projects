@@ -5,6 +5,18 @@ const ghu =
 
 const data = [
   {
+    title: "Interactive card details form",
+    date: new Date("Thu 11 Aug 2022 06:39:46 PM IST"),
+    labels: ["React", "Webpack", "Styled Components"],
+    image: "./fem-interactive-card-details-form/desktop-preview.jpg",
+
+    links: {
+      "Live url": "./fem-interactive-card-details-form/index.html",
+      GitHub: `${gh}fem-interactive-card-details-form`,
+      Challenge: "",
+    },
+  },
+  {
     title: "Single page design portfolio",
     date: new Date("Sat 06 Aug 2022 03:56:01 PM IST"),
     labels: ["React", "Webpack", "SCSS", "CSS Modules"],

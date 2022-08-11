@@ -29,17 +29,17 @@ module.exports = {
       {
         test: config.sassReg,
         use: [
-          {loader: "style-loader"},
+          { loader: "style-loader" },
           {
             loader: "css-loader",
             options: {
               modules: {
                 mode: "local",
                 auto: /\.module.scss$/i,
-              }
+              },
             },
           },
-          {loader: "sass-loader"},
+          { loader: "sass-loader" },
         ],
       },
       {
@@ -50,6 +50,6 @@ module.exports = {
   },
 
   resolve: {
-    extensions: config.reactExt
-  }
+    extensions: config.reactExt,
+  },
 };

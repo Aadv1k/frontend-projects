@@ -1,5 +1,8 @@
 # front-end monorepo 🗿
 
+Note (09/08/2022): I Am currently taking a break from frontend dev, and thus, this repo won't be recieving any major additions.
+Note (11/09/2022): Back at it baby!
+
 ![test workflow](https://github.com/aadv1k/frontend-projects/actions/workflows/test.js.yml/badge.svg)
 ![build workflow](https://github.com/aadv1k/frontend-projects/actions/workflows/deploy.yml/badge.svg)
 
@@ -7,12 +10,13 @@ this is the monorepo of aadvik's frontend projects. **_[Here is the url to the d
 
 | Packages 📦                                                                                                                                   | Tooling 🛠️                                     |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| [@frontend-projects/fem-single-page-design-portfolio](./packages/frontendmentor/fem-single-page-design-portfolio)                             | ![react] ![webpack] ![sass] ![cssmodules]      |
+| [@frontend-projects/fem-interactive-card-details-form](./packages/frontendmentor/fem-interactive-card-details-form)                           | ![react] ![styledcomponents] ![webpack]        |
+| [@frontend-projects/fem-single-page-design-portfolio](./packages/frontendmentor/fem-single-page-design-portfolio)                             | ![react] ![cssmodules] ![sass] ![webpack]      |
 | [@frontend-projects/uidd-stores-list-card-dark-mode-day-1563](./packages/uidesigndaily/uidd-stores-list-card-dark-mode-day-1563)              | ![sass] ![parcel]                              |
 | [@frontend-projects/uidd-product-review-modal-rating-day-1565](./packages/uidesigndaily/uidd-product-review-modal-rating-day-1565)            | ![parcel]                                      |
-| [@frontend-projects/fem-inbrowser-markdown-editor](./packages/frontendmentor/fem-inbrowser-markdown-editor)                                   | ![react] ![cssmodules] ![webpack] ![openprops] |
-| [@frontend-projects/fem-pricing-component-with-toggle](./packages/frontendmentor/fem-pricing-component-with-toggle/)                          | ![react] ![webpack] ![windicss]                |
-| [@frontend-projects/fem-typemaster-prelaunch-landing-page](./packages/frontendmentor/fem-typemaster-prelaunch-landing-page/)                  | ![react] ![webpack] ![openprops]               |
+| [@frontend-projects/fem-inbrowser-markdown-editor](./packages/frontendmentor/fem-inbrowser-markdown-editor)                                   | ![react] ![cssmodules] ![openprops] ![webpack] |
+| [@frontend-projects/fem-pricing-component-with-toggle](./packages/frontendmentor/fem-pricing-component-with-toggle/)                          | ![react] ![windicss] ![webpack]                |
+| [@frontend-projects/fem-typemaster-prelaunch-landing-page](./packages/frontendmentor/fem-typemaster-prelaunch-landing-page/)                  | ![react] ![openprops] ![webpack]               |
 | [@frontend-projects/fem-expenses-chart-component](./packages/frontendmentor/fem-expenses-chart-component/)                                    | ![tailwindcss] ![webpack] ![postcss]           |
 | [@frontend-projects/fem-github-user-search-app](./packages/frontendmentor/fem-github-user-search-app/)                                        | ![tailwindcss] ![Webpack] ![postcss]           |
 | [@frontend-projects/fem-intro-section-with-dropdown-navigation](./packages/frontendmentor/fem-intro-section-with-dropdown-navigation/)        | ![tailwindcss] ![webpack] ![postcss]           |
@@ -72,6 +76,7 @@ _note: currently there are no inner-deps_
 [sass]: https://img.shields.io/badge/-Sass-282c34?logo=sass&logocolor=white&style=classic
 [webpack]: https://img.shields.io/badge/-Webpack-282c34?logo=webpack&logocolor=white&style=classic
 [parcel]: https://img.shields.io/badge/-📦%20Parcel-282c34?logo=parcel&logocolor=white&style=classic
+[styledcomponents]: https://img.shields.io/badge/-💅%20Styled%20Components-282c34?&style=classic
 [gulp]: https://img.shields.io/badge/-Gulp-282c34?logo=gulp&logocolor=white&style=classic
 [postcss]: https://img.shields.io/badge/-PostCSS-282c34?logo=postCSS&logocolor=white&style=classic
 [openprops]: https://img.shields.io/badge/-🅿%20OpenProps-282c34?logo=&logocolor=white&style=classic

@@ -4,3 +4,19 @@
   margin: 0;
   padding: 0;
 }
+
+main > * {
+  width: 90%;
+  margin: 2em auto;
+  max-width: 1000px;
+  font-family: $fnt-sans;
+}
+
+P {
+  color: $clr-gray-1;
+  max-width: 60ch;
+}
+
+body {
+  background-color: $clr-white;
+}
