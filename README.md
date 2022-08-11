@@ -1,12 +1,13 @@
 # front-end monorepo 🗿
 
-Note (09/08/2022): I Am currently taking a break from frontend dev, and thus, this repo won't be recieving any major additions.
-Note (11/09/2022): Back at it baby!
-
 ![test workflow](https://github.com/aadv1k/frontend-projects/actions/workflows/test.js.yml/badge.svg)
 ![build workflow](https://github.com/aadv1k/frontend-projects/actions/workflows/deploy.yml/badge.svg)
 
-this is the monorepo of aadvik's frontend projects. **_[Here is the url to the darhboard](https://aadv1k-frontend.netlify.app)_**
+Note (11/09/2022): Back at it baby!
+<br>
+Note (09/08/2022): I Am currently taking a break from frontend dev, and thus, this repo won't be recieving any major additions.
+
+this is the monorepo of aadvik's frontend projects. **_[Here is the url to the dashboard](https://aadv1k-frontend.netlify.app)_**
 
 | Packages 📦                                                                                                                                   | Tooling 🛠️                                     |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
@@ -17,13 +18,13 @@ this is the monorepo of aadvik's frontend projects. **_[Here is the url to the d
 | [@frontend-projects/fem-inbrowser-markdown-editor](./packages/frontendmentor/fem-inbrowser-markdown-editor)                                   | ![react] ![cssmodules] ![openprops] ![webpack] |
 | [@frontend-projects/fem-pricing-component-with-toggle](./packages/frontendmentor/fem-pricing-component-with-toggle/)                          | ![react] ![windicss] ![webpack]                |
 | [@frontend-projects/fem-typemaster-prelaunch-landing-page](./packages/frontendmentor/fem-typemaster-prelaunch-landing-page/)                  | ![react] ![openprops] ![webpack]               |
-| [@frontend-projects/fem-expenses-chart-component](./packages/frontendmentor/fem-expenses-chart-component/)                                    | ![tailwindcss] ![webpack] ![postcss]           |
-| [@frontend-projects/fem-github-user-search-app](./packages/frontendmentor/fem-github-user-search-app/)                                        | ![tailwindcss] ![Webpack] ![postcss]           |
-| [@frontend-projects/fem-intro-section-with-dropdown-navigation](./packages/frontendmentor/fem-intro-section-with-dropdown-navigation/)        | ![tailwindcss] ![webpack] ![postcss]           |
+| [@frontend-projects/fem-expenses-chart-component](./packages/frontendmentor/fem-expenses-chart-component/)                                    | ![tailwindcss] ![postcss] ![webpack]           |
+| [@frontend-projects/fem-github-user-search-app](./packages/frontendmentor/fem-github-user-search-app/)                                        | ![tailwindcss] ![postcss] ![Webpack]           |
+| [@frontend-projects/fem-intro-section-with-dropdown-navigation](./packages/frontendmentor/fem-intro-section-with-dropdown-navigation/)        | ![tailwindcss] ![postcss] ![webpack]           |
 | [@frontend-projects/fem-interactive-comments-section](./packages/frontendmentor/fem-interactive-comments-section/)                            | ![sass] ![webpack]                             |
 | [@frontend-projects/fem-loopstudios-page](./packages/frontendmentor/fem-loopstudios-page/)                                                    | ![sass] ![webpack]                             |
 | [@frontend-projects/fem-social-dashboard](./packages/frontendmentor/fem-social-dashboard/)                                                    | ![sass] ![webpack]                             |
-| [@frontend-projects/fem-huddle-landing-page](./packages/frontendmentor/fem-huddle-landing-page/)                                              | ![sass] ![webpack] ![postcss]                  |
+| [@frontend-projects/fem-huddle-landing-page](./packages/frontendmentor/fem-huddle-landing-page/)                                              | ![sass] ![postcss] ![webpack]                  |
 | [@frontend-projects/fem-testemonials-grid](./packages/frontendmentor/fem-testemonials-grid/)                                                  | ![sass]                                        |
 | [@frontend-projects/fem-interactive-pricing-component](./packages/frontendmentor/fem-interactive-pricing-component/)                          | ![sass]                                        |
 | [@frontend-projects/fem-crowdfunding-product-page](./packages/frontendmentor/fem-crowdfunding-product-page/)                                  | ![sass] ![gulp]                                |
