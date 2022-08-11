@@ -13,8 +13,8 @@ this is the monorepo of aadvik's frontend projects. **_[Here is the url to the d
 | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | [@frontend-projects/fem-interactive-card-details-form](./packages/frontendmentor/fem-interactive-card-details-form)                           | ![react] ![styledcomponents] ![webpack]        |
 | [@frontend-projects/fem-single-page-design-portfolio](./packages/frontendmentor/fem-single-page-design-portfolio)                             | ![react] ![cssmodules] ![sass] ![webpack]      |
-| [@frontend-projects/uidd-stores-list-card-dark-mode-day-1563](./packages/uidesigndaily/uidd-stores-list-card-dark-mode-day-1563)              | ![sass] ![parcel]                              |
-| [@frontend-projects/uidd-product-review-modal-rating-day-1565](./packages/uidesigndaily/uidd-product-review-modal-rating-day-1565)            | ![parcel]                                      |
+| [@frontend-projects/uidd-stores-list-card-dark-mode-day-1563](./packages/uidesigndaily/uidd-stores-list-card-dark-mode-day-1563)              | ![sass] ![jest] ![parcel]                      |
+| [@frontend-projects/uidd-product-review-modal-rating-day-1565](./packages/uidesigndaily/uidd-product-review-modal-rating-day-1565)            | ![jest] ![parcel]                              |
 | [@frontend-projects/fem-inbrowser-markdown-editor](./packages/frontendmentor/fem-inbrowser-markdown-editor)                                   | ![react] ![cssmodules] ![openprops] ![webpack] |
 | [@frontend-projects/fem-pricing-component-with-toggle](./packages/frontendmentor/fem-pricing-component-with-toggle/)                          | ![react] ![windicss] ![webpack]                |
 | [@frontend-projects/fem-typemaster-prelaunch-landing-page](./packages/frontendmentor/fem-typemaster-prelaunch-landing-page/)                  | ![react] ![openprops] ![webpack]               |
@@ -71,17 +71,18 @@ on netlify via the `npm run build` command This command makes it so that the
 
 _note: currently there are no inner-deps_
 
+[jest]: https://img.shields.io/badge/-Jest-282c34?logo=jest&logoColor=C21325&style=classic
 [react]: https://img.shields.io/badge/-React-282c34?logo=React&logoColor=61dafb&style=classic
 [cssmodules]: https://img.shields.io/badge/-CSS%20Modules-282c34?logo=cssmodules&logoColor=61dafb&style=classic
 [tailwindcss]: https://img.shields.io/badge/-Tailwindcss-282c34?logo=tailwind-css&logocolor=white&style=classic
 [sass]: https://img.shields.io/badge/-Sass-282c34?logo=sass&logocolor=white&style=classic
-[webpack]: https://img.shields.io/badge/-Webpack-282c34?logo=webpack&logocolor=white&style=classic
+[webpack]: https://img.shields.io/badge/-Webpack-282c34?logo=webpack&logocolor=8DD6F9&style=classic
 [parcel]: https://img.shields.io/badge/-📦%20Parcel-282c34?logo=parcel&logocolor=white&style=classic
 [styledcomponents]: https://img.shields.io/badge/-💅%20Styled%20Components-282c34?&style=classic
-[gulp]: https://img.shields.io/badge/-Gulp-282c34?logo=gulp&logocolor=white&style=classic
-[postcss]: https://img.shields.io/badge/-PostCSS-282c34?logo=postCSS&logocolor=white&style=classic
+[gulp]: https://img.shields.io/badge/-Gulp-282c34?logo=gulp&logocolor=CF4647&style=classic
+[postcss]: https://img.shields.io/badge/-PostCSS-282c34?logo=postCSS&logocolor=DD3A0A&style=classic
 [openprops]: https://img.shields.io/badge/-🅿%20OpenProps-282c34?logo=&logocolor=white&style=classic
-[windicss]: https://img.shields.io/badge/-WindiCSS-282c34?logo=windicss&logocolor=white&style=classic
-[javascript]: https://img.shields.io/badge/-JavaScript-282c34?logo=javascript&logocolor=white&style=classic
-[css]: https://img.shields.io/badge/-CSS-282c34?logo=CSS&logocolor=white&style=classic
-[html]: https://img.shields.io/badge/-HTML-282c34?logo=html&logocolor=white&style=classic
+[windicss]: https://img.shields.io/badge/-WindiCSS-282c34?logo=windicss&logocolor=48B0F1&style=classic
+[javascript]: https://img.shields.io/badge/-JavaScript-282c34?logo=JavaScript&logocolor=F7DF1E&style=classic
+[css]: https://img.shields.io/badge/-CSS3-282c34?logo=CSS3&logocolor=1572B6&style=classic
+[html]: https://img.shields.io/badge/-HTML5-282c34?logo=HTML5&logocolor=E34F26&style=classic
