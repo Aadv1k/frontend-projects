@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply bg-none bg-none cursor-pointer;
+  }
+
+  .btn--primary {
+    @apply bg-blue1 text-white border-blue2 border-b-4 rounded-md;
+  }
+
+  .btn--secondary {
+    @apply bg-transparent border border-periwinkle text-indigo2 border-2 rounded-md;
+  }
+}
+
+[data-shipping="Free shipping"]::before {
+  @apply bg-indigo2 top-0 absolute w-max text-white rounded-full px-2 py-1 text-sm font-bold;
+  content: attr(data-shipping);
+}
