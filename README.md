@@ -3,14 +3,11 @@
 ![test workflow](https://github.com/aadv1k/frontend-projects/actions/workflows/test.js.yml/badge.svg)
 ![build workflow](https://github.com/aadv1k/frontend-projects/actions/workflows/deploy.yml/badge.svg)
 
-Note (11/09/2022): Back at it baby!
-<br>
-Note (09/08/2022): I Am currently taking a break from frontend dev, and thus, this repo won't be recieving any major additions.
-
 this is the monorepo of aadvik's frontend projects. **_[Here is the url to the dashboard](https://aadv1k-frontend.netlify.app)_**
 
 | Packages 📦                                                                                                                                   | Tooling 🛠️                                     |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| [@frontend-projects/uidd-product-info-ui-design-card-day-1575](./packages/uidesigndaily/uidd-product-info-ui-design-card-day-1575)            | ![tailwindcss] ![parcel]                       |
 | [@frontend-projects/fem-interactive-card-details-form](./packages/frontendmentor/fem-interactive-card-details-form)                           | ![react] ![styledcomponents] ![webpack]        |
 | [@frontend-projects/fem-single-page-design-portfolio](./packages/frontendmentor/fem-single-page-design-portfolio)                             | ![react] ![cssmodules] ![sass] ![webpack]      |
 | [@frontend-projects/uidd-stores-list-card-dark-mode-day-1563](./packages/uidesigndaily/uidd-stores-list-card-dark-mode-day-1563)              | ![sass] ![jest] ![parcel]                      |
