@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "dev": "parcel -p 8080",
-    "build": "parcel --publicPath ./"
+    "build": "parcel --public-path ./"
   },
   "author": "Aadvik <aadv1k@outlook.com>",
   "license": "GPL-3.0-or-later",
