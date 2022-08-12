@@ -4,9 +4,8 @@
   "description": "https://uidesigndaily.com/posts/figma-product-info-ui-design-card-day-1575",
   "source": "./src/index.html",
   "scripts": {
-    "test": "jest",
     "dev": "parcel -p 8080",
-    "build": "parcel --public-path ./"
+    "build": "parcel build ./src/index.html --public-url ./"
   },
   "author": "Aadvik <aadv1k@outlook.com>",
   "license": "GPL-3.0-or-later",
