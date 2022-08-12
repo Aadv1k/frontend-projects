@@ -5,6 +5,18 @@ const ghu =
 
 const data = [
   {
+    title: "Product info Ui design card",
+    date: new Date("Fri 12 Aug 2022 01:07:01 PM IST"),
+    labels: ["Parcel", "TailwindCSS", "UiDesignDaily"],
+    image: "./uidd-product-info-ui-design-card-day-1575/desktop-preview.jpg",
+
+    links: {
+      "Live url": "./uidd-product-info-ui-design-card-day-1575/index.html",
+      GitHub: `${gh}uidd-product-info-ui-design-card-day-1575`,
+      Challenge: "",
+    },
+  },
+  {
     title: "Interactive card details form",
     date: new Date("Thu 11 Aug 2022 06:39:46 PM IST"),
     labels: ["React", "Webpack", "Styled Components"],

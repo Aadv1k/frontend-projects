@@ -1,4 +1,7 @@
+import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
+
 import { fonts, sizes, colors } from "./styles/Variables";
 
 import bgMainMob from "./images/bg-main-mobile.png";
@@ -77,7 +80,7 @@ const CardBack = styled(Card)`
     top: 45%;
     left: 10%;
     color: ${colors.white};
-  } 
+  }
 
   @media screen and (min-width: ${sizes.md}) {
     transform: translate(10%, 20%);
@@ -86,8 +89,6 @@ const CardBack = styled(Card)`
   @media screen and (min-width: ${sizes.lg}) {
     transform: translate(20%, 20%);
   }
-
-
 `;
 
 const CardContent = styled.div`
@@ -95,7 +96,7 @@ const CardContent = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 1.5em 1.5em;
+  padding: 1em;
 
   > img {
     width: 70px;
@@ -109,10 +110,10 @@ const CardContent = styled.div`
 const CardTitle = styled.div`
   display: flex;
   justify-content: start;
-  width: 90%;
+  width: 100%;
   color: ${colors.white};
   margin-block-end: 1.5em;
-  gap: .7em;
+  gap: 0.5em;
 
   span {
     font-size: 1.5em;
@@ -128,11 +129,12 @@ const CardTitle = styled.div`
   }
 
   @media screen and (max-width: ${sizes.sm}) {
-  width: 100%;
-
+    gap: 0.3em;
+    width: 100%;
     span {
-      letter-spacing: 0;
-  } 
+      letter-spacing: 1px;
+      font-size: 1.3em;
+    }
   }
 `;
 
@@ -146,7 +148,7 @@ const CardContentSub = styled.div`
   }
 `;
 
-export default function ({card}) {
+function CardSection({ card }) {
   return (
     <Section>
       <CardContainer>
@@ -155,11 +157,15 @@ export default function ({card}) {
             <img src={logo} alt="" />
             <div>
               <CardTitle>
-                {card.num.split(' ').map(e => <span key={Math.floor(Math.random()*9999)}>{e}</span>)}
+                {card.num.split(" ").map((e) => (
+                  <span key={Math.floor(Math.random() * 9999)}>{e}</span>
+                ))}
               </CardTitle>
               <CardContentSub>
                 <span>{card.name}</span>
-                <span>{card.date.mm}/{card.date.yy}</span>
+                <span>
+                  {card.date.mm}/{card.date.yy}
+                </span>
               </CardContentSub>
             </div>
           </CardContent>
@@ -171,3 +177,17 @@ export default function ({card}) {
     </Section>
   );
 }
+
+CardSection.propTypes = {
+  card: PropTypes.shape({
+    name: PropTypes.string,
+    num: PropTypes.string,
+    cvc: PropTypes.string,
+    date: PropTypes.shape({
+      mm: PropTypes.string,
+      yy: PropTypes.string,
+    }),
+  }).isRequired,
+};
+
+export default CardSection;

@@ -1,13 +1,11 @@
-import styled from "styled-components";
+import React, { useState } from "react";
 
 import GlobalStyle from "./styles/Globals";
 
 import CardSection from "./CardSection";
 import FormSection from "./FormSection";
 
-import { useState } from "react";
-
-export default function () {
+export default function App() {
   const [card, setCard] = useState({
     num: "0000 0000 0000 0000",
     name: "Jane appleseed",
@@ -15,14 +13,14 @@ export default function () {
       mm: "00",
       yy: "00",
     },
-    cvc: 222
-  })
-    
+    cvc: 222,
+  });
+
   return (
     <>
       <GlobalStyle />
       <CardSection card={card} setCard={setCard} />
-      <FormSection card={card} setCard={setCard}/>
+      <FormSection card={card} setCard={setCard} />
     </>
   );
 }
