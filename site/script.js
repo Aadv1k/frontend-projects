@@ -5,6 +5,18 @@ const ghu =
 
 const data = [
   {
+    title: "Fylo dark theme landing page",
+    date: new Date("Sun 21 Aug 2022 02:22:38 PM IST"),
+    labels: ["Material Ui", "React", "Styled Components", "Webpack"],
+    image: "./fem-fylo-dark-theme-landing-page/desktop-preview.jpg",
+    links: {
+      "Live url": "./fem-fylo-dark-theme-landing-page/index.html",
+      GitHub: `${gh}fem-fylo-dark-theme-landing-page`,
+      Challenge: "",
+    },
+  },
+
+  {
     title: "Product info Ui design card",
     date: new Date("Fri 12 Aug 2022 01:07:01 PM IST"),
     labels: ["Parcel", "TailwindCSS", "UiDesignDaily"],
@@ -12,7 +24,7 @@ const data = [
 
     links: {
       "Live url": "./uidd-product-info-ui-design-card-day-1575/index.html",
-      GitHub: `${gh}uidd-product-info-ui-design-card-day-1575`,
+      GitHub: `${ghu}uidd-product-info-ui-design-card-day-1575`,
       Challenge: "",
     },
   },
