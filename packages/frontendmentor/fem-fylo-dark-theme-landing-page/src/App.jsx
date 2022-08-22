@@ -1,22 +1,21 @@
 import React from "react";
 
-import Navbar from "./Navbar";
-import Hero from "./Hero";
-import Features from "./Features";
-import CTA from "./CTA";
-import Testemonials from "./Testemonials";
-import Footer from "./Footer";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
+import CTA from "./components/CTA";
+import Testemonials from "./components/Testemonials";
+import Footer from "./components/Footer";
 
-export default function () {
+export default function App() {
   return (
-    <React.Fragment>
+    <>
       <Navbar />
       <Hero />
       <Features />
       <CTA />
       <Testemonials />
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
-

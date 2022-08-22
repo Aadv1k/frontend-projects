@@ -11,6 +11,7 @@
     "build": "npm run build --ws && npm exec --ws -c ../../../scripts/deploy.sh && ./scripts/deployStatic.sh",
     "femFetch": "./scripts/femfetch.sh",
     "lint": "eslint .",
+    "lint:ws": "npm exec --ws -c 'eslint --ext=.js,.jsx .'",
     "lint:fix": "eslint . --fix",
     "test:ws": "npm run test --if-present --ws",
     "format": "prettier --write ."
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/aadv1k/frontend-projects#readme",
   "devDependencies": {
+    "@babel/eslint-parser": "^7.18.9",
     "@parcel/transformer-sass": "^2.6.2",
     "eslint": "^8.21.0",
     "eslint-config-airbnb": "^19.0.4",

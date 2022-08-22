@@ -10,7 +10,7 @@ import DocumentContext from "./contexts/DocumentContext";
 
 import "./App.css";
 
-// Works ¯\_(ツ)_/¯heigh
+// Works ¯\_(ツ)_/¯
 // After refactoring the Navbar component to use DocumentContext I have come to
 // realize that there isn't much point using contexts in this case, the main
 // "issue" was the AppDrawer component, which required passing down props to a
@@ -68,7 +68,10 @@ export default class extends Component {
   }
 
   setDrawerState() {
-    this.setState({ drawer: !this.state.drawer });
+    const { drawer } = this.state;
+    this.setState({
+      drawer: !drawer,
+    });
   }
 
   saveDocumentToLocalStorage(content, id, name, lastOpened = true) {

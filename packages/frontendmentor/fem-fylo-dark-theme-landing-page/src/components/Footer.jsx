@@ -8,9 +8,6 @@ import {
   Input as MuiInput,
   Link as MuiLink,
 } from "@mui/material";
-import styled from "styled-components";
-import Logo from "./images/logo.svg";
-import { colors, sizes } from "./Variables";
 
 import {
   Place as MuiPlace,
@@ -21,15 +18,13 @@ import {
   Instagram as MuiInsta,
 } from "@mui/icons-material";
 
+import styled from "styled-components";
 import { useTheme } from "@mui/material/styles";
 
-const Heading = styled(Typography)`
-  font-size: 1.5em;
-  font-weight: 700;
-  max-width: 600px;
-`;
+import Logo from "../images/logo.svg";
+import { colors, sizes } from "../Variables";
 
-const Footer = styled.footer`
+const FooterContainer = styled.footer`
   background: ${colors.footer};
   margin-block-start: 15em;
   padding-block-start: 12em;
@@ -126,11 +121,6 @@ const FooterList = styled(MuiBox)`
   gap: 0.5em;
 `;
 
-const FooterNavLink = styled(MuiLink)`
-  text-decoration: none;
-  color: inherit;
-`;
-
 const SocialButton = styled(MuiIconButton)`
   width: 20px;
   height: 20px;
@@ -141,32 +131,34 @@ const FooterListSocial = styled(FooterList)`
   flex-direction: row;
   justify-content: center;
   margin-block: 1em;
-`
+`;
 
-export default function () {
+export default function Footer() {
   const theme = useTheme();
 
   return (
-    <Footer>
+    <FooterContainer>
       <FloatingCta>
-        <Heading variant="h2"> Get early access today</Heading>
-        <p>
+        <Typography variant="h2"> Get early access today</Typography>
+        <Typography variant="body2">
           It only takes a minute to sign up and our free starter tier is
           extremely generous. If you have any questions, our support team would
           be happy to help you.
-        </p>
+        </Typography>
         <Form
           action="#"
           onSubmit={(e) => {
             e.preventDefault();
+            // eslint-disable-next-line no-alert
             alert(e.target.elements[0].value);
+            // ^- Not sure what to do with the submission of the form
           }}
         >
           <Input
             type="email"
             placeholder="email@example.com"
             required
-            disableUnderline={true}
+            disableUnderline
           />
 
           <Button variant="contained" color="primary" type="submit">
@@ -202,16 +194,16 @@ export default function () {
         </FooterList>
 
         <FooterList>
-          <FooterNavLink href="#">About Us</FooterNavLink>
-          <FooterNavLink href="#">Jobs</FooterNavLink>
-          <FooterNavLink href="#">Press</FooterNavLink>
-          <FooterNavLink href="#">Blog</FooterNavLink>
+          <MuiLink href="#">About Us</MuiLink>
+          <MuiLink href="#">Jobs</MuiLink>
+          <MuiLink href="#">Press</MuiLink>
+          <MuiLink href="#">Blog</MuiLink>
         </FooterList>
 
         <FooterList>
-          <FooterNavLink href="#">Contact Us</FooterNavLink>
-          <FooterNavLink href="#"> Terms</FooterNavLink>
-          <FooterNavLink href="#"> Privacy</FooterNavLink>
+          <MuiLink href="#">Contact Us</MuiLink>
+          <MuiLink href="#">Terms</MuiLink>
+          <MuiLink href="#">Privacy</MuiLink>
         </FooterList>
       </FooterContent>
 
@@ -246,6 +238,6 @@ export default function () {
           <MuiInsta fontSize="inherit" />
         </SocialButton>
       </FooterListSocial>
-    </Footer>
+    </FooterContainer>
   );
 }
