@@ -1,12 +1,11 @@
 import React from "react";
 
 import { Box, Typography, Button } from "@mui/material";
-import styled from "styled-components";
-import { sizes } from "./Variables.js";
-
 import { ArrowCircleRight } from "@mui/icons-material";
+import styled from "styled-components";
 
-import ProdImg from "./images/illustration-stay-productive.png";
+import { sizes } from "../Variables";
+import ProdImg from "../images/illustration-stay-productive.png";
 
 const Image = styled.div`
   img {
@@ -20,6 +19,7 @@ const Container = styled(Box)`
   align-items: center;
   padding: 3em 2em;
   flex: 50%;
+  margin-block: 2.5em;
 
   max-width: 1200px;
   width: 95%;
@@ -50,13 +50,7 @@ const Content = styled(Box)`
   }
 `;
 
-const Heading = styled(Typography)`
-  font-size: 1.5em;
-  font-weight: 700;
-  max-width: 600px;
-`;
-
-export default function () {
+export default function CTA() {
   return (
     <Container>
       <Image>
@@ -64,16 +58,16 @@ export default function () {
       </Image>
 
       <Content>
-        <Heading variant="h2">Stay productive, wherever you are</Heading>
-        <p>
+        <Typography variant="h1">Stay productive, wherever you are</Typography>
+        <Typography variant="body2">
           Never let location be an issue when accessing your files. Fylo has you
           covered for all of your file storage needs.
-        </p>
+        </Typography>
 
-        <p>
+        <Typography variant="body2">
           Securely share files and folders with friends, family and colleagues
           for live collaboration. No email attachments required.
-        </p>
+        </Typography>
 
         <Button variant="text" endIcon={<ArrowCircleRight />} href="#">
           see how fylo works

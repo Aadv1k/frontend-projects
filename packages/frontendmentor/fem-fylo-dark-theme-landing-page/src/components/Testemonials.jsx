@@ -1,17 +1,16 @@
-import { Grid } from "@mui/material";
 import React from "react";
+
+import { Grid, Typography } from "@mui/material";
 import styled from "styled-components";
 
-import { colors } from "./Variables";
+import { colors } from "../Variables";
 
-import Prof1 from "./images/profile-1.jpg";
-import Prof2 from "./images/profile-2.jpg";
-import Prof3 from "./images/profile-3.jpg";
-
-import QuoteImg from "./images/bg-quotes.png";
+import Prof1 from "../images/profile-1.jpg";
+import Prof2 from "../images/profile-2.jpg";
+import Prof3 from "../images/profile-3.jpg";
+import QuoteImg from "../images/bg-quotes.png";
 
 const GridContainer = styled(Grid)`
-  margin-block: 2em;
   max-width: 1200px;
   width: 95%;
   margin-inline: auto;
@@ -30,7 +29,6 @@ const GridContainer = styled(Grid)`
     left: 0;
   }
 }
-
 `;
 
 const GridContent = styled.div`
@@ -55,18 +53,19 @@ const GridProfile = styled.div`
   }
 `;
 
-export default function () {
+export default function Testemonials() {
   return (
     <GridContainer container rowSpacing={4} columnSpacing={2}>
-      {/* Ah yes, MUI Grid that is not grid at all! but a hacky flexbox solution that breaks with the sligtest non-mui touch, truly a library for the modern web*/}
+      {/* Ah yes, MUI Grid that is not grid at all! but a hacky flexbox solution that breaks with the sligtest non-mui touch, truly a library for the modern web */}
 
       <Grid item xs={12} md={4}>
         <GridContent>
-          <p>
+          <Typography variant="body2" paragraph>
             Fylo has improved our team productivity by an order of magnitude.
             Since making the switch our team has become a well-oiled
             collaboration machine.
-          </p>
+          </Typography>
+
           <GridProfile>
             <img src={Prof1} alt="" />
             <div>

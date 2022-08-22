@@ -1,17 +1,18 @@
 import React from "react";
 
-import HeroImg from "./images/illustration-intro.png";
-
-import BgMbl from "./images/bg-curvy-mobile.svg";
-import BgDesk from "./images/bg-curvy-desktop.svg";
 import styled from "styled-components";
-import { Typography, Button} from "@mui/material";
-import { sizes, colors } from "./Variables";
+import { Typography, Button } from "@mui/material";
+
+import { sizes, colors } from "../Variables";
+
+import IntroImg from "../images/illustration-intro.png";
+import BgMbl from "../images/bg-curvy-mobile.svg";
+import BgDesk from "../images/bg-curvy-desktop.svg";
 
 const Section = styled.section`
   display: flex;
   flex-direction: column;
-  padding: 2em .5em;
+  padding: 1.5em 1em;
   align-items: center;
   text-align: center;
   background-color: ${colors.intro};
@@ -20,23 +21,15 @@ const Section = styled.section`
 
   > * {
     width: 95%;
-  z-index: 2;
+    z-index: 2;
   }
-p {
-max-width: 60ch;
-}
 `;
-const Hero = styled.div`
+const HeroImg = styled.div`
   img {
     width: 100%;
     vertical-align: middle;
     max-width: 600px;
   }
-`;
-const Heading = styled(Typography)`
-  font-size: 2em;
-  font-weight: 700;
-    max-width: 600px;
 `;
 
 const HeroBg = styled.picture`
@@ -49,12 +42,12 @@ const HeroBg = styled.picture`
   img {
     width: 100%;
     vertical-align: bottom;
-    user-drag: none; 
-    user-select: none
+    user-drag: none;
+    user-select: none;
   }
 `;
 
-export default function () {
+export default function Hero() {
   return (
     <Section>
       <HeroBg>
@@ -62,23 +55,29 @@ export default function () {
         <img src={BgMbl} alt="" />
       </HeroBg>
 
-      <Hero>
-        <img src={HeroImg} alt="" />
-      </Hero>
+      <HeroImg>
+        <img src={IntroImg} alt="" />
+      </HeroImg>
 
-      <Heading variant="h1">
+      <Typography variant="h1">
         All your files in one secure location, accessible anywhere.
-      </Heading>
-      <p>
+      </Typography>
+
+      <Typography variant="body2">
         Fylo stores all your most important files in one secure location. Access
         them wherever you need, share and collaborate with friends family, and
         co-workers.
-      </p>
+      </Typography>
 
-      <Button variant="contained" sx={{
-        maxWidth: "400px",
-        fontSize: "1.1em"
-      }}>Get Started</Button>
+      <Button
+        variant="contained"
+        sx={{
+          maxWidth: "400px",
+          fontSize: "1.1em",
+        }}
+      >
+        Get Started
+      </Button>
     </Section>
   );
 }

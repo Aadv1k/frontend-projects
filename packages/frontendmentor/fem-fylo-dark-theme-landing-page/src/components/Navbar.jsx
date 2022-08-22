@@ -2,10 +2,11 @@ import React from "react";
 
 import MuiBox from "@mui/material/Box";
 import MuiLink from "@mui/material/Link";
-import Logo from "./images/logo.svg";
 import styled from "styled-components";
 
-import {sizes, colors} from "./Variables";
+import { sizes, colors } from "../Variables";
+
+import Logo from "../images/logo.svg";
 
 const Img = styled.div`
   width: 100px;
@@ -32,19 +33,14 @@ const NavList = styled.ul`
   list-style: none;
   display: flex;
   gap: 1em;
-`
+`;
 
 const NavItm = styled.li`
   text-transform: capitalize;
   opacity: 0.8;
 `;
 
-const NavLink = styled(MuiLink)`
-  text-decoration: none;
-  color: inherit;
-`;
-
-export default function () {
+export default function Navbar() {
   return (
     <Box>
       <Img>
@@ -53,20 +49,20 @@ export default function () {
 
       <NavList>
         <NavItm>
-          <NavLink href="#" underline="hover" aria-label="features of the product">
+          <MuiLink href="#" aria-label="features of the product">
             features
-          </NavLink>
+          </MuiLink>
         </NavItm>
 
         <NavItm>
-          <NavLink href="#" underline="hover" aria-label="teams and more">
+          <MuiLink href="#" aria-label="teams and more">
             team
-          </NavLink>
+          </MuiLink>
         </NavItm>
         <NavItm>
-          <NavLink href="#" underline="hover" aria-label="sign in action">
+          <MuiLink href="#" aria-label="sign in action">
             sign in
-          </NavLink>
+          </MuiLink>
         </NavItm>
       </NavList>
     </Box>
