@@ -17,7 +17,8 @@ import style from "./Navbar.module.css";
 import Modal from "./Modal.jsx";
 import DocumentContext from "../contexts/DocumentContext";
 
-export default class extends Component {
+export default class Navbar extends Component {
+  static contextType = DocumentContext; // eslint-disable-line
   constructor(props) {
     super(props);
     this.inputRef = createRef();
@@ -26,8 +27,6 @@ export default class extends Component {
       modalDelete: false,
     };
   }
-
-  static contextType = DocumentContext;
 
   setModalState() {
     this.setState({ modal: !this.state.modal });
