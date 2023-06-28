@@ -1,5 +1,7 @@
 import { FaRegCopy } from 'react-icons/fa';
 
+import Slider from "./Slider";
+
 function OutputCard({ password }) {
   return (
     <div className="output-card">
@@ -20,11 +22,9 @@ function InputCard({ password }) {
         <div class="flex-col">
             <div className="flex justify-between">
                 <span class="card__text">character length</span>
-                <span class="card__special">0</span>
+                <span class="card__accent">0</span>
             </div>
-
-            <input type="range" id="volume" name="volume"
-                   min="0" max="11" />
+            <Slider />
         </div>
     </div>
   )

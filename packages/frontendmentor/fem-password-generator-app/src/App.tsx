@@ -6,8 +6,10 @@ import {InputCard, OutputCard} from "./Card";
 function App() {
   return (
     <>
-        <OutputCard password="2d29h09" />
-        <InputCard password="2d29h09" />
+        <div className="v-stack">
+            <OutputCard password="2d29h09" />
+            <InputCard password="2d29h09" />
+        </div>
     </>
   )
 }

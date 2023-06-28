@@ -6,7 +6,18 @@
     border-radius: $card-radius;
 
     padding-block: 1rem;
-    padding-inline: .9rem;
+    padding-inline: 2rem;
+
+    color: $grey-100;
+
+    &__accent {
+        color: $light-green;
+    }
+
+    &__text {
+        text-transform: capitalize;
+    }
+
 }
 
 
@@ -28,7 +39,11 @@
 .input-card {
     @extend .card;
 
+    .card__accent {
+        font-size: 2rem;
+    }
 
-    .text 
-
+    .slider {
+        width: 100%;
+    }
 }
