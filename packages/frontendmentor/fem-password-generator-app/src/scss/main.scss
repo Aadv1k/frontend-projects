@@ -1,0 +1,16 @@
+@use "reset";
+
+@use "base/variables" as *;
+@use "base/typography" as *;
+@use "base/utilities";
+
+@use "components/card";
+@use "components/button";
+
+* {
+    font-family: $font-mono;
+}
+
+body {
+    background-image: $bg-gradient;
+}

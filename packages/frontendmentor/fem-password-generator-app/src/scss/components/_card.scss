@@ -1,0 +1,34 @@
+@use "../base/variables" as *;
+
+.card {
+    background-color: $indigo-100;
+    max-width: $card-m-width;
+    border-radius: $card-radius;
+
+    padding-block: 1rem;
+    padding-inline: .9rem;
+}
+
+
+.output-card {
+    @extend .card;
+    display: flex;
+
+    &__input {
+        flex: 80%;
+        font-size: 1.6rem;
+        color: $grey-100;
+    }
+
+    &__input:focus {
+        outline: none;
+    }
+}
+
+.input-card {
+    @extend .card;
+
+
+    .text 
+
+}

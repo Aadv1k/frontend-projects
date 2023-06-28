@@ -1,0 +1,13 @@
+@use "../base/variables" as *;
+
+.btn {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.btn--primary {
+    font-size: 1.3rem;
+    color: $light-green;
+}
