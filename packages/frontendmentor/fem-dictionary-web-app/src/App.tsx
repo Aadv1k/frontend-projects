@@ -5,9 +5,12 @@ import { ThemeContext, ThemeProvider} from "./ThemeContext";
 import Navbar from "./Navbar";
 
 export default function App() {
+
   return (
     <ThemeProvider>
-        <Navbar />
+        <main className="min-h-screen w-screen">
+            <Navbar />
+        </main>
     </ThemeProvider>
   )
 }
