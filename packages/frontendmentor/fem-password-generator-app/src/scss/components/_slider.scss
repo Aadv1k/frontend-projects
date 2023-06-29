@@ -1,34 +1,37 @@
 @use "../base/variables" as *;
 
 .slider {
-   -webkit-appearance: none;
-   appearance: none;
-   height: $slider-h;
-   background-color: $indigo-200;
-   position: relative;
-
+  -webkit-appearance: none;
+  appearance: none;
+  height: $slider-h;
+  background-color: $indigo-200;
+  position: relative;
   &:hover {
-      cursor: pointer;
+    cursor: pointer;
   }
 
   &:active {
-      &::-webkit-slider-thumb, &::-moz-range-thumb {
-          background-color: $indigo-200;
-          border: 1px solid $light-green;
-      }
+    &::-webkit-slider-thumb,
+    &::-moz-range-thumb {
+      background-color: $indigo-200;
+      border: 1px solid $light-green;
+    }
   }
 }
 
-.slider::-webkit-slider-thumb, .slider::-moz-range-thumb {
+.slider::-webkit-slider-thumb,
+.slider::-moz-range-thumb {
   -webkit-appearance: none;
   appearance: none;
   border: none;
 
+  z-index: 2;
+
   width: $slider-thumb-w;
   height: $slider-thumb-w;
 
+  position: absolute;
+
   background-color: $grey-100;
   border-radius: 999px;
-  
 }
-

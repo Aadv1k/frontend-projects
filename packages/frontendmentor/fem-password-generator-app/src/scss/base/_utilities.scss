@@ -46,9 +46,8 @@
   align-items: center;
 }
 
-
 .v-stack {
-    @extend .flex;
-    @extend .flex-col;
-    gap: 2rem;
+  @extend .flex;
+  @extend .flex-col;
+  gap: 2rem;
 }

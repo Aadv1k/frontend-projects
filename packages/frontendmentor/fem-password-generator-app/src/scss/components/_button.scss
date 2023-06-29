@@ -1,13 +1,31 @@
 @use "../base/variables" as *;
 
 .btn {
-    all: unset;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
 }
 
 .btn--primary {
-    font-size: 1.3rem;
-    color: $light-green;
+  color: $light-green;
+}
+
+.btn--secondary {
+  text-transform: uppercase;
+  background-color: $light-green;
+  color: $indigo-200;
+  border-radius: 2px;
+  gap: 1rem;
+  transition: all ease 100ms;
+
+  @media (hover: hover) {
+    &:hover {
+      color: $light-green;
+      background-color: transparent;
+      box-shadow: inset 0 0 2px $light-green;
+    }
+  }
 }

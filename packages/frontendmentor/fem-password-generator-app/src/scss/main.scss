@@ -7,11 +7,29 @@
 @use "components/card";
 @use "components/button";
 @use "components/slider";
+@use "components/checkbox";
 
 * {
-    font-family: $font-mono;
+  font-family: $font-mono;
 }
 
 body {
-    background-image: $bg-gradient;
+  background-image: $bg-gradient;
+}
+
+main.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  max-width: $card-m-width;
+  width: 90%;
+
+  .hero__title {
+    text-align: center;
+    text-transform: capitalize;
+    color: $grey-200;
+    font-size: 1.75rem;
+  }
 }

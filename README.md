@@ -5,8 +5,9 @@
 
 this is the monorepo of aadvik's frontend projects. **_[Here is the url to the dashboard](https://aadv1k-frontend.netlify.app)_**
 
-| Packages 📦                                                                                                                                   | Tooling 🛠️                                            |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| Packages 📦                                                                                                                                   | Tooling 🛠️                                             |
+|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| [@frontend-projects/fem-password-generator-app](./packages/frontendmentor/fem-password-generator-app)                                         | ![react] ![vite] ![sass]                              |
 | [@frontend-projects/fem-fylo-dark-theme-landing-page](./packages/frontendmentor/fem-fylo-dark-theme-landing-page)                             | ![react] ![materialui] ![styledcomponents] ![webpack] |
 | [@frontend-projects/uidd-product-info-ui-design-card-day-1575](./packages/uidesigndaily/uidd-product-info-ui-design-card-day-1575)            | ![tailwindcss] ![parcel]                              |
 | [@frontend-projects/fem-interactive-card-details-form](./packages/frontendmentor/fem-interactive-card-details-form)                           | ![react] ![styledcomponents] ![webpack]               |
@@ -71,6 +72,7 @@ _note: currently there are no inner-deps_
 
 [jest]: https://img.shields.io/badge/-Jest-282c34?logo=jest&logoColor=C21325&style=classic
 [react]: https://img.shields.io/badge/-React-282c34?logo=React&logoColor=61dafb&style=classic
+[vite]: https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white&style=flat
 [cssmodules]: https://img.shields.io/badge/-CSS%20Modules-282c34?logo=cssmodules&logoColor=61dafb&style=classic
 [tailwindcss]: https://img.shields.io/badge/-Tailwindcss-282c34?logo=tailwind-css&logocolor=white&style=classic
 [materialui]: https://img.shields.io/badge/-MaterialUi-282c34?logo=MUI&logocolor=007FFF&style=classic
