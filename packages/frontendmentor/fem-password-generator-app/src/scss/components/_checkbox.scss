@@ -1,0 +1,46 @@
+@use "../base/variables" as *;
+
+.checkbox {
+    position: relative;
+
+    &__input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 25px;
+        z-index: 99;
+    }
+
+    &__box {
+        width: 20px;
+        height: 20px;
+        background-color: $indigo-200;
+        border-radius: 3px;
+        position: relative;
+    }
+
+    input:checked ~ .checkbox__box {
+        background: $light-green; 
+    }
+
+    input:checked ~ .checkbox__box > .checkbox__mark {
+        display: block;
+    }
+
+
+    &__mark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $indigo-200;
+        display: none;
+
+        svg {
+            vertical-align: middle;
+        }
+    }
+}

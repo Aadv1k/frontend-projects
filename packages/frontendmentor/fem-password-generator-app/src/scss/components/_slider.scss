@@ -6,7 +6,6 @@
    height: $slider-h;
    background-color: $indigo-200;
    position: relative;
-
   &:hover {
       cursor: pointer;
   }
@@ -24,11 +23,14 @@
   appearance: none;
   border: none;
 
+  z-index: 2;
+
   width: $slider-thumb-w;
   height: $slider-thumb-w;
 
+  position: absolute;
+
   background-color: $grey-100;
   border-radius: 999px;
-  
 }
 

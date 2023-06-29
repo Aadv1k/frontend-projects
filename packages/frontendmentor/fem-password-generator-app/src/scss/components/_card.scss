@@ -29,6 +29,8 @@
         flex: 80%;
         font-size: 1.6rem;
         color: $grey-100;
+        background: none;
+        border: none;
     }
 
     &__input:focus {
@@ -45,5 +47,9 @@
 
     .slider {
         width: 100%;
+    }
+
+    &__list {
+        list-style: none;
     }
 }
