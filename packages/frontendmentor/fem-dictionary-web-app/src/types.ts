@@ -1,7 +1,7 @@
 export enum FontConfig {
-    mono,
-    serif,
-    sans
+    mono = "mono",
+    serif = "serif",
+    sans = "sans"
 }
 
 export enum ColorScheme {

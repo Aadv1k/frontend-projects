@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 
-import ThemeContext from "./ThemeContext";
+import { ThemeContext, ThemeProvider} from "./ThemeContext";
+
+import Navbar from "./Navbar";
 
 export default function App() {
   return (
-    <ThemeContext>
-        <h1>Hello world!</h1>
-    </ThemeContext>
+    <ThemeProvider>
+        <Navbar />
+    </ThemeProvider>
   )
 }
