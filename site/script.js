@@ -5,6 +5,18 @@ const ghu =
 
 const data = [
   {
+    title: "Password generator app",
+    date: new Date("Thu Jun 29 2023 15:45:26 GMT+0530"),
+    labels: ["Vite", "React", "SCSS"],
+    image: "./fem-password-generator-app/desktop-preview.jpg",
+    links: {
+      "Live url": "./fem-password-generator-app/index.html",
+      GitHub: `${gh}fem-password-generator-app`,
+      Challenge: "",
+    },
+  },
+
+  {
     title: "Fylo dark theme landing page",
     date: new Date("Sun 21 Aug 2022 02:22:38 PM IST"),
     labels: ["Material Ui", "React", "Styled Components", "Webpack"],
