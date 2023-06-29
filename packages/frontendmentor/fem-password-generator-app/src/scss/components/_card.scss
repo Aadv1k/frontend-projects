@@ -1,55 +1,129 @@
 @use "../base/variables" as *;
 
 .card {
-    background-color: $indigo-100;
-    max-width: $card-m-width;
-    border-radius: $card-radius;
+  background-color: $indigo-100;
+  width: 100%;
+  border-radius: $card-radius;
 
-    padding-block: 1rem;
-    padding-inline: 2rem;
+  padding-block: 1rem;
+  padding-inline: 2rem;
 
-    color: $grey-100;
+  color: $grey-100;
 
-    &__accent {
-        color: $light-green;
-    }
+  &__accent {
+    color: $light-green;
+  }
 
-    &__text {
-        text-transform: capitalize;
-    }
+  &__text {
+    text-transform: capitalize;
+  }
 
+  .btn {
+    font-size: 1.3rem;
+  }
 }
 
-
 .output-card {
-    @extend .card;
-    display: flex;
+  @extend .card;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  width: 100%;
 
-    &__input {
-        flex: 80%;
-        font-size: 1.6rem;
-        color: $grey-100;
-        background: none;
-        border: none;
-    }
+  &__input {
+    font-size: 1.6rem;
+    color: $grey-100;
+    background: none;
+    border: none;
+    max-width: 80%;
+  }
 
-    &__input:focus {
-        outline: none;
-    }
+  &__input:focus {
+    outline: none;
+  }
 }
 
 .input-card {
-    @extend .card;
+  @extend .card;
 
-    .card__accent {
-        font-size: 2rem;
-    }
+  .card__accent {
+    font-size: 2rem;
+  }
 
-    .slider {
-        width: 100%;
-    }
+  .slider {
+    width: 100%;
+  }
 
-    &__list {
-        list-style: none;
-    }
+  > * {
+    margin-block: 1.3rem;
+  }
+
+  &__list {
+    all: unset;
+    padding-inline: 0.4rem;
+    gap: 0.8rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__rating {
+    padding: 1rem;
+    background: $indigo-200;
+    height: 55px;
+  }
+
+  &__rating span {
+    text-transform: uppercase;
+    color: $grey-200;
+    border-radius: 2px;
+    font-size: 0.9rem;
+  }
+
+  &__rating .bars {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    position: relative;
+  }
+
+  .bars::before {
+    content: attr(data-label);
+    position: absolute;
+    top: 50%;
+    transform: translate(-120%, -50%);
+  }
+
+  &__rating .bars > * {
+    width: 6px;
+    height: 20px;
+    outline: 1px solid $grey-100;
+    border-radius: 0;
+  }
+
+  .bar__item--weak {
+    outline: 1px solid red;
+    background-color: red;
+  }
+
+  .bar__item--medium {
+    outline: 1px solid yellow;
+    background-color: yellow;
+  }
+
+  .bar__item--strong {
+    outline: 1px solid $light-green;
+    background-color: $light-green;
+  }
+
+  .btn {
+    width: 100%;
+    height: 55px;
+  }
 }

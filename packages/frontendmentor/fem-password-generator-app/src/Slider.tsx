@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
-export default function Slider({min, max, length, setLength}) {
-  const [slider, setSlider] = useState(min);
-   useEffect(() => {
-       setLength(slider - 1);
-   }, [slider])
+export default function Slider({ min, max, length, setLength }) {
+  const [slider, setSlider] = useState(min + 8);
+  useEffect(() => {
+    setLength(slider - 1);
+  }, [slider]);
 
-  const percent = Math.ceil((slider/max) * 100);
+  const percent = Math.ceil((slider / max) * 100);
 
   return (
     <>
@@ -17,7 +17,7 @@ export default function Slider({min, max, length, setLength}) {
         value={slider}
         className="slider"
         style={{
-            backgroundImage: `linear-gradient(to right, #a4ffaf ${percent}%, #18171f ${percent}%)`
+          backgroundImage: `linear-gradient(to right, #a4ffaf ${percent}%, #18171f ${percent}%)`,
         }}
         onChange={(e) => {
           setSlider(parseInt(e.target.value, 10));
