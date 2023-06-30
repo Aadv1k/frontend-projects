@@ -35,3 +35,17 @@ body {
     @apply text-cool-gray capitalize;
     @apply transition hover:text-marine-blue;
 }
+
+.heading {
+    @apply font-bold text-marine-blue capitalize;
+}
+
+.input {
+    @apply border border-light-gray rounded-lg px-2 py-3 text-marine-blue;
+    @apply placeholder:text-cool-gray focus:border-marine-blue focus:outline-none hover:border-marine-blue;
+}
+
+.input--bad {
+    @apply border border-strawberry-red;
+    @apply focus:border-strawberry-red focus:outline-none hover:border-strawberry-red;
+}
