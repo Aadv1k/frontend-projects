@@ -2,15 +2,19 @@ import { useState } from 'react'
 
 import StepLink from "./StepLink";
 import PersonalInfo from "./PersonalInfo";
+import SelectPlan from "./SelectPlan";
 
 const TOTAL_STEPS = 4;
 
 const stepsIndex = ["your info", "select plan", "add-ons", "summary"]
 
-function getComponentFromStep(step, disabled, setDisabled, processInfo, setProcessInfo): any {
-    switch (step) {
+function getComponentFromStep(step, disabled, setDisabled, processInfo, setProcessInfo) {
+    switch (step) { 
         case 1:
             return <PersonalInfo disabled={disabled} setDisabled={setDisabled} processInfo={processInfo} setProcessInfo={setProcessInfo}/>
+        case 2:
+            return <SelectPlan disabled={disabled} setDisabled={setDisabled} processInfo={processInfo} setProcessInfo={setProcessInfo}
+            />
         default:
             return null;
     }
@@ -18,7 +22,7 @@ function getComponentFromStep(step, disabled, setDisabled, processInfo, setProce
 
 
 function App() {
-    const [currentStep, setCurrentStep] = useState(1);
+    const [currentStep, setCurrentStep] = useState(2);
     const [disabled, setDisabled] = useState(false);
     const [processInfo, setProcessInfo] = useState({});
 
