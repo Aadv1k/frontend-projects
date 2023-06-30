@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+    @apply bg-blue-100;
+}
+
+.hero__navigator {
+    background-image: url("./assets/bg-sidebar-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 750px) {
+    .hero__navigator {
+        background-image: url("./assets/bg-sidebar-desktop.svg");
+        background-position: center;
+    }
+} 
+
+.util-absolute-center {
+    @apply sm:absolute top-1/2 left-1/2 sm:-translate-y-1/2 sm:-translate-x-1/2;
+}

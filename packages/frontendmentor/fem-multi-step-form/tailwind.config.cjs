@@ -5,7 +5,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ["Ubuntu", 'ui-sans-serif', 'system-ui']
+    }
   },
   plugins: [],
 }
