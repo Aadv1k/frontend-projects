@@ -6,10 +6,10 @@ import StepLink from "./StepLink";
 function App() {
   return (
     <>
-        <main className="shadow-xl w-full max-w-4xl flex flex-col util-absolute-center bg-white rounded-lg sm:p-4 sm:flex-row sm:h-[560px]">
+        <main className="shadow-xl w-full max-w-5xl flex flex-col util-absolute-center bg-white rounded-lg md:p-4 md:flex-row md:h-[580px]">
 
             <section
-                className="hero__navigator rounded-lg flex gap-4 items-center justify-center p-8 sm:flex-col sm:w-1/3 sm:gap-8 sm:justify-start sm:items-start "
+                className="hero__navigator rounded-lg flex gap-4 items-center justify-center p-8 md:flex-col md:w-[28%] md:gap-8 md:justify-start md:items-start "
             >
 
                 <StepLink stepNumber={1} stepSubtitle="your info" />

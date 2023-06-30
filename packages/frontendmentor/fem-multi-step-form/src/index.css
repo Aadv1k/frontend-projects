@@ -4,7 +4,7 @@
 
 
 body {
-    @apply bg-blue-100;
+    @apply bg-magnolia;
 }
 
 .hero__navigator {
@@ -22,5 +22,5 @@ body {
 } 
 
 .util-absolute-center {
-    @apply sm:absolute top-1/2 left-1/2 sm:-translate-y-1/2 sm:-translate-x-1/2;
+    @apply md:absolute top-1/2 left-1/2 md:-translate-y-1/2 md:-translate-x-1/2;
 }
