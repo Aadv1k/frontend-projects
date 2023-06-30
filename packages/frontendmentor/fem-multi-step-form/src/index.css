@@ -24,3 +24,14 @@ body {
 .util-absolute-center {
     @apply md:absolute top-1/2 left-1/2 md:-translate-y-1/2 md:-translate-x-1/2;
 }
+
+
+.btn--primary {
+    @apply bg-marine-blue rounded-md text-white capitalize;
+    @apply transition hover:bg-dark-blue;
+}
+
+.btn--secondary {
+    @apply text-cool-gray capitalize;
+    @apply transition hover:text-marine-blue;
+}
