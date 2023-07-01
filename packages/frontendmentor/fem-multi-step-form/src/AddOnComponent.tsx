@@ -1,7 +1,7 @@
 import CheckmarkIcon from "./assets/icon-checkmark.svg";
 
 export default function AddOnComponent (
-    { title, description, cost, isYearly, marked, onClick }
+    { title, description, monthlyCost, yearlyCost, isYearly, marked, onClick }
 ) {
     return (
           <div className={`
@@ -13,7 +13,7 @@ export default function AddOnComponent (
         onClick={onClick}
           >
 
-              <div className={`${marked ? "bg-purplish-blue" : "border border-light-gray"} w-[25px] h-[25px] rounded-md flex items-center justify-center`}>
+              <div className={`${marked ? "bg-purplish-blue" : "border border-light-gray"} w-[20px] h-[20px] rounded-sm flex items-center justify-center`}>
                   {marked && <img alt="checkmark" src={CheckmarkIcon} className="w-[60%] h-full" />}
               </div>
 
@@ -22,7 +22,7 @@ export default function AddOnComponent (
                 <p className="text-cool-gray">{description}</p>
             </div>
 
-            <p className="text-pastel-blue ml-auto">{cost}</p>
+            <p className="text-purplish-blue ml-auto">+${isYearly ? `${yearlyCost}/yr` : `${monthlyCost}/mo`}</p>
           </div>
     )
 }

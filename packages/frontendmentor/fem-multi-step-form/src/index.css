@@ -36,6 +36,12 @@ body {
     @apply transition hover:text-marine-blue;
 }
 
+.btn--blue {
+    @apply bg-purplish-blue rounded-md text-white capitalize text-white;
+    @apply transition hover:bg-pastel-blue;
+
+}
+
 .heading {
     @apply font-bold text-marine-blue capitalize;
 }
@@ -46,6 +52,8 @@ body {
 }
 
 .input--bad {
+    /*
     @apply border border-strawberry-red;
     @apply focus:border-strawberry-red focus:outline-none hover:border-strawberry-red;
+*/
 }

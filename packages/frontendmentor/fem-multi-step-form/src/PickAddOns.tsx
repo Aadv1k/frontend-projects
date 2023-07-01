@@ -9,17 +9,20 @@ const plans = [
   {
     title: 'Online service',
     desc: 'Access to multiplayer games',
-    cost: '+$1/mo',
+    monthlyCost: '1',
+    yearlyCost: '10'
   },
   {
     title: 'Larger storage',
     desc: 'Extra 1TB of cloud save',
-    cost: '+$2/mo',
+    monthlyCost: '2',
+    yearlyCost: '20'
   },
   {
-    title: ' Customizable Profile',
+    title: 'Customizable Profile',
     desc: 'Custom theme on your profile',
-    cost: '+$2/mo',
+    monthlyCost: '2',
+    yearlyCost: '20'
   },
 ];
  
@@ -55,8 +58,9 @@ export default function PickAddOns({ disabled, setDisabled, processInfo, setProc
             <AddOnComponent
                 title={plan.title}
                 description={plan.desc}
-                cost={plan.cost}
-                isYearly={false}
+                monthlyCost={plan.monthlyCost}
+                yearlyCost={plan.yearlyCost}
+                isYearly={processInfo.isSelectedPlanYearly}
                 onClick={(elem) => {
                     const foundIdx = selected.findIndex((i) => i === index);
                     if (foundIdx !== -1) {

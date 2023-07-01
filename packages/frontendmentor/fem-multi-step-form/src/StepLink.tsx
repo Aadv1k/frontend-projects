@@ -12,7 +12,7 @@ export default function StepLink({ stepNumber, stepSubtitle, focused }: StepLink
         >
             <span
                className={
-               `rounded-full w-[35px] h-[35px] text-white border border-white border-sm flex items-center justify-center ${focused ? "bg-white text-purplish-blue" : ""}`
+               `rounded-full w-[35px] h-[35px] text-white border border-white border-sm flex items-center justify-center ${focused ? "bg-white text-dark-blue" : ""}`
                }>
                 {stepNumber}
             </span>

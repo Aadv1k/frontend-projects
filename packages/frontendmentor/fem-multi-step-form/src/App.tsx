@@ -4,6 +4,8 @@ import StepLink from "./StepLink";
 import PersonalInfo from "./PersonalInfo";
 import SelectPlan from "./SelectPlan";
 import PickAddOns from "./PickAddOns";
+import Summary from "./Summary";
+import Success from "./Success";
 
 const TOTAL_STEPS = 4;
 
@@ -16,7 +18,9 @@ function getComponentFromStep(step, disabled, setDisabled, processInfo, setProce
         case 2:
             return <SelectPlan disabled={disabled} setDisabled={setDisabled} processInfo={processInfo} setProcessInfo={setProcessInfo} />
         case 3:
-            return <PickAddOns disabled={disabled} setDisabled={setDisabled} processInfo={processInfo} setProcessInfo={setProcessInfo} />
+            return <PickAddOns processInfo={processInfo} setProcessInfo={setProcessInfo} />
+        case 4:
+            return <Summary processInfo={processInfo} setProcessInfo={setProcessInfo} />
         default:
             return null;
     }
@@ -24,9 +28,22 @@ function getComponentFromStep(step, disabled, setDisabled, processInfo, setProce
 
 
 function App() {
-    const [currentStep, setCurrentStep] = useState(3);
+    const [currentStep, setCurrentStep] = useState(1);
     const [disabled, setDisabled] = useState(false);
     const [processInfo, setProcessInfo] = useState({});
+    const [success, setSuccess] = useState(false);
+
+    const handleSuccessClick = () => {
+        setSuccess(true);
+
+        console.info("INFO: in production we would do something here, eg `POST /user/info`");
+
+        setTimeout(() => {
+            setSuccess(false);
+            setProcessInfo({})
+            setCurrentStep(1);
+        }, 3000);
+    }
 
     const nextStep = () => {
         setCurrentStep(currentStep < TOTAL_STEPS ?  currentStep + 1 : currentStep)
@@ -49,17 +66,28 @@ function App() {
         </section>
 
         <section className="md:relative md:w-[55%] md:mx-auto py-8">
-        <div className=" absolute shadow-lg w-[90%] md:w-full -translate-y-12 left-1/2 -translate-x-1/2 rounded-md bg-white px-4 py-6 md:py-12
+
+        <div className="absolute h-full shadow-lg w-[90%] md:w-full -translate-y-12 left-1/2 -translate-x-1/2 rounded-md bg-white px-4 py-6 md:py-12
             md:static md:shadow-none md:-translate-x-0
         "
         >
-        {getComponentFromStep(currentStep, disabled, setDisabled, processInfo, setProcessInfo)}
+            {!success && getComponentFromStep(currentStep, disabled, setDisabled, processInfo, setProcessInfo)}
+
+        {success && <Success />}
         </div>
 
+        {!success &&
+
         <div className="flex justify-between p-2 py-4 fixed bottom-0 bg-white w-full items-center md:absolute">
-                {currentStep > 1 && <button className="btn--secondary py-3 px-6 mr-auto" onClick={previousStep}>Go back</button>}
-                {currentStep !== TOTAL_STEPS && <button className={`btn--primary py-3 px-6 ml-auto ${disabled ? "opacity-75 cursor-not-allowed" : ""}`} onClick={!disabled ? nextStep : () => {}}>Next Step</button>}
+
+        {currentStep > 1 && <button className="btn--secondary py-3 px-8 mr-auto" onClick={previousStep}>Go back</button>}
+
+        {currentStep !== TOTAL_STEPS ? <button className={`btn--primary py-3 px-8 ml-auto ${disabled ? "opacity-75 cursor-not-allowed" : ""}`} onClick={!disabled ? nextStep : () => {}}>Next Step</button>
+: <button className="btn--blue py-3 px-8 ml-auto" onClick={handleSuccessClick}>confirm</button>}
+
         </div>
+        }
+
             </section>
 
         </main>
