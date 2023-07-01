@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import AddOnCard from "./AddOnCard";
 import { ViewProps } from "../types";
 
@@ -24,11 +24,11 @@ const productAddOns = [
 ];
  
 export default function ({ processInfo, setProcessInfo }: ViewProps) {
-  const [selected, setSelected] = useState(processInfo.selectedAddOns?.map(e => productAddOns.findIndx((i: any) => e.title === i.title)) ?? []);
+  const [selected, setSelected] = useState(processInfo.selectedAddOns?.map((e: any) => productAddOns.findIndex((i: any) => e.title === i.title)) ?? []);
    useEffect(() => {
         setProcessInfo({
             ...processInfo,
-            selectedAddOns: selected.map((e) => {
+            selectedAddOns: selected.map((e: any) => {
                 return {
                     title: productAddOns[e].title,
                     yearlyCost: parseInt(productAddOns[e].yearlyCost, 10),
@@ -38,14 +38,6 @@ export default function ({ processInfo, setProcessInfo }: ViewProps) {
         })
    }, [selected])
 
-  const handleClick = (elem: any, index: any) => {
-      const foundIdx = selected.findIndex((i) => i === idx);
-      if (foundIdx) {
-          setSelected(selected.splice(foundIdx, 1));
-          return;
-      }
-      setSelected([...selected, idx]);
-  }
 
   return (
     <>
@@ -56,17 +48,18 @@ export default function ({ processInfo, setProcessInfo }: ViewProps) {
 
       <div className="flex flex-col gap-4 my-6 ">
 
-        {plans.map((plan, index) => (
+        {productAddOns.map((plan: any, index: any) => (
             <AddOnCard
                 title={plan.title}
                 description={plan.desc}
                 monthlyCost={plan.monthlyCost}
+                icon=""
                 yearlyCost={plan.yearlyCost}
                 isYearly={processInfo.isSelectedPlanYearly}
-                onClick={(elem) => {
-                    const foundIdx = selected.findIndex((i) => i === index);
+                onClick={() => {
+                    const foundIdx = selected.findIndex((i: number) => i === index);
                     if (foundIdx !== -1) {
-                        setSelected(selected.filter((e, i) => i !== foundIdx));
+                        setSelected(selected.filter((_: any, i: any) => i !== foundIdx));
                         return;
                     }
                     setSelected([...selected, index]);

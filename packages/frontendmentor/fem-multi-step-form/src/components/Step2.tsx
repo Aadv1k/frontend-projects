@@ -2,8 +2,6 @@ import PricingCard from "./PricingCard";
 import { useState, useEffect } from "react";
 import { Switch } from '@headlessui/react'
 
-import { ViewProps } from "../types";
-
 import arcadeIcon from "../assets/icon-arcade.svg";
 import proIcon from "../assets/icon-pro.svg";
 import advancedIcon from "../assets/icon-advanced.svg";
@@ -47,8 +45,8 @@ export default function ({ processInfo, setProcessInfo}: any ) {
         })
     }, [marked, isYearly])
 
-    const handleClick = (e) => {
-        setMarked(e);
+    const handleClick = (e: any) => {
+        setMarked(e as number);
     }
 
     return (

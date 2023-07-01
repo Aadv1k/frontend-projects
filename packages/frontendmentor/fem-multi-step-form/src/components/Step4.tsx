@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ViewProps } from "../types";
 
-export default function Summary({ processInfo, setProcessInfo }: ViewProps) {
+export default function Summary({ processInfo }: ViewProps) { 
     const [isYearly, setYearly] = useState<boolean>(processInfo.isPlanYearly);
 
     const subType = isYearly ? "yr" : "mo"
@@ -38,7 +38,7 @@ export default function Summary({ processInfo, setProcessInfo }: ViewProps) {
             <hr className="w-full h-[1px] bg-light-gray border-none my-4" />
 
             <div className="flex flex-col gap-4">
-                {processInfo.selectedAddOns.reverse().map(e =>
+                {processInfo.selectedAddOns.reverse().map((e: any) =>
                 <div className="flex justify-between items-center">
                     <p className="text-cool-gray text-sm">{e.title}</p>
                     <p className="text-marine-blue text-sm">+${isYearly ? e.yearlyCost : e.monthlyCost}/{subType} </p>
