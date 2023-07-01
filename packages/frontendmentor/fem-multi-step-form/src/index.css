@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    @apply bg-magnolia;
+}
+
+.hero__navigator {
+    background-image: url("./assets/bg-sidebar-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 750px) {
+    .hero__navigator {
+        background-image: url("./assets/bg-sidebar-desktop.svg");
+        background-position: center;
+    }
+} 
+
+.util-absolute-center {
+    @apply md:absolute top-1/2 left-1/2 md:-translate-y-1/2 md:-translate-x-1/2;
+}
+
+
+.btn--primary {
+    @apply bg-marine-blue rounded-md text-white capitalize;
+    @apply transition hover:bg-dark-blue;
+}
+
+.btn--secondary {
+    @apply text-cool-gray capitalize;
+    @apply transition hover:text-marine-blue;
+}
+
+.btn--blue {
+    @apply bg-purplish-blue rounded-md text-white capitalize text-white;
+    @apply transition hover:bg-pastel-blue;
+
+}
+
+.heading {
+    @apply font-bold text-marine-blue capitalize;
+}
+
+.input {
+    @apply border border-light-gray rounded-lg px-2 py-3 text-marine-blue;
+    @apply placeholder:text-cool-gray focus:border-marine-blue focus:outline-none hover:border-marine-blue;
+}
+
+.input--bad {
+    /*
+    @apply border border-strawberry-red;
+    @apply focus:border-strawberry-red focus:outline-none hover:border-strawberry-red;
+*/
+}

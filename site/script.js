@@ -5,6 +5,17 @@ const ghu =
 
 const data = [
   {
+    title: "Multi Step Form",
+    date: new Date("Sat Jul 01 2023 22:13:44 GMT+0530"),
+    labels: ["Vite", "React", "TypeScript", "TailwindCSS", "Advanced"],
+    image: "./fem-multi-step-form/desktop-preview.jpg",
+    links: {
+      "Live url": "./fem-multi-step-form/index.html",
+      GitHub: `${gh}fem-multi-step-form`,
+      Challenge: "",
+    },
+  },
+  {
     title: "Password generator app",
     date: new Date("Thu Jun 29 2023 15:45:26 GMT+0530"),
     labels: ["Vite", "React", "SCSS"],
