@@ -1,6 +1,6 @@
-export default function PricingComponent(
-    { title, monthlyCost, yearlyCost, isYearly, icon, marked, onClick }
-) {
+import { CardProps } from "../types";
+
+export default function ({ title, monthlyCost, yearlyCost, isYearly, icon, marked, onClick }: CardProps ) {
     return (
         <div
             className={`p-4 flex gap-2 border border-light-gray rounded-lg transition cursor-pointer select-none

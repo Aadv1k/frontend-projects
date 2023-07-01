@@ -1,13 +1,14 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { ViewProps } from "../types";
 
-export default function Summary({ processInfo, setProcessInfo }) {
-    const [isYearly, setYearly] = useState(processInfo.isSelectedPlanYearly);
+export default function Summary({ processInfo, setProcessInfo }: ViewProps) {
+    const [isYearly, setYearly] = useState<boolean>(processInfo.isPlanYearly);
 
     const subType = isYearly ? "yr" : "mo"
-    let totalCost = parseInt(processInfo.selectedPlan[isYearly ? "yearlyCost" : "monthlyCost"], 10);
+    let totalCost = processInfo.selectedPlan[isYearly ? "yearlyCost" : "monthlyCost"];
 
     for (let i = 0; i < processInfo.selectedAddOns.length; i++) {
-       totalCost += parseInt(processInfo.selectedAddOns[i][isYearly ? "yearlyCost" : "monthlyCost"], 10);
+       totalCost += processInfo.selectedAddOns[i][isYearly ? "yearlyCost" : "monthlyCost"];
     }
     
 

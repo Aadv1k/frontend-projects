@@ -1,7 +1,6 @@
-import SuccessImage from "./assets/icon-thank-you.svg";
+import SuccessImage from "../assets/icon-thank-you.svg";
 
-export default function Success()  {
-
+export default function ()  {
     return (
         <div className="h-full w-full flex flex-col items-center justify-center gap-4">
 

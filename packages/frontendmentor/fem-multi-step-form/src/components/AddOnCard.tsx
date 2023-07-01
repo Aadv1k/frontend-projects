@@ -1,7 +1,8 @@
-import CheckmarkIcon from "./assets/icon-checkmark.svg";
+import CheckmarkIcon from "../assets/icon-checkmark.svg";
+import { CardProps } from "../types";
 
-export default function AddOnComponent (
-    { title, description, monthlyCost, yearlyCost, isYearly, marked, onClick }
+export default function (
+    { title, description, monthlyCost, yearlyCost, isYearly, marked, onClick }: CardProps
 ) {
     return (
           <div className={`
@@ -14,7 +15,7 @@ export default function AddOnComponent (
           >
 
               <div className={`${marked ? "bg-purplish-blue" : "border border-light-gray"} w-[20px] h-[20px] rounded-sm flex items-center justify-center`}>
-                  {marked && <img alt="checkmark" src={CheckmarkIcon} className="w-[60%] h-full" />}
+                  {marked && <img alt="checkmark" src={CheckmarkIcon as string} className="w-[60%] h-full" />}
               </div>
 
             <div>

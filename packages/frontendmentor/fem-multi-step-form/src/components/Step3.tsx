@@ -1,11 +1,8 @@
-import Pricing from "./PricingComponent";
-import { useState, useEffect } from "react";
-import { Switch } from '@headlessui/react'
-import { RadioGroup } from '@headlessui/react'
+import React, { useState, useEffect } from "react";
+import AddOnCard from "./AddOnCard";
+import { ViewProps } from "../types";
 
-import AddOnComponent from "./AddOnComponent";
-
-const plans = [
+const productAddOns = [
   {
     title: 'Online service',
     desc: 'Access to multiplayer games',
@@ -26,17 +23,22 @@ const plans = [
   },
 ];
  
-export default function PickAddOns({ disabled, setDisabled, processInfo, setProcessInfo }) {
-  const [selected, setSelected] = useState(processInfo.selectedAddOnsIndex ?? []);
+export default function ({ processInfo, setProcessInfo }: ViewProps) {
+  const [selected, setSelected] = useState(processInfo.selectedAddOns?.map(e => productAddOns.findIndx((i: any) => e.title === i.title)) ?? []);
    useEffect(() => {
         setProcessInfo({
             ...processInfo,
-            selectedAddOns: selected.map(e => plans[e]),
-            selectedAddOnsIndex: selected
+            selectedAddOns: selected.map((e) => {
+                return {
+                    title: productAddOns[e].title,
+                    yearlyCost: parseInt(productAddOns[e].yearlyCost, 10),
+                    monthlyCost: parseInt(productAddOns[e].monthlyCost, 10),
+                }
+            }),
         })
    }, [selected])
 
-  const handleClick = (elem, index) => {
+  const handleClick = (elem: any, index: any) => {
       const foundIdx = selected.findIndex((i) => i === idx);
       if (foundIdx) {
           setSelected(selected.splice(foundIdx, 1));
@@ -55,7 +57,7 @@ export default function PickAddOns({ disabled, setDisabled, processInfo, setProc
       <div className="flex flex-col gap-4 my-6 ">
 
         {plans.map((plan, index) => (
-            <AddOnComponent
+            <AddOnCard
                 title={plan.title}
                 description={plan.desc}
                 monthlyCost={plan.monthlyCost}

@@ -1,10 +1,12 @@
-import Pricing from "./PricingComponent";
+import PricingCard from "./PricingCard";
 import { useState, useEffect } from "react";
 import { Switch } from '@headlessui/react'
 
-import arcadeIcon from "./assets/icon-arcade.svg";
-import proIcon from "./assets/icon-pro.svg";
-import advancedIcon from "./assets/icon-advanced.svg";
+import { ViewProps } from "../types";
+
+import arcadeIcon from "../assets/icon-arcade.svg";
+import proIcon from "../assets/icon-pro.svg";
+import advancedIcon from "../assets/icon-advanced.svg";
 
 const productPlans = [
     {
@@ -28,16 +30,20 @@ const productPlans = [
 ]
 
 
-export default function SelectPlan({ disabled, setDisabled, processInfo, setProcessInfo}) {
-    const [isYearly, setYearly] = useState(processInfo.isSelectedPlanYearly ?? false);
-    const [marked, setMarked] = useState(processInfo.markedIdx ?? 1);
+export default function ({ processInfo, setProcessInfo}: any ) {
+    const [isYearly, setYearly] = useState<boolean>(processInfo.isPlanYearly ?? false);
+    const alreadyMarked =  productPlans.findIndex((e) => e.title === processInfo?.selectedPlan?.title);
+    const [marked, setMarked] = useState<number>(alreadyMarked > -1 ? alreadyMarked : 1);
 
     useEffect(() => {
         setProcessInfo({
             ...processInfo,
-            selectedPlan: productPlans[marked],
-            markedIdx: marked,
-            isSelectedPlanYearly: isYearly, 
+            selectedPlan: {
+                title: productPlans[marked].title,
+                yearlyCost: parseInt(productPlans[marked].yearlyCost, 10),
+                monthlyCost: parseInt(productPlans[marked].monthlyCost, 10),
+            },
+            isPlanYearly: isYearly, 
         })
     }, [marked, isYearly])
 
@@ -58,10 +64,10 @@ export default function SelectPlan({ disabled, setDisabled, processInfo, setProc
 
                 <div className="flex flex-col gap-4 my-6 md:flex-row">
                     {productPlans.map((e, i) =>
-                        <Pricing
+                        <PricingCard
                             title={e.title}
-                            monthlyCost={e.monthlyCost}
-                            yearlyCost={e.yearlyCost}
+                            monthlyCost={parseInt(e.monthlyCost, 10)}
+                            yearlyCost={parseInt(e.yearlyCost, 10)}
                             isYearly={isYearly}
                             icon={e.icon}
                             marked={marked === i}
