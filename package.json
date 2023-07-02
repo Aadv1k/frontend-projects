@@ -8,6 +8,7 @@
   "description": "A collection of my frontend project",
   "main": "script.js",
   "scripts": {
+    "install": "npm install --legacy-peer-deps",
     "build": "npm run build --ws",
     "deploy": "npm exec --ws -c ../../../scripts/deploy.sh && ./scripts/deployStatic.sh",
     "femFetch": "./scripts/femfetch.sh",
