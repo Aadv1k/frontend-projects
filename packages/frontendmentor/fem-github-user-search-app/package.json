@@ -10,9 +10,19 @@
   "author": "aadv1k",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "postcss": "^8.4.14"
+    "autoprefixer": "^10.4.14",
+    "css-loader": "^6.8.1",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "postcss": "^8.4.14",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "bootstrap-icons": "^1.8.3"
+    "bootstrap-icons": "^1.8.3",
+    "postcss-loader": "^7.3.3",
+    "tailwindcss": "^3.3.2"
   }
 }
