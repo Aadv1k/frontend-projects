@@ -17,12 +17,10 @@ const GestureBase = styled.div`
     justify-content: center;
 
     cursor: pointer;
-    transition: opacity 100ms ease;
+    transition: box-shadow 250ms ease, transform 500ms ease;
 
-    @media (hover: hover) {
-        &:hover {
-            opacity: 0.8;
-        }
+    &:active {
+        transform: scale(.7);
     }
 
     @media screen and (max-width: 320px) {
@@ -46,7 +44,17 @@ const GestureInnerBase = styled.div`
 `
 
 const GestureRock = styled(GestureBase)`
-    background-image: linear-gradient(180deg, ${props => props.theme.rockGradient.from}, ${props => props.theme.rockGradient.to}); `;
+    background-image: linear-gradient(180deg, ${props => props.theme.rockGradient.from}, ${props => props.theme.rockGradient.to});
+
+
+    @media (hover: hover) {
+        &:hover {
+box-shadow: ${props => props.theme.rockGradient.from} 0px 5px 15px 0px;
+        }
+    }
+
+
+`;
 
 const GestureInnerRock = styled(GestureInnerBase)`
   background-image: url(${RockIcon});
@@ -55,6 +63,12 @@ const GestureInnerRock = styled(GestureInnerBase)`
 
 const GesturePaper = styled(GestureBase)`
     background-image: linear-gradient(180deg, ${props => props.theme.paperGradient.from}, ${props => props.theme.paperGradient.to});
+
+    @media (hover: hover) {
+        &:hover {
+box-shadow: ${props => props.theme.paperGradient.from} 0px 5px 15px 0px;
+        }
+    }
 `;
 
 const GestureInnerPaper = styled(GestureInnerBase)`
@@ -63,7 +77,15 @@ const GestureInnerPaper = styled(GestureInnerBase)`
 
 const GestureScissors = styled(GestureBase)`
     background-image: linear-gradient(180deg, ${props => props.theme.scissorsGradient.from}, ${props => props.theme.scissorsGradient.to});
-    grid-column: span 2;
+
+// TODO: this should NOT be hard-coded
+   grid-column: span 2;
+
+    @media (hover: hover) {
+        &:hover {
+box-shadow: ${props => props.theme.scissorsGradient.from} 0px 5px 15px 0px;
+        }
+    }
 `;
 
 const GestureInnerScissors = styled(GestureInnerBase)`
@@ -75,19 +97,19 @@ function getGestureComponentFromType(props: GestureProps) {
     switch (props.type) {
             case Gestures.rock:
               return (
-                  <GestureRock >
+                  <GestureRock onClick={props.onClick}>
                       <GestureInnerRock />
                   </GestureRock>
               )
             case Gestures.paper:
               return (
-                  <GesturePaper>
+                  <GesturePaper onClick={props.onClick}>
                       <GestureInnerPaper />
                   </GesturePaper>
               )
             case Gestures.scissors:
               return (
-                  <GestureScissors>
+                  <GestureScissors onClick={props.onClick}>
                       <GestureInnerScissors />
                   </GestureScissors>
               )
