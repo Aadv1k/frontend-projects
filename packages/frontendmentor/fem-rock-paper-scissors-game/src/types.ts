@@ -16,5 +16,5 @@ export interface GameProps {
 }
 
 export interface GestureProps {
-    type: Gestures
+    type: Gestures;
 }

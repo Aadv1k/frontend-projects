@@ -7,14 +7,29 @@ import ScissorsIcon from "../assets/icon-scissors.svg";
 
 
 const GestureBase = styled.div`
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 
     border-radius: 999px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
+    transition: opacity 100ms ease;
+
+    @media (hover: hover) {
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        width: 100px;
+        height: 100px;
+    }
+
 
 `
 
@@ -39,26 +54,28 @@ const GestureInnerRock = styled(GestureInnerBase)`
 
 
 const GesturePaper = styled(GestureBase)`
-    background-image: linear-gradient(180deg, ${props => props.theme.paperGradient.from}, ${props => props.theme.paperGradient.to}); `;
+    background-image: linear-gradient(180deg, ${props => props.theme.paperGradient.from}, ${props => props.theme.paperGradient.to});
+`;
 
 const GestureInnerPaper = styled(GestureInnerBase)`
   background-image: url(${PaperIcon});
 `;
 
 const GestureScissors = styled(GestureBase)`
-    background-image: linear-gradient(180deg, ${props => props.theme.scissorsGradient.from}, ${props => props.theme.scissorsGradient.to}); `;
+    background-image: linear-gradient(180deg, ${props => props.theme.scissorsGradient.from}, ${props => props.theme.scissorsGradient.to});
+    grid-column: span 2;
+`;
 
 const GestureInnerScissors = styled(GestureInnerBase)`
   background-image: url(${ScissorsIcon});
 `;
 
 
-
-function getGestureComponentFromType(type: Gestures) {
-    switch (type) {
+function getGestureComponentFromType(props: GestureProps) {
+    switch (props.type) {
             case Gestures.rock:
               return (
-                  <GestureRock>
+                  <GestureRock >
                       <GestureInnerRock />
                   </GestureRock>
               )
@@ -79,10 +96,10 @@ function getGestureComponentFromType(type: Gestures) {
 
 }
 
-export default function ({ type }: GestureProps) {
+export default function (props: GestureProps) {
     return (
         <>
-        {getGestureComponentFromType(type)}
+            {getGestureComponentFromType(props)}
         </>
 
     )
