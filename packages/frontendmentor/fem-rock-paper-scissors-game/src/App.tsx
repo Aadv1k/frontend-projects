@@ -2,24 +2,33 @@ import { useState } from 'react'
 
 import styled from "styled-components";
 
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import theme from "./Theme";
+import GlobalStyle from "./GlobalStyle";
 
-const Title = styled.h1`
-   font-size: 1.5rem;
-	 font-family: ${(props) => props.theme.font.serif};
+import ScoreBoard from "./components/ScoreBoard";
+
+import { Gestures } from "./types";
+
+const Container = styled.main`
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-block: 1.25rem;
 `
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
         <ThemeProvider theme={theme}>
-            <Title>
-                <h1>Hello world</h1>
-            </Title>
+            <GlobalStyle />
+            <Container>
+
+            <ScoreBoard score={12} gestures={[Gestures.rock, Gestures.paper, Gestures.scissors]} />
+                
+            </Container>
+
         </ThemeProvider>
     </>
   )
