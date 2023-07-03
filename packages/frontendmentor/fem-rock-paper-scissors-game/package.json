@@ -1,12 +1,14 @@
 {
   "name": "@frontend-projects/fem-rock-paper-scissors-game",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+	"private": true,
+  "description": "https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH",
   "type": "module",
+  "author": "Aadvik <aadv1k@outlook.com>",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -14,14 +16,13 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.37",
+    "@types/babel__core": "^7.20.1",
+    "@types/react": "^18.2.14",
     "@types/react-dom": "^18.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.59.0",
-    "@typescript-eslint/parser": "^5.59.0",
     "@vitejs/plugin-react": "^4.0.0",
-    "eslint": "^8.38.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.3.4",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
   }
