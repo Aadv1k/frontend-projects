@@ -33,5 +33,8 @@ export default {
     darkText: 'hsl(229, 25%, 31%)',
     scoreText: 'hsl(229, 64%, 46%)',
     headerOutline: 'hsl(217, 16%, 45%)',
-    white: "#ffffff"
+    white: "#ffffff",
+
+    shadowInner: "#2b3956",
+    shadowOuter: "#273655"
 }

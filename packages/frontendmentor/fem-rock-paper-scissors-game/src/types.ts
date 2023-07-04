@@ -34,5 +34,6 @@ export interface MoveStateProps {
     house: Gesture,
     onClick?: (e: any) => void;
     setScore: (e: number) => void;
-    score: number
+    score: number;
+    isWinner?: boolean
 }

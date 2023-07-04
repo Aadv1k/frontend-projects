@@ -12,6 +12,8 @@ const GameContainer = styled.div`
     place-items: center;
     gap: 4.25rem;
 
+    margin-top: 2rem;
+
     background-image: url(${GameBackground});
     background-position: center;
     background-repeat: no-repeat;

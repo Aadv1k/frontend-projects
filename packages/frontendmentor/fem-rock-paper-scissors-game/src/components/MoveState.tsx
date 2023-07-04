@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Gesture from "./Gesture";
 
 import { useState, useEffect } from "react";
@@ -7,11 +7,14 @@ import { MoveStateProps, GameOutcome, Gestures } from "../types";
 
 import { PrimaryButton } from "./Button";
 
+
+const ANIMATION_DURATION_IN_MS = 1000; 
+
 const MoveContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 
     @media screen and (min-width: 650px) {
       width: 60%;
@@ -19,6 +22,17 @@ const MoveContainer = styled.div`
       position: relative; 
     }
 
+`
+
+const statusFadeOut = keyframes`
+  from {
+    opacity: 0;
+
+  }
+
+  to: {
+    opacity: 1;
+  }
 `
 
 const StatusContainer = styled.div`
@@ -35,19 +49,46 @@ const StatusContainer = styled.div`
 
     @media screen and (min-width: 650px) {
       position: absolute; 
-
-      left: 50%;
       top: 50%;
-
+      left: 50%;
       transform: translate(-50%, -50%);
+      animation: ${statusFadeOut} ${ANIMATION_DURATION_IN_MS + 1000}ms forwards;
+        animation-timing-function: ease-in-out;
     }
 `
+
+const gestureGoRight = keyframes`
+  from {
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+  to {
+      left: 100%;
+      transform: translateX(-50%);
+
+  }
+`
+
+const gestureGoLeft = keyframes`
+  from {
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+
+  to {
+      left: 0;
+      transform: translateX(-50%);
+  }
+`
+
+
 
 const GestureContainer = styled.div`
     display: flex;
     gap: 1.75rem;
     justify-content: center;
-
     > div {
         display: flex;
         flex-direction: column;
@@ -63,8 +104,25 @@ const GestureContainer = styled.div`
     }
 
     @media screen and (min-width: 650px) {
-        width: 100%;
-        justify-content: space-between; 
+        display: block;
+        position: relative;
+        width: 80%;
+        margin-inline: auto;
+        height: 200px;
+
+        > div {
+            animation-timing-function: ease-in;
+        }
+
+        > div:nth-child(2) {
+            position: absolute;
+            animation: ${gestureGoRight} ${ANIMATION_DURATION_IN_MS}ms forwards;
+        }
+
+        > div:nth-child(1) {
+            position: absolute;
+            animation: ${gestureGoLeft} ${ANIMATION_DURATION_IN_MS}ms forwards;
+        }
     }
 `;
 
@@ -97,27 +155,29 @@ function getOutcomeMessage(outcome: GameOutcome): string {
 
 export default function (props: MoveStateProps) {
     const [message, setMessage] = useState<string>("");
+    const [gameOutcome, setGameOutcome] = useState<GameOutcome>("");
 
     useEffect(() => {
-        const gameOutcome = getGameOutcome(props.player, props.house);
+        setGameOutcome(getGameOutcome(props.player, props.house));
+
         const message = getOutcomeMessage(gameOutcome);
         setMessage(message);
 
         if (gameOutcome === GameOutcome.PlayerWins) props.setScore(props.score + 3);
         if (gameOutcome === GameOutcome.HouseWins) props.setScore(props.score - 2);
         if (gameOutcome === GameOutcome.Tie) props.setScore(props.score + 1);
-    }, [])
+    }, [gameOutcome])
 
     return (
         <MoveContainer>
             <GestureContainer>
                 <div>
-                    <Gesture type={props.player} />
+                    <Gesture type={props.player} isWinner={gameOutcome === GameOutcome.PlayerWins} />
                     <p>you picked</p> 
                 </div>
 
                 <div>
-                    <Gesture type={props.house} />
+                    <Gesture type={props.house} isWinner={gameOutcome === GameOutcome.HouseWins}/>
                     <p>house picked</p> 
                 </div>
             </GestureContainer>

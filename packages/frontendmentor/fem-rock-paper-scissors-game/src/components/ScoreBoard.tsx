@@ -12,6 +12,8 @@ const ScoreContainer = styled.div`
     display: flex;
     border-radius: .5rem;
 
+    z-index: 12;
+
     padding: .75rem;
 
     width: 90%;
