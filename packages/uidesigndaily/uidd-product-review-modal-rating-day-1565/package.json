@@ -1,0 +1,21 @@
+{
+  "name": "@frontend-projects/uidd-product-review-modal-rating-day-1565",
+  "version": "1.0.0",
+  "source": "./src/index.html",
+  "scripts": {
+    "dev": "parcel --port 8080",
+    "build": "mkdir -p dist && rm -rf ./dist/* && parcel build ./src/index.html --public-url ./",
+    "test": "npm run build && jest --detectOpenHandles && rm -rf ./dist"
+  },
+  "author": "Aadvik <aadv1k@outlook.com>",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aadv1k/frontend-projects.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aadv1k/frontend-projects/issues"
+  },
+  "homepage": "https://github.com/aadv1k/frontend-projects#readme",
+  "description": "https://uidesigndaily.com/posts/figma-product-review-modal-rating-day-1565"
+}
