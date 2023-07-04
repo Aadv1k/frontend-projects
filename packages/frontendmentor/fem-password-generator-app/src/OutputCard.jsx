@@ -1,7 +1,7 @@
-import { FaRegCopy } from "react-icons/fa";
 import {
   BsArrowRightShort as ArrowRight,
   BsCheckLg as CheckMark,
+  BsFillClipboard2Fill as ClipboardIcon
 } from "react-icons/bs";
 import PasswordGenerator from "./utils/PasswordGenerator";
 
@@ -27,7 +27,7 @@ export default function OutputCard({ password, setPassword }) {
         onInput={(e) => setPassword(e.target.value)}
       />
       <button className="btn btn--primary" onClick={handleClick}>
-        {!copying ? <FaRegCopy /> : <CheckMark />}
+        {!copying ? <ClipboardIcon /> : <CheckMark />}
       </button>
     </div>
   );
