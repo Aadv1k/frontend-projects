@@ -1,0 +1,12 @@
+{
+  "name": "@frontend-projects/fem-intro-section-with-dropdown-navigation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "webpack serve",
+    "build": "webpack --mode=production"
+  },
+  "author": "",
+  "license": "ISC"
+}

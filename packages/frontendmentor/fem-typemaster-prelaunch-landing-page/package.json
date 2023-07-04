@@ -1,0 +1,17 @@
+{
+  "name": "@frontend-projects/fem-typemaster-prelaunch-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack server"
+  },
+  "author": "Aadvik <aadv1k@outlook.com>",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "open-props": "^1.5.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

@@ -8,7 +8,7 @@
   "description": "A collection of my frontend project",
   "main": "script.js",
   "scripts": {
-    "build": "npm run build --ws",
+    "build": "npm run build --ws 2> /dev/null",
     "deploy": "npm exec --ws -c ../../../scripts/deploy.sh && ./scripts/deployStatic.sh",
     "femFetch": "./scripts/femfetch.sh",
     "lint": "eslint .",

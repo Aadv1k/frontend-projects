@@ -1,0 +1,16 @@
+{
+  "name": "@frontend-projects/fem-huddle-landing-page",
+  "version": "1.0.0",
+  "description": "Hello.",
+  "main": "postcss.config.js",
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "Aadvik<aadv1k@outlook.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "sass-loader": "^13.3.2"
+  }
+}

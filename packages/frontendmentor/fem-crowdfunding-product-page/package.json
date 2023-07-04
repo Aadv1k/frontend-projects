@@ -1,0 +1,22 @@
+{
+  "name": "@frontend-projects/fem-crowdfunding-product-page",
+  "version": "1.0.0",
+  "description": "crowdfunding page",
+  "main": "gulpfile.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "build": "gulp build && cp ./index.html ./dist/",
+    "dev": "gulp watch"
+  },
+  "author": "Aadvik <aadv1k@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.63.6",
+    "uglify": "^0.1.5"
+  }
+}
