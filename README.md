@@ -7,6 +7,7 @@ this is the monorepo of aadvik's frontend projects. **_[Here is the url to the d
 
 | Packages 📦                                                                                                                                   | Tooling 🛠️                                                |
 |-----------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
+| [@frontend-projects/fem-rock-paper-scissors-game](./packages/frontendmentor/fem-rock-paper-scissors-game)                                     | ![react] ![TypeScript] ![vite] ![styledcomponents]       |
 | [@frontend-projects/fem-multi-step-form](./packages/frontendmentor/fem-multi-step-form)                                                       | ![react] ![TypeScript] ![vite] ![tailwindcss] ![postcss] |
 | [@frontend-projects/fem-password-generator-app](./packages/frontendmentor/fem-password-generator-app)                                         | ![react] ![vite] ![sass]                                 |
 | [@frontend-projects/fem-fylo-dark-theme-landing-page](./packages/frontendmentor/fem-fylo-dark-theme-landing-page)                             | ![react] ![materialui] ![styledcomponents] ![webpack]    |

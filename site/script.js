@@ -5,6 +5,17 @@ const ghu =
 
 const data = [
   {
+    title: "Rock Paper Scissors app",
+    date: new Date("Tue Jul 04 2023 18:19:25 GMT+0530"),
+    labels: ["Vite", "React", "TypeScript", "Styled Components", "Advanced"],
+    image: "./fem-rock-paper-scissors-game/desktop-preview.jpg",
+    links: {
+      "Live url": "./fem-rock-paper-scissors-game/index.html",
+      GitHub: `${gh}fem-rock-paper-scissors-game`,
+      Challenge: "",
+    },
+  },
+  {
     title: "Multi Step Form",
     date: new Date("Sat Jul 01 2023 22:13:44 GMT+0530"),
     labels: ["Vite", "React", "TypeScript", "TailwindCSS", "Advanced"],
