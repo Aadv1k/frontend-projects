@@ -1,0 +1,17 @@
+{
+  "name": "@frontend-projects/fem-single-page-design-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack server",
+    "build": "webpack --mode=production"
+  },
+  "author": "Aadvik <aadv1k@outlook.com>",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "normalize-scss": "^7.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
