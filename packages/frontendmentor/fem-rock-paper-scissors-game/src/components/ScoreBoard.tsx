@@ -65,7 +65,7 @@ export default function ({ score, gestures }: ScoreBoardProps ) {
     return (
         <ScoreContainer>
             <Box>
-                {gestures.map(e => <Gesture>{e}</Gesture>)}
+                {gestures.map(e => <Gesture key={e}>{e}</Gesture>)}
             </Box>
 
             <ScoreBox>

@@ -12,8 +12,6 @@ const GameContainer = styled.div`
     place-items: center;
     gap: 4.25rem;
 
-    margin-top: 2rem;
-
     background-image: url(${GameBackground});
     background-position: center;
     background-repeat: no-repeat;
@@ -31,7 +29,6 @@ function getMove(): Gestures {
   let randomIndex = Math.floor(Math.random() * gestures.length);
   let move = gestures[randomIndex];
 
-
   while (move === previousMove) {
     randomIndex = Math.floor(Math.random() * gestures.length);
     move = gestures[randomIndex];
@@ -42,8 +39,9 @@ function getMove(): Gestures {
   return move;
 }
 
-export default function Game({ setScore, score }: GameProps) {
+export default function ({ setScore, score }: GameProps) {
     const [currentMove, setCurrentMove] = useState<Gestures | null>(null);
+    const [opponentMove, setOpponentMove] = useState<Gestures>(getMove());
     const gestures = [Gestures.rock, Gestures.paper, Gestures.scissors];
 
 
@@ -52,7 +50,7 @@ export default function Game({ setScore, score }: GameProps) {
             {!currentMove ? <GameContainer>
                     {gestures.map(e => (<Gesture key={e} type={e} onClick={() => setCurrentMove(e)} />))}
                 </GameContainer> :
-        <MoveState score={score} setScore={setScore} player={currentMove} house={getMove()} onClick={() => {setCurrentMove(null)}} />}
+            <MoveState score={score} setScore={setScore} player={currentMove} house={opponentMove} onClick={() => {setCurrentMove(null)}} />}
         </>
     );
 }
