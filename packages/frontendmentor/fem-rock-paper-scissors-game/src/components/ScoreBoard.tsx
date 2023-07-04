@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { ScoreBoardProps } from "./types";
+import { ScoreBoardProps } from "../types";
 
 const Box = styled.div`
     display: flex;
@@ -65,7 +65,7 @@ export default function ({ score, gestures }: ScoreBoardProps ) {
     return (
         <ScoreContainer>
             <Box>
-                {gestures.map(e => <Gesture key={e}>{e}</Gesture>)}
+                {gestures.map((e: any) => <Gesture key={e}>{e}</Gesture>)}
             </Box>
 
             <ScoreBox>

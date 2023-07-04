@@ -26,12 +26,13 @@ export interface GameProps {
 export interface GestureProps {
     type: Gestures;
     onClick?: (e: any) => void;
+    isWinner?: boolean;
 }
 
 
 export interface MoveStateProps {
-    player: Gesture,
-    house: Gesture,
+    player: Gestures,
+    house: Gestures,
     onClick?: (e: any) => void;
     setScore: (e: number) => void;
     score: number;

@@ -154,17 +154,19 @@ export default function Move(props: MoveStateProps) {
     const outcomeMessage = getOutcomeMessage(outcome);
     setMessage(outcomeMessage);
 
+    let score = props.score;
+
     if (outcome === GameOutcome.PlayerWins) {
-      props.setScore(prevScore => prevScore + 3);
+      props.setScore(score + 3);
     } else if (outcome === GameOutcome.HouseWins) {
-      props.setScore(prevScore => prevScore - 2);
+      props.setScore(score - 2);
     } else if (outcome === GameOutcome.Tie) {
-      props.setScore(prevScore => prevScore + 1);
+      props.setScore(score + 1);
     }
   }, [props.player, props.house]);
 
-  const handleClick = () => {
-    props.onClick();
+  const handleClick = (e: any) => {
+    (props.onClick as any)(e);
   };
 
   return (

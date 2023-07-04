@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { GameProps, Gestures } from "../types";
 import Gesture from "./Gesture";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import GameBackground from "../assets/bg-triangle.svg";
 
 import MoveState from "./MoveState";
@@ -41,7 +41,7 @@ function getMove(): Gestures {
 
 export default function ({ setScore, score }: GameProps) {
     const [currentMove, setCurrentMove] = useState<Gestures | null>(null);
-    const [opponentMove, setOpponentMove] = useState<Gestures>(getMove());
+    const [opponentMove, _] = useState<Gestures>(getMove());
     const gestures = [Gestures.rock, Gestures.paper, Gestures.scissors];
 
 

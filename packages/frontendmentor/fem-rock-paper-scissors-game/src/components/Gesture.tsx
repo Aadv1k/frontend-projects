@@ -4,7 +4,7 @@ import RockIcon from "../assets/icon-rock.svg";
 import PaperIcon from "../assets/icon-paper.svg";
 import ScissorsIcon from "../assets/icon-scissors.svg";
 
-const GestureBase = styled.div`
+const GestureBase = styled("div")<GestureProps>`
   width: 120px;
   height: 120px;
   border-radius: 999px;

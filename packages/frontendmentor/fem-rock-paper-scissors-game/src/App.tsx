@@ -2,9 +2,7 @@ import { useState } from 'react'
 
 import styled from "styled-components";
 
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
-
-import { PrimaryButton } from "./components/Button";
+import { ThemeProvider } from 'styled-components';
 
 import theme from "./Theme";
 import GlobalStyle from "./GlobalStyle";
