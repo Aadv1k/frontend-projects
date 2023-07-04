@@ -1,0 +1,15 @@
+{
+  "name": "@frontend-projects/fem-github-user-search-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "dev": "webpack serve",
+    "build": "webpack --mode=production"
+  },
+  "author": "Aadvik<aadv1k@outlook.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-icons": "^1.10.5"
+  }
+}
