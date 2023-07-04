@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/aadv1k/frontend-projects/issues"
   },
-  "homepage": "https://github.com/aadv1k/frontend-projects#readme"
+  "homepage": "https://github.com/aadv1k/frontend-projects#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3"
+  }
 }
