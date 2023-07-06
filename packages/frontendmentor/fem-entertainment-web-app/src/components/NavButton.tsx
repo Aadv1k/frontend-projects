@@ -5,7 +5,7 @@ interface NavButtonProps {
 }
 export default function (props: NavButtonProps) {
     return (
-        <button className={`w-[20px] ${props.active ? "fill-light-gray" : "fill-blue-gray"}`}>
+        <button className={`w-[20px] transition hover:fill-light-gray ${props.active ? "fill-light-gray" : "fill-blue-gray"}`}>
             {props.icon}
         </button>
 
