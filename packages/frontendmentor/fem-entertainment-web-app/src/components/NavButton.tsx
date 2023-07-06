@@ -3,10 +3,9 @@ interface NavButtonProps {
     active: boolean;
     icon: string
 }
-
 export default function (props: NavButtonProps) {
     return (
-        <button className={`text-xl ${props.active ? "text-light-gray" : "text-blue-gray"}`}>
+        <button className={`w-[20px] ${props.active ? "fill-light-gray" : "fill-blue-gray"}`}>
             {props.icon}
         </button>
 
