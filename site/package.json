@@ -1,0 +1,11 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "the core site for the app",
+  "main": "script.js",
+  "scripts": {
+    "build": "powershell cp -r ./src/ ./dist"
+  },
+  "author": "",
+  "license": "MIT"
+}

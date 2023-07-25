@@ -2,13 +2,14 @@
   "name": "frontend-projects",
   "workspaces": [
     "packages/frontendmentor/*",
-    "packages/uidesigndaily/*"
+    "packages/uidesigndaily/*",
+    "./site"
   ],
   "version": "1.0.0",
   "description": "A collection of my frontend project",
   "main": "script.js",
   "scripts": {
-    "build": "npm run build --ws 2> /dev/null",
+    "build": "npm run build --ws",
     "deploy": "npm exec --ws -c ../../../scripts/deploy.sh && ./scripts/deployStatic.sh",
     "femFetch": "./scripts/femfetch.sh",
     "lint": "eslint .",
